@@ -1,0 +1,694 @@
+<!DOCTYPE HTML>
+<html lang="es">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+<meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1, viewport-fit=cover" />
+<title>Renta de ropa</title>
+
+
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+
+
+
+<link rel="stylesheet" type="text/css" href="styles/style.css">
+<link href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,500,500i,700,700i,900,900i|Source+Sans+Pro:300,300i,400,400i,600,600i,700,700i,900,900i&display=swap" rel="stylesheet">
+<link rel="stylesheet" type="text/css" href="fonts/css/fontawesome-all.min.css">
+<link rel="manifest" href="_manifest.json" data-pwa-version="set_in_manifest_and_pwa_js">
+<link rel="apple-touch-icon" sizes="180x180" href="app/icons/icon-192x192.png">
+</head>
+
+<body class="theme-light" data-highlight="highlight-pink" data-gradient="body-default">
+
+<div id="preloader"><div class="spinner-border color-highlight" role="status"></div></div>
+
+<div id="page">
+
+    <div class="header header-fixed header-logo-center header-auto-show">
+        <a href="#" class="header-title">Renta de ropa</a>
+        <a href="#" data-back-button class="header-icon header-icon-1"><i class="fas fa-arrow-left"></i></a>
+        <a href="#" data-toggle-theme class="header-icon header-icon-4"><i class="fas fa-lightbulb"></i></a>
+    </div>
+
+
+
+    <div id="footer-bar" class="footer-bar-1">
+        <a href="?id=inicio"><i class="fa fa-home"></i><span>Inicio</span></a>
+        <a href="?id=categorias"><i class="fa fa-star"></i><span>Categorías</span></a>
+        <a href="#" class="active-nav"><i class="fa fa-heart"></i><span>Favoritos</span></a>
+
+
+        <a href="#"><i class="fa fa-list"></i><span>Pedidos</span></a>
+		<a href="#"><i class="fa fa-user"></i><span>Perfil</span></a>
+
+    </div>
+
+
+
+
+    <div class="page-content pb-0">
+
+		<div class="card preload-img position-fixed w-100" data-card-height="450">
+			<!-- Search -->
+			<div class="content mt-2 position-absolute start-0 end-0 mx-1">
+				<div class="notch-clear"></div>
+				<div class="search-box bg-theme color-theme rounded-m shadow-l mx-2">
+					<i class="fa fa-search"></i>
+					<input type="text" class="border-0" placeholder="Qué estás buscando?" data-search>
+					<a href="#" class="clear-search disabled no-click mt-0"></a>
+					<a href="#" data-menu="menu-filter" class="color-theme"><i class="fa fa-sliders me-n3"></i></a>
+				</div>
+
+
+
+				<div class="search-results disabled-search-list mt-3">
+					<div class="card card-style mx-2 px-2 mb-0 pt-2">
+						
+						<a href="#" class="d-flex py-2" data-filter-item data-filter-name="all apple watch 42 leather edition white">
+							<div>
+								<img src="images/food/500x500/2.png" class="rounded-sm me-1" width="45" alt="img">
+							</div>
+							<div>
+								<span class="color-highlight font-400 d-block pt-0 mb-n2 font-11">Rentar</span>
+								<strong class="color-theme font-14 d-block mt-n2">Vestido de noche</strong>
+							</div>
+							<div class="ms-auto text-center align-self-center pe-2">
+								<h5 class="line-height-xs font-18 pt-3">$5.<sup class="font-14">50</sup></h5>
+							</div>
+						</a>
+						<a href="#" class="d-flex py-2" data-filter-item data-filter-name="all apple watch lime edition 44 green">
+							<div>
+								<img src="images/food/500x500/3.png" class="rounded-sm me-1" width="45" alt="img">
+							</div>
+							<div>
+								<span class="color-highlight font-400 d-block pt-0 mb-n2 font-11">Accesorio</span>
+								<strong class="color-theme font-14 d-block mt-n2">Aretes brillantes</strong>
+							</div>
+							<div class="ms-auto text-center align-self-center pe-2">
+								<h5 class="line-height-xs font-18 pt-3">$16.<sup class="font-14">50</sup></h5>
+							</div>
+						</a>
+					</div>
+				</div>
+
+
+
+
+			</div>
+			<!-- Placing iframe under the header-->
+			<iframe src="https://maps.google.com/maps?q=%Sidney%20Opera&t=k&z=17&ie=UTF8&iwloc=&output=embed" style="height:650px; margin-top:-200px;"></iframe>
+		</div>
+
+
+
+		<!-- Scroll Over Clear Effect-->
+		<div class="card bg-transparent shadow-0 border-0 mb-0 no-click" data-card-height="430" style="height: 430px;">
+
+		</div>
+
+		<div class="card card-style mx-0 pb-5 pt-1">
+			<div class="divider mx-auto mt-3 bg-gray-dark opacity-30 rounded-s mb-3" style="height:5px; width:50px;"></div>
+			<div class="search-no-results disabled mt-n3">
+				<div class="content bg-red-dark p-3 rounded-m">
+					<h1 class="color-white">Sin resultados</h1>
+					<p class="color-white">
+						No se encontraraon datos conforme a tu busqueda.
+					</p>
+				</div>
+				<div class="divider divider-margins mt-4"></div>
+			</div>
+
+
+			
+			
+			<div id="tab-group">
+				<div class="card card-style bg-theme pb-0 mb-3">
+					<div class="tab-controls tabs-rounded tabs-large" data-highlight="bg-highlight">
+						<a href="#" class="font-14 font-600" data-bs-toggle="collapse" data-bs-target="#tab-1" data-active><span class="opacity-80">Prendas</span></a>
+						<a href="#" class="font-14 font-600" data-bs-toggle="collapse" data-bs-target="#tab-2"><span class="opacity-80">Paquetes</span></a>
+						<a href="#" class="font-14 font-600" data-bs-toggle="collapse" data-bs-target="#tab-3"><span class="opacity-80">Accesorios</span></a>
+					</div>
+				</div>
+				
+				
+				
+				<!-- Tab 1 -->
+				<div data-bs-parent="#tab-group" class="collapse show px-3" id="tab-1">
+				
+				
+				
+				
+					<div class="card card-style mx-0">
+						<div class="card card-style mx-2 mt-2" data-card-height="400" style="background-image:url('https://newname.mx/wp-content/uploads/2021/01/AVL7664-1.jpg')">
+							<div class="card-top p-3 pe-2 pt-2">
+								<a href="#" data-toast="snackbar-favorites" class="float-end">
+									<span class="bg-theme color-theme px-2 py-2 rounded-sm">
+										<i class="fa fa-heart color-red-dark pe-1"></i>
+										Fav
+									</span>
+								</a>
+							</div>
+						</div>
+						<div class="content mt-n3">
+							<div class="d-flex">
+								<div class="me-auto align-self-center">
+									<h2 class="mb-n1">Vestido de noche</h2>
+									<span class="d-block color-green-dark font-700">Veces rentado: +10</span>
+								</div>
+								<div class="ms-auto align-self-center">
+									<h1 class="pt-2">$32.<sup class="font-14 font-400 opacity-50">99</sup></h1>
+								</div>
+							</div>
+							<p class="font-12 line-height-m pt-2 mb-2">
+								Con este vestido de noche podrás tener una comodidad increíble, además de poder usarlo para cualquier ocasión. Estamos seguros que te encantará.
+							</p>
+							<div class="d-flex">
+								<div class="align-self-center">
+									<span>
+										<i class="fa fa-star font-12 color-yellow-dark pe-1"></i>
+										<i class="fa fa-star font-12 color-yellow-dark pe-1"></i>
+										<i class="fa fa-star font-12 color-yellow-dark pe-1"></i>
+										<i class="fa fa-star font-12 color-yellow-dark pe-1"></i>
+										<i class="fa fa-star font-12 color-yellow-dark pe-1"></i>
+									</span>
+									<span class="d-block opacity-70 font-11 mt-n2 color-theme">53 calificaciones</span>
+								</div>
+								<div class="align-self-center ms-auto">
+									<a href="#" data-toast="snackbar-cart" class="btn btn-s bg-highlight rounded-sm font-700 text-uppercase" data-bs-toggle="offcanvas" data-bs-target="#offcanvasBottom" aria-controls="offcanvasBottom">Rentar ahora</a>
+								</div>
+							</div>
+						</div>
+					</div>
+
+
+
+
+					<div class="card card-style mx-0">
+						<div class="card card-style mx-2 mt-2" data-card-height="400" style="background-image:url('https://doce38boutique.com/wp-content/uploads/2023/09/VL8038-Vestido-largo-de-lentejuela-con-una-manga-asimetrico-cintura-drapeado-con-escarola-abertura-en-pierna-324x540.jpg')">
+							<div class="card-top p-3 pe-2 pt-2">
+								<a href="#" data-toast="snackbar-favorites" class="float-end">
+									<span class="bg-theme color-theme px-2 py-2 rounded-sm">
+										<i class="fa fa-heart color-red-dark pe-1"></i>
+										Fav
+									</span>
+								</a>
+							</div>
+						</div>
+						<div class="content mt-n3">
+							<div class="d-flex">
+								<div class="me-auto align-self-center">
+									<h2 class="mb-n1">Vestido de noche</h2>
+									<span class="d-block color-green-dark font-700">Veces rentado: +10</span>
+								</div>
+								<div class="ms-auto align-self-center">
+									<h1 class="pt-2">$32.<sup class="font-14 font-400 opacity-50">99</sup></h1>
+								</div>
+							</div>
+							<p class="font-12 line-height-m pt-2 mb-2">
+								Con este vestido de noche podrás tener una comodidad increíble, además de poder usarlo para cualquier ocasión. Estamos seguros que te encantará.
+							</p>
+							<div class="d-flex">
+								<div class="align-self-center">
+									<span>
+										<i class="fa fa-star font-12 color-yellow-dark pe-1"></i>
+										<i class="fa fa-star font-12 color-yellow-dark pe-1"></i>
+										<i class="fa fa-star font-12 color-yellow-dark pe-1"></i>
+										<i class="fa fa-star font-12 color-yellow-dark pe-1"></i>
+										<i class="fa fa-star font-12 color-yellow-dark pe-1"></i>
+									</span>
+									<span class="d-block opacity-70 font-11 mt-n2 color-theme">53 calificaciones</span>
+								</div>
+								<div class="align-self-center ms-auto">
+									<a href="#" data-toast="snackbar-cart" class="btn btn-s bg-highlight rounded-sm font-700 text-uppercase" data-bs-toggle="offcanvas" data-bs-target="#offcanvasBottom" aria-controls="offcanvasBottom">Rentar ahora</a>
+								</div>
+							</div>
+						</div>
+					</div>
+					
+
+
+
+
+
+				</div>
+
+
+				
+				<!-- Tab 2 -->
+				<div data-bs-parent="#tab-group" class="collapse px-3" id="tab-2">
+					<div class="card card-style mx-0">
+						<div class="content mt-3 mb-0">
+							
+							
+							
+							
+							
+							<div class="d-flex mb-3">
+								<div class="w-100 me-3">
+									<div class="card card-style m-0" data-card-height="250" style="background-image:url('https://cdn0.bodas.com.mx/cat/vestidos-fiesta/manu-garcia/mg3321--mt20_2x_566275.jpg')">
+										<div class="card-bottom text-center pb-2">
+											<a href="#" data-toast="snackbar-favorites" class="icon icon-xxs bg-theme rounded-l shadow-xl rounded-m mx-2 color-theme"><i class="fa fa-heart color-red-dark font-12"></i></a>
+											<a href="#" data-toast="snackbar-cart" class="icon icon-xxs bg-theme rounded-l shadow-xl rounded-m mx-2 color-theme"><i class="fa fa-shopping-bag font-12"></i></a>
+										</div>
+									</div>
+								</div>
+								<div class="ms-auto w-100">
+									<h5 class="font-600 font-16 line-height-sm">Vestido de Noche Elegante</h5>
+									<span class="color-green-dark d-block font-11 font-600"><i class="fa fa-truck"></i> - Entrega en 2 días</span>
+									<h2 class="pt-2 mt-n1">Renta desde $49.<sup class="font-14 font-400 opacity-50">99</sup></h2>
+								</div>
+							</div>
+							
+							<div class="divider mt-4 mb-4"></div>
+							
+							<div class="d-flex mb-3">
+								<div class="w-100 me-3">
+									<div class="card card-style m-0" data-card-height="250" style="background-image:url('https://m.media-amazon.com/images/I/41aujSgibbL._AC_SY580_.jpg')">
+										<div class="card-bottom text-center pb-3">
+											<a href="#" data-toast="snackbar-favorites" class="icon icon-xxs bg-theme rounded-l shadow-xl rounded-m mx-2 color-theme"><i class="fa fa-heart color-red-dark font-12"></i></a>
+										</div>
+									</div>
+								</div>
+							
+								<div class="ms-auto w-100">
+									<span class="color-red-dark d-block font-11 font-600">Rentado</span>
+									<h2 class="opacity-40 pb-2 mt-n1">Renta desde $79.<sup class="font-14 font-400 opacity-50">99</sup></h2>
+									<h5 class="opacity-40 font-600 font-16 line-height-sm">Vestido de Gala Exclusivo</h5>
+								</div>
+							</div>
+							
+							<div class="divider mt-4 mb-4"></div>
+							
+							<div class="d-flex mb-3">
+								<div class="w-100 me-3">
+									<div class="card card-style m-0" data-card-height="250" style="background-image:url('https://www.pronovias.com/media/catalog/product/l/a/lace_2236_b.jpg?quality=80&bg-color=255,255,255&fit=bounds&height=747&width=560&canvas=560:747')">
+										<div class="card-top p-2">
+											<span class="bg-highlight p-2 py-1 rounded-sm font-13 font-600">-30%</span>
+										</div>
+										<div class="card-bottom text-center pb-3">
+											<a href="#" data-toast="snackbar-favorites" class="icon icon-xxs bg-theme rounded-l shadow-xl rounded-m mx-2 color-theme"><i class="fa fa-heart color-red-dark font-12"></i></a>
+											<a href="#" data-toast="snackbar-cart" class="icon icon-xxs bg-theme rounded-l shadow-xl rounded-m mx-2 color-theme"><i class="fa fa-shopping-bag font-12"></i></a>
+										</div>
+									</div>
+								</div>
+							
+								<div class="ms-auto w-100">
+									<span class="color-blue-dark d-block font-11 font-600">Destacado</span>
+									<h2 class="pb-3 mt-n1">Renta desde $104.<sup class="font-14 font-400 opacity-50">99</sup></h2>
+									<h5 class="font-600 font-16 line-height-sm">Vestido de Novia con Detalles Exquisitos</h5>
+								</div>
+							</div>
+							
+
+
+
+						</div>
+						
+					</div>
+				</div>
+
+
+
+
+				<!-- Tab 3 -->
+				<div data-bs-parent="#tab-group" class="collapse" id="tab-3">
+					<div class="card card-style mx-3">
+						<div class="content">
+							<div class="row mb-0">
+
+
+
+
+
+								<div class="col-6">
+									<div class="card card-style m-0" data-card-height="140" style="background-image:url('https://i5.walmartimages.com.mx/mg/gm/3pp/asr/42cd59bb-a09b-40fb-9985-efd30ac36961.85cd13959dfa6ff3aba7620e05079696.jpeg?odnHeight=612&odnWidth=612&odnBg=FFFFFF')">
+										<div class="card-top p-2">
+											<span class="bg-highlight p-2 py-1 rounded-sm font-13 font-600">-50%</span>
+										</div>
+										<div class="card-bottom text-center pb-3">
+											<a href="#" data-toast="snackbar-favorites" class="icon icon-xxs bg-theme rounded-l shadow-xl rounded-m mx-2 color-theme"><i class="fa fa-heart color-red-dark font-12"></i></a>
+											<a href="#" data-toast="snackbar-cart" class="icon icon-xxs bg-theme rounded-l shadow-xl rounded-m mx-2 color-theme"><i class="fa fa-shopping-bag font-12"></i></a>
+										</div>
+									</div>
+									<h5 class="font-600 font-16 line-height-sm pt-3">Collar Elegante para Vestidos</h5>
+									<span class="color-blue-dark d-block font-11 font-600">Destacado esta Semana</span>
+									<h2 class="pb-3 mt-n1">$34.<sup class="font-14 font-400 opacity-50">99</sup></h2>
+								</div>
+								
+								<div class="col-6">
+									<div class="card card-style m-0 bg-28" data-card-height="140" style="background-image:url('https://exoticaonline.mx/18226-large_default/diadema-ancha-cristal.jpg')">
+										<div class="card-top p-2">
+											<span class="bg-red-dark p-2 py-1 rounded-sm font-13 font-600">-50%</span>
+										</div>
+										<div class="card-bottom text-center pb-3">
+											<a href="#" data-toast="snackbar-favorites" class="icon icon-xxs bg-theme rounded-l shadow-xl rounded-m mx-2 color-theme"><i class="fa fa-heart color-red-dark font-12"></i></a>
+											<a href="#" data-toast="snackbar-cart" class "icon icon-xxs bg-theme rounded-l shadow-xl rounded-m mx-2 color-theme"><i class="fa fa-shopping-bag font-12"></i></a>
+										</div>
+									</div>
+									<h5 class="font-600 font-16 line-height-sm pt-3">Diadema de Cristales para Ropa de Noche</h5>
+									<span class="color-red-dark d-block font-11 font-600">No disponible</span>
+									<h2 class="pb-3 mt-n1">$14.<sup class="font-14 font-400 opacity-50">99</sup></h2>
+								</div>
+								<div class="col-12"><div class="divider mt-2 mb-4"></div></div>
+								
+								<div class="col-6">
+									<div class="card card-style m-0 bg-21" data-card-height="140" style="background-image:url('https://i5.walmartimages.com.mx/mg/gm/3pp/asr/e0af7907-1591-40f3-8f6c-c72211e58187.648dc2338b8536fdfa1693502a28c853.jpeg?odnHeight=612&odnWidth=612&odnBg=FFFFFF')">
+										<div class="card-bottom text-center pb-3">
+											<a href="#" data-toast="snackbar-favorites" class="icon icon-xxs bg-theme rounded-l shadow-xl rounded-m mx-2 color-theme"><i class="fa fa-heart color-red-dark font-12"></i></a>
+											<a href="#" data-toast="snackbar-cart" class="icon icon-xxs bg-theme rounded-l shadow-xl rounded-m mx-2 color-theme"><i class="fa fa-shopping-bag font-12"></i></a>
+										</div>
+									</div>
+									<h5 class="font-600 font-16 line-height-sm pt-3">Cinturón de Diseño para Vestidos</h5>
+									<span class="color-green-dark d-block font-11 font-600">Disponible</span>
+									<h2 class="mt-n1">$23.<sup class="font-14 font-400 opacity-50">99</sup></h2>
+								</div>
+								
+								<div class="col-6">
+									<div class="card card-style m-0 bg-8" data-card-height="140" style="background-image:url('https://m.media-amazon.com/images/I/71AlglSGrhL._AC_UY580_.jpg')">
+										<div class="card-bottom text-center pb-3">
+											<a href="#" data-toast="snackbar-favorites" class="icon icon-xxs bg-theme rounded-l shadow-xl rounded-m mx-2 color-theme"><i class="fa fa-heart color-red-dark font-12"></i></a>
+										</div>
+									</div>
+									<h5 class="opacity-40 font-600 font-16 line-height-sm pt-3">Bolsa de Ropa para Viajes</h5>
+									<span class="color-red-dark d-block font-11 font-600">No disponible</span>
+									<h2 class="opacity-40 pb-2 mt-n1">$47.<sup class="font-14 font-400 opacity-50">99</sup></h2>
+								</div>
+								
+
+
+
+
+
+
+
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+
+
+			<div class="d-flex px-3 mb-n3">
+				<div class="align-self-center">
+					<h4 class="mb-0">Más para ver</h4>
+				</div>
+				<div class="align-self-center ms-auto">
+					<a href="#" class="font-12">Ver todo</a>
+				</div>
+			</div>
+
+			<div class="splide double-slider slider-no-dots visible-slider" id="double-slider-1a">
+				<div class="splide__track">
+					
+					
+					
+					<div class="splide__list">
+						<div class="splide__slide">
+							<a href="#" class="mx-3" data-menu="menu-reserve" data-bs-toggle="offcanvas" data-bs-target="#offcanvasBottom" aria-controls="offcanvasBottom">
+								<div class="card card-style me-0 mb-0" style="background-image:url(https://barocsshop.com/wp-content/uploads/2023/06/vestido-cloeh-f.jpg);" data-card-height="250">
+									<div class="card-top p-2">
+										<span class="bg-red-dark color-white px-2 py-1 rounded-xs font-11 font-700">-10%</span>
+									</div>
+									<div class="card-bottom p-2 px-2">
+										<h4 class="color-white line-height-s">Conjunto vestido</h4>
+										<span class="color-white font-10 opacity-60"><i class="fa fa-map-marker pe-2"></i>Ibiza, españa</span>
+									</div>
+									<div class="card-overlay bg-gradient"></div>
+								</div>
+							</a>
+						</div>
+
+
+
+						<div class="splide__slide">
+							<a href="#" class="mx-3" data-menu="menu-reserve" data-bs-toggle="offcanvas" data-bs-target="#offcanvasBottom" aria-controls="offcanvasBottom">
+								<div class="card card-style me-0 mb-0" style="background-image:url(https://cdn0.bodas.com.mx/cat/vestidos-fiesta/manu-garcia/mg3321--mt20_2x_566275.jpg);" data-card-height="250">
+									<div class="card-top p-2">
+										<span class="color-white bg-blue-dark px-2 py-1 rounded-xs font-11 font-700">RENTA</span>
+									</div>
+									<div class="card-bottom p-2 px-2">
+										<h4 class="color-white line-height-s">Prenda minimalista</h4>
+										<span class="color-white font-10 opacity-60"><i class="fa fa-map-marker pe-2"></i>Ibiza, España</span>
+									</div>
+									<div class="card-overlay bg-gradient"></div>
+								</div>
+							</a>
+						</div>
+
+
+						
+
+
+
+
+
+					</div>
+				</div>
+			</div>
+		</div>
+
+
+    </div>
+    <!-- End of Page Content-->
+
+	<!-- Menu Sidebar Sidebar Filters-->
+	<div id="menu-filter" class="menu menu-box-left" data-menu-height="cover" data-menu-width="cover">
+		<div class="notch-clear"></div>
+		<div class="menu-title ms-n1"><h1>Filtros</h1><p class="color-highlight">Filtra tus resultados</p><a href="#" class="close-menu"><i class="fa fa-times"></i></a></div>
+		<p class="mb-3 mx-3 mt-n1">
+			Selecciona opciones para poder buscar y obtener resultados filtrados
+		</p>
+		<div class="divider divider-margins"></div>
+		<div class="content mt-n3 ps-1 mb-0">
+		
+			
+
+
+			<!-- Price Range -->
+			<h5 class="mb-3 font-15 mt-2">Rango de precio</h5>
+			<div class="row mb-0">
+				<div class="col-6">
+					<div class="input-style has-borders no-icon mb-4 input-style-always-active">
+						<label for="form-4" class="color-highlight text-uppercase font-700 font-11">Precio min</label>
+						<select id="form-4">
+							<option value="default" disabled>Desde</option>
+							<option value="1a">$10</option>
+							<option value="2a">$50</option>
+							<option value="3a" selected>$100</option>
+							<option value="4a">$250</option>
+							<option value="5a">$500</option>
+						</select>
+						<span><i class="fa fa-chevron-down"></i></span>
+					</div>
+				</div>
+				<div class="col-6">
+					<div class="input-style has-borders no-icon mb-4 input-style-always-active">
+						<label for="form-4" class="color-highlight text-uppercase font-700 font-11">Precio max</label>
+						<select id="form-4">
+							<option value="default" disabled>Hasta</option>
+							<option value="1a">$15</option>
+							<option value="2a">$25</option>
+							<option value="3a">$100</option>
+							<option value="4a" selected>$250</option>
+							<option value="5a">$500</option>
+						</select>
+						<span><i class="fa fa-chevron-down"></i></span>
+					</div>
+				</div>
+			</div>
+			<!-- Property Facts -->
+			<h5 class="mb-3 font-15">Talla</h5>
+			<div class="row mb-0">
+				<div class="col-12">
+					<div class="input-style has-borders no-icon mb-4 input-style-always-active">
+						<label for="form-4b" class="color-highlight text-uppercase font-700 font-11">Talla.</label>
+						<select id="form-4b">
+							<option value="default" disabled>Elige</option>
+							<option value="1a" selected>SMALL</option>
+							<option value="2a">MEDIANA</option>
+							<option value="3a">GRANDE</option>
+							<option value="4a">X. GRANDE</option>
+						</select>
+						<span><i class="fa fa-chevron-down"></i></span>
+					</div>
+				</div>
+			</div>
+
+			<div class="divider mt-2 mb-3"></div>
+
+			<!-- Sort By -->
+			<div class="list-group list-custom-small list-icon-0">
+				<a data-bs-toggle="collapse" class="border-0" href="#collapse-filter-1">
+					<span class="font-15 font-600">Ordenar por</span>
+					<i class="fa fa-angle-down"></i>
+				</a>
+			</div>
+			<div class="collapse" id="collapse-filter-1">
+				<div class="form-check icon-check">
+					<input class="form-check-input" type="checkbox" value="" id="check412" checked>
+					<label class="form-check-label font-14" for="check412">Precio: Mas bajo a más alto</label>
+					<i class="icon-check-1 far fa-circle color-gray-dark font-16"></i>
+					<i class="icon-check-2 fa fa-check-circle font-16 color-green-dark"></i>
+				</div>
+				
+				<div class="form-check icon-check">
+					<input class="form-check-input" type="checkbox" value="" id="check434">
+					<label class="form-check-label font-14" for="check434">Precio: Más alto a más bajo</label>
+					<i class="icon-check-1 far fa-circle color-gray-dark font-16"></i>
+					<i class="icon-check-2 fa fa-check-circle font-16 color-green-dark"></i>
+				</div>
+			
+				<div class="mb-3"></div>
+			</div>
+
+			<!-- Category -->
+			<div class="list-group list-custom-small list-icon-0">
+				<a data-bs-toggle="collapse" class="border-0" href="#collapse-filter-1a">
+					<span class="font-15 font-600">Categoría</span>
+					<i class="fa fa-angle-down"></i>
+				</a>
+			</div>
+			<div class="collapse" id="collapse-filter-1a">
+				<div class="form-check icon-check">
+					<input class="form-check-input" type="checkbox" value="" id="check412a" checked>
+					<label class="form-check-label font-14" for="check412a">Vestidos</label>
+					<i class="icon-check-1 far fa-circle color-gray-dark font-16"></i>
+					<i class="icon-check-2 fa fa-check-circle font-16 color-green-dark"></i>
+				</div>
+				<div class="form-check icon-check">
+					<input class="form-check-input" type="checkbox" value="" id="check434b">
+					<label class="form-check-label font-14" for="check434b">Accesorios</label>
+					<i class="icon-check-1 far fa-circle color-gray-dark font-16"></i>
+					<i class="icon-check-2 fa fa-check-circle font-16 color-green-dark"></i>
+				</div>
+				<div class="mb-3"></div>
+			</div>
+
+		
+			<!-- Rating-->
+			<div class="list-group list-custom-small list-icon-0">
+				<a data-bs-toggle="collapse" class="border-0" href="#collapse-filter-3">
+					<span class="font-15 font-600">Rating</span>
+					<i class="fa fa-angle-down"></i>
+				</a>
+			</div>
+			<div class="collapse" id="collapse-filter-3">
+				<div class="form-check icon-check">
+					<input class="form-check-input" type="checkbox" value="" id="check412adg" checked>
+					<label class="form-check-label font-14" for="check412adg">
+						<i class="fa fa-star position-relative start-0 color-yellow-dark me-n1" style="transform:translateY(-2px);"></i>
+						<i class="fa fa-star position-relative start-0 color-yellow-dark me-n1" style="transform:translateY(-2px);"></i>
+						<i class="fa fa-star position-relative start-0 color-yellow-dark me-n1" style="transform:translateY(-2px);"></i>
+						<i class="fa fa-star position-relative start-0 color-yellow-dark me-n1" style="transform:translateY(-2px);"></i>
+						<i class="fa fa-star position-relative start-0 color-yellow-dark me-n1" style="transform:translateY(-2px);"></i>
+					</label>
+					<i class="icon-check-1 far fa-circle color-gray-dark font-16"></i>
+					<i class="icon-check-2 fa fa-check-circle font-16 color-green-dark"></i>
+				</div>
+				<div class="form-check icon-check">
+					<input class="form-check-input" type="checkbox" value="" id="check434bdg">
+					<label class="form-check-label font-14" for="check434bdg">
+						<i class="fa fa-star position-relative start-0 color-yellow-dark me-n1" style="transform:translateY(-2px);"></i>
+						<i class="fa fa-star position-relative start-0 color-yellow-dark me-n1" style="transform:translateY(-2px);"></i>
+						<i class="fa fa-star position-relative start-0 color-yellow-dark me-n1" style="transform:translateY(-2px);"></i>
+						<i class="fa fa-star position-relative start-0 color-yellow-dark me-n1" style="transform:translateY(-2px);"></i>
+						<i class="fa fa-star position-relative start-0 color-gray-light me-n1" style="transform:translateY(-2px);"></i>
+					</label>
+					<i class="icon-check-1 far fa-circle color-gray-dark font-16"></i>
+					<i class="icon-check-2 fa fa-check-circle font-16 color-green-dark"></i>
+				</div>
+				<div class="form-check icon-check">
+					<input class="form-check-input" type="checkbox" value="" id="check435cdg">
+					<label class="form-check-label font-14" for="check435cdg">
+						<i class="fa fa-star position-relative start-0 color-yellow-dark me-n1" style="transform:translateY(-2px);"></i>
+						<i class="fa fa-star position-relative start-0 color-yellow-dark me-n1" style="transform:translateY(-2px);"></i>
+						<i class="fa fa-star position-relative start-0 color-yellow-dark me-n1" style="transform:translateY(-2px);"></i>
+						<i class="fa fa-star position-relative start-0 color-gray-light me-n1" style="transform:translateY(-2px);"></i>
+						<i class="fa fa-star position-relative start-0 color-gray-light me-n1" style="transform:translateY(-2px);"></i>
+					</label>
+					<i class="icon-check-1 far fa-circle color-gray-dark font-16"></i>
+					<i class="icon-check-2 fa fa-check-circle font-16 color-green-dark"></i>
+				</div>
+				<div class="form-check icon-check">
+					<input class="form-check-input" type="checkbox" value="" id="check435cdga">
+					<label class="form-check-label font-14" for="check435cdga">
+						<i class="fa fa-star position-relative start-0 color-yellow-dark me-n1" style="transform:translateY(-2px);"></i>
+						<i class="fa fa-star position-relative start-0 color-yellow-dark me-n1" style="transform:translateY(-2px);"></i>
+						<i class="fa fa-star position-relative start-0 color-gray-light me-n1" style="transform:translateY(-2px);"></i>
+						<i class="fa fa-star position-relative start-0 color-gray-light me-n1" style="transform:translateY(-2px);"></i>
+						<i class="fa fa-star position-relative start-0 color-gray-light me-n1" style="transform:translateY(-2px);"></i>
+					</label>
+					<i class="icon-check-1 far fa-circle color-gray-dark font-16"></i>
+					<i class="icon-check-2 fa fa-check-circle font-16 color-green-dark"></i>
+				</div>
+				<div class="form-check icon-check">
+					<input class="form-check-input" type="checkbox" value="" id="check435cdgb">
+					<label class="form-check-label font-14" for="check435cdgb">
+						<i class="fa fa-star position-relative start-0 color-yellow-dark me-n1" style="transform:translateY(-2px);"></i>
+						<i class="fa fa-star position-relative start-0 color-gray-light me-n1" style="transform:translateY(-2px);"></i>
+						<i class="fa fa-star position-relative start-0 color-gray-light me-n1" style="transform:translateY(-2px);"></i>
+						<i class="fa fa-star position-relative start-0 color-gray-light me-n1" style="transform:translateY(-2px);"></i>
+						<i class="fa fa-star position-relative start-0 color-gray-light me-n1" style="transform:translateY(-2px);"></i>
+					</label>
+					<i class="icon-check-1 far fa-circle color-gray-dark font-16"></i>
+					<i class="icon-check-2 fa fa-check-circle font-16 color-green-dark"></i>
+				</div>
+				<div class="mb-3"></div>
+			</div>
+		</div>
+		<div class="divider divider-margins mt-2 mb-4"></div>
+		<a href="#" class="close-menu btn btn-full mx-3 btn-m text-white rounded-sm font-700 text-uppercase" style="background-color: #FF0080;">Aplicar filtros</a>
+		<div class="divider divider-margins mt-4 mb-4"></div>
+
+	</div>
+
+ 
+  
+
+</div>
+
+
+
+
+<div class="offcanvas offcanvas-bottom" tabindex="-1" id="offcanvasBottom" aria-labelledby="offcanvasBottomLabel" style="height: auto;">
+	<div class="offcanvas-header">
+		<!--
+	  <h5 class="offcanvas-title" id="offcanvasBottomLabel">Acerca de la prenda</h5>
+		-->
+
+	  <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+	</div>
+	<div class="offcanvas-body small">
+
+		<h2>Renta de vestido</h2>
+
+		<img class="img-fluid" src="https://newname.mx/wp-content/uploads/2021/01/AVL7664-1.jpg" alt="Renta de vestido">
+	
+	  <p>Este hermoso vestido está disponible para alquiler. Es la elección perfecta para ocasiones especiales, como bodas, fiestas de gala y eventos elegantes. Destaca tu estilo con este vestido exclusivo.</p>
+	  <h3>Precio: <strong>€200</strong></h3>
+
+	  <hr>
+
+	  <button class="btn btn-dark" style="width: 100%;">Alquilar Ahora</button>
+	  <br>
+	</div>
+  </div>
+</div>
+</div>
+
+
+
+  <script type="text/javascript" src="scripts/bootstrap.min.js"></script>
+
+  
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js" integrity="sha384-7+zCNj/IqJ95wo16oMtfsKbZ9ccEh31eOz1HGyDuCQ6wgnyJNSYdrPa03rtR1zdB" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.min.js" integrity="sha384-QJHtvGhmr9XOIpI6YVutG+2QOK9T+ZnN4kzFN1RtK3zEFEIsxhlmWl5/YESvpZ13" crossorigin="anonymous"></script>
+
+
+  <!--
+<script type="text/javascript" src="scripts/bootstrap.min.js"></script>
+-->
+
+<script type="text/javascript" src="scripts/custom.js"></script>
+</body>
