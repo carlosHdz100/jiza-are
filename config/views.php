@@ -14,6 +14,12 @@ switch ($view) {
     case 'carrito':
         include('views/carrito.php');
         break;
+    case 'perfil':
+        include('views/perfil.php');
+        break;
+    case 'historial':
+        include('views/historial.php');
+        break;
     default:
         # ERROR DEBE VOLVER AL INICIO | no esta logueado
         redireccion();
