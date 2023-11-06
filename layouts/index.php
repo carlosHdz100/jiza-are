@@ -37,11 +37,10 @@
 
         <div id="footer-bar" class="footer-bar-1">
             <a href="?view="><i class="fa fa-home"></i><span>Inicio</span></a>
-            <a href="?view=categoria"><i class="fa fa-star"></i><span>Categorías</span></a>
-            <a href="#" class="active-nav"><i class="fa fa-heart"></i><span>Favoritos</span></a>
+            <a href="?view=categorias"><i class="fa fa-star"></i><span>Categorías</span></a>
+            <a href="?view=favoritos" class="active-nav"><i class="fa fa-heart"></i><span>Favoritos</span></a>
             <a href="?view=carrito"><i class="fa fa-shop"></i><span>carrito</span></a>
             <a href="#"><i class="fa fa-user"></i><span>Perfil</span></a>
-
         </div>
 
 

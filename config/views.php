@@ -20,6 +20,24 @@ switch ($view) {
     case 'historial':
         include('views/historial.php');
         break;
+    case 'vestido':
+        include('views/vestido.php');
+        break;
+    case 'camiseta':
+        include('views/camiseta.php');
+        break;
+    case 'bolso':
+        include('views/bolso.php');
+        break;
+    case 'zapato':
+        include('views/zapato.php');
+        break;
+    case 'gafa':
+        include('views/gafa.php');
+        break;
+    case 'favoritos':
+        include('views/favoritos.php');
+        break;
     default:
         # ERROR DEBE VOLVER AL INICIO | no esta logueado
         redireccion();

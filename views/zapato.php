@@ -1,9 +1,9 @@
 <div class="page-content pb-0">
 
-    <div class="card preload-img position-fixed w-100" data-card-height="450">
+    <!-- <div class="card preload-img position-fixed w-100" data-card-height="450"> -->
         <!-- Search -->
-        <div class="content mt-2 position-absolute start-0 end-0 mx-1">
-            <div class="notch-clear"></div>
+        <!-- <div class="content mt-2 position-absolute start-0 end-0 mx-1"> -->
+            <!-- <div class="notch-clear"></div> -->
             <div class="search-box bg-theme color-theme rounded-m shadow-l mx-2">
                 <i class="fa fa-search"></i>
                 <input type="text" class="border-0" placeholder="Qué estás buscando?" data-search>
@@ -46,17 +46,17 @@
 
 
 
-        </div>
+        <!-- </div> -->
         <!-- Placing iframe under the header-->
-        <iframe src="https://maps.google.com/maps?q=%Sidney%20Opera&t=k&z=17&ie=UTF8&iwloc=&output=embed" style="height:650px; margin-top:-200px;"></iframe>
-    </div>
+        <!-- <iframe src="https://maps.google.com/maps?q=%Sidney%20Opera&t=k&z=17&ie=UTF8&iwloc=&output=embed" style="height:650px; margin-top:-200px;"></iframe> -->
+    <!-- </div> -->
 
 
 
     <!-- Scroll Over Clear Effect-->
-    <div class="card bg-transparent shadow-0 border-0 mb-0 no-click" data-card-height="430" style="height: 430px;">
+    <!-- <div class="card bg-transparent shadow-0 border-0 mb-0 no-click" data-card-height="430" style="height: 430px;">
 
-    </div>
+    </div> -->
 
     <div class="card card-style mx-0 pb-5 pt-1">
         <div class="divider mx-auto mt-3 bg-gray-dark opacity-30 rounded-s mb-3" style="height:5px; width:50px;"></div>
@@ -70,269 +70,280 @@
             <div class="divider divider-margins mt-4"></div>
         </div>
 
-
-
-
-        <div id="tab-group">
-            <div class="card card-style bg-theme pb-0 mb-3">
-                <div class="tab-controls tabs-rounded tabs-large" data-highlight="bg-highlight">
-                    <a href="#" class="font-14 font-600" data-bs-toggle="collapse" data-bs-target="#tab-1" data-active><span class="opacity-80">Prendas</span></a>
-                    <a href="#" class="font-14 font-600" data-bs-toggle="collapse" data-bs-target="#tab-2"><span class="opacity-80">Paquetes</span></a>
-                    <!-- <a href="#" class="font-14 font-600" data-bs-toggle="collapse" data-bs-target="#tab-3"><span class="opacity-80">Accesorios</span></a> -->
-                </div>
-            </div>
-
-
-
-            <!-- Tab 1 -->
-            <div data-bs-parent="#tab-group" class="collapse show px-3" id="tab-1">
-
-
-
-
-                <div class="card card-style mx-0">
-                    <div class="card card-style mx-2 mt-2" data-card-height="400" style="background-image:url('https://newname.mx/wp-content/uploads/2021/01/AVL7664-1.jpg')">
-                        <div class="card-top p-3 pe-2 pt-2">
-                            <a href="#" data-toast="snackbar-favorites" class="float-end">
-                                <span class="bg-theme color-theme px-2 py-2 rounded-sm">
-                                    <i class="fa fa-heart color-red-dark pe-1"></i>
-                                    Fav
-                                </span>
-                            </a>
-                        </div>
-                    </div>
-                    <div class="content mt-n3">
-                        <div class="d-flex">
-                            <div class="me-auto align-self-center">
-                                <h2 class="mb-n1">Vestido de noche</h2>
-                                <span class="d-block color-green-dark font-700">Veces rentado: +10</span>
-                            </div>
-                            <div class="ms-auto align-self-center">
-                                <h1 class="pt-2">$32.<sup class="font-14 font-400 opacity-50">99</sup></h1>
-                            </div>
-                        </div>
-                        <p class="font-12 line-height-m pt-2 mb-2">
-                            Con este vestido de noche podrás tener una comodidad increíble, además de poder usarlo para cualquier ocasión. Estamos seguros que te encantará.
-                        </p>
-                        <div class="d-flex">
-                            <div class="align-self-center">
-                                <span>
-                                    <i class="fa fa-star font-12 color-yellow-dark pe-1"></i>
-                                    <i class="fa fa-star font-12 color-yellow-dark pe-1"></i>
-                                    <i class="fa fa-star font-12 color-yellow-dark pe-1"></i>
-                                    <i class="fa fa-star font-12 color-yellow-dark pe-1"></i>
-                                    <i class="fa fa-star font-12 color-yellow-dark pe-1"></i>
-                                </span>
-                                <span class="d-block opacity-70 font-11 mt-n2 color-theme">53 calificaciones</span>
-                            </div>
-                            <div class="align-self-center ms-auto">
-                                <a href="#" data-toast="snackbar-cart" class="btn btn-s bg-highlight rounded-sm font-700 text-uppercase" data-bs-toggle="offcanvas" data-bs-target="#offcanvasBottom" aria-controls="offcanvasBottom">Rentar ahora</a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-
-
-
-                <div class="card card-style mx-0">
-                    <div class="card card-style mx-2 mt-2" data-card-height="400" style="background-image:url('https://doce38boutique.com/wp-content/uploads/2023/09/VL8038-Vestido-largo-de-lentejuela-con-una-manga-asimetrico-cintura-drapeado-con-escarola-abertura-en-pierna-324x540.jpg')">
-                        <div class="card-top p-3 pe-2 pt-2">
-                            <a href="#" data-toast="snackbar-favorites" class="float-end">
-                                <span class="bg-theme color-theme px-2 py-2 rounded-sm">
-                                    <i class="fa fa-heart color-red-dark pe-1"></i>
-                                    Fav
-                                </span>
-                            </a>
-                        </div>
-                    </div>
-                    <div class="content mt-n3">
-                        <div class="d-flex">
-                            <div class="me-auto align-self-center">
-                                <h2 class="mb-n1">Vestido de noche</h2>
-                                <span class="d-block color-green-dark font-700">Veces rentado: +10</span>
-                            </div>
-                            <div class="ms-auto align-self-center">
-                                <h1 class="pt-2">$32.<sup class="font-14 font-400 opacity-50">99</sup></h1>
-                            </div>
-                        </div>
-                        <p class="font-12 line-height-m pt-2 mb-2">
-                            Con este vestido de noche podrás tener una comodidad increíble, además de poder usarlo para cualquier ocasión. Estamos seguros que te encantará.
-                        </p>
-                        <div class="d-flex">
-                            <div class="align-self-center">
-                                <span>
-                                    <i class="fa fa-star font-12 color-yellow-dark pe-1"></i>
-                                    <i class="fa fa-star font-12 color-yellow-dark pe-1"></i>
-                                    <i class="fa fa-star font-12 color-yellow-dark pe-1"></i>
-                                    <i class="fa fa-star font-12 color-yellow-dark pe-1"></i>
-                                    <i class="fa fa-star font-12 color-yellow-dark pe-1"></i>
-                                </span>
-                                <span class="d-block opacity-70 font-11 mt-n2 color-theme">53 calificaciones</span>
-                            </div>
-                            <div class="align-self-center ms-auto">
-                                <a href="#" data-toast="snackbar-cart" class="btn btn-s bg-highlight rounded-sm font-700 text-uppercase" data-bs-toggle="offcanvas" data-bs-target="#offcanvasBottom" aria-controls="offcanvasBottom">Rentar ahora</a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-
-
-
-
-
-            </div>
-
-
-
-            <!-- Tab 2 -->
-            <div data-bs-parent="#tab-group" class="collapse px-3" id="tab-2">
-                <div class="card card-style mx-0">
-                    <div class="content mt-3 mb-0">
-
-
-
-
-
-                        <div class="d-flex mb-3">
-                            <div class="w-100 me-3">
-                                <div class="card card-style m-0" data-card-height="250" style="background-image:url('https://cdn0.bodas.com.mx/cat/vestidos-fiesta/manu-garcia/mg3321--mt20_2x_566275.jpg')">
-                                    <div class="card-bottom text-center pb-2">
-                                        <a href="#" data-toast="snackbar-favorites" class="icon icon-xxs bg-theme rounded-l shadow-xl rounded-m mx-2 color-theme"><i class="fa fa-heart color-red-dark font-12"></i></a>
-                                        <a href="#" data-toast="snackbar-cart" class="icon icon-xxs bg-theme rounded-l shadow-xl rounded-m mx-2 color-theme"><i class="fa fa-shopping-bag font-12"></i></a>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="ms-auto w-100">
-                                <h5 class="font-600 font-16 line-height-sm">Vestido de Noche Elegante</h5>
-                                <span class="color-green-dark d-block font-11 font-600"><i class="fa fa-truck"></i> - Entrega en 2 días</span>
-                                <h2 class="pt-2 mt-n1">Renta desde $49.<sup class="font-14 font-400 opacity-50">99</sup></h2>
-                            </div>
-                        </div>
-
-                        <div class="divider mt-4 mb-4"></div>
-
-                        <div class="d-flex mb-3">
-                            <div class="w-100 me-3">
-                                <div class="card card-style m-0" data-card-height="250" style="background-image:url('https://m.media-amazon.com/images/I/41aujSgibbL._AC_SY580_.jpg')">
-                                    <div class="card-bottom text-center pb-3">
-                                        <a href="#" data-toast="snackbar-favorites" class="icon icon-xxs bg-theme rounded-l shadow-xl rounded-m mx-2 color-theme"><i class="fa fa-heart color-red-dark font-12"></i></a>
-                                    </div>
-                                </div>
-                            </div>
-
-                            <div class="ms-auto w-100">
-                                <span class="color-red-dark d-block font-11 font-600">Rentado</span>
-                                <h2 class="opacity-40 pb-2 mt-n1">Renta desde $79.<sup class="font-14 font-400 opacity-50">99</sup></h2>
-                                <h5 class="opacity-40 font-600 font-16 line-height-sm">Vestido de Gala Exclusivo</h5>
-                            </div>
-                        </div>
-
-                        <div class="divider mt-4 mb-4"></div>
-
-                        <div class="d-flex mb-3">
-                            <div class="w-100 me-3">
-                                <div class="card card-style m-0" data-card-height="250" style="background-image:url('https://www.pronovias.com/media/catalog/product/l/a/lace_2236_b.jpg?quality=80&bg-color=255,255,255&fit=bounds&height=747&width=560&canvas=560:747')">
-                                    <div class="card-top p-2">
-                                        <span class="bg-highlight p-2 py-1 rounded-sm font-13 font-600">-30%</span>
-                                    </div>
-                                    <div class="card-bottom text-center pb-3">
-                                        <a href="#" data-toast="snackbar-favorites" class="icon icon-xxs bg-theme rounded-l shadow-xl rounded-m mx-2 color-theme"><i class="fa fa-heart color-red-dark font-12"></i></a>
-                                        <a href="#" data-toast="snackbar-cart" class="icon icon-xxs bg-theme rounded-l shadow-xl rounded-m mx-2 color-theme"><i class="fa fa-shopping-bag font-12"></i></a>
-                                    </div>
-                                </div>
-                            </div>
-
-                            <div class="ms-auto w-100">
-                                <span class="color-blue-dark d-block font-11 font-600">Destacado</span>
-                                <h2 class="pb-3 mt-n1">Renta desde $104.<sup class="font-14 font-400 opacity-50">99</sup></h2>
-                                <h5 class="font-600 font-16 line-height-sm">Vestido de Novia con Detalles Exquisitos</h5>
-                            </div>
-                        </div>
-
-
-
-
-                    </div>
-
-                </div>
-            </div>
-
-
-
-
-            <!-- Tab 3 -->
-            <!-- <div data-bs-parent="#tab-group" class="collapse" id="tab-3">
-                <div class="card card-style mx-3">
-                    <div class="content">
-                        <div class="row mb-0">
-
-
-
-
-
-                            <div class="col-6">
-                                <div class="card card-style m-0" data-card-height="140" style="background-image:url('https://i5.walmartimages.com.mx/mg/gm/3pp/asr/42cd59bb-a09b-40fb-9985-efd30ac36961.85cd13959dfa6ff3aba7620e05079696.jpeg?odnHeight=612&odnWidth=612&odnBg=FFFFFF')">
-                                    <div class="card-top p-2">
-                                        <span class="bg-highlight p-2 py-1 rounded-sm font-13 font-600">-50%</span>
-                                    </div>
-                                    <div class="card-bottom text-center pb-3">
-                                        <a href="#" data-toast="snackbar-favorites" class="icon icon-xxs bg-theme rounded-l shadow-xl rounded-m mx-2 color-theme"><i class="fa fa-heart color-red-dark font-12"></i></a>
-                                        <a href="#" data-toast="snackbar-cart" class="icon icon-xxs bg-theme rounded-l shadow-xl rounded-m mx-2 color-theme"><i class="fa fa-shopping-bag font-12"></i></a>
-                                    </div>
-                                </div>
-                                <h5 class="font-600 font-16 line-height-sm pt-3">Collar Elegante para Vestidos</h5>
-                                <span class="color-blue-dark d-block font-11 font-600">Destacado esta Semana</span>
-                                <h2 class="pb-3 mt-n1">$34.<sup class="font-14 font-400 opacity-50">99</sup></h2>
-                            </div>
-
-                            <div class="col-6">
-                                <div class="card card-style m-0 bg-28" data-card-height="140" style="background-image:url('https://exoticaonline.mx/18226-large_default/diadema-ancha-cristal.jpg')">
-                                    <div class="card-top p-2">
-                                        <span class="bg-red-dark p-2 py-1 rounded-sm font-13 font-600">-50%</span>
-                                    </div>
-                                    <div class="card-bottom text-center pb-3">
-                                        <a href="#" data-toast="snackbar-favorites" class="icon icon-xxs bg-theme rounded-l shadow-xl rounded-m mx-2 color-theme"><i class="fa fa-heart color-red-dark font-12"></i></a>
-                                        <a href="#" data-toast="snackbar-cart" class="icon icon-xxs bg-theme rounded-l shadow-xl rounded-m mx-2 color-theme"><i class="fa fa-shopping-bag font-12"></i></a>
-                                    </div>
-                                </div>
-                                <h5 class="font-600 font-16 line-height-sm pt-3">Diadema de Cristales para Ropa de Noche</h5>
-                                <span class="color-red-dark d-block font-11 font-600">No disponible</span>
-                                <h2 class="pb-3 mt-n1">$14.<sup class="font-14 font-400 opacity-50">99</sup></h2>
-                            </div>
-                            <div class="col-12">
-                                <div class="divider mt-2 mb-4"></div>
-                            </div>
-
-                            <div class="col-6">
-                                <div class="card card-style m-0 bg-21" data-card-height="140" style="background-image:url('https://i5.walmartimages.com.mx/mg/gm/3pp/asr/e0af7907-1591-40f3-8f6c-c72211e58187.648dc2338b8536fdfa1693502a28c853.jpeg?odnHeight=612&odnWidth=612&odnBg=FFFFFF')">
-                                    <div class="card-bottom text-center pb-3">
-                                        <a href="#" data-toast="snackbar-favorites" class="icon icon-xxs bg-theme rounded-l shadow-xl rounded-m mx-2 color-theme"><i class="fa fa-heart color-red-dark font-12"></i></a>
-                                        <a href="#" data-toast="snackbar-cart" class="icon icon-xxs bg-theme rounded-l shadow-xl rounded-m mx-2 color-theme"><i class="fa fa-shopping-bag font-12"></i></a>
-                                    </div>
-                                </div>
-                                <h5 class="font-600 font-16 line-height-sm pt-3">Cinturón de Diseño para Vestidos</h5>
-                                <span class="color-green-dark d-block font-11 font-600">Disponible</span>
-                                <h2 class="mt-n1">$23.<sup class="font-14 font-400 opacity-50">99</sup></h2>
-                            </div>
-
-                            <div class="col-6">
-                                <div class="card card-style m-0 bg-8" data-card-height="140" style="background-image:url('https://m.media-amazon.com/images/I/71AlglSGrhL._AC_UY580_.jpg')">
-                                    <div class="card-bottom text-center pb-3">
-                                        <a href="#" data-toast="snackbar-favorites" class="icon icon-xxs bg-theme rounded-l shadow-xl rounded-m mx-2 color-theme"><i class="fa fa-heart color-red-dark font-12"></i></a>
-                                    </div>
-                                </div>
-                                <h5 class="opacity-40 font-600 font-16 line-height-sm pt-3">Bolsa de Ropa para Viajes</h5>
-                                <span class="color-red-dark d-block font-11 font-600">No disponible</span>
-                                <h2 class="opacity-40 pb-2 mt-n1">$47.<sup class="font-14 font-400 opacity-50">99</sup></h2>
-                            </div>
-
-                        </div>
-                    </div>
-                </div>
-            </div> -->
+        <div class="card card-style">
+        <div class="content">
+            <h3>Zapatos</h3>
+            <!-- <p>
+                Elige una de las categorías qeu tenemos para encontrar alguna prenda a rentar.
+            </p> -->
         </div>
+    </div>
+
+
+
+        <div class="row mb-0">
+    
+
+            <div class="card card-style mx-0 col-12 col-md-6 col-lg-4">
+                <div class="card card-style mx-2 mt-2" data-card-height="400" style="background-image:url('https://img.freepik.com/foto-gratis/mujer-joven-hermosa-estilo-hipster-chaqueta-cuero-rosa_285396-3265.jpg?size=626&ext=jpg&ga=GA1.1.649413161.1697839706&semt=sph')">
+                    <div class="card-top p-3 pe-2 pt-2">
+                        <a href="#" data-toast="snackbar-favorites" class="float-end">
+                            <span class="bg-theme color-theme px-2 py-2 rounded-sm">
+                                <i class="fa fa-heart color-red-dark pe-1"></i>
+                                Fav
+                            </span>
+                        </a>
+                    </div>
+                </div>
+                <div class="content mt-n3">
+                    <div class="d-flex">
+                        <div class="me-auto align-self-center">
+                            <h2 class="mb-n1">Zapato 1</h2>
+                            <span class="d-block color-green-dark font-700">Veces rentado: +10</span>
+                        </div>
+                        <div class="ms-auto align-self-center">
+                            <h1 class="pt-2">$32.<sup class="font-14 font-400 opacity-50">99</sup></h1>
+                        </div>
+                    </div>
+                    <p class="font-12 line-height-m pt-2 mb-2">
+                        Con este zapato podrás tener una comodidad increíble, además de poder usarlo para cualquier ocasión. Estamos seguros que te encantará.
+                    </p>
+                    <div class="d-flex">
+                        <div class="align-self-center">
+                            <span>
+                                <i class="fa fa-star font-12 color-yellow-dark pe-1"></i>
+                                <i class="fa fa-star font-12 color-yellow-dark pe-1"></i>
+                                <i class="fa fa-star font-12 color-yellow-dark pe-1"></i>
+                                <i class="fa fa-star font-12 color-yellow-dark pe-1"></i>
+                                <i class="fa fa-star font-12 color-yellow-dark pe-1"></i>
+                            </span>
+                            <span class="d-block opacity-70 font-11 mt-n2 color-theme">53 calificaciones</span>
+                        </div>
+                        <div class="align-self-center ms-auto">
+                            <a href="#" data-toast="snackbar-cart" class="btn btn-s bg-highlight rounded-sm font-700 text-uppercase" data-bs-toggle="offcanvas" data-bs-target="#offcanvasBottom" aria-controls="offcanvasBottom">Rentar ahora</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+            <div class="card card-style mx-0 col-12 col-md-6 col-lg-4">
+                <div class="card card-style mx-2 mt-2" data-card-height="400" style="background-image:url('https://img.freepik.com/foto-gratis/cerrar-detalles-piernas-sandalias-rosas-mujer-sentada-escaleras-calle-ciudad-elegante-falda-estampada-mochila-cuero-tendencia-estilo-veraniego_285396-2922.jpg?size=626&ext=jpg&ga=GA1.1.649413161.1697839706&semt=ais')">
+                    <div class="card-top p-3 pe-2 pt-2">
+                        <a href="#" data-toast="snackbar-favorites" class="float-end">
+                            <span class="bg-theme color-theme px-2 py-2 rounded-sm">
+                                <i class="fa fa-heart color-red-dark pe-1"></i>
+                                Fav
+                            </span>
+                        </a>
+                    </div>
+                </div>
+                <div class="content mt-n3">
+                    <div class="d-flex">
+                        <div class="me-auto align-self-center">
+                            <h2 class="mb-n1">Zapato 2</h2>
+                            <span class="d-block color-green-dark font-700">Veces rentado: +10</span>
+                        </div>
+                        <div class="ms-auto align-self-center">
+                            <h1 class="pt-2">$32.<sup class="font-14 font-400 opacity-50">99</sup></h1>
+                        </div>
+                    </div>
+                    <p class="font-12 line-height-m pt-2 mb-2">
+                        Con este zapato de podrás tener una comodidad increíble, además de poder usarlo para cualquier ocasión. Estamos seguros que te encantará.
+                    </p>
+                    <div class="d-flex">
+                        <div class="align-self-center">
+                            <span>
+                                <i class="fa fa-star font-12 color-yellow-dark pe-1"></i>
+                                <i class="fa fa-star font-12 color-yellow-dark pe-1"></i>
+                                <i class="fa fa-star font-12 color-yellow-dark pe-1"></i>
+                                <i class="fa fa-star font-12 color-yellow-dark pe-1"></i>
+                                <i class="fa fa-star font-12 color-yellow-dark pe-1"></i>
+                            </span>
+                            <span class="d-block opacity-70 font-11 mt-n2 color-theme">53 calificaciones</span>
+                        </div>
+                        <div class="align-self-center ms-auto">
+                            <a href="#" data-toast="snackbar-cart" class="btn btn-s bg-highlight rounded-sm font-700 text-uppercase" data-bs-toggle="offcanvas" data-bs-target="#offcanvasBottom" aria-controls="offcanvasBottom">Rentar ahora</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+            <div class="card card-style mx-0 col-12 col-md-6 col-lg-4">
+                <div class="card card-style mx-2 mt-2" data-card-height="400" style="background-image:url('https://img.freepik.com/foto-gratis/cerrar-detalles-piernas-sandalias-rosas-mujer-sentada-escaleras-calle-ciudad-elegante-falda-estampada-mochila-cuero-tendencia-estilo-veraniego_285396-2922.jpg?size=626&ext=jpg&ga=GA1.1.649413161.1697839706&semt=ais')">
+                    <div class="card-top p-3 pe-2 pt-2">
+                        <a href="#" data-toast="snackbar-favorites" class="float-end">
+                            <span class="bg-theme color-theme px-2 py-2 rounded-sm">
+                                <i class="fa fa-heart color-red-dark pe-1"></i>
+                                Fav
+                            </span>
+                        </a>
+                    </div>
+                </div>
+                <div class="content mt-n3">
+                    <div class="d-flex">
+                        <div class="me-auto align-self-center">
+                            <h2 class="mb-n1">Zapato 2</h2>
+                            <span class="d-block color-green-dark font-700">Veces rentado: +10</span>
+                        </div>
+                        <div class="ms-auto align-self-center">
+                            <h1 class="pt-2">$32.<sup class="font-14 font-400 opacity-50">99</sup></h1>
+                        </div>
+                    </div>
+                    <p class="font-12 line-height-m pt-2 mb-2">
+                        Con este zapato de podrás tener una comodidad increíble, además de poder usarlo para cualquier ocasión. Estamos seguros que te encantará.
+                    </p>
+                    <div class="d-flex">
+                        <div class="align-self-center">
+                            <span>
+                                <i class="fa fa-star font-12 color-yellow-dark pe-1"></i>
+                                <i class="fa fa-star font-12 color-yellow-dark pe-1"></i>
+                                <i class="fa fa-star font-12 color-yellow-dark pe-1"></i>
+                                <i class="fa fa-star font-12 color-yellow-dark pe-1"></i>
+                                <i class="fa fa-star font-12 color-yellow-dark pe-1"></i>
+                            </span>
+                            <span class="d-block opacity-70 font-11 mt-n2 color-theme">53 calificaciones</span>
+                        </div>
+                        <div class="align-self-center ms-auto">
+                            <a href="#" data-toast="snackbar-cart" class="btn btn-s bg-highlight rounded-sm font-700 text-uppercase" data-bs-toggle="offcanvas" data-bs-target="#offcanvasBottom" aria-controls="offcanvasBottom">Rentar ahora</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+            <div class="card card-style mx-0 col-12 col-md-6 col-lg-4">
+                <div class="card card-style mx-2 mt-2" data-card-height="400" style="background-image:url('https://img.freepik.com/foto-gratis/mujer-joven-hermosa-estilo-hipster-chaqueta-cuero-rosa_285396-3265.jpg?size=626&ext=jpg&ga=GA1.1.649413161.1697839706&semt=sph')">
+                    <div class="card-top p-3 pe-2 pt-2">
+                        <a href="#" data-toast="snackbar-favorites" class="float-end">
+                            <span class="bg-theme color-theme px-2 py-2 rounded-sm">
+                                <i class="fa fa-heart color-red-dark pe-1"></i>
+                                Fav
+                            </span>
+                        </a>
+                    </div>
+                </div>
+                <div class="content mt-n3">
+                    <div class="d-flex">
+                        <div class="me-auto align-self-center">
+                            <h2 class="mb-n1">Zapato 1</h2>
+                            <span class="d-block color-green-dark font-700">Veces rentado: +10</span>
+                        </div>
+                        <div class="ms-auto align-self-center">
+                            <h1 class="pt-2">$32.<sup class="font-14 font-400 opacity-50">99</sup></h1>
+                        </div>
+                    </div>
+                    <p class="font-12 line-height-m pt-2 mb-2">
+                        Con este zapato podrás tener una comodidad increíble, además de poder usarlo para cualquier ocasión. Estamos seguros que te encantará.
+                    </p>
+                    <div class="d-flex">
+                        <div class="align-self-center">
+                            <span>
+                                <i class="fa fa-star font-12 color-yellow-dark pe-1"></i>
+                                <i class="fa fa-star font-12 color-yellow-dark pe-1"></i>
+                                <i class="fa fa-star font-12 color-yellow-dark pe-1"></i>
+                                <i class="fa fa-star font-12 color-yellow-dark pe-1"></i>
+                                <i class="fa fa-star font-12 color-yellow-dark pe-1"></i>
+                            </span>
+                            <span class="d-block opacity-70 font-11 mt-n2 color-theme">53 calificaciones</span>
+                        </div>
+                        <div class="align-self-center ms-auto">
+                            <a href="#" data-toast="snackbar-cart" class="btn btn-s bg-highlight rounded-sm font-700 text-uppercase" data-bs-toggle="offcanvas" data-bs-target="#offcanvasBottom" aria-controls="offcanvasBottom">Rentar ahora</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+            <div class="card card-style mx-0 col-12 col-md-6 col-lg-4">
+                <div class="card card-style mx-2 mt-2" data-card-height="400" style="background-image:url('https://img.freepik.com/foto-gratis/cerrar-detalles-piernas-sandalias-rosas-mujer-sentada-escaleras-calle-ciudad-elegante-falda-estampada-mochila-cuero-tendencia-estilo-veraniego_285396-2922.jpg?size=626&ext=jpg&ga=GA1.1.649413161.1697839706&semt=ais')">
+                    <div class="card-top p-3 pe-2 pt-2">
+                        <a href="#" data-toast="snackbar-favorites" class="float-end">
+                            <span class="bg-theme color-theme px-2 py-2 rounded-sm">
+                                <i class="fa fa-heart color-red-dark pe-1"></i>
+                                Fav
+                            </span>
+                        </a>
+                    </div>
+                </div>
+                <div class="content mt-n3">
+                    <div class="d-flex">
+                        <div class="me-auto align-self-center">
+                            <h2 class="mb-n1">Zapato 2</h2>
+                            <span class="d-block color-green-dark font-700">Veces rentado: +10</span>
+                        </div>
+                        <div class="ms-auto align-self-center">
+                            <h1 class="pt-2">$32.<sup class="font-14 font-400 opacity-50">99</sup></h1>
+                        </div>
+                    </div>
+                    <p class="font-12 line-height-m pt-2 mb-2">
+                        Con este zapato de podrás tener una comodidad increíble, además de poder usarlo para cualquier ocasión. Estamos seguros que te encantará.
+                    </p>
+                    <div class="d-flex">
+                        <div class="align-self-center">
+                            <span>
+                                <i class="fa fa-star font-12 color-yellow-dark pe-1"></i>
+                                <i class="fa fa-star font-12 color-yellow-dark pe-1"></i>
+                                <i class="fa fa-star font-12 color-yellow-dark pe-1"></i>
+                                <i class="fa fa-star font-12 color-yellow-dark pe-1"></i>
+                                <i class="fa fa-star font-12 color-yellow-dark pe-1"></i>
+                            </span>
+                            <span class="d-block opacity-70 font-11 mt-n2 color-theme">53 calificaciones</span>
+                        </div>
+                        <div class="align-self-center ms-auto">
+                            <a href="#" data-toast="snackbar-cart" class="btn btn-s bg-highlight rounded-sm font-700 text-uppercase" data-bs-toggle="offcanvas" data-bs-target="#offcanvasBottom" aria-controls="offcanvasBottom">Rentar ahora</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+            <div class="card card-style mx-0 col-12 col-md-6 col-lg-4">
+                <div class="card card-style mx-2 mt-2" data-card-height="400" style="background-image:url('https://img.freepik.com/foto-gratis/cerrar-detalles-piernas-sandalias-rosas-mujer-sentada-escaleras-calle-ciudad-elegante-falda-estampada-mochila-cuero-tendencia-estilo-veraniego_285396-2922.jpg?size=626&ext=jpg&ga=GA1.1.649413161.1697839706&semt=ais')">
+                    <div class="card-top p-3 pe-2 pt-2">
+                        <a href="#" data-toast="snackbar-favorites" class="float-end">
+                            <span class="bg-theme color-theme px-2 py-2 rounded-sm">
+                                <i class="fa fa-heart color-red-dark pe-1"></i>
+                                Fav
+                            </span>
+                        </a>
+                    </div>
+                </div>
+                <div class="content mt-n3">
+                    <div class="d-flex">
+                        <div class="me-auto align-self-center">
+                            <h2 class="mb-n1">Zapato 2</h2>
+                            <span class="d-block color-green-dark font-700">Veces rentado: +10</span>
+                        </div>
+                        <div class="ms-auto align-self-center">
+                            <h1 class="pt-2">$32.<sup class="font-14 font-400 opacity-50">99</sup></h1>
+                        </div>
+                    </div>
+                    <p class="font-12 line-height-m pt-2 mb-2">
+                        Con este zapato de podrás tener una comodidad increíble, además de poder usarlo para cualquier ocasión. Estamos seguros que te encantará.
+                    </p>
+                    <div class="d-flex">
+                        <div class="align-self-center">
+                            <span>
+                                <i class="fa fa-star font-12 color-yellow-dark pe-1"></i>
+                                <i class="fa fa-star font-12 color-yellow-dark pe-1"></i>
+                                <i class="fa fa-star font-12 color-yellow-dark pe-1"></i>
+                                <i class="fa fa-star font-12 color-yellow-dark pe-1"></i>
+                                <i class="fa fa-star font-12 color-yellow-dark pe-1"></i>
+                            </span>
+                            <span class="d-block opacity-70 font-11 mt-n2 color-theme">53 calificaciones</span>
+                        </div>
+                        <div class="align-self-center ms-auto">
+                            <a href="#" data-toast="snackbar-cart" class="btn btn-s bg-highlight rounded-sm font-700 text-uppercase" data-bs-toggle="offcanvas" data-bs-target="#offcanvasBottom" aria-controls="offcanvasBottom">Rentar ahora</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+    
+
+        </div>
+        
 
 
         <div class="d-flex px-3 mb-n3">
@@ -346,18 +357,15 @@
 
         <div class="splide double-slider slider-no-dots visible-slider" id="double-slider-1a">
             <div class="splide__track">
-
-
-
                 <div class="splide__list">
                     <div class="splide__slide">
                         <a href="#" class="mx-3" data-menu="menu-reserve" data-bs-toggle="offcanvas" data-bs-target="#offcanvasBottom" aria-controls="offcanvasBottom">
-                            <div class="card card-style me-0 mb-0" style="background-image:url(https://barocsshop.com/wp-content/uploads/2023/06/vestido-cloeh-f.jpg);" data-card-height="250">
+                            <div class="card card-style me-0 mb-0" style="background-image:url(https://img.freepik.com/fotos-premium/modelo-posando-estudio-modelo-abrigo-negro-zapatos_444642-784.jpg?size=626&ext=jpg&ga=GA1.1.649413161.1697839706&semt=ais);" data-card-height="250">
                                 <div class="card-top p-2">
                                     <span class="bg-red-dark color-white px-2 py-1 rounded-xs font-11 font-700">-10%</span>
                                 </div>
                                 <div class="card-bottom p-2 px-2">
-                                    <h4 class="color-white line-height-s">Conjunto vestido</h4>
+                                    <h4 class="color-white line-height-s">Zapato</h4>
                                     <span class="color-white font-10 opacity-60"><i class="fa fa-map-marker pe-2"></i>Ibiza, españa</span>
                                 </div>
                                 <div class="card-overlay bg-gradient"></div>
@@ -365,29 +373,24 @@
                         </a>
                     </div>
 
-
-
                     <div class="splide__slide">
                         <a href="#" class="mx-3" data-menu="menu-reserve" data-bs-toggle="offcanvas" data-bs-target="#offcanvasBottom" aria-controls="offcanvasBottom">
-                            <div class="card card-style me-0 mb-0" style="background-image:url(https://cdn0.bodas.com.mx/cat/vestidos-fiesta/manu-garcia/mg3321--mt20_2x_566275.jpg);" data-card-height="250">
+                            <div class="card card-style me-0 mb-0" style="background-image:url(https://img.freepik.com/foto-gratis/zapatos_1303-3769.jpg?size=626&ext=jpg&ga=GA1.1.649413161.1697839706&semt=ais);" data-card-height="250">
                                 <div class="card-top p-2">
                                     <span class="color-white bg-blue-dark px-2 py-1 rounded-xs font-11 font-700">RENTA</span>
                                 </div>
                                 <div class="card-bottom p-2 px-2">
-                                    <h4 class="color-white line-height-s">Prenda minimalista</h4>
+                                    <h4 class="color-white line-height-s">Zapato</h4>
                                     <span class="color-white font-10 opacity-60"><i class="fa fa-map-marker pe-2"></i>Ibiza, España</span>
                                 </div>
                                 <div class="card-overlay bg-gradient"></div>
                             </div>
                         </a>
                     </div>
-
                 </div>
             </div>
         </div>
     </div>
-
-
 </div>
 
 <!-- Menu Sidebar Sidebar Filters-->
@@ -585,7 +588,7 @@
 </div>
 
 
-<!-- Rentar -->
+<!-- Rentar-->
 <div class="offcanvas offcanvas-bottom" tabindex="-1" id="offcanvasBottom" aria-labelledby="offcanvasBottomLabel" style="height: auto;">
     <div class="offcanvas-header">
 
@@ -593,19 +596,19 @@
     </div>
     <div class="offcanvas-body small">
 
-        <h2>Vestido</h2>
+        <h2>Zapato</h2>
 
         <!-- <img class="img-fluid w-100" src="https://img.freepik.com/foto-gratis/camisa-blanca-palabra-t-ella_1340-25481.jpg?size=626&ext=jpg&ga=GA1.1.649413161.1697839706&semt=sph" alt="Renta de vestido"> -->
         <div id="carouselExample" class="carousel slide">
             <div class="carousel-inner">
                 <div class="carousel-item active">
-                <img src="https://newname.mx/wp-content/uploads/2021/01/AVL7664-1.jpg" class="d-block w-100" alt="...">
+                <img src="https://img.freepik.com/fotos-premium/hermosos-zapatos-femeninos-rojos-sobre-fondo-azul_392895-297419.jpg?size=626&ext=jpg&ga=GA1.1.649413161.1697839706&semt=ais" class="d-block w-100" alt="...">
                 </div>
                 <div class="carousel-item">
-                <img src="https://newname.mx/wp-content/uploads/2021/01/AVL7664-1.jpg" class="d-block w-100" alt="...">
+                <img src="https://img.freepik.com/fotos-premium/hermosos-zapatos-femeninos-rojos-sobre-fondo-azul_392895-297419.jpg?size=626&ext=jpg&ga=GA1.1.649413161.1697839706&semt=ais" class="d-block w-100" alt="...">
                 </div>
                 <div class="carousel-item">
-                <img src="https://newname.mx/wp-content/uploads/2021/01/AVL7664-1.jpg" class="d-block w-100" alt="...">
+                <img src="https://img.freepik.com/fotos-premium/hermosos-zapatos-femeninos-rojos-sobre-fondo-azul_392895-297419.jpg?size=626&ext=jpg&ga=GA1.1.649413161.1697839706&semt=ais" class="d-block w-100" alt="...">
                 </div>
             </div>
             <button class="carousel-control-prev" type="button" data-bs-target="#carouselExample" data-bs-slide="prev">
@@ -620,7 +623,7 @@
 
         <span class="d-block color-green-dark font-700">Veces rentado: +10</span>
        
-        <p class="mb-2">Este hermoso vestido está disponible para alquiler. Es la elección perfecta para ocasiones especiales, como bodas, fiestas de gala y eventos elegantes. Destaca tu estilo con este vestido exclusivo.</p>
+        <p class="mb-2">Este zapato está disponible para alquiler. Es la elección perfecta para ocasiones especiales, como bodas, fiestas de gala y eventos elegantes. Destaca tu estilo con este zapato exclusivo.</p>
         
         <div class="align-self-center">
             <span>
