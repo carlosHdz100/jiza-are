@@ -59,7 +59,7 @@
     </div> -->
 
     <div class="card card-style mx-0 pb-5 pt-1">
-        <div class="divider mx-auto mt-3 bg-gray-dark opacity-30 rounded-s mb-3" style="height:5px; width:50px;"></div>
+        <!-- <div class="divider mx-auto mt-3 bg-gray-dark opacity-30 rounded-s mb-3" style="height:5px; width:50px;"></div> -->
         <div class="search-no-results disabled mt-n3">
             <div class="content bg-red-dark p-3 rounded-m">
                 <h1 class="color-white">Sin resultados</h1>
@@ -639,7 +639,11 @@
 
         <hr>
 
-        <button class="btn btn-dark" style="width: 100%;">Alquilar Ahora</button>
+        <div id="liveAlertPlaceholder"></div>
+        <button type="button" class="btn btn-dark"  id="agregarAlCarrito" style="width: 100%;">Agregar al carrito</button>
         <br>
     </div>
 </div>
+
+
+<script src="assets/scripts/alerta-carrito.js"></script>

@@ -59,7 +59,7 @@
     </div> -->
 
     <div class="card card-style mx-0 pb-5 pt-1">
-        <div class="divider mx-auto mt-3 bg-gray-dark opacity-30 rounded-s mb-3" style="height:5px; width:50px;"></div>
+        <!-- <div class="divider mx-auto mt-3 bg-gray-dark opacity-30 rounded-s mb-3" style="height:5px; width:50px;"></div> -->
         <div class="search-no-results disabled mt-n3">
             <div class="content bg-red-dark p-3 rounded-m">
                 <h1 class="color-white">Sin resultados</h1>
@@ -87,9 +87,14 @@
             <div class="card card-style mx-0 col-12 col-md-6 col-lg-4">
                 <div class="card card-style mx-2 mt-2" data-card-height="400" style="background-image:url('https://newname.mx/wp-content/uploads/2021/01/AVL7664-1.jpg')">
                     <div class="card-top p-3 pe-2 pt-2">
-                        <a href="#" data-toast="snackbar-favorites" class="float-end">
-                            <span class="bg-theme color-theme px-2 py-2 rounded-sm">
+                        <div id="liveAlertPlaceholder2"></div>
+                        <a href="#" id="agregarAFavoritos" data-toast="snackbar-favorites" class="float-end">
+                            <span class="bg-theme color-theme px-2 py-2 rounded-sm hidden" id="icon1">
                                 <i class="fa fa-heart color-red-dark pe-1"></i>
+                                Fav
+                            </span>
+                            <span class="bg-theme color-theme px-2 py-2 rounded-sm" id="icon2">
+                                <i class="fa fa-heart color-dark pe-1"></i>
                                 Fav
                             </span>
                         </a>
@@ -637,8 +642,13 @@
         <h3>Precio: <strong>€200</strong></h3>
 
         <hr>
-
-        <button class="btn btn-dark" style="width: 100%;">Alquilar Ahora</button>
+        
+        <div id="liveAlertPlaceholder"></div>
+        <button type="button" class="btn btn-dark" id="agregarAlCarrito" style="width: 100%;">Agregar al carrito</button>
         <br>
     </div>
 </div>
+
+
+<script src="assets/scripts/alerta-carrito.js"></script>
+<script src="assets/scripts/alerta-favorito.js"></script>
