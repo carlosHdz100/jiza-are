@@ -636,7 +636,11 @@
 
         <hr>
 
-        <button class="btn btn-dark" style="width: 100%;">Alquilar Ahora</button>
+        <div id="liveAlertPlaceholder"></div>
+        <button type="button" class="btn btn-dark"  id="agregarAlCarrito" style="width: 100%;">Agregar al carrito</button>
         <br>
     </div>
 </div>
+
+
+<script src="assets/scripts/alerta-carrito.js"></script>

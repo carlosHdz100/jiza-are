@@ -38,6 +38,9 @@ switch ($view) {
     case 'favoritos':
         include('views/favoritos.php');
         break;
+    case 'accionesymodales':
+        include('views/accionesymodales.php');
+        break;
     default:
         # ERROR DEBE VOLVER AL INICIO | no esta logueado
         redireccion();

@@ -12,6 +12,7 @@
 
     <link rel="stylesheet" type="text/css" href="assets/styles/bootstrap.css">
     <link rel="stylesheet" type="text/css" href="assets/styles/style.css">
+    <link rel="stylesheet" type="text/css" href="assets/styles/plantilla.css">
 
     <link href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,500,500i,700,700i,900,900i|Source+Sans+Pro:300,300i,400,400i,600,600i,700,700i,900,900i&display=swap" rel="stylesheet">
     <link rel="stylesheet" type="text/css" href="assets/fonts/css/fontawesome-all.min.css">
