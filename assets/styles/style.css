@@ -20,7 +20,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 h1 {
-  font-size: 24px;
+  font-size: 30px;
   line-height: 30px;
 }
 
@@ -162,7 +162,8 @@ body {
   height: calc(50px + env(safe-area-inset-top) * 0.8) !important;
   z-index: 99;
   transition: all 350ms ease;
-  background-color: #FFF;
+  /* background-color: #FFF; */
+  background-color: #FF0080;
   border-bottom: solid 1px rgba(0, 0, 0, 0.03);
   box-shadow: 0 4px 18px 0 rgba(0, 0, 0, 0.08);
 }
