@@ -2,26 +2,27 @@
 
     <div class="card card-style">
         <div class="content">
-            <h2>Your Order</h2>
-            <p>
-                Finished Shopping? Let's checkout! Remember, this is just a template!
-            </p>
+            <h2>Articulos</h2>
+
             <div class="d-flex mb-4">
                 <div>
-                    <img src="images/food/full/1s.jpg" class="rounded-m shadow-xl" width="80">
+                    <img src="https://www.pronovias.com/media/catalog/product/l/a/lace_2236_b.jpg?quality=80&bg-color=255,255,255&fit=bounds&height=747&width=560&canvas=560:747" class="rounded-m shadow-xl" width="80">
                 </div>
                 <div class="ms-3">
-                    <h5 class="font-600 opacity-50">Royal Burger with Extra Cheese and no Onions</h5>
+                    <h5 class="font-600 opacity-50">Vestido de noche</h5>
                     <h4 class="pt-1 color-highlight">$29.<sup>99</sup></h4>
+                    <span class="text-muted">(3 dias)</span>
                 </div>
             </div>
             <div class="d-flex">
                 <div>
-                    <img src="images/food/full/2s.jpg" class="rounded-m shadow-xl" width="80">
+                    <img src="https://img.freepik.com/foto-gratis/vista-frontal-gafas-sol-arena-playa_23-2148557643.jpg?size=626&ext=jpg&ga=GA1.1.649413161.1697839706&semt=ais" class="rounded-m shadow-xl" width="80">
                 </div>
                 <div class="ms-3">
-                    <h5 class="font-600 opacity-50">House Special Pizza with Grilled Cheese</h5>
-                    <h4 class="pt-1 color-highlight">$24<sup>99</sup></h4>
+                    <h5 class="font-600 opacity-50">Lentes de sol</h5>
+                    <h4 class="pt-1 color-highlight">$4<sup>99</sup></h4>
+                    <span class="text-muted">(4 dias)</span>
+
                 </div>
             </div>
         </div>
@@ -29,71 +30,34 @@
 
     <div class="card card-style">
         <div class="content">
-            <h2 class="mb-0">
-                Billing Information
-            </h2>
-            <p>
-                Finished Shopping? Let's checkout! Remember, this is just a template!
-            </p>
-
-            <div class="input-style has-borders no-icon validate-field">
-                <input type="text" class="form-control focus-blue validate-text" id="f1" placeholder="First Name">
-                <label for="f1" class="color-blue-dark">First Name</label>
-                <i class="fa fa-times disabled invalid color-red-dark"></i>
-                <i class="fa fa-check disabled valid color-green-dark"></i>
-                <em>(required)</em>
-            </div>
-            <div class="input-style has-borders no-icon validate-field">
-                <input type="text" class="form-control focus-blue validate-text" id="f1a" placeholder="Last Name">
-                <label for="f1a" class="color-blue-dark">Last Name</label>
-                <i class="fa fa-times disabled invalid color-red-dark"></i>
-                <i class="fa fa-check disabled valid color-green-dark"></i>
-                <em>(required)</em>
-            </div>
-            <div class="input-style has-borders no-icon validate-field">
-                <input type="text" class="form-control focus-blue validate-text" id="f1b" placeholder="Street Address">
-                <label for="f1b" class="color-blue-dark">Street Address</label>
-                <i class="fa fa-times disabled invalid color-red-dark"></i>
-                <i class="fa fa-check disabled valid color-green-dark"></i>
-                <em>(required)</em>
-            </div>
-            <div class="input-style has-borders no-icon validate-field">
-                <input type="text" class="form-control focus-blue validate-text" id="f1c" placeholder="Apartament, Suite, Unit">
-                <label for="f1c" class="color-blue-dark">Appartament, Suit, Unit</label>
-                <i class="fa fa-times disabled invalid color-red-dark"></i>
-                <i class="fa fa-check disabled valid color-green-dark"></i>
-                <em>(required)</em>
-            </div>
 
             <div class="divider"></div>
 
-            <h2>Payment Details</h2>
-            <p>
-                Please select your payment method. This page is a dummy template.
-            </p>
+            <h2>Proceso de pago</h2>
+
             <div class="input-style has-borders no-icon validate-field">
-                <input type="text" class="form-control focus-blue validate-text" id="f2" placeholder="Cardholder Name">
-                <label for="f2" class="color-blue-dark">Cardholder Name</label>
+                <input type="text" class="form-control focus-blue validate-text" id="f2" placeholder="Nombre del propietario">
+                <label for="f2" class="color-blue-dark">Nombre del propietario</label>
                 <i class="fa fa-times disabled invalid color-red-dark"></i>
                 <i class="fa fa-check disabled valid color-green-dark"></i>
-                <em>(required)</em>
+                <em>(Requerido)</em>
             </div>
             <div class="input-style has-borders no-icon validate-field">
-                <input type="number" class="form-control focus-blue validate-text" id="f2a" placeholder="Card Number">
-                <label for="f2a" class="color-blue-dark">Card Number</label>
+                <input type="number" class="form-control focus-blue validate-text" id="f2a" placeholder="Número de tarjeta">
+                <label for="f2a" class="color-blue-dark">Número de tarjeta</label>
                 <i class="fa fa-times disabled invalid color-red-dark"></i>
                 <i class="fa fa-check disabled valid color-green-dark"></i>
-                <em>(required)</em>
+                <em>(Requerido)</em>
             </div>
 
             <div class="row mb-0">
                 <div class="col-7">
                     <div class="input-style has-borders no-icon validate-field">
-                        <input type="text" class="form-control focus-blue validate-text" id="f2c" placeholder="Valid Thru">
-                        <label for="f2c" class="color-blue-dark">Valid Thru</label>
+                        <input type="text" class="form-control focus-blue validate-text" id="f2c" placeholder="Fecha vencimiento">
+                        <label for="f2c" class="color-blue-dark">Fecha vencimiento</label>
                         <i class="fa fa-times disabled invalid color-red-dark"></i>
                         <i class="fa fa-check disabled valid color-green-dark"></i>
-                        <em>(required)</em>
+                        <em>(Requerido)</em>
                     </div>
                 </div>
                 <div class="col-5">
@@ -102,7 +66,7 @@
                         <label for="f2d" class="color-blue-dark">CCV</label>
                         <i class="fa fa-times disabled invalid color-red-dark"></i>
                         <i class="fa fa-check disabled valid color-green-dark"></i>
-                        <em>(required)</em>
+                        <em>(Requerido)</em>
                     </div>
                 </div>
             </div>
@@ -114,18 +78,18 @@
                     <h4 class="font-18">Total</h4>
                 </div>
                 <div class="ms-auto">
-                    <h4 class="font-18">$49<sup>99</sup></h4>
+                    <h4 class="font-18">$34<sup>98</sup></h4>
                 </div>
             </div>
-            <div class="d-flex mb-3">
+            <!-- <div class="d-flex mb-3">
                 <div class="me-3">
                     <h4 class="font-18">Shipping</h4>
                 </div>
                 <div class="ms-auto">
                     <h4 class="font-18">FREE</h4>
                 </div>
-            </div>
-            <div class="divider mb-3"></div>
+            </div> -->
+            <!-- <div class="divider mb-3"></div>
             <div class="d-flex mb-3">
                 <div class="me-3">
                     <h4 class="font-16 color-highlight">Est Delivery</h4>
@@ -133,69 +97,17 @@
                 <div class="ms-auto">
                     <h4 class="font-16 color-highlight">1 Hour, 25 Min</h4>
                 </div>
-            </div>
+            </div> -->
             <div class="divider"></div>
-            <a href="#" data-menu="menu-settings" class="btn btn-full bg-highlight btn-m text-uppercase font-800 rounded-sm">Place Order</a>
+            <a href="#" data-menu="menu-settings" class="btn btn-full bg-highlight btn-m text-uppercase font-800 rounded-sm">Rentar articulos</a>
         </div>
     </div>
 
 
-
-
-    <div class="footer card card-style">
-        <a href="#" class="footer-title"><span class="color-highlight">StickyMobile</span></a>
-        <p class="footer-text"><span>Made with <i class="fa fa-heart color-highlight font-16 ps-2 pe-2"></i> by Enabled</span><br><br>Powered by the best Mobile Website Developer on Envato Market. Elite Quality. Elite Products.</p>
-        <div class="text-center mb-3">
-            <a href="#" class="icon icon-xs rounded-sm shadow-l me-1 bg-facebook"><i class="fab fa-facebook-f"></i></a>
-            <a href="#" class="icon icon-xs rounded-sm shadow-l me-1 bg-twitter"><i class="fab fa-twitter"></i></a>
-            <a href="#" class="icon icon-xs rounded-sm shadow-l me-1 bg-phone"><i class="fa fa-phone"></i></a>
-            <a href="#" data-menu="menu-share" class="icon icon-xs rounded-sm me-1 shadow-l bg-red-dark"><i class="fa fa-share-alt"></i></a>
-            <a href="#" class="back-to-top icon icon-xs rounded-sm shadow-l bg-dark-light"><i class="fa fa-angle-up"></i></a>
-        </div>
-        <p class="footer-copyright">Copyright &copy; Enabled <span id="copyright-year">2017</span>. All Rights Reserved.</p>
-        <p class="footer-links"><a href="#" class="color-highlight">Privacy Policy</a> | <a href="#" class="color-highlight">Terms and Conditions</a> | <a href="#" class="back-to-top color-highlight"> Back to Top</a></p>
-        <div class="clear"></div>
-    </div>
 
 </div>
 <!-- End of Page Content-->
-<!-- All Menus, Action Sheets, Modals, Notifications, Toasts, Snackbars get Placed outside the <div class="page-content"> -->
-<div id="menu-settings" class="menu menu-box-bottom menu-box-detached">
-    <div class="menu-title mt-0 pt-0">
-        <h1>Settings</h1>
-        <p class="color-highlight">Flexible and Easy to Use</p><a href="#" class="close-menu"><i class="fa fa-times"></i></a>
-    </div>
-    <div class="divider divider-margins mb-n2"></div>
-    <div class="content">
-        <div class="list-group list-custom-small">
-            <a href="#" data-toggle-theme data-trigger-switch="switch-dark-mode" class="pb-2 ms-n1">
-                <i class="fa font-12 fa-moon rounded-s bg-highlight color-white me-3"></i>
-                <span>Dark Mode</span>
-                <div class="custom-control scale-switch ios-switch">
-                    <input data-toggle-theme type="checkbox" class="ios-input" id="switch-dark-mode">
-                    <label class="custom-control-label" for="switch-dark-mode"></label>
-                </div>
-                <i class="fa fa-angle-right"></i>
-            </a>
-        </div>
-        <div class="list-group list-custom-large">
-            <a data-menu="menu-highlights" href="#">
-                <i class="fa font-14 fa-tint bg-green-dark rounded-s"></i>
-                <span>Page Highlight</span>
-                <strong>16 Colors Highlights Included</strong>
-                <span class="badge bg-highlight color-white">HOT</span>
-                <i class="fa fa-angle-right"></i>
-            </a>
-            <a data-menu="menu-backgrounds" href="#" class="border-0">
-                <i class="fa font-14 fa-cog bg-blue-dark rounded-s"></i>
-                <span>Background Color</span>
-                <strong>10 Page Gradients Included</strong>
-                <span class="badge bg-highlight color-white">NEW</span>
-                <i class="fa fa-angle-right"></i>
-            </a>
-        </div>
-    </div>
-</div>
+
 <!-- Menu Settings Highlights-->
 <div id="menu-highlights" class="menu menu-box-bottom menu-box-detached">
     <div class="menu-title">
