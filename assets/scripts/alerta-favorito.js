@@ -17,16 +17,24 @@ const appendAlert2 = (message, type) => {
 }
 
 const alertTrigger2 = document.getElementById('agregarAFavoritos')
+let favorito = false;
+
 if (alertTrigger2) {
   alertTrigger2.addEventListener('click', () => {
-    appendAlert2('Agregado a favoritos!', '')
-  })
+    if (favorito) {
+    appendAlert2('Eliminado de favoritos!', '');
+    favorito = false;
+    } else {
+      appendAlert2('Agregado a favoritos!', '');
+      favorito = true;
+    }
+  });
 }
 
-// document.getElementById('icon1').addEventListener('click', function() {
-//   this.classList.add('hidden');
-//   document.getElementById('icon2').classList.remove('hidden');
-// });
+document.getElementById('icon1').addEventListener('click', function() {
+  this.classList.add('hidden');
+  document.getElementById('icon2').classList.remove('hidden');
+});
 
 document.getElementById('icon2').addEventListener('click', function() {
   this.classList.add('hidden');

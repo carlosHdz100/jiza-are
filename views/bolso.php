@@ -87,9 +87,18 @@
             <div class="card card-style mx-0 col-12 col-md-6 col-lg-4">
                 <div class="card card-style mx-2 mt-2" data-card-height="400" style="background-image:url('https://img.freepik.com/foto-gratis/bastante-magnifica-joven-morena-timida-posando-calle-paris-mirada-dama-elegante-verano-colores-beige-experiencia-viaje_291049-1756.jpg?size=626&ext=jpg&ga=GA1.1.649413161.1697839706&semt=sph')">
                     <div class="card-top p-3 pe-2 pt-2">
-                        <a href="#" data-toast="snackbar-favorites" class="float-end">
-                            <span class="bg-theme color-theme px-2 py-2 rounded-sm">
+                        <div id="liveAlertPlaceholder2"></div>
+                        <a href="#" id="agregarAFavoritos" data-toast="snackbar-favorites" class="float-end">
+                            <span class="bg-theme color-theme px-2 py-2 rounded-sm hidden" id="icon1">
                                 <i class="fa fa-heart color-red-dark pe-1"></i>
+                                Fav
+                            </span>
+                            <span class="bg-theme color-theme px-2 py-2 rounded-sm" id="icon2">
+                                <!-- <i class="fa fa-heart color-red-dark pe-1"></i> -->
+                                <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-heart" width="16" height="16" viewBox="0 0 24 24" stroke-width="1.5" stroke="#fd0061" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                                <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+                                <path d="M19.5 12.572l-7.5 7.428l-7.5 -7.428a5 5 0 1 1 7.5 -6.566a5 5 0 1 1 7.5 6.572" />
+                                </svg>
                                 Fav
                             </span>
                         </a>
@@ -120,7 +129,7 @@
                             <span class="d-block opacity-70 font-11 mt-n2 color-theme">53 calificaciones</span>
                         </div>
                         <div class="align-self-center ms-auto">
-                            <a href="#" data-toast="snackbar-cart" class="btn btn-s bg-highlight rounded-sm font-700 text-uppercase" data-bs-toggle="offcanvas" data-bs-target="#offcanvasBottom" aria-controls="offcanvasBottom">Rentar ahora</a>
+                            <a href="#" data-toast="snackbar-cart" class="custom-btn btn-11 btn-s bg-highlight rounded-sm font-700 text-uppercase" data-bs-toggle="offcanvas" data-bs-target="#offcanvasBottom" aria-controls="offcanvasBottom">Rentar ahora</a>
                         </div>
                     </div>
                 </div>
@@ -163,7 +172,7 @@
                             <span class="d-block opacity-70 font-11 mt-n2 color-theme">53 calificaciones</span>
                         </div>
                         <div class="align-self-center ms-auto">
-                            <a href="#" data-toast="snackbar-cart" class="btn btn-s bg-highlight rounded-sm font-700 text-uppercase" data-bs-toggle="offcanvas" data-bs-target="#offcanvasBottom" aria-controls="offcanvasBottom">Rentar ahora</a>
+                            <a href="#" data-toast="snackbar-cart" class="custom-btn btn-11 btn-s bg-highlight rounded-sm font-700 text-uppercase" data-bs-toggle="offcanvas" data-bs-target="#offcanvasBottom" aria-controls="offcanvasBottom">Rentar ahora</a>
                         </div>
                     </div>
                 </div>
@@ -206,7 +215,7 @@
                             <span class="d-block opacity-70 font-11 mt-n2 color-theme">53 calificaciones</span>
                         </div>
                         <div class="align-self-center ms-auto">
-                            <a href="#" data-toast="snackbar-cart" class="btn btn-s bg-highlight rounded-sm font-700 text-uppercase" data-bs-toggle="offcanvas" data-bs-target="#offcanvasBottom" aria-controls="offcanvasBottom">Rentar ahora</a>
+                            <a href="#" data-toast="snackbar-cart" class="custom-btn btn-11 btn-s bg-highlight rounded-sm font-700 text-uppercase" data-bs-toggle="offcanvas" data-bs-target="#offcanvasBottom" aria-controls="offcanvasBottom">Rentar ahora</a>
                         </div>
                     </div>
                 </div>
@@ -249,7 +258,7 @@
                             <span class="d-block opacity-70 font-11 mt-n2 color-theme">53 calificaciones</span>
                         </div>
                         <div class="align-self-center ms-auto">
-                            <a href="#" data-toast="snackbar-cart" class="btn btn-s bg-highlight rounded-sm font-700 text-uppercase" data-bs-toggle="offcanvas" data-bs-target="#offcanvasBottom" aria-controls="offcanvasBottom">Rentar ahora</a>
+                            <a href="#" data-toast="snackbar-cart" class="custom-btn btn-11 btn-s bg-highlight rounded-sm font-700 text-uppercase" data-bs-toggle="offcanvas" data-bs-target="#offcanvasBottom" aria-controls="offcanvasBottom">Rentar ahora</a>
                         </div>
                     </div>
                 </div>
@@ -292,7 +301,7 @@
                             <span class="d-block opacity-70 font-11 mt-n2 color-theme">53 calificaciones</span>
                         </div>
                         <div class="align-self-center ms-auto">
-                            <a href="#" data-toast="snackbar-cart" class="btn btn-s bg-highlight rounded-sm font-700 text-uppercase" data-bs-toggle="offcanvas" data-bs-target="#offcanvasBottom" aria-controls="offcanvasBottom">Rentar ahora</a>
+                            <a href="#" data-toast="snackbar-cart" class="custom-btn btn-11 btn-s bg-highlight rounded-sm font-700 text-uppercase" data-bs-toggle="offcanvas" data-bs-target="#offcanvasBottom" aria-controls="offcanvasBottom">Rentar ahora</a>
                         </div>
                     </div>
                 </div>
@@ -335,7 +344,7 @@
                             <span class="d-block opacity-70 font-11 mt-n2 color-theme">53 calificaciones</span>
                         </div>
                         <div class="align-self-center ms-auto">
-                            <a href="#" data-toast="snackbar-cart" class="btn btn-s bg-highlight rounded-sm font-700 text-uppercase" data-bs-toggle="offcanvas" data-bs-target="#offcanvasBottom" aria-controls="offcanvasBottom">Rentar ahora</a>
+                            <a href="#" data-toast="snackbar-cart" class="custom-btn btn-11 btn-s bg-highlight rounded-sm font-700 text-uppercase" data-bs-toggle="offcanvas" data-bs-target="#offcanvasBottom" aria-controls="offcanvasBottom">Rentar ahora</a>
                         </div>
                     </div>
                 </div>
@@ -596,19 +605,19 @@
     </div>
     <div class="offcanvas-body small">
 
-        <h2>Bolso</h2>
+        <h1>Bolso</h1>
 
         <!-- <img class="img-fluid w-100" src="https://img.freepik.com/foto-gratis/camisa-blanca-palabra-t-ella_1340-25481.jpg?size=626&ext=jpg&ga=GA1.1.649413161.1697839706&semt=sph" alt="Renta de vestido"> -->
         <div id="carouselExample" class="carousel slide">
             <div class="carousel-inner">
                 <div class="carousel-item active">
-                <img src="https://img.freepik.com/foto-gratis/_23-2150709609.jpg?size=626&ext=jpg&ga=GA1.1.649413161.1697839706&semt=ais" class="d-block w-100" alt="...">
+                <img src="https://img.freepik.com/foto-gratis/_23-2150709609.jpg?size=626&ext=jpg&ga=GA1.1.649413161.1697839706&semt=ais" class="d-block w-100 rounded" alt="...">
                 </div>
                 <div class="carousel-item">
-                <img src="https://img.freepik.com/foto-gratis/_23-2150709609.jpg?size=626&ext=jpg&ga=GA1.1.649413161.1697839706&semt=ais" class="d-block w-100" alt="...">
+                <img src="https://img.freepik.com/foto-gratis/_23-2150709609.jpg?size=626&ext=jpg&ga=GA1.1.649413161.1697839706&semt=ais" class="d-block w-100 rounded" alt="...">
                 </div>
                 <div class="carousel-item">
-                <img src="https://img.freepik.com/foto-gratis/_23-2150709609.jpg?size=626&ext=jpg&ga=GA1.1.649413161.1697839706&semt=ais" class="d-block w-100" alt="...">
+                <img src="https://img.freepik.com/foto-gratis/_23-2150709609.jpg?size=626&ext=jpg&ga=GA1.1.649413161.1697839706&semt=ais" class="d-block w-100 rounded" alt="...">
                 </div>
             </div>
             <button class="carousel-control-prev" type="button" data-bs-target="#carouselExample" data-bs-slide="prev">
@@ -635,15 +644,22 @@
             </span>
             <span class="d-block opacity-70 font-11 mt-n2 color-theme">53 calificaciones</span>
         </div>
-        <h3>Precio: <strong>€200</strong></h3>
+        <div class="d-flex justify-content-between">
+            <h3>Precio: <strong>€200</strong></h3>
+            <button class="custom-btn btn-5"><span>Opciones de Fecha</span></button>
+            <!-- <button type="button" class="btn btn-dark">Opciones de Fecha</button> -->
+        </div>
 
         <hr>
 
         <div id="liveAlertPlaceholder"></div>
-        <button type="button" class="btn btn-dark"  id="agregarAlCarrito" style="width: 100%;">Agregar al carrito</button>
+        <!-- <button type="button" class="btn btn-dark"  id="agregarAlCarrito" style="width: 100%;">Agregar al carrito</button> -->
+        <button type="button" class="custom-btn btn-11" id="agregarAlCarrito" style="width: 100%;">Agregar al carrito<div class="dot"></div></button>
+
         <br>
     </div>
 </div>
 
 
 <script src="assets/scripts/alerta-carrito.js"></script>
+<script src="assets/scripts/alerta-favorito.js"></script>
