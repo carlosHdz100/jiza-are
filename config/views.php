@@ -20,6 +20,12 @@ switch ($view) {
     case 'historial':
         include('views/historial.php');
         break;
+    case 'rentas':
+        include('views/rentas.php');
+        break;
+    case 'renta_detalle':
+        include('views/renta_detalle.php');
+        break;
     case 'vestido':
         include('views/vestido.php');
         break;
