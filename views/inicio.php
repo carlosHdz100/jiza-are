@@ -208,15 +208,17 @@
                             <div class="w-100 me-3">
                                 <div class="card card-style m-0" data-card-height="250" style="background-image:url('https://cdn0.bodas.com.mx/cat/vestidos-fiesta/manu-garcia/mg3321--mt20_2x_566275.jpg')">
                                     <div class="card-bottom text-center pb-2">
-                                        <a href="#" data-toast="snackbar-favorites" class="icon icon-xxs bg-theme rounded-l shadow-xl rounded-m mx-2 color-theme"><i class="fa fa-heart color-red-dark font-12"></i></a>
+                                        
+                                        <a href="#" data-toast="snackbar-favorites" class="icon icon-xxs bg-theme rounded-l shadow-xl rounded-m mx-2 color-theme" id="icon1"><i class="fa fa-heart color-red-dark font-12"></i></a>
                                         <a href="#" data-toast="snackbar-cart" class="icon icon-xxs bg-theme rounded-l shadow-xl rounded-m mx-2 color-theme"><i class="fa fa-shopping-bag font-12"></i></a>
                                     </div>
                                 </div>
                             </div>
                             <div class="ms-auto w-100">
                                 <h5 class="font-600 font-16 line-height-sm">Vestido de Noche Elegante</h5>
-                                <span class="color-green-dark d-block font-11 font-600"><i class="fa fa-truck"></i> - Entrega en 2 días</span>
+                                <!-- <span class="color-green-dark d-block font-11 font-600"><i class="fa fa-truck"></i> - Entrega en 2 días</span> -->
                                 <h2 class="pt-2 mt-n1">Renta desde $49.<sup class="font-14 font-400 opacity-50">99</sup></h2>
+                                <a href="?view=vestido" data-toast="snackbar-cart" class="custom-btn btn-11 btn-s bg-highlight rounded-sm font-700 text-uppercase mt-2" data-bs-toggle="offcanvas" data-bs-target="#offcanvasBottom" aria-controls="offcanvasBottom">Rentar ahora</a>
                             </div>
                         </div>
 
@@ -235,6 +237,7 @@
                                 <span class="color-red-dark d-block font-11 font-600">Rentado</span>
                                 <h2 class="opacity-40 pb-2 mt-n1">Renta desde $79.<sup class="font-14 font-400 opacity-50">99</sup></h2>
                                 <h5 class="opacity-40 font-600 font-16 line-height-sm">Vestido de Gala Exclusivo</h5>
+                                <a href="?view=vestido" data-toast="snackbar-cart" class="custom-btn btn-11 btn-s bg-highlight rounded-sm font-700 text-uppercase mt-2" data-bs-toggle="offcanvas" data-bs-target="#offcanvasBottom" aria-controls="offcanvasBottom">Rentar ahora</a>
                             </div>
                         </div>
 
@@ -244,7 +247,7 @@
                             <div class="w-100 me-3">
                                 <div class="card card-style m-0" data-card-height="250" style="background-image:url('https://www.pronovias.com/media/catalog/product/l/a/lace_2236_b.jpg?quality=80&bg-color=255,255,255&fit=bounds&height=747&width=560&canvas=560:747')">
                                     <div class="card-top p-2">
-                                        <span class="bg-highlight p-2 py-1 rounded-sm font-13 font-600">-30%</span>
+                                        <!-- <span class="bg-highlight p-2 py-1 rounded-sm font-13 font-600">-30%</span> -->
                                     </div>
                                     <div class="card-bottom text-center pb-3">
                                         <a href="#" data-toast="snackbar-favorites" class="icon icon-xxs bg-theme rounded-l shadow-xl rounded-m mx-2 color-theme"><i class="fa fa-heart color-red-dark font-12"></i></a>
@@ -254,9 +257,10 @@
                             </div>
 
                             <div class="ms-auto w-100">
-                                <span class="color-blue-dark d-block font-11 font-600">Destacado</span>
+                                <!-- <span class="color-blue-dark d-block font-11 font-600">Destacado</span> -->
                                 <h2 class="pb-3 mt-n1">Renta desde $104.<sup class="font-14 font-400 opacity-50">99</sup></h2>
                                 <h5 class="font-600 font-16 line-height-sm">Vestido de Novia con Detalles Exquisitos</h5>
+                                <a href="?view=vestido" data-toast="snackbar-cart" class="custom-btn btn-11 btn-s bg-highlight rounded-sm font-700 text-uppercase mt-2" data-bs-toggle="offcanvas" data-bs-target="#offcanvasBottom" aria-controls="offcanvasBottom">Rentar ahora</a>
                             </div>
                         </div>
 
