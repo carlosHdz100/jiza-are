@@ -1,10 +1,10 @@
-<div class="page-content pb-0">
+<div class="page-content header-clear-medium">
 
     <!-- <div class="card preload-img position-fixed w-100" data-card-height="450"> -->
         <!-- Search -->
         <!-- <div class="content mt-2 position-absolute start-0 end-0 mx-1"> -->
             <!-- <div class="notch-clear"></div> -->
-            <div class="search-box bg-theme color-theme rounded-m shadow-l mx-2">
+            <div class="search-box bg-theme color-theme rounded-m shadow-l mx-2 mb-4">
                 <i class="fa fa-search"></i>
                 <input type="text" class="border-0" placeholder="Qué estás buscando?" data-search>
                 <a href="#" class="clear-search disabled no-click mt-0"></a>
@@ -87,7 +87,7 @@
             <div class="card card-style mx-0 col-12 col-md-6 col-lg-4">
                 <div class="card card-style mx-2 mt-2" data-card-height="400" style="background-image:url('https://img.freepik.com/foto-gratis/sesion-fotos-al-aire-libre-primer-plano-blanco-camisa-casual-negocios_53876-119744.jpg?size=626&ext=jpg&ga=GA1.1.649413161.1697839706&semt=sph')">
                     <div class="card-top p-3 pe-2 pt-2">
-                    <div id="liveAlertPlaceholder2"></div>
+                        <div id="liveAlertPlaceholder2"></div>
                         <a href="#" id="agregarAFavoritos" data-toast="snackbar-favorites" class="float-end">
                             <span class="bg-theme color-theme px-2 py-2 rounded-sm hidden" id="icon1">
                                 <i class="fa fa-heart color-red-dark pe-1"></i>
