@@ -85,88 +85,88 @@
 
 
                     <div class="card card-style mx-0 col-12 col-md-6 col-lg-4">
-                    <div class="card card-style mx-2 mt-2" data-card-height="400" style="background-image:url('https://doce38boutique.com/wp-content/uploads/2023/09/VL8038-Vestido-largo-de-lentejuela-con-una-manga-asimetrico-cintura-drapeado-con-escarola-abertura-en-pierna-324x540.jpg')">
-                        <div class="card-top p-3 pe-2 pt-2">
-                            <a href="#" data-toast="snackbar-favorites" class="float-end">
-                                <span class="bg-theme color-theme px-2 py-2 rounded-sm">
-                                    <i class="fa fa-heart color-red-dark pe-1"></i>
-                                    Fav
-                                </span>
-                            </a>
-                        </div>
-                    </div>
-                    <div class="content mt-n3">
-                        <div class="d-flex">
-                            <div class="me-auto align-self-center">
-                                <h2 class="mb-n1">Vestido de noche</h2>
-                                <span class="d-block color-green-dark font-700">Veces rentado: +10</span>
-                            </div>
-                            <div class="ms-auto align-self-center">
-                                <h1 class="pt-2">$32.<sup class="font-14 font-400 opacity-50">99</sup></h1>
+                        <div class="card card-style mx-2 mt-2" data-card-height="400" style="background-image:url('https://doce38boutique.com/wp-content/uploads/2023/09/VL8038-Vestido-largo-de-lentejuela-con-una-manga-asimetrico-cintura-drapeado-con-escarola-abertura-en-pierna-324x540.jpg')">
+                            <div class="card-top p-3 pe-2 pt-2">
+                                <a href="#" data-toast="snackbar-favorites" class="float-end">
+                                    <span class="bg-theme color-theme px-2 py-2 rounded-sm">
+                                        <i class="fa fa-heart color-red-dark pe-1"></i>
+                                        Fav
+                                    </span>
+                                </a>
                             </div>
                         </div>
-                        <p class="font-12 line-height-m pt-2 mb-2">
-                            Con este vestido de noche podrás tener una comodidad increíble, además de poder usarlo para cualquier ocasión. Estamos seguros que te encantará.
-                        </p>
-                        <div class="d-flex">
-                            <div class="align-self-center">
-                                <span>
-                                    <i class="fa fa-star font-12 color-yellow-dark pe-1"></i>
-                                    <i class="fa fa-star font-12 color-yellow-dark pe-1"></i>
-                                    <i class="fa fa-star font-12 color-yellow-dark pe-1"></i>
-                                    <i class="fa fa-star font-12 color-yellow-dark pe-1"></i>
-                                    <i class="fa fa-star font-12 color-yellow-dark pe-1"></i>
-                                </span>
-                                <span class="d-block opacity-70 font-11 mt-n2 color-theme">53 calificaciones</span>
+                        <div class="content mt-n3">
+                            <div class="d-flex">
+                                <div class="me-auto align-self-center">
+                                    <h2 class="mb-n1">Vestido de noche</h2>
+                                    <span class="d-block color-green-dark font-700">Veces rentado: +10</span>
+                                </div>
+                                <div class="ms-auto align-self-center">
+                                    <h1 class="pt-2">$32.<sup class="font-14 font-400 opacity-50">99</sup></h1>
+                                </div>
                             </div>
-                            <div class="align-self-center ms-auto">
-                                <a href="#" data-toast="snackbar-cart" class="btn btn-s bg-highlight rounded-sm font-700 text-uppercase" data-bs-toggle="offcanvas" data-bs-target="#offcanvasBottom" aria-controls="offcanvasBottom">Rentar ahora</a>
+                            <p class="font-12 line-height-m pt-2 mb-2">
+                                Con este vestido de noche podrás tener una comodidad increíble, además de poder usarlo para cualquier ocasión. Estamos seguros que te encantará.
+                            </p>
+                            <div class="d-flex">
+                                <div class="align-self-center">
+                                    <span>
+                                        <i class="fa fa-star font-12 color-yellow-dark pe-1"></i>
+                                        <i class="fa fa-star font-12 color-yellow-dark pe-1"></i>
+                                        <i class="fa fa-star font-12 color-yellow-dark pe-1"></i>
+                                        <i class="fa fa-star font-12 color-yellow-dark pe-1"></i>
+                                        <i class="fa fa-star font-12 color-yellow-dark pe-1"></i>
+                                    </span>
+                                    <span class="d-block opacity-70 font-11 mt-n2 color-theme">53 calificaciones</span>
+                                </div>
+                                <div class="align-self-center ms-auto">
+                                    <a href="#" data-toast="snackbar-cart" class="btn btn-s bg-highlight rounded-sm font-700 text-uppercase" data-bs-toggle="offcanvas" data-bs-target="#offcanvasBottom" aria-controls="offcanvasBottom">Rentar ahora</a>
+                                </div>
                             </div>
                         </div>
-                    </div>
                     </div>
 
 
                     <div class="card card-style mx-0 col-12 col-md-6 col-lg-4">
-                    <div class="card card-style mx-2 mt-2" data-card-height="400" style="background-image:url('https://doce38boutique.com/wp-content/uploads/2023/09/VL8038-Vestido-largo-de-lentejuela-con-una-manga-asimetrico-cintura-drapeado-con-escarola-abertura-en-pierna-324x540.jpg')">
-                        <div class="card-top p-3 pe-2 pt-2">
-                            <a href="#" data-toast="snackbar-favorites" class="float-end">
-                                <span class="bg-theme color-theme px-2 py-2 rounded-sm">
-                                    <i class="fa fa-heart color-red-dark pe-1"></i>
-                                    Fav
-                                </span>
-                            </a>
-                        </div>
-                    </div>
-                    <div class="content mt-n3">
-                        <div class="d-flex">
-                            <div class="me-auto align-self-center">
-                                <h2 class="mb-n1">Vestido de noche</h2>
-                                <span class="d-block color-green-dark font-700">Veces rentado: +10</span>
-                            </div>
-                            <div class="ms-auto align-self-center">
-                                <h1 class="pt-2">$32.<sup class="font-14 font-400 opacity-50">99</sup></h1>
+                        <div class="card card-style mx-2 mt-2" data-card-height="400" style="background-image:url('https://doce38boutique.com/wp-content/uploads/2023/09/VL8038-Vestido-largo-de-lentejuela-con-una-manga-asimetrico-cintura-drapeado-con-escarola-abertura-en-pierna-324x540.jpg')">
+                            <div class="card-top p-3 pe-2 pt-2">
+                                <a href="#" data-toast="snackbar-favorites" class="float-end">
+                                    <span class="bg-theme color-theme px-2 py-2 rounded-sm">
+                                        <i class="fa fa-heart color-red-dark pe-1"></i>
+                                        Fav
+                                    </span>
+                                </a>
                             </div>
                         </div>
-                        <p class="font-12 line-height-m pt-2 mb-2">
-                            Con este vestido de noche podrás tener una comodidad increíble, además de poder usarlo para cualquier ocasión. Estamos seguros que te encantará.
-                        </p>
-                        <div class="d-flex">
-                            <div class="align-self-center">
-                                <span>
-                                    <i class="fa fa-star font-12 color-yellow-dark pe-1"></i>
-                                    <i class="fa fa-star font-12 color-yellow-dark pe-1"></i>
-                                    <i class="fa fa-star font-12 color-yellow-dark pe-1"></i>
-                                    <i class="fa fa-star font-12 color-yellow-dark pe-1"></i>
-                                    <i class="fa fa-star font-12 color-yellow-dark pe-1"></i>
-                                </span>
-                                <span class="d-block opacity-70 font-11 mt-n2 color-theme">53 calificaciones</span>
+                        <div class="content mt-n3">
+                            <div class="d-flex">
+                                <div class="me-auto align-self-center">
+                                    <h2 class="mb-n1">Vestido de noche</h2>
+                                    <span class="d-block color-green-dark font-700">Veces rentado: +10</span>
+                                </div>
+                                <div class="ms-auto align-self-center">
+                                    <h1 class="pt-2">$32.<sup class="font-14 font-400 opacity-50">99</sup></h1>
+                                </div>
                             </div>
-                            <div class="align-self-center ms-auto">
-                                <a href="#" data-toast="snackbar-cart" class="btn btn-s bg-highlight rounded-sm font-700 text-uppercase" data-bs-toggle="offcanvas" data-bs-target="#offcanvasBottom" aria-controls="offcanvasBottom">Rentar ahora</a>
+                            <p class="font-12 line-height-m pt-2 mb-2">
+                                Con este vestido de noche podrás tener una comodidad increíble, además de poder usarlo para cualquier ocasión. Estamos seguros que te encantará.
+                            </p>
+                            <div class="d-flex">
+                                <div class="align-self-center">
+                                    <span>
+                                        <i class="fa fa-star font-12 color-yellow-dark pe-1"></i>
+                                        <i class="fa fa-star font-12 color-yellow-dark pe-1"></i>
+                                        <i class="fa fa-star font-12 color-yellow-dark pe-1"></i>
+                                        <i class="fa fa-star font-12 color-yellow-dark pe-1"></i>
+                                        <i class="fa fa-star font-12 color-yellow-dark pe-1"></i>
+                                    </span>
+                                    <span class="d-block opacity-70 font-11 mt-n2 color-theme">53 calificaciones</span>
+                                </div>
+                                <div class="align-self-center ms-auto">
+                                    <a href="#" data-toast="snackbar-cart" class="btn btn-s bg-highlight rounded-sm font-700 text-uppercase" data-bs-toggle="offcanvas" data-bs-target="#offcanvasBottom" aria-controls="offcanvasBottom">Rentar ahora</a>
+                                </div>
                             </div>
                         </div>
-                    </div>
                     </div>
 
                     <div class="card card-style mx-0 col-12 col-md-6 col-lg-4">
@@ -213,93 +213,93 @@
 
 
                     <div class="card card-style mx-0 col-12 col-md-6 col-lg-4">
-                    <div class="card card-style mx-2 mt-2" data-card-height="400" style="background-image:url('https://doce38boutique.com/wp-content/uploads/2023/09/VL8038-Vestido-largo-de-lentejuela-con-una-manga-asimetrico-cintura-drapeado-con-escarola-abertura-en-pierna-324x540.jpg')">
-                        <div class="card-top p-3 pe-2 pt-2">
-                            <a href="#" data-toast="snackbar-favorites" class="float-end">
-                                <span class="bg-theme color-theme px-2 py-2 rounded-sm">
-                                    <i class="fa fa-heart color-red-dark pe-1"></i>
-                                    Fav
-                                </span>
-                            </a>
-                        </div>
-                    </div>
-                    <div class="content mt-n3">
-                        <div class="d-flex">
-                            <div class="me-auto align-self-center">
-                                <h2 class="mb-n1">Vestido de noche</h2>
-                                <span class="d-block color-green-dark font-700">Veces rentado: +10</span>
-                            </div>
-                            <div class="ms-auto align-self-center">
-                                <h1 class="pt-2">$32.<sup class="font-14 font-400 opacity-50">99</sup></h1>
+                        <div class="card card-style mx-2 mt-2" data-card-height="400" style="background-image:url('https://doce38boutique.com/wp-content/uploads/2023/09/VL8038-Vestido-largo-de-lentejuela-con-una-manga-asimetrico-cintura-drapeado-con-escarola-abertura-en-pierna-324x540.jpg')">
+                            <div class="card-top p-3 pe-2 pt-2">
+                                <a href="#" data-toast="snackbar-favorites" class="float-end">
+                                    <span class="bg-theme color-theme px-2 py-2 rounded-sm">
+                                        <i class="fa fa-heart color-red-dark pe-1"></i>
+                                        Fav
+                                    </span>
+                                </a>
                             </div>
                         </div>
-                        <p class="font-12 line-height-m pt-2 mb-2">
-                            Con este vestido de noche podrás tener una comodidad increíble, además de poder usarlo para cualquier ocasión. Estamos seguros que te encantará.
-                        </p>
-                        <div class="d-flex">
-                            <div class="align-self-center">
-                                <span>
-                                    <i class="fa fa-star font-12 color-yellow-dark pe-1"></i>
-                                    <i class="fa fa-star font-12 color-yellow-dark pe-1"></i>
-                                    <i class="fa fa-star font-12 color-yellow-dark pe-1"></i>
-                                    <i class="fa fa-star font-12 color-yellow-dark pe-1"></i>
-                                    <i class="fa fa-star font-12 color-yellow-dark pe-1"></i>
-                                </span>
-                                <span class="d-block opacity-70 font-11 mt-n2 color-theme">53 calificaciones</span>
+                        <div class="content mt-n3">
+                            <div class="d-flex">
+                                <div class="me-auto align-self-center">
+                                    <h2 class="mb-n1">Vestido de noche</h2>
+                                    <span class="d-block color-green-dark font-700">Veces rentado: +10</span>
+                                </div>
+                                <div class="ms-auto align-self-center">
+                                    <h1 class="pt-2">$32.<sup class="font-14 font-400 opacity-50">99</sup></h1>
+                                </div>
                             </div>
-                            <div class="align-self-center ms-auto">
-                                <a href="#" data-toast="snackbar-cart" class="btn btn-s bg-highlight rounded-sm font-700 text-uppercase" data-bs-toggle="offcanvas" data-bs-target="#offcanvasBottom" aria-controls="offcanvasBottom">Rentar ahora</a>
+                            <p class="font-12 line-height-m pt-2 mb-2">
+                                Con este vestido de noche podrás tener una comodidad increíble, además de poder usarlo para cualquier ocasión. Estamos seguros que te encantará.
+                            </p>
+                            <div class="d-flex">
+                                <div class="align-self-center">
+                                    <span>
+                                        <i class="fa fa-star font-12 color-yellow-dark pe-1"></i>
+                                        <i class="fa fa-star font-12 color-yellow-dark pe-1"></i>
+                                        <i class="fa fa-star font-12 color-yellow-dark pe-1"></i>
+                                        <i class="fa fa-star font-12 color-yellow-dark pe-1"></i>
+                                        <i class="fa fa-star font-12 color-yellow-dark pe-1"></i>
+                                    </span>
+                                    <span class="d-block opacity-70 font-11 mt-n2 color-theme">53 calificaciones</span>
+                                </div>
+                                <div class="align-self-center ms-auto">
+                                    <a href="#" data-toast="snackbar-cart" class="btn btn-s bg-highlight rounded-sm font-700 text-uppercase" data-bs-toggle="offcanvas" data-bs-target="#offcanvasBottom" aria-controls="offcanvasBottom">Rentar ahora</a>
+                                </div>
                             </div>
                         </div>
-                    </div>
                     </div>
 
 
                     <div class="card card-style mx-0 col-12 col-md-6 col-lg-4">
-                    <div class="card card-style mx-2 mt-2" data-card-height="400" style="background-image:url('https://doce38boutique.com/wp-content/uploads/2023/09/VL8038-Vestido-largo-de-lentejuela-con-una-manga-asimetrico-cintura-drapeado-con-escarola-abertura-en-pierna-324x540.jpg')">
-                        <div class="card-top p-3 pe-2 pt-2">
-                            <a href="#" data-toast="snackbar-favorites" class="float-end">
-                                <span class="bg-theme color-theme px-2 py-2 rounded-sm">
-                                    <i class="fa fa-heart color-red-dark pe-1"></i>
-                                    Fav
-                                </span>
-                            </a>
-                        </div>
-                    </div>
-                    <div class="content mt-n3">
-                        <div class="d-flex">
-                            <div class="me-auto align-self-center">
-                                <h2 class="mb-n1">Vestido de noche</h2>
-                                <span class="d-block color-green-dark font-700">Veces rentado: +10</span>
-                            </div>
-                            <div class="ms-auto align-self-center">
-                                <h1 class="pt-2">$32.<sup class="font-14 font-400 opacity-50">99</sup></h1>
+                        <div class="card card-style mx-2 mt-2" data-card-height="400" style="background-image:url('https://doce38boutique.com/wp-content/uploads/2023/09/VL8038-Vestido-largo-de-lentejuela-con-una-manga-asimetrico-cintura-drapeado-con-escarola-abertura-en-pierna-324x540.jpg')">
+                            <div class="card-top p-3 pe-2 pt-2">
+                                <a href="#" data-toast="snackbar-favorites" class="float-end">
+                                    <span class="bg-theme color-theme px-2 py-2 rounded-sm">
+                                        <i class="fa fa-heart color-red-dark pe-1"></i>
+                                        Fav
+                                    </span>
+                                </a>
                             </div>
                         </div>
-                        <p class="font-12 line-height-m pt-2 mb-2">
-                            Con este vestido de noche podrás tener una comodidad increíble, además de poder usarlo para cualquier ocasión. Estamos seguros que te encantará.
-                        </p>
-                        <div class="d-flex">
-                            <div class="align-self-center">
-                                <span>
-                                    <i class="fa fa-star font-12 color-yellow-dark pe-1"></i>
-                                    <i class="fa fa-star font-12 color-yellow-dark pe-1"></i>
-                                    <i class="fa fa-star font-12 color-yellow-dark pe-1"></i>
-                                    <i class="fa fa-star font-12 color-yellow-dark pe-1"></i>
-                                    <i class="fa fa-star font-12 color-yellow-dark pe-1"></i>
-                                </span>
-                                <span class="d-block opacity-70 font-11 mt-n2 color-theme">53 calificaciones</span>
+                        <div class="content mt-n3">
+                            <div class="d-flex">
+                                <div class="me-auto align-self-center">
+                                    <h2 class="mb-n1">Vestido de noche</h2>
+                                    <span class="d-block color-green-dark font-700">Veces rentado: +10</span>
+                                </div>
+                                <div class="ms-auto align-self-center">
+                                    <h1 class="pt-2">$32.<sup class="font-14 font-400 opacity-50">99</sup></h1>
+                                </div>
                             </div>
-                            <div class="align-self-center ms-auto">
-                                <a href="#" data-toast="snackbar-cart" class="btn btn-s bg-highlight rounded-sm font-700 text-uppercase" data-bs-toggle="offcanvas" data-bs-target="#offcanvasBottom" aria-controls="offcanvasBottom">Rentar ahora</a>
+                            <p class="font-12 line-height-m pt-2 mb-2">
+                                Con este vestido de noche podrás tener una comodidad increíble, además de poder usarlo para cualquier ocasión. Estamos seguros que te encantará.
+                            </p>
+                            <div class="d-flex">
+                                <div class="align-self-center">
+                                    <span>
+                                        <i class="fa fa-star font-12 color-yellow-dark pe-1"></i>
+                                        <i class="fa fa-star font-12 color-yellow-dark pe-1"></i>
+                                        <i class="fa fa-star font-12 color-yellow-dark pe-1"></i>
+                                        <i class="fa fa-star font-12 color-yellow-dark pe-1"></i>
+                                        <i class="fa fa-star font-12 color-yellow-dark pe-1"></i>
+                                    </span>
+                                    <span class="d-block opacity-70 font-11 mt-n2 color-theme">53 calificaciones</span>
+                                </div>
+                                <div class="align-self-center ms-auto">
+                                    <a href="#" data-toast="snackbar-cart" class="btn btn-s bg-highlight rounded-sm font-700 text-uppercase" data-bs-toggle="offcanvas" data-bs-target="#offcanvasBottom" aria-controls="offcanvasBottom">Rentar ahora</a>
+                                </div>
                             </div>
                         </div>
-                    </div>
                     </div>
 
-                    
+
                 </div>
-]
+                ]
             </div>
 
 
@@ -722,13 +722,13 @@
         <div id="carouselExample" class="carousel slide">
             <div class="carousel-inner">
                 <div class="carousel-item active">
-                <img src="https://newname.mx/wp-content/uploads/2021/01/AVL7664-1.jpg" class="d-block w-100" alt="...">
+                    <img src="https://newname.mx/wp-content/uploads/2021/01/AVL7664-1.jpg" class="d-block w-100" alt="...">
                 </div>
                 <div class="carousel-item">
-                <img src="https://newname.mx/wp-content/uploads/2021/01/AVL7664-1.jpg" class="d-block w-100" alt="...">
+                    <img src="https://newname.mx/wp-content/uploads/2021/01/AVL7664-1.jpg" class="d-block w-100" alt="...">
                 </div>
                 <div class="carousel-item">
-                <img src="https://newname.mx/wp-content/uploads/2021/01/AVL7664-1.jpg" class="d-block w-100" alt="...">
+                    <img src="https://newname.mx/wp-content/uploads/2021/01/AVL7664-1.jpg" class="d-block w-100" alt="...">
                 </div>
             </div>
             <button class="carousel-control-prev" type="button" data-bs-target="#carouselExample" data-bs-slide="prev">
@@ -742,9 +742,9 @@
         </div>
 
         <span class="d-block color-green-dark font-700">Veces rentado: +10</span>
-       
+
         <p class="mb-2">Este hermoso vestido está disponible para alquiler. Es la elección perfecta para ocasiones especiales, como bodas, fiestas de gala y eventos elegantes. Destaca tu estilo con este vestido exclusivo.</p>
-        
+
         <div class="align-self-center">
             <span>
                 <i class="fa fa-star font-12 color-yellow-dark pe-1"></i>
@@ -761,5 +761,70 @@
 
         <button class="btn btn-dark" style="width: 100%;">Alquilar Ahora</button>
         <br>
+    </div>
+</div>
+
+<div id="menu-event-calendar" class="menu menu-box-bottom menu-box-detached" data-menu-height="370" style="display: block; height: 370px; z-index:99999">
+    <div class="calendar bg-theme m-0" style="max-width:100%!important;">
+        <div class="cal-header">
+            <h4 class="cal-title text-left font-700 bg-highlight color-white">Elige la fecha que necesites</h4>
+            <h6 class="cal-title-right color-white close-menu"><i class="fa fa-times"></i></h6>
+        </div>
+        <div class="clearfix"></div>
+        <div class="cal-days bg-highlight opacity-80 bottom-0">
+            <a href="#">SUN</a>
+            <a href="#">MON</a>
+            <a href="#">TUE</a>
+            <a href="#">WED</a>
+            <a href="#">THU</a>
+            <a href="#">FRI</a>
+            <a href="#">SAT</a>
+            <div class="clearfix"></div>
+        </div>
+        <div class="cal-dates cal-dates-border">
+            <a href="#" class="cal-disabled">25</a>
+            <a href="#" class="cal-disabled">26</a>
+            <a href="#" class="cal-disabled">27</a>
+            <a href="#" class="cal-disabled">28</a>
+            <a href="#" class="cal-disabled">29</a>
+            <a href="#" class="cal-disabled">30</a>
+            <a href="#">1</a>
+            <a href="#">2</a>
+            <a href="#">3</a>
+            <a href="#" class="cal-selected"><i class="fa fa-circle color-highlight"></i><span>5</span></a>
+            <a href="#">5</a>
+            <a href="#">6</a>
+            <a href="#" class="cal-selected"><i class="fa fa-circle color-highlight"></i><span>7</span></a>
+            <a href="#">8</a>
+            <a href="#">9</a>
+            <a href="#">10</a>
+            <a href="#">11</a>
+            <a href="#" class="cal-selected"><i class="fa fa-circle color-highlight"></i><span>12</span></a>
+            <a href="#">13</a>
+            <a href="#">14</a>
+            <a href="#">15</a>
+            <a href="#">16</a>
+            <a href="#" class="cal-selected"><i class="fa fa-circle color-highlight"></i><span>5</span></a>
+            <a href="#">18</a>
+            <a href="#">19</a>
+            <a href="#">20</a>
+            <a href="#" class="cal-selected"><i class="fa fa-circle color-highlight"></i><span>5</span></a>
+            <a href="#">22</a>
+            <a href="#">23</a>
+            <a href="#">24</a>
+            <a href="#">25</a>
+            <a href="#" class="cal-selected"><i class="fa fa-circle color-highlight"></i><span>26</span></a>
+            <a href="#">27</a>
+            <a href="#">28</a>
+            <a href="#">29</a>
+            <a href="#">30</a>
+            <a href="#">31</a>
+            <a href="#" class="cal-disabled">1</a>
+            <a href="#" class="cal-disabled">2</a>
+            <a href="#" class="cal-disabled">3</a>
+            <a href="#" class="cal-disabled">4</a>
+            <a href="#" class="cal-disabled">5</a>
+            <div class="clearfix"></div>
+        </div>
     </div>
 </div>
