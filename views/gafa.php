@@ -631,7 +631,7 @@
         <h1>Gafas de Sol</h1>
 
         <!-- <img class="img-fluid w-100" src="https://img.freepik.com/foto-gratis/camisa-blanca-palabra-t-ella_1340-25481.jpg?size=626&ext=jpg&ga=GA1.1.649413161.1697839706&semt=sph" alt="Renta de vestido"> -->
-        <div id="carouselExample" class="carousel slide">
+        <div id="carouselExample" class="carousel slide" data-bs-ride="carousel">
             <div class="carousel-inner">
                 <div class="carousel-item active">
                 <img src="https://img.freepik.com/foto-gratis/gafas-sol-colores-primer-plano-sombra_23-2148290419.jpg?size=626&ext=jpg&ga=GA1.1.649413161.1697839706&semt=ais" class="d-block w-100 rounded" alt="...">
