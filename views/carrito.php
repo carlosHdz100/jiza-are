@@ -99,7 +99,7 @@
                 </div>
             </div> -->
             <div class="divider"></div>
-            <a href="#" data-menu="menu-settings" class="btn btn-full bg-highlight btn-m text-uppercase font-800 rounded-sm">Rentar articulos</a>
+            <a href="?view=rentas" class="btn btn-full bg-highlight btn-m text-uppercase font-800 rounded-sm">Rentar articulos</a>
         </div>
     </div>
 
