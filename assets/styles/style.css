@@ -2198,13 +2198,22 @@ button {
 .card-image {
   display: block;
   width: 100%;
-  min-height: 250px;
+  /* min-height: 250px; */
+  height: 100%;  /* Ajusta la altura al 100% del contenedor */
   overflow: hidden;
   position: absolute;
   width: 100%;
 }
 .card-image img {
   transition: all 450ms ease;
+
+  width: 100%;
+  height: 100%;
+  object-fit: cover;/* Controla cómo la imagen se ajusta al contenedor manteniendo su relación de aspecto */
+}
+
+.card-image:hover img {
+  transform: scale(1.1); /* Efecto de agrandamiento al hacer hover */
 }
 
 .card-overflow {
