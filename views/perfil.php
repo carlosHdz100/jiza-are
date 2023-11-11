@@ -1,6 +1,6 @@
-<div class="page-content header-clear-medium">
+<div class="page-content mt-2">
     <div class="card card-style">
-        <div class="d-flex content">
+        <div class="d-flex align-items-center content">
             <div class="flex-grow-1">
                 <div>
                     <h1 class="font-700 mb-1">Miguel ohara</h1>
