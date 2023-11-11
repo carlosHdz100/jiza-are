@@ -115,7 +115,7 @@
             <div class="content mt-n3">
                 <div class="d-flex">
                     <div class="me-auto align-self-center">
-                        <h2 class="mb-n1">Vestido de noche</h2>
+                        <h2 class="mb-n1">Camisa de Vestir</h2>
                         <span class="d-block color-green-dark font-700">Veces rentado: +10</span>
                     </div>
                     <div class="ms-auto align-self-center">
@@ -161,7 +161,7 @@
             <div class="content mt-n3">
                 <div class="d-flex">
                     <div class="me-auto align-self-center">
-                        <h2 class="mb-n1">Vestido de noche</h2>
+                        <h2 class="mb-n1">Camisa</h2>
                         <span class="d-block color-green-dark font-700">Veces rentado: +10</span>
                     </div>
                     <div class="ms-auto align-self-center">
@@ -207,7 +207,7 @@
             <div class="content mt-n3">
                 <div class="d-flex">
                     <div class="me-auto align-self-center">
-                        <h2 class="mb-n1">Vestido de noche</h2>
+                        <h2 class="mb-n1">Camisa</h2>
                         <span class="d-block color-green-dark font-700">Veces rentado: +10</span>
                     </div>
                     <div class="ms-auto align-self-center">
@@ -253,7 +253,7 @@
             <div class="content mt-n3">
                 <div class="d-flex">
                     <div class="me-auto align-self-center">
-                        <h2 class="mb-n1">Vestido de noche</h2>
+                        <h2 class="mb-n1">Camisa de Vestir</h2>
                         <span class="d-block color-green-dark font-700">Veces rentado: +10</span>
                     </div>
                     <div class="ms-auto align-self-center">
@@ -299,7 +299,7 @@
             <div class="content mt-n3">
                 <div class="d-flex">
                     <div class="me-auto align-self-center">
-                        <h2 class="mb-n1">Vestido de noche</h2>
+                        <h2 class="mb-n1">Camisa de Vestir</h2>
                         <span class="d-block color-green-dark font-700">Veces rentado: +10</span>
                     </div>
                     <div class="ms-auto align-self-center">
@@ -345,7 +345,7 @@
             <div class="content mt-n3">
                 <div class="d-flex">
                     <div class="me-auto align-self-center">
-                        <h2 class="mb-n1">Vestido de noche</h2>
+                        <h2 class="mb-n1">Camisa</h2>
                         <span class="d-block color-green-dark font-700">Veces rentado: +10</span>
                     </div>
                     <div class="ms-auto align-self-center">
