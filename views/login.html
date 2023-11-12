@@ -1,0 +1,222 @@
+<!DOCTYPE HTML>
+<html lang="es">
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <meta name="viewport"
+        content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1, viewport-fit=cover" />
+    <title>Renta de prendas</title>
+    <link rel="stylesheet" type="text/css" href="assets/styles/bootstrap.css">
+    <link rel="stylesheet" type="text/css" href="assets/styles/style.css">
+    <link
+        href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,500,500i,700,700i,900,900i|Source+Sans+Pro:300,300i,400,400i,600,600i,700,700i,900,900i&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="assets/fonts/css/fontawesome-all.min.css">
+    <link rel="manifest" href="_manifest.json" data-pwa-version="set_in_manifest_and_pwa_js">
+    <link rel="apple-touch-icon" sizes="180x180" href="assets/app/icons/icon-192x192.png">
+    <style>
+        body {
+            overflow: hidden;
+            /* Evitar el desplazamiento de la página */
+        }
+
+        .background-container {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(90deg, #ff0000, #00ff00);
+            background-size: 200% 100%;
+            animation: gradient 10s linear infinite;
+        }
+
+        @keyframes gradient {
+            0% {
+                background-position: 0 0;
+            }
+
+            100% {
+                background-position: 100% 0;
+            }
+        }
+    </style>
+</head>
+
+<body class="theme-light" data-highlight="highlight-red" data-gradient="body-default">
+    <div class="background-container"></div>
+    <div id="preloader">
+        <div class="spinner-border color-highlight" role="status"></div>
+    </div>
+
+    <div id="page">
+        <div class="header header-fixed header-logo-center header-transparent">
+            <a href="#" class="header-title color-white">Renta de prendas</a>
+            <a href="#" data-toggle-theme class="header-icon header-icon-4 color-white"><i
+                    class="fas fa-lightbulb"></i></a>
+        </div>
+
+        <div class="page-content pb-0">
+            <div data-card-height="cover" class="card"
+                style="background-image:url(https://s0.smartresize.com/wallpaper/221/148/HD-wallpaper-long-evening-dress-graphy-dress-woman-fashion.jpg)">
+                <div class="card-center px-3">
+                    <h1 class="color-white font-38 line-height-xl mb-3">
+                        Renta vestidos <br>
+                        desde cualquier lugar <br>
+                    </h1>
+                    <p class="color-white font-14 opacity-70 pb-4">
+                        Viaja ligero, renta vestidos de manera fácil y rápida.
+                    </p>
+                    <button data-menu="menu-login-1"
+                        class="btn btn-l mb-3 rounded-m bg-white color-black text-uppercase font-800"
+                        style="width:100%;">Iniciar Sesión</button>
+                    <button data-menu="menu-register-1"
+                        class="btn btn-l rounded-m bg-highlight color-black text-uppercase font-800 mb-5"
+                        style="width:100%;">Registrarse</button>
+                </div>
+                <div class="card-bottom mb-5 pb-5 mx-3">
+                </div>
+                <div class="card-overlay bg-black opacity-30"></div>
+            </div>
+        </div>
+    </div>
+
+    <div id="menu-login-1" class="menu menu-box-bottom menu-box-detached rounded-m" data-menu-height="320"
+        data-menu-effect="menu-over" style="display: block; height: 320px;">
+        <div class="menu-title mt-n1">
+            <h1>Iniciar Sesión</h1>
+            <p class="color-theme opacity-50">Ingresa tu correo y contraseña para ingresar</p>
+            <a href="#" class="close-menu"><i class="fa fa-times"></i></a>
+        </div>
+        <div class="content mb-0">
+            <div class="input-style no-borders has-icon validate-field mb-4">
+                <i class="fa fa-user"></i>
+                <input type="name" class="form-control validate-name" id="form1a" placeholder="Correo">
+                <label for="form1a" class="color-blue-dark">Correo</label>
+                <i class="fa fa-times disabled invalid color-red-dark"></i>
+                <i class="fa fa-check disabled valid color-green-dark"></i>
+                <em>(required)</em>
+            </div>
+            <div class="input-style no-borders has-icon validate-field mb-4">
+                <i class="fa fa-lock"></i>
+                <input type="password" class="form-control validate-text" id="form3a" placeholder="Password">
+                <label for="form3a" class="color-blue-dark">Password</label>
+                <i class="fa fa-times disabled invalid color-red-dark"></i>
+                <i class="fa fa-check disabled valid color-green-dark"></i>
+                <em>(required)</em>
+            </div>
+            <div class="row">
+                <div class="col-6">
+                    <a href="#" data-menu="menu-forgot-1" class="font-10">¿Olvidaste tu contraseña?</a>
+                </div>
+                <div class="col-6">
+                    <a data-menu="menu-register-1" href="#" class="float-end font-10">Crear una cuenta</a>
+                    <div class="clearfix"></div>
+                </div>
+            </div>
+            <a href="?view=inicio"
+                class="btn btn-full btn-m shadow-l rounded-s text-uppercase font-900 bg-green-dark mt-n2">Ingresar</a>
+        </div>
+    </div>
+
+    <div id="menu-register-1" class="menu menu-box-bottom menu-box-detached rounded-m" data-menu-height="480"
+        data-menu-effect="menu-over" style="display: block; height: 430px;">
+        <div class="menu-title mt-n1">
+            <h1>Registrarse</h1>
+            <p class="color-theme opacity-50">Crear una cuenta</p>
+            <a href="#" class="close-menu"><i class="fa fa-times"></i></a>
+        </div>
+        <div class="content mb-0 mt-0">
+            <div class="input-style no-borders has-icon validate-field mb-4">
+                <i class="fa fa-user"></i>
+                <input type="name" class="form-control validate-name" id="form1ac" placeholder="Ingresa tu nombre">
+                <label for="form1ac" class="color-blue-dark font-10">Ingresa tu nombre</label>
+                <i class="fa fa-times disabled invalid color-red-dark"></i>
+                <i class="fa fa-check disabled valid color-green-dark"></i>
+                <em>(required)</em>
+            </div>
+            <div class="input-style no-borders has-icon validate-field mb-4">
+                <i class="fa fa-user"></i>
+                <input type="name" class="form-control validate-name" id="form1ac" placeholder="Ingresa tus apellidos">
+                <label for="form1ac" class="color-blue-dark font-10">Ingresa tus apellidos</label>
+                <i class="fa fa-times disabled invalid color-red-dark"></i>
+                <i class="fa fa-check disabled valid color-green-dark"></i>
+                <em>(required)</em>
+            </div>
+            <div class="input-style no-borders has-icon validate-field mb-4">
+                <i class="fa fa-at"></i>
+                <input type="email" class="form-control validate-text" id="form2ac55" placeholder="Ingresa tu correo">
+                <label for="form2ac55" class="color-blue-dark font-10">Ingresa tu correo</label>
+                <i class="fa fa-times disabled invalid color-red-dark"></i>
+                <i class="fa fa-check disabled valid color-green-dark"></i>
+                <em>(required)</em>
+            </div>
+            <div class="input-style no-borders has-icon validate-field mb-4">
+                <i class="fa fa-lock"></i>
+                <input type="password" class="form-control validate-text" id="form3ac"
+                    placeholder="Ingresa un password">
+                <label for="form3ac" class="color-blue-dark font-10">Ingresa un password</label>
+                <i class="fa fa-times disabled invalid color-red-dark"></i>
+                <i class="fa fa-check disabled valid color-green-dark"></i>
+                <em>(required)</em>
+            </div>
+            <div class="input-style no-borders has-icon validate-field mb-4">
+                <i class="fa fa-lock"></i>
+                <input type="password" class="form-control validate-text" id="form4ac"
+                    placeholder="Confirma tu password">
+                <label for="form4ac" class="color-blue-dark font-10">Confirma tu password</label>
+                <i class="fa fa-times disabled invalid color-red-dark"></i>
+                <i class="fa fa-check disabled valid color-green-dark"></i>
+                <em>(required)</em>
+            </div>
+            <div class="row">
+                <div class="col-6">
+                    <a href="#" data-menu="menu-forgot-1" class="font-10">¿Olvidaste tu contraseña?</a>
+                </div>
+                <div class="col-6">
+                    <a data-menu="menu-login-1" href="#" class="float-end font-10">Iniciar Sesión</a>
+                    <div class="clearfix"></div>
+                </div>
+            </div>
+            <a href="?view=inicio"
+                class="btn btn-full btn-m shadow-l rounded-s text-uppercase font-900 bg-blue-dark mt-n2">
+                Crear cuenta</a>
+        </div>
+    </div>
+
+    <div id="menu-forgot-1" class="menu menu-box-bottom menu-box-detached rounded-m" data-menu-height="240"
+        data-menu-effect="menu-over" style="display: block; height: 240px;">
+        <div class="menu-title mt-n1">
+            <h1>Recuperar contraseña</h1>
+            <p class="color-theme opacity-50">Recuperar cuenta</p>
+            <a href="#" class="close-menu"><i class="fa fa-times"></i></a>
+        </div>
+        <div class="content mb-0 mt-n2">
+            <div class="input-style no-borders has-icon validate-field mb-4">
+                <i class="fa fa-at"></i>
+                <input type="email" class="form-control validate-text" id="form24a" placeholder="Ingresa tu correo electronico">
+                <label for="form24a" class="color-blue-dark">Ingresa tu correo electronico</label>
+                <i class="fa fa-times disabled invalid color-red-dark"></i>
+                <i class="fa fa-check disabled valid color-green-dark"></i>
+                <em>(required)</em>
+            </div>
+            <div class="row">
+                <div class="col-6">
+                    <a href="#" data-menu="menu-login-1" class="font-10">Iniciar Sesión</a>
+                </div>
+                <div class="col-6">
+                    <a data-menu="menu-register-1" href="#" class="float-end font-10">Crear cuenta</a>
+                    <div class="clearfix"></div>
+                </div>
+            </div>
+            <a href="#" class="btn btn-full btn-m shadow-l rounded-s text-uppercase font-900 bg-red-dark mt-n2">Nueva contraseña</a>
+        </div>
+    </div>
+
+    <script type="text/javascript" src="assets/scripts/bootstrap.min.js"></script>
+    <script type="text/javascript" src="assets/scripts/custom.js"></script>
+</body>
+
+</html>

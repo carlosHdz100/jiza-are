@@ -37,7 +37,7 @@
 
 
         <div id="footer-bar" class="footer-bar-1">
-            <a href="?view="><i class="fa fa-home"></i><span>Inicio</span></a>
+            <a href="?view=inicio"><i class="fa fa-home"></i><span>Inicio</span></a>
             <a href="?view=categorias"><i class="fa fa-star"></i><span>Categorías</span></a>
             <a href="?view=favoritos" class="active-nav"><i class="fa fa-heart"></i><span>Favoritos</span></a>
             <a href="?view=carrito"><i class="fa"><svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-shopping-cart-filled" width="24" height="24" viewBox="0 0 24 24" stroke-width="1.5" stroke="#000000" fill="none" stroke-linecap="round" stroke-linejoin="round">

@@ -5,7 +5,7 @@ $view = $_GET['view'];
 // $rol = $usuario->use_fkrol;
 
 switch ($view) {
-    case '':
+    case 'inicio':
         include('views/inicio.php');
         break;
     case 'categorias':

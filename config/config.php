@@ -10,11 +10,20 @@ $isLogueado = true; //$resultado['logueado'];
 if ($isLogueado) {
     //$usuario = usuario($link, $idUsuario); # INFORMACIÓN DEL usuario logueado
 
-    include('layouts/index.php');
+    if ($_GET['view']== '') {
+        include('views/login.html');
+    } else {
+        include('layouts/index.php');
+    }
+
 } else {
     # SE PUEDE INCLUIR UNA VISTA DE LA CARPETA VIEWS SI EL DISEÑO ES DIFERENTE A LO QUE SE MOSTRARA AL LOGUAERSE : LOGIN U OTRA COSA
     // include('views/login.php'); # PAGINA DE INICIO
-    include('layouts/index.php');
+    if ($_GET['view']== '') {
+        include('views/login.html');
+    } else {
+        include('layouts/index.php');
+    }
 }
 
 
