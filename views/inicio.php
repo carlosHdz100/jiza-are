@@ -353,7 +353,7 @@
                 <h4 class="mb-0">Más para ver</h4>
             </div>
             <div class="align-self-center ms-auto">
-                <a href="#" class="font-12">Ver todo</a>
+                <a href="?view=ver_todo" class="font-12">Ver todo</a>
             </div>
         </div>
 
@@ -727,3 +727,4 @@
 
 <script src="assets/scripts/alerta-carrito.js"></script>
 <script src="assets/scripts/alerta-favorito.js"></script>
+<script type="text/javascript" src="assets/scripts/custom.js"></script>

@@ -1,4 +1,4 @@
-<div class="page-content header-clear-medium">
+<div class="page-content mt-2">
 
         <div class="card card-style">
             <div class="content">

@@ -72,7 +72,7 @@
 
     <!-- <div class="card card-style">
             <div class="content">
-                <h3>Camisetas</h3>
+                <h3>Vestidos</h3>
                 <p>
                     Elige una de las categorías qeu tenemos para encontrar alguna prenda a rentar.
                 </p>
@@ -80,13 +80,108 @@
         </div> -->
     <!-- </div> -->
 
-    <div class="card card-style">
-        <div class="content">
-            <h1 class="text-center font-700 mb-1">Camisetas</h1>
-        </div>
-    </div>
+    <div class="row mb-0 ">
 
-    <div class="row mb-0">
+
+        <div class="card card-style mx-0 col-12 col-md-6 col-lg-4">
+            <div class="card card-style mx-2 mt-2" data-card-height="400">
+                <div class="card-top p-3 pe-2 pt-2">
+                    <div id="liveAlertPlaceholder2"></div>
+                    <a href="#" id="agregarAFavoritos" data-toast="snackbar-favorites" class="float-end">
+                        <span class="bg-theme color-theme px-2 py-2 rounded-sm hidden" id="icon1">
+                            <i class="fa fa-heart color-red-dark pe-1"></i>
+                            Fav
+                        </span>
+                        <span class="bg-theme color-theme px-2 py-2 rounded-sm" id="icon2">
+                            <!-- <i class="fa fa-heart color-dark pe-1"></i> -->
+                            <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-heart" width="16" height="16" viewBox="0 0 24 24" stroke-width="1.5" stroke="#fd0061" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                                <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                                <path d="M19.5 12.572l-7.5 7.428l-7.5 -7.428a5 5 0 1 1 7.5 -6.566a5 5 0 1 1 7.5 6.572" />
+                            </svg>
+                            Fav
+                        </span>
+                    </a>
+                </div>
+                <div class="card-image">
+                    <img src="https://newname.mx/wp-content/uploads/2021/01/AVL7664-1.jpg" alt="">
+                </div>
+            </div>
+            <div class="content mt-n3">
+                <div class="d-flex">
+                    <div class="me-auto align-self-center">
+                        <h2 class="mb-n1">Vestido de noche</h2>
+                        <span class="d-block color-green-dark font-700">Veces rentado: +10</span>
+                    </div>
+                    <div class="ms-auto align-self-center">
+                        <h1 class="pt-2">$32.<sup class="font-14 font-400 opacity-50">99</sup></h1>
+                    </div>
+                </div>
+                <p class="font-12 line-height-m pt-2 mb-2">
+                    Con este vestido de noche podrás tener una comodidad increíble, además de poder usarlo para cualquier ocasión. Estamos seguros que te encantará.
+                </p>
+                <div class="d-flex">
+                    <div class="align-self-center">
+                        <span>
+                            <i class="fa fa-star font-12 color-yellow-dark pe-1"></i>
+                            <i class="fa fa-star font-12 color-yellow-dark pe-1"></i>
+                            <i class="fa fa-star font-12 color-yellow-dark pe-1"></i>
+                            <i class="fa fa-star font-12 color-yellow-dark pe-1"></i>
+                            <i class="fa fa-star font-12 color-yellow-dark pe-1"></i>
+                        </span>
+                        <span class="d-block opacity-70 font-11 mt-n2 color-theme">53 calificaciones</span>
+                    </div>
+                    <div class="align-self-center ms-auto">
+                        <a href="#" data-toast="snackbar-cart" class="custom-btn btn-11 btn-s bg-highlight rounded-sm font-700 text-uppercase" data-bs-toggle="offcanvas" data-bs-target="#offcanvasBottom" aria-controls="offcanvasBottom">Rentar ahora</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+        <div class="card card-style mx-0 col-12 col-md-6 col-lg-4">
+            <div class="card card-style mx-2 mt-2" data-card-height="400">
+                <div class="card-top p-3 pe-2 pt-2">
+                    <a href="#" data-toast="snackbar-favorites" class="float-end">
+                        <span class="bg-theme color-theme px-2 py-2 rounded-sm">
+                            <i class="fa fa-heart color-red-dark pe-1"></i>
+                            Fav
+                        </span>
+                    </a>
+                </div>
+                <div class="card-image">
+                    <img src="https://doce38boutique.com/wp-content/uploads/2023/09/VL8038-Vestido-largo-de-lentejuela-con-una-manga-asimetrico-cintura-drapeado-con-escarola-abertura-en-pierna-324x540.jpg" alt="">
+                </div>
+            </div>
+            <div class="content mt-n3">
+                <div class="d-flex">
+                    <div class="me-auto align-self-center">
+                        <h2 class="mb-n1">Vestido de noche</h2>
+                        <span class="d-block color-green-dark font-700">Veces rentado: +10</span>
+                    </div>
+                    <div class="ms-auto align-self-center">
+                        <h1 class="pt-2">$32.<sup class="font-14 font-400 opacity-50">99</sup></h1>
+                    </div>
+                </div>
+                <p class="font-12 line-height-m pt-2 mb-2">
+                    Con este vestido de noche podrás tener una comodidad increíble, además de poder usarlo para cualquier ocasión. Estamos seguros que te encantará.
+                </p>
+                <div class="d-flex">
+                    <div class="align-self-center">
+                        <span>
+                            <i class="fa fa-star font-12 color-yellow-dark pe-1"></i>
+                            <i class="fa fa-star font-12 color-yellow-dark pe-1"></i>
+                            <i class="fa fa-star font-12 color-yellow-dark pe-1"></i>
+                            <i class="fa fa-star font-12 color-yellow-dark pe-1"></i>
+                            <i class="fa fa-star font-12 color-yellow-dark pe-1"></i>
+                        </span>
+                        <span class="d-block opacity-70 font-11 mt-n2 color-theme">53 calificaciones</span>
+                    </div>
+                    <div class="align-self-center ms-auto">
+                        <a href="#" data-toast="snackbar-cart" class="custom-btn btn-11 btn-s bg-highlight rounded-sm font-700 text-uppercase" data-bs-toggle="offcanvas" data-bs-target="#offcanvasBottom" aria-controls="offcanvasBottom">Rentar ahora</a>
+                    </div>
+                </div>
+            </div>
+        </div>
 
 
         <div class="card card-style mx-0 col-12 col-md-6 col-lg-4">
@@ -147,21 +242,30 @@
         <div class="card card-style mx-0 col-12 col-md-6 col-lg-4">
             <div class="card card-style mx-2 mt-2" data-card-height="400">
                 <div class="card-top p-3 pe-2 pt-2">
-                    <a href="#" data-toast="snackbar-favorites" class="float-end">
-                        <span class="bg-theme color-theme px-2 py-2 rounded-sm">
+                    <div id="liveAlertPlaceholder2"></div>
+                    <a href="#" id="agregarAFavoritos" data-toast="snackbar-favorites" class="float-end">
+                        <span class="bg-theme color-theme px-2 py-2 rounded-sm hidden" id="icon1">
                             <i class="fa fa-heart color-red-dark pe-1"></i>
+                            Fav
+                        </span>
+                        <span class="bg-theme color-theme px-2 py-2 rounded-sm" id="icon2">
+                            <!-- <i class="fa fa-heart color-red-dark pe-1"></i> -->
+                            <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-heart" width="16" height="16" viewBox="0 0 24 24" stroke-width="1.5" stroke="#fd0061" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                                <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                                <path d="M19.5 12.572l-7.5 7.428l-7.5 -7.428a5 5 0 1 1 7.5 -6.566a5 5 0 1 1 7.5 6.572" />
+                            </svg>
                             Fav
                         </span>
                     </a>
                 </div>
                 <div class="card-image">
-                    <img src="https://img.freepik.com/foto-gratis/modelo-camiseta-negra-aislada-vista-frontal_125540-1073.jpg?size=626&ext=jpg&ga=GA1.1.649413161.1697839706&semt=sph" alt="">
+                    <img src="https://img.freepik.com/foto-gratis/bastante-magnifica-joven-morena-timida-posando-calle-paris-mirada-dama-elegante-verano-colores-beige-experiencia-viaje_291049-1756.jpg?size=626&ext=jpg&ga=GA1.1.649413161.1697839706&semt=sph" alt="">
                 </div>
             </div>
             <div class="content mt-n3">
                 <div class="d-flex">
                     <div class="me-auto align-self-center">
-                        <h2 class="mb-n1">Camisa</h2>
+                        <h2 class="mb-n1">Bolso 1</h2>
                         <span class="d-block color-green-dark font-700">Veces rentado: +10</span>
                     </div>
                     <div class="ms-auto align-self-center">
@@ -169,7 +273,7 @@
                     </div>
                 </div>
                 <p class="font-12 line-height-m pt-2 mb-2">
-                    Con este vestido de noche podrás tener una comodidad increíble, además de poder usarlo para cualquier ocasión. Estamos seguros que te encantará.
+                    Con este bolso podrás tener una comodidad increíble, además de poder usarlo para cualquier ocasión. Estamos seguros que te encantará.
                 </p>
                 <div class="d-flex">
                     <div class="align-self-center">
@@ -193,21 +297,30 @@
         <div class="card card-style mx-0 col-12 col-md-6 col-lg-4">
             <div class="card card-style mx-2 mt-2" data-card-height="400">
                 <div class="card-top p-3 pe-2 pt-2">
-                    <a href="#" data-toast="snackbar-favorites" class="float-end">
-                        <span class="bg-theme color-theme px-2 py-2 rounded-sm">
+                <div id="liveAlertPlaceholder2"></div>
+                    <a href="#" id="agregarAFavoritos" data-toast="snackbar-favorites" class="float-end">
+                        <span class="bg-theme color-theme px-2 py-2 rounded-sm hidden" id="icon1">
                             <i class="fa fa-heart color-red-dark pe-1"></i>
+                            Fav
+                        </span>
+                        <span class="bg-theme color-theme px-2 py-2 rounded-sm" id="icon2">
+                            <!-- <i class="fa fa-heart color-dark pe-1"></i> -->
+                            <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-heart" width="16" height="16" viewBox="0 0 24 24" stroke-width="1.5" stroke="#fd0061" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                            <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+                            <path d="M19.5 12.572l-7.5 7.428l-7.5 -7.428a5 5 0 1 1 7.5 -6.566a5 5 0 1 1 7.5 6.572" />
+                            </svg>
                             Fav
                         </span>
                     </a>
                 </div>
                 <div class="card-image">
-                    <img src="https://img.freepik.com/foto-gratis/modelo-camiseta-negra-aislada-vista-frontal_125540-1073.jpg?size=626&ext=jpg&ga=GA1.1.649413161.1697839706&semt=sph" alt="">
+                    <img src="https://img.freepik.com/foto-gratis/mujer-joven-hermosa-estilo-hipster-chaqueta-cuero-rosa_285396-3265.jpg?size=626&ext=jpg&ga=GA1.1.649413161.1697839706&semt=sph" alt="">
                 </div>
             </div>
             <div class="content mt-n3">
                 <div class="d-flex">
                     <div class="me-auto align-self-center">
-                        <h2 class="mb-n1">Camisa</h2>
+                        <h2 class="mb-n1">Zapato 1</h2>
                         <span class="d-block color-green-dark font-700">Veces rentado: +10</span>
                     </div>
                     <div class="ms-auto align-self-center">
@@ -215,7 +328,7 @@
                     </div>
                 </div>
                 <p class="font-12 line-height-m pt-2 mb-2">
-                    Con este vestido de noche podrás tener una comodidad increíble, además de poder usarlo para cualquier ocasión. Estamos seguros que te encantará.
+                    Con este zapato podrás tener una comodidad increíble, además de poder usarlo para cualquier ocasión. Estamos seguros que te encantará.
                 </p>
                 <div class="d-flex">
                     <div class="align-self-center">
@@ -239,21 +352,30 @@
         <div class="card card-style mx-0 col-12 col-md-6 col-lg-4">
             <div class="card card-style mx-2 mt-2" data-card-height="400">
                 <div class="card-top p-3 pe-2 pt-2">
-                    <a href="#" data-toast="snackbar-favorites" class="float-end">
-                        <span class="bg-theme color-theme px-2 py-2 rounded-sm">
+                    <div id="liveAlertPlaceholder2"></div>
+                    <a href="#" id="agregarAFavoritos" data-toast="snackbar-favorites" class="float-end">
+                        <span class="bg-theme color-theme px-2 py-2 rounded-sm hidden" id="icon1">
                             <i class="fa fa-heart color-red-dark pe-1"></i>
+                            Fav
+                        </span>
+                        <span class="bg-theme color-theme px-2 py-2 rounded-sm" id="icon2">
+                            <!-- <i class="fa fa-heart color-red-dark pe-1"></i> -->
+                            <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-heart" width="16" height="16" viewBox="0 0 24 24" stroke-width="1.5" stroke="#fd0061" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                                <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                                <path d="M19.5 12.572l-7.5 7.428l-7.5 -7.428a5 5 0 1 1 7.5 -6.566a5 5 0 1 1 7.5 6.572" />
+                            </svg>
                             Fav
                         </span>
                     </a>
                 </div>
                 <div class="card-image">
-                    <img src="https://img.freepik.com/foto-gratis/sesion-fotos-al-aire-libre-primer-plano-blanco-camisa-casual-negocios_53876-119744.jpg?size=626&ext=jpg&ga=GA1.1.649413161.1697839706&semt=sph" alt="">
+                    <img src="https://img.freepik.com/foto-gratis/vista-frontal-gafas-sol-arena-playa_23-2148557643.jpg?size=626&ext=jpg&ga=GA1.1.649413161.1697839706&semt=ais" alt="">
                 </div>
             </div>
             <div class="content mt-n3">
                 <div class="d-flex">
                     <div class="me-auto align-self-center">
-                        <h2 class="mb-n1">Camisa de Vestir</h2>
+                        <h2 class="mb-n1">Gafas de Sol 1</h2>
                         <span class="d-block color-green-dark font-700">Veces rentado: +10</span>
                     </div>
                     <div class="ms-auto align-self-center">
@@ -261,99 +383,7 @@
                     </div>
                 </div>
                 <p class="font-12 line-height-m pt-2 mb-2">
-                    Con este vestido de noche podrás tener una comodidad increíble, además de poder usarlo para cualquier ocasión. Estamos seguros que te encantará.
-                </p>
-                <div class="d-flex">
-                    <div class="align-self-center">
-                        <span>
-                            <i class="fa fa-star font-12 color-yellow-dark pe-1"></i>
-                            <i class="fa fa-star font-12 color-yellow-dark pe-1"></i>
-                            <i class="fa fa-star font-12 color-yellow-dark pe-1"></i>
-                            <i class="fa fa-star font-12 color-yellow-dark pe-1"></i>
-                            <i class="fa fa-star font-12 color-yellow-dark pe-1"></i>
-                        </span>
-                        <span class="d-block opacity-70 font-11 mt-n2 color-theme">53 calificaciones</span>
-                    </div>
-                    <div class="align-self-center ms-auto">
-                        <a href="#" data-toast="snackbar-cart" class="custom-btn btn-11 btn-s bg-highlight rounded-sm font-700 text-uppercase" data-bs-toggle="offcanvas" data-bs-target="#offcanvasBottom" aria-controls="offcanvasBottom">Rentar ahora</a>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-
-        <div class="card card-style mx-0 col-12 col-md-6 col-lg-4">
-            <div class="card card-style mx-2 mt-2" data-card-height="400">
-                <div class="card-top p-3 pe-2 pt-2">
-                    <a href="#" data-toast="snackbar-favorites" class="float-end">
-                        <span class="bg-theme color-theme px-2 py-2 rounded-sm">
-                            <i class="fa fa-heart color-red-dark pe-1"></i>
-                            Fav
-                        </span>
-                    </a>
-                </div>
-                <div class="card-image">
-                    <img src="https://img.freepik.com/foto-gratis/modelo-camiseta-negra-aislada-vista-frontal_125540-1073.jpg?size=626&ext=jpg&ga=GA1.1.649413161.1697839706&semt=sph" alt="">
-                </div>
-            </div>
-            <div class="content mt-n3">
-                <div class="d-flex">
-                    <div class="me-auto align-self-center">
-                        <h2 class="mb-n1">Camisa de Vestir</h2>
-                        <span class="d-block color-green-dark font-700">Veces rentado: +10</span>
-                    </div>
-                    <div class="ms-auto align-self-center">
-                        <h1 class="pt-2">$32.<sup class="font-14 font-400 opacity-50">99</sup></h1>
-                    </div>
-                </div>
-                <p class="font-12 line-height-m pt-2 mb-2">
-                    Con este vestido de noche podrás tener una comodidad increíble, además de poder usarlo para cualquier ocasión. Estamos seguros que te encantará.
-                </p>
-                <div class="d-flex">
-                    <div class="align-self-center">
-                        <span>
-                            <i class="fa fa-star font-12 color-yellow-dark pe-1"></i>
-                            <i class="fa fa-star font-12 color-yellow-dark pe-1"></i>
-                            <i class="fa fa-star font-12 color-yellow-dark pe-1"></i>
-                            <i class="fa fa-star font-12 color-yellow-dark pe-1"></i>
-                            <i class="fa fa-star font-12 color-yellow-dark pe-1"></i>
-                        </span>
-                        <span class="d-block opacity-70 font-11 mt-n2 color-theme">53 calificaciones</span>
-                    </div>
-                    <div class="align-self-center ms-auto">
-                        <a href="#" data-toast="snackbar-cart" class="custom-btn btn-11 btn-s bg-highlight rounded-sm font-700 text-uppercase" data-bs-toggle="offcanvas" data-bs-target="#offcanvasBottom" aria-controls="offcanvasBottom">Rentar ahora</a>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-
-        <div class="card card-style mx-0 col-12 col-md-6 col-lg-4">
-            <div class="card card-style mx-2 mt-2" data-card-height="400">
-                <div class="card-top p-3 pe-2 pt-2">
-                    <a href="#" data-toast="snackbar-favorites" class="float-end">
-                        <span class="bg-theme color-theme px-2 py-2 rounded-sm">
-                            <i class="fa fa-heart color-red-dark pe-1"></i>
-                            Fav
-                        </span>
-                    </a>
-                </div>
-                <div class="card-image">
-                    <img src="https://img.freepik.com/foto-gratis/modelo-camiseta-negra-aislada-vista-frontal_125540-1073.jpg?size=626&ext=jpg&ga=GA1.1.649413161.1697839706&semt=sph" alt="">
-                </div>
-            </div>
-            <div class="content mt-n3">
-                <div class="d-flex">
-                    <div class="me-auto align-self-center">
-                        <h2 class="mb-n1">Camisa</h2>
-                        <span class="d-block color-green-dark font-700">Veces rentado: +10</span>
-                    </div>
-                    <div class="ms-auto align-self-center">
-                        <h1 class="pt-2">$32.<sup class="font-14 font-400 opacity-50">99</sup></h1>
-                    </div>
-                </div>
-                <p class="font-12 line-height-m pt-2 mb-2">
-                    Con este vestido de noche podrás tener una comodidad increíble, además de poder usarlo para cualquier ocasión. Estamos seguros que te encantará.
+                    Con esta gafs podrás tener una comodidad increíble, además de poder usarlo para cualquier ocasión. Estamos seguros que te encantará.
                 </p>
                 <div class="d-flex">
                     <div class="align-self-center">
@@ -375,55 +405,6 @@
 
 
     </div>
-
-
-
-    <div class="d-flex px-3 mb-n3">
-        <div class="align-self-center">
-            <h4 class="mb-0">Más para ver</h4>
-        </div>
-        <div class="align-self-center ms-auto">
-            <a href="?view=ver_todo" class="font-12">Ver todo</a>
-        </div>
-    </div>
-
-    <div class="splide double-slider slider-no-dots visible-slider" id="double-slider-1a">
-        <div class="splide__track">
-            <div class="splide__list">
-                <div class="splide__slide">
-                    <a href="#" class="mx-3" data-menu="menu-reserve" data-bs-toggle="offcanvas" data-bs-target="#offcanvasBottom" aria-controls="offcanvasBottom">
-                        <div class="card card-style me-0 mb-0" style="background-image:url(https://img.freepik.com/foto-gratis/retrato-joven-apuesto_158595-243.jpg?size=626&ext=jpg&ga=GA1.1.649413161.1697839706&semt=ais);" data-card-height="250">
-                            <div class="card-top p-2">
-                                <!-- <span class="bg-red-dark color-white px-2 py-1 rounded-xs font-11 font-700">-10%</span> -->
-                            </div>
-                            <div class="card-bottom p-2 px-2">
-                                <h4 class="color-white line-height-s">Camisa de Vestir</h4>
-                                <span class="color-white font-10 opacity-60"><i class="fa fa-map-marker pe-2"></i>Ibiza, españa</span>
-                            </div>
-                            <div class="card-overlay bg-gradient"></div>
-                        </div>
-                    </a>
-                </div>
-
-                <div class="splide__slide">
-                    <a href="#" class="mx-3" data-menu="menu-reserve" data-bs-toggle="offcanvas" data-bs-target="#offcanvasBottom" aria-controls="offcanvasBottom">
-                        <div class="card card-style me-0 mb-0" style="background-image:url(https://img.freepik.com/foto-gratis/hombre-llevando-camisa-blanco_23-2149347508.jpg?size=626&ext=jpg&ga=GA1.1.649413161.1697839706&semt=sph);" data-card-height="250">
-                            <div class="card-top p-2">
-                                <!-- <span class="color-white bg-blue-dark px-2 py-1 rounded-xs font-11 font-700">RENTA</span> -->
-                            </div>
-                            <div class="card-bottom p-2 px-2">
-                                <h4 class="color-white line-height-s">Camisa</h4>
-                                <span class="color-white font-10 opacity-60"><i class="fa fa-map-marker pe-2"></i>Ibiza, España</span>
-                            </div>
-                            <div class="card-overlay bg-gradient"></div>
-                        </div>
-                    </a>
-                </div>
-            </div>
-        </div>
-    </div>
-</div>
-</div>
 
 <!-- Menu Sidebar Sidebar Filters-->
 <div id="menu-filter" class="menu menu-box-left" data-menu-height="cover" data-menu-width="cover">
@@ -620,7 +601,7 @@
 </div>
 
 
-<!-- Rentar-->
+<!-- Rentar -->
 <div class="offcanvas offcanvas-bottom" tabindex="-1" id="offcanvasBottom" aria-labelledby="offcanvasBottomLabel" style="height: auto;">
     <div class="offcanvas-header">
 
@@ -628,19 +609,19 @@
     </div>
     <div class="offcanvas-body small">
 
-        <h1>Camisa</h1>
+        <h1>Vestido</h1>
 
         <!-- <img class="img-fluid w-100" src="https://img.freepik.com/foto-gratis/camisa-blanca-palabra-t-ella_1340-25481.jpg?size=626&ext=jpg&ga=GA1.1.649413161.1697839706&semt=sph" alt="Renta de vestido"> -->
         <div id="carouselExample" class="carousel slide" data-bs-ride="carousel">
             <div class="carousel-inner">
                 <div class="carousel-item active">
-                    <img src="https://img.freepik.com/foto-gratis/camisa-blanca-palabra-t-ella_1340-25481.jpg?size=626&ext=jpg&ga=GA1.1.649413161.1697839706&semt=sph" class="d-block w-100 rounded" alt="...">
+                    <img src="https://newname.mx/wp-content/uploads/2021/01/AVL7664-1.jpg" class="d-block w-100 rounded" alt="...">
                 </div>
                 <div class="carousel-item">
-                    <img src="https://img.freepik.com/foto-gratis/camisa-blanca-palabra-t-ella_1340-25481.jpg?size=626&ext=jpg&ga=GA1.1.649413161.1697839706&semt=sph" class="d-block w-100 rounded" alt="...">
+                    <img src="https://newname.mx/wp-content/uploads/2021/01/AVL7664-1.jpg" class="d-block w-100 rounded" alt="...">
                 </div>
                 <div class="carousel-item">
-                    <img src="https://img.freepik.com/foto-gratis/camisa-blanca-palabra-t-ella_1340-25481.jpg?size=626&ext=jpg&ga=GA1.1.649413161.1697839706&semt=sph" class="d-block w-100 rounded" alt="...">
+                    <img src="https://newname.mx/wp-content/uploads/2021/01/AVL7664-1.jpg" class="d-block w-100 rounded" alt="...">
                 </div>
             </div>
             <button class="carousel-control-prev" type="button" data-bs-target="#carouselExample" data-bs-slide="prev">
@@ -655,7 +636,7 @@
 
         <span class="d-block color-green-dark font-700">Veces rentado: +10</span>
 
-        <p class="mb-2">Esta camisa está disponible para alquiler. Es la elección perfecta para ocasiones especiales, como bodas, fiestas de gala y eventos elegantes. Destaca tu estilo con esta camisa exclusiva.</p>
+        <p class="mb-2">Este hermoso vestido está disponible para alquiler. Es la elección perfecta para ocasiones especiales, como bodas, fiestas de gala y eventos elegantes. Destaca tu estilo con este vestido exclusivo.</p>
 
         <div class="align-self-center">
             <span>
@@ -676,33 +657,78 @@
         <hr>
 
         <div id="liveAlertPlaceholder"></div>
-        <!-- <button type="button" class="btn btn-dark"  id="agregarAlCarrito" style="width: 100%;">Agregar al carrito</button> -->
+        <!-- <button type="button" class="btn btn-dark" id="agregarAlCarrito" style="width: 100%;">Agregar al carrito</button> -->
         <button type="button" class="custom-btn btn-11" id="agregarAlCarrito" style="width: 100%;">Agregar al carrito<div class="dot"></div></button>
         <br>
     </div>
 </div>
 
- <!-- Calendar -->
- <div id="menu-event-calendar" class="menu menu-box-bottom menu-box-detached" data-menu-height="370" style="display: block; height: 370px; z-index:99999">
+<div id="menu-event-calendar" class="menu menu-box-bottom menu-box-detached" data-menu-height="370" style="display: block; height: 370px; z-index:99999">
     <div class="calendar bg-theme m-0" style="max-width:100%!important;">
         <div class="cal-header">
-            <h4 class="cal-title text-left font-700 bg-highlight color-white">Elige las fechas que necesite</h4>
+            <h4 class="cal-title text-left font-700 bg-highlight color-white">Elige la fecha que necesites</h4>
             <h6 class="cal-title-right color-white close-menu"><i class="fa fa-times"></i></h6>
         </div>
         <div class="clearfix"></div>
-
-        <div class="containerForm mt-4">
-            <h4 class="ls-1 text-uppercase" style="font-weight: 500;">Inicio</h4>
-            <input type="text" id="from" class="from" size="10">
-            <h4 class="ls-1 text-uppercase"  style="font-weight: 500;">Fin</h4>
-            <input type="text" id="to" class="to" size="10">
+        <div class="cal-days bg-highlight opacity-80 bottom-0">
+            <a href="#">SUN</a>
+            <a href="#">MON</a>
+            <a href="#">TUE</a>
+            <a href="#">WED</a>
+            <a href="#">THU</a>
+            <a href="#">FRI</a>
+            <a href="#">SAT</a>
+            <div class="clearfix"></div>
         </div>
-
-        <div class="datepicker ll-skin-melon bottom-0"></div>
-    </div> 
+        <div class="cal-dates cal-dates-border">
+            <a href="#" class="cal-disabled">25</a>
+            <a href="#" class="cal-disabled">26</a>
+            <a href="#" class="cal-disabled">27</a>
+            <a href="#" class="cal-disabled">28</a>
+            <a href="#" class="cal-disabled">29</a>
+            <a href="#" class="cal-disabled">30</a>
+            <a href="#">1</a>
+            <a href="#">2</a>
+            <a href="#">3</a>
+            <a href="#" class="cal-selected"><i class="fa fa-circle color-highlight"></i><span>5</span></a>
+            <a href="#">5</a>
+            <a href="#">6</a>
+            <a href="#" class="cal-selected"><i class="fa fa-circle color-highlight"></i><span>7</span></a>
+            <a href="#">8</a>
+            <a href="#">9</a>
+            <a href="#">10</a>
+            <a href="#">11</a>
+            <a href="#" class="cal-selected"><i class="fa fa-circle color-highlight"></i><span>12</span></a>
+            <a href="#">13</a>
+            <a href="#">14</a>
+            <a href="#">15</a>
+            <a href="#">16</a>
+            <a href="#" class="cal-selected"><i class="fa fa-circle color-highlight"></i><span>5</span></a>
+            <a href="#">18</a>
+            <a href="#">19</a>
+            <a href="#">20</a>
+            <a href="#" class="cal-selected"><i class="fa fa-circle color-highlight"></i><span>5</span></a>
+            <a href="#">22</a>
+            <a href="#">23</a>
+            <a href="#">24</a>
+            <a href="#">25</a>
+            <a href="#" class="cal-selected"><i class="fa fa-circle color-highlight"></i><span>26</span></a>
+            <a href="#">27</a>
+            <a href="#">28</a>
+            <a href="#">29</a>
+            <a href="#">30</a>
+            <a href="#">31</a>
+            <a href="#" class="cal-disabled">1</a>
+            <a href="#" class="cal-disabled">2</a>
+            <a href="#" class="cal-disabled">3</a>
+            <a href="#" class="cal-disabled">4</a>
+            <a href="#" class="cal-disabled">5</a>
+            <div class="clearfix"></div>
+        </div>
+    </div>
 </div>
+
 
 <script src="assets/scripts/alerta-carrito.js"></script>
 <script src="assets/scripts/alerta-favorito.js"></script>
-<script src="assets/scripts/calendar-range.js"></script>
 <script type="text/javascript" src="assets/scripts/custom.js"></script>
