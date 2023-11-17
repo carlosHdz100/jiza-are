@@ -47,6 +47,9 @@ switch ($view) {
     case 'accionesymodales':
         include('views/accionesymodales.php');
         break;
+    case 'ver_todo':
+        include('views/ver_todo.php');
+        break;
     default:
         # ERROR DEBE VOLVER AL INICIO | no esta logueado
         redireccion();

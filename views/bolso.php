@@ -383,7 +383,7 @@
             <h4 class="mb-0">Más para ver</h4>
         </div>
         <div class="align-self-center ms-auto">
-            <a href="#" class="font-12">Ver todo</a>
+            <a href="?view=ver_todo" class="font-12">Ver todo</a>
         </div>
     </div>
 
@@ -683,69 +683,27 @@
     </div>
 </div>
 
-<div id="menu-event-calendar" class="menu menu-box-bottom menu-box-detached" data-menu-height="370" style="display: block; height: 370px; z-index:99999">
+ <!-- Calendar -->
+ <div id="menu-event-calendar" class="menu menu-box-bottom menu-box-detached" data-menu-height="370" style="display: block; height: 370px; z-index:99999">
     <div class="calendar bg-theme m-0" style="max-width:100%!important;">
         <div class="cal-header">
-            <h4 class="cal-title text-left font-700 bg-highlight color-white">Elige la fecha que necesites</h4>
+            <h4 class="cal-title text-left font-700 bg-highlight color-white">Elige las fechas que necesite</h4>
             <h6 class="cal-title-right color-white close-menu"><i class="fa fa-times"></i></h6>
         </div>
         <div class="clearfix"></div>
-        <div class="cal-days bg-highlight opacity-80 bottom-0">
-            <a href="#">SUN</a>
-            <a href="#">MON</a>
-            <a href="#">TUE</a>
-            <a href="#">WED</a>
-            <a href="#">THU</a>
-            <a href="#">FRI</a>
-            <a href="#">SAT</a>
-            <div class="clearfix"></div>
+
+        <div class="containerForm mt-4">
+            <h4 class="ls-1 text-uppercase" style="font-weight: 500;">Inicio</h4>
+            <input type="text" id="from" class="from" size="10">
+            <h4 class="ls-1 text-uppercase"  style="font-weight: 500;">Fin</h4>
+            <input type="text" id="to" class="to" size="10">
         </div>
-        <div class="cal-dates cal-dates-border">
-            <a href="#" class="cal-disabled">25</a>
-            <a href="#" class="cal-disabled">26</a>
-            <a href="#" class="cal-disabled">27</a>
-            <a href="#" class="cal-disabled">28</a>
-            <a href="#" class="cal-disabled">29</a>
-            <a href="#" class="cal-disabled">30</a>
-            <a href="#">1</a>
-            <a href="#">2</a>
-            <a href="#">3</a>
-            <a href="#" class="cal-selected"><i class="fa fa-circle color-highlight"></i><span>5</span></a>
-            <a href="#">5</a>
-            <a href="#">6</a>
-            <a href="#" class="cal-selected"><i class="fa fa-circle color-highlight"></i><span>7</span></a>
-            <a href="#">8</a>
-            <a href="#">9</a>
-            <a href="#">10</a>
-            <a href="#">11</a>
-            <a href="#" class="cal-selected"><i class="fa fa-circle color-highlight"></i><span>12</span></a>
-            <a href="#">13</a>
-            <a href="#">14</a>
-            <a href="#">15</a>
-            <a href="#">16</a>
-            <a href="#" class="cal-selected"><i class="fa fa-circle color-highlight"></i><span>5</span></a>
-            <a href="#">18</a>
-            <a href="#">19</a>
-            <a href="#">20</a>
-            <a href="#" class="cal-selected"><i class="fa fa-circle color-highlight"></i><span>5</span></a>
-            <a href="#">22</a>
-            <a href="#">23</a>
-            <a href="#">24</a>
-            <a href="#">25</a>
-            <a href="#" class="cal-selected"><i class="fa fa-circle color-highlight"></i><span>26</span></a>
-            <a href="#">27</a>
-            <a href="#">28</a>
-            <a href="#">29</a>
-            <a href="#">30</a>
-            <a href="#">31</a>
-            <a href="#" class="cal-disabled">1</a>
-            <a href="#" class="cal-disabled">2</a>
-            <a href="#" class="cal-disabled">3</a>
-            <a href="#" class="cal-disabled">4</a>
-            <a href="#" class="cal-disabled">5</a>
-            <div class="clearfix"></div>
-        </div>
-    </div>
+
+        <div class="datepicker ll-skin-melon bottom-0"></div>
+    </div> 
 </div>
+
 <script src="assets/scripts/alerta-carrito.js"></script>
 <script src="assets/scripts/alerta-favorito.js"></script>
+<script src="assets/scripts/calendar-range.js"></script>
+<script type="text/javascript" src="assets/scripts/custom.js"></script>

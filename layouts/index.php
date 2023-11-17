@@ -13,6 +13,14 @@
     <link rel="stylesheet" type="text/css" href="assets/styles/bootstrap.css">
     <link rel="stylesheet" type="text/css" href="assets/styles/style.css">
     <link rel="stylesheet" type="text/css" href="assets/styles/plantilla.css">
+    
+    <!-- Incluye jQuery -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+    <link rel="stylesheet" href="https://code.jquery.com/ui/1.11.4/themes/smoothness/jquery-ui.css">
+    <script src="https://code.jquery.com/jquery-1.10.2.js"></script>
+    <script src="https://code.jquery.com/ui/1.11.4/jquery-ui.js"></script>
+  
 
     <link href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,500,500i,700,700i,900,900i|Source+Sans+Pro:300,300i,400,400i,600,600i,700,700i,900,900i&display=swap" rel="stylesheet">
     <link rel="stylesheet" type="text/css" href="assets/fonts/css/fontawesome-all.min.css">
