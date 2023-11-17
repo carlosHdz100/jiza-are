@@ -683,8 +683,8 @@
     </div>
 </div>
 
- <!-- Calendar -->
- <div id="menu-event-calendar" class="menu menu-box-bottom menu-box-detached" data-menu-height="370" style="display: block; height: 370px; z-index:99999">
+<!-- Calendar -->
+<div id="menu-event-calendar" class="menu menu-box-bottom menu-box-detached" data-menu-height="370" style="display: block; height: 370px; z-index:99999">
     <div class="calendar bg-theme m-0" style="max-width:100%!important;">
         <div class="cal-header">
             <h4 class="cal-title text-left font-700 bg-highlight color-white">Elige las fechas que necesite</h4>
@@ -695,12 +695,12 @@
         <div class="containerForm mt-4">
             <h4 class="ls-1 text-uppercase" style="font-weight: 500;">Inicio</h4>
             <input type="text" id="from" class="from" size="10">
-            <h4 class="ls-1 text-uppercase"  style="font-weight: 500;">Fin</h4>
+            <h4 class="ls-1 text-uppercase" style="font-weight: 500;">Fin</h4>
             <input type="text" id="to" class="to" size="10">
         </div>
 
         <div class="datepicker ll-skin-melon bottom-0"></div>
-    </div> 
+    </div>
 </div>
 
 <script src="assets/scripts/alerta-carrito.js"></script>
