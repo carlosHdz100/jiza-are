@@ -681,7 +681,7 @@
 </div>
 
 
- <!-- Calendar -->
+<!-- Calendar -->
 <div id="menu-event-calendar" class="menu menu-box-bottom menu-box-detached" data-menu-height="370" style="display: block; height: 370px; z-index:99999">
     <div class="calendar bg-theme m-0" style="max-width:100%!important;">
         <div class="cal-header">

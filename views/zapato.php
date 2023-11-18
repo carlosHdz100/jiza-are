@@ -1,54 +1,54 @@
 <div class="page-content mt-2">
 
     <!-- <div class="card preload-img position-fixed w-100" data-card-height="450"> -->
-        <!-- Search -->
-        <!-- <div class="content mt-2 position-absolute start-0 end-0 mx-1"> -->
-            <!-- <div class="notch-clear"></div> -->
-            <div class="search-box bg-theme color-theme rounded-m shadow-l mx-2 mb-4">
-                <i class="fa fa-search"></i>
-                <input type="text" class="border-0" placeholder="Qué estás buscando?" data-search>
-                <a href="#" class="clear-search disabled no-click mt-0"></a>
-                <a href="#" data-menu="menu-filter" class="color-theme"><i class="fa fa-sliders me-n3"></i></a>
-            </div>
+    <!-- Search -->
+    <!-- <div class="content mt-2 position-absolute start-0 end-0 mx-1"> -->
+    <!-- <div class="notch-clear"></div> -->
+    <div class="search-box bg-theme color-theme rounded-m shadow-l mx-2 mb-4">
+        <i class="fa fa-search"></i>
+        <input type="text" class="border-0" placeholder="Qué estás buscando?" data-search>
+        <a href="#" class="clear-search disabled no-click mt-0"></a>
+        <a href="#" data-menu="menu-filter" class="color-theme"><i class="fa fa-sliders me-n3"></i></a>
+    </div>
 
 
 
-            <div class="search-results disabled-search-list mt-3">
-                <div class="card card-style mx-2 px-2 mb-0 pt-2">
+    <div class="search-results disabled-search-list mt-3">
+        <div class="card card-style mx-2 px-2 mb-0 pt-2">
 
-                    <a href="#" class="d-flex py-2" data-filter-item data-filter-name="all apple watch 42 leather edition white">
-                        <div>
-                            <img src="images/food/500x500/2.png" class="rounded-sm me-1" width="45" alt="img">
-                        </div>
-                        <div>
-                            <span class="color-highlight font-400 d-block pt-0 mb-n2 font-11">Rentar</span>
-                            <strong class="color-theme font-14 d-block mt-n2">Vestido de noche</strong>
-                        </div>
-                        <div class="ms-auto text-center align-self-center pe-2">
-                            <h5 class="line-height-xs font-18 pt-3">$5.<sup class="font-14">50</sup></h5>
-                        </div>
-                    </a>
-                    <a href="#" class="d-flex py-2" data-filter-item data-filter-name="all apple watch lime edition 44 green">
-                        <div>
-                            <img src="images/food/500x500/3.png" class="rounded-sm me-1" width="45" alt="img">
-                        </div>
-                        <div>
-                            <span class="color-highlight font-400 d-block pt-0 mb-n2 font-11">Accesorio</span>
-                            <strong class="color-theme font-14 d-block mt-n2">Aretes brillantes</strong>
-                        </div>
-                        <div class="ms-auto text-center align-self-center pe-2">
-                            <h5 class="line-height-xs font-18 pt-3">$16.<sup class="font-14">50</sup></h5>
-                        </div>
-                    </a>
+            <a href="#" class="d-flex py-2" data-filter-item data-filter-name="all apple watch 42 leather edition white">
+                <div>
+                    <img src="images/food/500x500/2.png" class="rounded-sm me-1" width="45" alt="img">
                 </div>
-            </div>
+                <div>
+                    <span class="color-highlight font-400 d-block pt-0 mb-n2 font-11">Rentar</span>
+                    <strong class="color-theme font-14 d-block mt-n2">Vestido de noche</strong>
+                </div>
+                <div class="ms-auto text-center align-self-center pe-2">
+                    <h5 class="line-height-xs font-18 pt-3">$5.<sup class="font-14">50</sup></h5>
+                </div>
+            </a>
+            <a href="#" class="d-flex py-2" data-filter-item data-filter-name="all apple watch lime edition 44 green">
+                <div>
+                    <img src="images/food/500x500/3.png" class="rounded-sm me-1" width="45" alt="img">
+                </div>
+                <div>
+                    <span class="color-highlight font-400 d-block pt-0 mb-n2 font-11">Accesorio</span>
+                    <strong class="color-theme font-14 d-block mt-n2">Aretes brillantes</strong>
+                </div>
+                <div class="ms-auto text-center align-self-center pe-2">
+                    <h5 class="line-height-xs font-18 pt-3">$16.<sup class="font-14">50</sup></h5>
+                </div>
+            </a>
+        </div>
+    </div>
 
 
 
 
-        <!-- </div> -->
-        <!-- Placing iframe under the header-->
-        <!-- <iframe src="https://maps.google.com/maps?q=%Sidney%20Opera&t=k&z=17&ie=UTF8&iwloc=&output=embed" style="height:650px; margin-top:-200px;"></iframe> -->
+    <!-- </div> -->
+    <!-- Placing iframe under the header-->
+    <!-- <iframe src="https://maps.google.com/maps?q=%Sidney%20Opera&t=k&z=17&ie=UTF8&iwloc=&output=embed" style="height:650px; margin-top:-200px;"></iframe> -->
     <!-- </div> -->
 
 
@@ -59,18 +59,18 @@
     </div> -->
 
     <!-- <div class="card card-style mx-0 pb-5 pt-1"> -->
-        <!-- <div class="divider mx-auto mt-3 bg-gray-dark opacity-30 rounded-s mb-3" style="height:5px; width:50px;"></div> -->
-        <div class="search-no-results disabled mt-n3">
-            <div class="content bg-red-dark p-3 rounded-m">
-                <h1 class="color-white">Sin resultados</h1>
-                <p class="color-white">
-                    No se encontraraon datos conforme a tu busqueda.
-                </p>
-            </div>
-            <div class="divider divider-margins mt-4"></div>
+    <!-- <div class="divider mx-auto mt-3 bg-gray-dark opacity-30 rounded-s mb-3" style="height:5px; width:50px;"></div> -->
+    <div class="search-no-results disabled mt-n3">
+        <div class="content bg-red-dark p-3 rounded-m">
+            <h1 class="color-white">Sin resultados</h1>
+            <p class="color-white">
+                No se encontraraon datos conforme a tu busqueda.
+            </p>
         </div>
+        <div class="divider divider-margins mt-4"></div>
+    </div>
 
-        <!-- <div class="card card-style">
+    <!-- <div class="card card-style">
             <div class="content">
                 <h3>Zapatos</h3>
                 <p>
@@ -94,7 +94,7 @@
         <div class="card card-style mx-0 col-12 col-md-6 col-lg-4">
             <div class="card card-style mx-2 mt-2" data-card-height="400">
                 <div class="card-top p-3 pe-2 pt-2">
-                <div id="liveAlertPlaceholder2"></div>
+                    <div id="liveAlertPlaceholder2"></div>
                     <a href="#" id="agregarAFavoritos" data-toast="snackbar-favorites" class="float-end">
                         <span class="bg-theme color-theme px-2 py-2 rounded-sm hidden" id="icon1">
                             <i class="fa fa-heart color-red-dark pe-1"></i>
@@ -103,8 +103,8 @@
                         <span class="bg-theme color-theme px-2 py-2 rounded-sm" id="icon2">
                             <!-- <i class="fa fa-heart color-dark pe-1"></i> -->
                             <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-heart" width="16" height="16" viewBox="0 0 24 24" stroke-width="1.5" stroke="#fd0061" fill="none" stroke-linecap="round" stroke-linejoin="round">
-                            <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
-                            <path d="M19.5 12.572l-7.5 7.428l-7.5 -7.428a5 5 0 1 1 7.5 -6.566a5 5 0 1 1 7.5 6.572" />
+                                <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                                <path d="M19.5 12.572l-7.5 7.428l-7.5 -7.428a5 5 0 1 1 7.5 -6.566a5 5 0 1 1 7.5 6.572" />
                             </svg>
                             Fav
                         </span>
@@ -377,54 +377,54 @@
 
 
     </div>
-        
 
 
-        <div class="d-flex px-3 mb-n3">
-            <div class="align-self-center">
-                <h4 class="mb-0">Más para ver</h4>
-            </div>
-            <div class="align-self-center ms-auto">
-                <a href="?view=ver_todo" class="font-12">Ver todo</a>
-            </div>
+
+    <div class="d-flex px-3 mb-n3">
+        <div class="align-self-center">
+            <h4 class="mb-0">Más para ver</h4>
         </div>
+        <div class="align-self-center ms-auto">
+            <a href="?view=ver_todo" class="font-12">Ver todo</a>
+        </div>
+    </div>
 
-        <div class="splide double-slider slider-no-dots visible-slider" id="double-slider-1a">
-            <div class="splide__track">
-                <div class="splide__list">
-                    <div class="splide__slide">
-                        <a href="#" class="mx-3" data-menu="menu-reserve" data-bs-toggle="offcanvas" data-bs-target="#offcanvasBottom" aria-controls="offcanvasBottom">
-                            <div class="card card-style me-0 mb-0" style="background-image:url(https://img.freepik.com/fotos-premium/modelo-posando-estudio-modelo-abrigo-negro-zapatos_444642-784.jpg?size=626&ext=jpg&ga=GA1.1.649413161.1697839706&semt=ais);" data-card-height="250">
-                                <div class="card-top p-2">
-                                    <!-- <span class="bg-red-dark color-white px-2 py-1 rounded-xs font-11 font-700">-10%</span> -->
-                                </div>
-                                <div class="card-bottom p-2 px-2">
-                                    <h4 class="color-white line-height-s">Zapato</h4>
-                                    <span class="color-white font-10 opacity-60"><i class="fa fa-map-marker pe-2"></i>Ibiza, españa</span>
-                                </div>
-                                <div class="card-overlay bg-gradient"></div>
+    <div class="splide double-slider slider-no-dots visible-slider" id="double-slider-1a">
+        <div class="splide__track">
+            <div class="splide__list">
+                <div class="splide__slide">
+                    <a href="#" class="mx-3" data-menu="menu-reserve" data-bs-toggle="offcanvas" data-bs-target="#offcanvasBottom" aria-controls="offcanvasBottom">
+                        <div class="card card-style me-0 mb-0" style="background-image:url(https://img.freepik.com/fotos-premium/modelo-posando-estudio-modelo-abrigo-negro-zapatos_444642-784.jpg?size=626&ext=jpg&ga=GA1.1.649413161.1697839706&semt=ais);" data-card-height="250">
+                            <div class="card-top p-2">
+                                <!-- <span class="bg-red-dark color-white px-2 py-1 rounded-xs font-11 font-700">-10%</span> -->
                             </div>
-                        </a>
-                    </div>
+                            <div class="card-bottom p-2 px-2">
+                                <h4 class="color-white line-height-s">Zapato</h4>
+                                <span class="color-white font-10 opacity-60"><i class="fa fa-map-marker pe-2"></i>Ibiza, españa</span>
+                            </div>
+                            <div class="card-overlay bg-gradient"></div>
+                        </div>
+                    </a>
+                </div>
 
-                    <div class="splide__slide">
-                        <a href="#" class="mx-3" data-menu="menu-reserve" data-bs-toggle="offcanvas" data-bs-target="#offcanvasBottom" aria-controls="offcanvasBottom">
-                            <div class="card card-style me-0 mb-0" style="background-image:url(https://img.freepik.com/foto-gratis/zapatos_1303-3769.jpg?size=626&ext=jpg&ga=GA1.1.649413161.1697839706&semt=ais);" data-card-height="250">
-                                <div class="card-top p-2">
-                                    <!-- <span class="color-white bg-blue-dark px-2 py-1 rounded-xs font-11 font-700">RENTA</span> -->
-                                </div>
-                                <div class="card-bottom p-2 px-2">
-                                    <h4 class="color-white line-height-s">Zapato</h4>
-                                    <span class="color-white font-10 opacity-60"><i class="fa fa-map-marker pe-2"></i>Ibiza, España</span>
-                                </div>
-                                <div class="card-overlay bg-gradient"></div>
+                <div class="splide__slide">
+                    <a href="#" class="mx-3" data-menu="menu-reserve" data-bs-toggle="offcanvas" data-bs-target="#offcanvasBottom" aria-controls="offcanvasBottom">
+                        <div class="card card-style me-0 mb-0" style="background-image:url(https://img.freepik.com/foto-gratis/zapatos_1303-3769.jpg?size=626&ext=jpg&ga=GA1.1.649413161.1697839706&semt=ais);" data-card-height="250">
+                            <div class="card-top p-2">
+                                <!-- <span class="color-white bg-blue-dark px-2 py-1 rounded-xs font-11 font-700">RENTA</span> -->
                             </div>
-                        </a>
-                    </div>
+                            <div class="card-bottom p-2 px-2">
+                                <h4 class="color-white line-height-s">Zapato</h4>
+                                <span class="color-white font-10 opacity-60"><i class="fa fa-map-marker pe-2"></i>Ibiza, España</span>
+                            </div>
+                            <div class="card-overlay bg-gradient"></div>
+                        </div>
+                    </a>
                 </div>
             </div>
         </div>
     </div>
+</div>
 </div>
 
 <!-- Menu Sidebar Sidebar Filters-->
@@ -636,13 +636,13 @@
         <div id="carouselExample" class="carousel slide" data-bs-ride="carousel">
             <div class="carousel-inner">
                 <div class="carousel-item active">
-                <img src="https://img.freepik.com/fotos-premium/hermosos-zapatos-femeninos-rojos-sobre-fondo-azul_392895-297419.jpg?size=626&ext=jpg&ga=GA1.1.649413161.1697839706&semt=ais" class="d-block w-100 rounded" alt="...">
+                    <img src="https://img.freepik.com/fotos-premium/hermosos-zapatos-femeninos-rojos-sobre-fondo-azul_392895-297419.jpg?size=626&ext=jpg&ga=GA1.1.649413161.1697839706&semt=ais" class="d-block w-100 rounded" alt="...">
                 </div>
                 <div class="carousel-item">
-                <img src="https://img.freepik.com/fotos-premium/hermosos-zapatos-femeninos-rojos-sobre-fondo-azul_392895-297419.jpg?size=626&ext=jpg&ga=GA1.1.649413161.1697839706&semt=ais" class="d-block w-100 rounded" alt="...">
+                    <img src="https://img.freepik.com/fotos-premium/hermosos-zapatos-femeninos-rojos-sobre-fondo-azul_392895-297419.jpg?size=626&ext=jpg&ga=GA1.1.649413161.1697839706&semt=ais" class="d-block w-100 rounded" alt="...">
                 </div>
                 <div class="carousel-item">
-                <img src="https://img.freepik.com/fotos-premium/hermosos-zapatos-femeninos-rojos-sobre-fondo-azul_392895-297419.jpg?size=626&ext=jpg&ga=GA1.1.649413161.1697839706&semt=ais" class="d-block w-100 rounded" alt="...">
+                    <img src="https://img.freepik.com/fotos-premium/hermosos-zapatos-femeninos-rojos-sobre-fondo-azul_392895-297419.jpg?size=626&ext=jpg&ga=GA1.1.649413161.1697839706&semt=ais" class="d-block w-100 rounded" alt="...">
                 </div>
             </div>
             <button class="carousel-control-prev" type="button" data-bs-target="#carouselExample" data-bs-slide="prev">
@@ -656,9 +656,9 @@
         </div>
 
         <span class="d-block color-green-dark font-700">Veces rentado: +10</span>
-       
+
         <p class="mb-2">Este zapato está disponible para alquiler. Es la elección perfecta para ocasiones especiales, como bodas, fiestas de gala y eventos elegantes. Destaca tu estilo con este zapato exclusivo.</p>
-        
+
         <div class="align-self-center">
             <span>
                 <i class="fa fa-star font-12 color-yellow-dark pe-1"></i>
@@ -684,8 +684,8 @@
     </div>
 </div>
 
- <!-- Calendar -->
- <div id="menu-event-calendar" class="menu menu-box-bottom menu-box-detached" data-menu-height="370" style="display: block; height: 370px; z-index:99999">
+<!-- Calendar -->
+<div id="menu-event-calendar" class="menu menu-box-bottom menu-box-detached" data-menu-height="370" style="display: block; height: 370px; z-index:99999">
     <div class="calendar bg-theme m-0" style="max-width:100%!important;">
         <div class="cal-header">
             <h4 class="cal-title text-left font-700 bg-highlight color-white">Elige las fechas que necesite</h4>
@@ -696,12 +696,12 @@
         <div class="containerForm mt-4">
             <h4 class="ls-1 text-uppercase" style="font-weight: 500;">Inicio</h4>
             <input type="text" id="from" class="from" size="10">
-            <h4 class="ls-1 text-uppercase"  style="font-weight: 500;">Fin</h4>
+            <h4 class="ls-1 text-uppercase" style="font-weight: 500;">Fin</h4>
             <input type="text" id="to" class="to" size="10">
         </div>
 
         <div class="datepicker ll-skin-melon bottom-0"></div>
-    </div> 
+    </div>
 </div>
 
 
