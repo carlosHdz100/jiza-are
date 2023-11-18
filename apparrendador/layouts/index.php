@@ -38,14 +38,14 @@
 
         <div id="footer-bar" class="footer-bar-1">
             <a href="?view=inicio"><i class="fa fa-home"></i><span>Inicio</span></a>
-            <a href="?view=categorias"><i class="fa"><svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-versions-filled" width="24" height="24" viewBox="0 0 24 24" stroke-width="1.5" stroke="#000000" fill="none" stroke-linecap="round" stroke-linejoin="round">
-  <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
-  <path d="M18 4h-6a3 3 0 0 0 -3 3v10a3 3 0 0 0 3 3h6a3 3 0 0 0 3 -3v-10a3 3 0 0 0 -3 -3z" stroke-width="0" fill="currentColor" />
-  <path d="M7 6a1 1 0 0 1 .993 .883l.007 .117v10a1 1 0 0 1 -1.993 .117l-.007 -.117v-10a1 1 0 0 1 1 -1z" stroke-width="0" fill="currentColor" />
-  <path d="M4 7a1 1 0 0 1 .993 .883l.007 .117v8a1 1 0 0 1 -1.993 .117l-.007 -.117v-8a1 1 0 0 1 1 -1z" stroke-width="0" fill="currentColor" />
-</svg></i><span>Rentas</span></a>
+            <a href="?view=rentas"><i class="fa"><svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-versions-filled" width="24" height="24" viewBox="0 0 24 24" stroke-width="1.5" stroke="#000000" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                        <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                        <path d="M18 4h-6a3 3 0 0 0 -3 3v10a3 3 0 0 0 3 3h6a3 3 0 0 0 3 -3v-10a3 3 0 0 0 -3 -3z" stroke-width="0" fill="currentColor" />
+                        <path d="M7 6a1 1 0 0 1 .993 .883l.007 .117v10a1 1 0 0 1 -1.993 .117l-.007 -.117v-10a1 1 0 0 1 1 -1z" stroke-width="0" fill="currentColor" />
+                        <path d="M4 7a1 1 0 0 1 .993 .883l.007 .117v8a1 1 0 0 1 -1.993 .117l-.007 -.117v-8a1 1 0 0 1 1 -1z" stroke-width="0" fill="currentColor" />
+                    </svg></i><span>Rentas</span></a>
             <!-- <a href="?view=favoritos" class="active-nav"><i class="fa fa-heart"></i><span>Favoritos</span></a> -->
-            <a href="?view=carrito"><i class="fa fa-tshirt"></i><span>Prendas</span></a>
+            <a href="#" data-menu="menu-prendas"><i class="fa fa-tshirt"></i><span>Prendas</span></a>
             <a href="#" data-menu="menu-settings"><i class="fa fa-user"></i><span>Perfil</span></a>
         </div>
 
@@ -266,9 +266,39 @@
                     </a>
                 </div>
                 <div class="list-group list-custom-large">
-                    <a href="?view=rentas">
-                        <i class="fa font-14 fa-tint bg-green-dark rounded-s"></i>
-                        <span>Rentas</span>
+                    <a href="?view=configuracion_pago">
+                        <i class="fa font-14 fa-coins bg-green-dark rounded-s"></i>
+                        <span>configuración de pago</span>
+                        <i class="fa fa-angle-right"></i>
+                    </a>
+                    <!-- <a data-menu="menu-backgrounds" href="#" class="border-0">
+                        <i class="fa font-14 fa-cog bg-blue-dark rounded-s"></i>
+                        <span>Background Color</span>
+                        <strong>10 Page Gradients Included</strong>
+                        <span class="badge bg-highlight color-white">NEW</span>
+                        <i class="fa fa-angle-right"></i>
+                    </a> -->
+                </div>
+            </div>
+        </div>
+
+        <div id="menu-prendas" class="menu menu-box-bottom menu-box-detached">
+            <div class="menu-title mt-0 pt-0">
+                <h1>Mis prendas</h1>
+            </div>
+            <div class="divider divider-margins mb-n2"></div>
+            <div class="content">
+                <div class="list-group list-custom-small">
+                    <a href="?view=nueva_prenda" class="pb-2 ms-n1">
+                        <i class="fa font-12 fa-plus rounded-s bg-highlight color-white me-3"></i>
+                        <span>Nueva prenda</span>
+                        <i class="fa fa-angle-right"></i>
+                    </a>
+                </div>
+                <div class="list-group list-custom-small">
+                    <a href="?view=prendas" class="pb-2 ms-n1">
+                        <i class="fa font-14 fa-list bg-green-dark rounded-s"></i>
+                        <span>Mis prendas</span>
                         <i class="fa fa-angle-right"></i>
                     </a>
                     <!-- <a data-menu="menu-backgrounds" href="#" class="border-0">

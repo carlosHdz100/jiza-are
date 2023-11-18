@@ -8,9 +8,26 @@ switch ($view) {
     case 'inicio':
         include('views/inicio.php');
         break;
-    case 'lista':
-        include('views/lista.php');
+    case 'rentas':
+        include('views/rentas.php');
         break;
+    case 'ver_renta':
+        include('views/ver_renta.php');
+        break;
+    case 'prendas':
+        include('views/prendas.php');
+        break;
+    case 'nueva_prenda':
+        include('views/nueva_prenda.php');
+        break;
+    case 'ver_prenda':
+        include('views/ver_prenda.php');
+        break;
+    case 'perfil':
+        include('views/perfil.php');
+        break;
+
+
     default:
         # ERROR DEBE VOLVER AL INICIO | no esta logueado
         redireccion();
