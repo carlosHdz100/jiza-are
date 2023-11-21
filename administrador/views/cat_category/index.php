@@ -46,9 +46,9 @@
                                 <tr>
                                     <td>
                                         <div class="d-flex px-2 py-1">
-                                            <div>
+                                            <!-- <div>
                                                 <img src="https://cdn-icons-png.flaticon.com/512/6073/6073874.png" class="avatar avatar-sm me-3" alt="user1">
-                                            </div>
+                                            </div> -->
                                             <div class="d-flex flex-column justify-content-center">
                                                 <h6 class="mb-0 text-sm">Vestidos</h6>
 
@@ -80,9 +80,9 @@
                                 <tr>
                                     <td>
                                         <div class="d-flex px-2 py-1">
-                                            <div>
+                                            <!-- <div>
                                                 <img src="https://cdn-icons-png.flaticon.com/512/6073/6073874.png" class="avatar avatar-sm me-3" alt="user1">
-                                            </div>
+                                            </div> -->
                                             <div class="d-flex flex-column justify-content-center">
                                                 <h6 class="mb-0 text-sm">Camisas</h6>
 
@@ -114,9 +114,9 @@
                                 <tr>
                                     <td>
                                         <div class="d-flex px-2 py-1">
-                                            <div>
+                                            <!-- <div>
                                                 <img src="https://cdn-icons-png.flaticon.com/512/6073/6073874.png" class="avatar avatar-sm me-3" alt="user1">
-                                            </div>
+                                            </div> -->
                                             <div class="d-flex flex-column justify-content-center">
                                                 <h6 class="mb-0 text-sm">Bolsos</h6>
 
@@ -148,9 +148,9 @@
                                 <tr>
                                     <td>
                                         <div class="d-flex px-2 py-1">
-                                            <div>
+                                            <!-- <div>
                                                 <img src="https://cdn-icons-png.flaticon.com/512/6073/6073874.png" class="avatar avatar-sm me-3" alt="user1">
-                                            </div>
+                                            </div> -->
                                             <div class="d-flex flex-column justify-content-center">
                                                 <h6 class="mb-0 text-sm">Zapatos</h6>
 
@@ -182,9 +182,9 @@
                                 <tr>
                                     <td>
                                         <div class="d-flex px-2 py-1">
-                                            <div>
+                                            <!-- <div>
                                                 <img src="https://cdn-icons-png.flaticon.com/512/6073/6073874.png" class="avatar avatar-sm me-3" alt="user1">
-                                            </div>
+                                            </div> -->
                                             <div class="d-flex flex-column justify-content-center">
                                                 <h6 class="mb-0 text-sm">Gafas de Sol</h6>
 

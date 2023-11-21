@@ -6,10 +6,10 @@
           <div class="row">
             <div class="col-8">
               <div class="numbers">
-                <p class="text-sm mb-0 text-capitalize font-weight-bold">Total de usuario</p>
+                <p class="text-sm mb-0 text-capitalize font-weight-bold">Rentas</p>
                 <h5 class="font-weight-bolder mb-0">
-                  12
-                  <span class="text-success text-sm font-weight-bolder">+</span>
+                  300
+                  <!-- <span class="text-success text-sm font-weight-bolder">+</span> -->
                 </h5>
               </div>
             </div>
@@ -31,7 +31,7 @@
                 <p class="text-sm mb-0 text-capitalize font-weight-bold">Arrendadores</p>
                 <h5 class="font-weight-bolder mb-0">
                   30
-                  <span class="text-success text-sm font-weight-bolder">+</span>
+                  <!-- <span class="text-success text-sm font-weight-bolder">+</span> -->
                 </h5>
               </div>
 
@@ -51,10 +51,10 @@
           <div class="row">
             <div class="col-8">
               <div class="numbers">
-                <p class="text-sm mb-0 text-capitalize font-weight-bold">Clientes</p>
+                <p class="text-sm mb-0 text-capitalize font-weight-bold">Usuarios</p>
                 <h5 class="font-weight-bolder mb-0">
-                  3,462
-                  <span class="text-success text-sm font-weight-bolder">+</span>
+                  3000
+                  <!-- <span class="text-success text-sm font-weight-bolder">+</span> -->
                 </h5>
               </div>
             </div>
@@ -73,10 +73,10 @@
           <div class="row">
             <div class="col-8">
               <div class="numbers">
-                <p class="text-sm mb-0 text-capitalize font-weight-bold">Ganancias</p>
+                <p class="text-sm mb-0 text-capitalize font-weight-bold">Ingresos</p>
                 <h5 class="font-weight-bolder mb-0">
-                  50
-                  <span class="text-success text-sm font-weight-bolder">+</span>
+                  130,864.14€
+                  <!-- <span class="text-success text-sm font-weight-bolder">+</span> -->
                 </h5>
               </div>
             </div>
@@ -159,9 +159,9 @@
                 <tr>
                   <td>
                     <div class="d-flex px-2 py-1">
-                      <!-- <div>
-                        <img src="https://cdn-icons-png.flaticon.com/256/6889/6889344.png" class="avatar avatar-sm me-3" alt="xd">
-                      </div> -->
+                      <div>
+                        <img src="https://cdn-icons-png.flaticon.com/512/6073/6073874.png" class="avatar avatar-sm me-3" alt="user1">
+                      </div>
                       <div class="d-flex flex-column justify-content-center">
                         <h6 class="mb-0 text-sm">Javier</h6>
                       </div>
@@ -173,7 +173,7 @@
                   </td>
 
                   <td class="align-middle">
-                    <span class="text-xs font-weight-bold">$5000</span>
+                    <span class="text-xs font-weight-bold">5000€</span>
                   </td>
 
                   <td class="align-middle text-center text-sm">
@@ -193,9 +193,9 @@
                 <tr>
                   <td>
                     <div class="d-flex px-2 py-1">
-                      <!-- <div>
-                        <img src="https://cdn-icons-png.flaticon.com/256/6889/6889344.png" class="avatar avatar-sm me-3" alt="xd">
-                      </div> -->
+                      <div>
+                        <img src="https://cdn-icons-png.flaticon.com/512/6073/6073874.png" class="avatar avatar-sm me-3" alt="user1">
+                      </div>
                       <div class="d-flex flex-column justify-content-center">
                         <h6 class="mb-0 text-sm">Francisco</h6>
                       </div>
@@ -207,7 +207,7 @@
                   </td>
 
                   <td class="align-middle">
-                    <span class="text-xs font-weight-bold">$1000</span>
+                    <span class="text-xs font-weight-bold">1000€</span>
                   </td>
 
                   <td class="align-middle text-center text-sm">
@@ -227,9 +227,9 @@
                 <tr>
                   <td>
                     <div class="d-flex px-2 py-1">
-                      <!-- <div>
-                        <img src="https://cdn-icons-png.flaticon.com/256/6889/6889344.png" class="avatar avatar-sm me-3" alt="xd">
-                      </div> -->
+                      <div>
+                        <img src="https://cdn-icons-png.flaticon.com/512/6073/6073874.png" class="avatar avatar-sm me-3" alt="user1">
+                      </div>
                       <div class="d-flex flex-column justify-content-center">
                         <h6 class="mb-0 text-sm">Paola</h6>
                       </div>
@@ -241,7 +241,7 @@
                   </td>
 
                   <td class="align-middle">
-                    <span class="text-xs font-weight-bold">$45000</span>
+                    <span class="text-xs font-weight-bold">45000€</span>
                   </td>
 
                   <td class="align-middle text-center text-sm">
@@ -261,9 +261,9 @@
                 <tr>
                   <td>
                     <div class="d-flex px-2 py-1">
-                      <!-- <div>
-                        <img src="https://cdn-icons-png.flaticon.com/256/6889/6889344.png" class="avatar avatar-sm me-3" alt="xd">
-                      </div> -->
+                      <div>
+                        <img src="https://cdn-icons-png.flaticon.com/512/6073/6073874.png" class="avatar avatar-sm me-3" alt="user1">
+                      </div>
                       <div class="d-flex flex-column justify-content-center">
                         <h6 class="mb-0 text-sm">Karla</h6>
                       </div>
@@ -275,7 +275,7 @@
                   </td>
 
                   <td class="align-middle">
-                    <span class="text-xs font-weight-bold">$20000</span>
+                    <span class="text-xs font-weight-bold">20000€</span>
                   </td>
 
                   <td class="align-middle text-center text-sm">
@@ -295,9 +295,9 @@
                 <tr>
                   <td>
                     <div class="d-flex px-2 py-1">
-                      <!-- <div>
-                        <img src="https://cdn-icons-png.flaticon.com/256/6889/6889344.png" class="avatar avatar-sm me-3" alt="xd">
-                      </div> -->
+                      <div>
+                        <img src="https://cdn-icons-png.flaticon.com/512/6073/6073874.png" class="avatar avatar-sm me-3" alt="user1">
+                      </div>
                       <div class="d-flex flex-column justify-content-center">
                         <h6 class="mb-0 text-sm">Luis</h6>
                       </div>
@@ -309,7 +309,7 @@
                   </td>
 
                   <td class="align-middle">
-                    <span class="text-xs font-weight-bold">$7000</span>
+                    <span class="text-xs font-weight-bold">7000€</span>
                   </td>
 
                   <td class="align-middle text-center text-sm">
@@ -328,9 +328,9 @@
                 <tr>
                   <td>
                     <div class="d-flex px-2 py-1">
-                      <!-- <div>
-                        <img src="https://cdn-icons-png.flaticon.com/256/6889/6889344.png" class="avatar avatar-sm me-3" alt="xd">
-                      </div> -->
+                      <div>
+                        <img src="https://cdn-icons-png.flaticon.com/512/6073/6073874.png" class="avatar avatar-sm me-3" alt="user1">
+                      </div>
                       <div class="d-flex flex-column justify-content-center">
                         <h6 class="mb-0 text-sm">Martín</h6>
                       </div>
@@ -342,7 +342,7 @@
                   </td>
 
                   <td class="align-middle">
-                    <span class="text-xs font-weight-bold">$5000</span>
+                    <span class="text-xs font-weight-bold">5000€</span>
                   </td>
 
                   <td class="align-middle text-center text-sm">
@@ -362,9 +362,9 @@
                 <tr>
                   <td>
                     <div class="d-flex px-2 py-1">
-                      <!-- <div>
-                        <img src="https://cdn-icons-png.flaticon.com/256/6889/6889344.png" class="avatar avatar-sm me-3" alt="xd">
-                      </div> -->
+                      <div>
+                        <img src="https://cdn-icons-png.flaticon.com/512/6073/6073874.png" class="avatar avatar-sm me-3" alt="user1">
+                      </div>
                       <div class="d-flex flex-column justify-content-center">
                         <h6 class="mb-0 text-sm">Ana</h6>
                       </div>
@@ -376,7 +376,7 @@
                   </td>
 
                   <td class="align-middle">
-                    <span class="text-xs font-weight-bold">$1000</span>
+                    <span class="text-xs font-weight-bold">1000€</span>
                   </td>
 
                   <td class="align-middle text-center text-sm">
@@ -396,9 +396,9 @@
                 <tr>
                   <td>
                     <div class="d-flex px-2 py-1">
-                      <!-- <div>
-                        <img src="https://cdn-icons-png.flaticon.com/256/6889/6889344.png" class="avatar avatar-sm me-3" alt="xd">
-                      </div> -->
+                      <div>
+                        <img src="https://cdn-icons-png.flaticon.com/512/6073/6073874.png" class="avatar avatar-sm me-3" alt="user1">
+                      </div>
                       <div class="d-flex flex-column justify-content-center">
                         <h6 class="mb-0 text-sm">Rosa</h6>
                       </div>
@@ -410,7 +410,7 @@
                   </td>
 
                   <td class="align-middle">
-                    <span class="text-xs font-weight-bold">$45000</span>
+                    <span class="text-xs font-weight-bold">45000€</span>
                   </td>
 
                   <td class="align-middle text-center text-sm">
@@ -430,9 +430,9 @@
                 <tr>
                   <td>
                     <div class="d-flex px-2 py-1">
-                      <!-- <div>
-                        <img src="https://cdn-icons-png.flaticon.com/256/6889/6889344.png" class="avatar avatar-sm me-3" alt="xd">
-                      </div> -->
+                      <div>
+                        <img src="https://cdn-icons-png.flaticon.com/512/6073/6073874.png" class="avatar avatar-sm me-3" alt="user1">
+                      </div>
                       <div class="d-flex flex-column justify-content-center">
                         <h6 class="mb-0 text-sm">Raúl</h6>
                       </div>
@@ -444,7 +444,7 @@
                   </td>
 
                   <td class="align-middle">
-                    <span class="text-xs font-weight-bold">$20000</span>
+                    <span class="text-xs font-weight-bold">20000€</span>
                   </td>
 
                   <td class="align-middle text-center text-sm">
@@ -464,9 +464,9 @@
                 <tr>
                   <td>
                     <div class="d-flex px-2 py-1">
-                      <!-- <div>
-                        <img src="https://cdn-icons-png.flaticon.com/256/6889/6889344.png" class="avatar avatar-sm me-3" alt="xd">
-                      </div> -->
+                      <div>
+                        <img src="https://cdn-icons-png.flaticon.com/512/6073/6073874.png" class="avatar avatar-sm me-3" alt="user1">
+                      </div>
                       <div class="d-flex flex-column justify-content-center">
                         <h6 class="mb-0 text-sm">Ángel</h6>
                       </div>
@@ -478,7 +478,7 @@
                   </td>
 
                   <td class="align-middle">
-                    <span class="text-xs font-weight-bold">$7000</span>
+                    <span class="text-xs font-weight-bold">7000€</span>
                   </td>
 
                   <td class="align-middle text-center text-sm">

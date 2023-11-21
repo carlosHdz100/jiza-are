@@ -146,8 +146,8 @@ function view(id) {
 
     const attr = {
         modal: {
-            title: 'Nuevo usuario',
-            button: 'Guardar usuario',
+            title: 'Nuevo cliente',
+            button: 'Guardar cliente',
         },
         form: {
             action: 'usuario',

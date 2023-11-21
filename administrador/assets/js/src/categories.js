@@ -98,10 +98,10 @@ function view(id) {
 
     if (id !== '') {
 
-        const url = `db_functions/categories.php?action=view`;
+        const url = `db_functions/cat_category.php?action=view`;
         let datos = new FormData();
         // Agregar el ID al FormData
-        datos.append('use_id', id);
+        datos.append('cat_id', id);
         fetch(url, {
             method: 'post',
             body: datos,
@@ -116,7 +116,7 @@ function view(id) {
                             button: 'Guardar cambios',
                         },
                         form: {
-                            action: 'usuario',
+                            action: 'cat_category',
                             type: 'update',
                             data: data.message,
                             select: {
@@ -146,11 +146,11 @@ function view(id) {
 
     const attr = {
         modal: {
-            title: 'Nuevo usuario',
-            button: 'Guardar usuario',
+            title: 'Nueva categoría',
+            button: 'Guardar categoría',
         },
         form: {
-            action: 'usuario',
+            action: 'cat_category',
             type: 'create',
             select: {
                 data: {

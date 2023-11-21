@@ -17,7 +17,7 @@ if ($view == '') {
     include('views/owners/index.php');
 
 } else if ($view == 'categorias') {
-    include('views/categories/index.php');
+    include('views/cat_category/index.php');
 
 } else if ($view == 'tiendas') {
     include('views/tiendas.php');
