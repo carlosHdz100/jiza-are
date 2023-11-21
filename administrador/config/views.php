@@ -19,6 +19,12 @@ if ($view == '') {
 } else if ($view == 'categorias') {
     include('views/cat_category/index.php');
 
+} else if ($view == 'reporte') {
+    include('views/reporte/index.php');
+
+} else if ($view == 'ver_reporte') {
+    include('views/reporte/ver_reporte.php');
+
 } else if ($view == 'tiendas') {
     include('views/tiendas.php');
 

@@ -82,13 +82,6 @@
                             </li>
 
                             <li>
-                                <!-- <a href="?view=tiendas">
-                                <i class="fas fa-user text-dark"></i>
-                                <span class="nav-link-text ms-1">Tiendas</span>
-                            </a>
-                            </li> -->
-
-                            <li>
                                 <a href="?view=arrendadores">
                                     <svg xmlns="http://www.w3.org/2000/svg" class="icon-tabler icon-tabler-users-group" width="24" height="24" viewBox="0 0 24 24" stroke-width="1.5" stroke="#000000" fill="none" stroke-linecap="round" stroke-linejoin="round">
                                         <path stroke="none" d="M0 0h24v24H0z" fill="none" />
@@ -116,16 +109,47 @@
                                 </a>
                             </li>
 
-                            <!-- <li>
-                                <a href="?view=productos">
-                                <i class="fas fa-user text-dark"></i>
-                                <span class="nav-link-text ms-1">Prendas</span>
-                                </a>
-                            </li> -->
-
                         </div>
                     </div>
                 </div>
+
+                
+                <div class="accordion-item">
+                    <h2 class="accordion-header" id="flush-headingTwo">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseTwo" aria-expanded="false" aria-controls="flush-collapseTwo">
+
+
+
+                            <div class="icon icon-shape icon-sm shadow border-radius-md bg-white text-center me-2 d-flex align-items-center justify-content-center">
+                                <i class="fas fa-chart-line text-dark"></i>
+                            </div>
+                            <span class="nav-link-text ms-1">Reportes</span>
+
+
+                        </button>
+
+
+                    </h2>
+                    <div id="flush-collapseTwo" class="accordion-collapse collapse" aria-labelledby="flush-headingTwo" data-bs-parent="#accordionFlushExample">
+                        <div class="accordion-body">
+                            <li>
+                                <a href="?view=reporte">
+                                    <svg xmlns="http://www.w3.org/2000/svg" class="icon-tabler icon-tabler-chart-infographic" width="24" height="24" viewBox="0 0 24 24" stroke-width="1.5" stroke="#000000" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                                        <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                                        <path d="M7 7m-4 0a4 4 0 1 0 8 0a4 4 0 1 0 -8 0" />
+                                        <path d="M7 3v4h4" />
+                                        <path d="M9 17l0 4" />
+                                        <path d="M17 14l0 7" />
+                                        <path d="M13 13l0 8" />
+                                        <path d="M21 12l0 9" />
+                                    </svg>
+                                    <span class="nav-link-text ms-1">Reporte</span>
+                                </a>
+                            </li>
+                        </div>
+                    </div>
+                </div>
+
 
                 <!-- <div class="accordion-item">
                     <h2 class="accordion-header" id="flush-headingTwo">
@@ -134,36 +158,31 @@
                             <div class="icon icon-shape icon-sm shadow border-radius-md bg-white text-center me-2 d-flex align-items-center justify-content-center">
                                 <i class="fas fa-chart-line text-dark"></i>
                             </div>
-                            <span class="nav-link-text ms-1">Procesos</span>
+                            <span class="nav-link-text ms-1">Reportes</span>
 
                         </button>
                     </h2>
                     <div id="flush-collapseTwo" class="accordion-collapse collapse" aria-labelledby="flush-headingTwo" data-bs-parent="#accordionFlushExample">
                         <div class="accordion-body">
 
-
-
-
-
                             <li>
-                                <i class="fas fa-user text-dark"></i>
-                                <span class="nav-link-text ms-1">Adherir productos a tiendas</span>
+                                <a href="">
+                                    <svg xmlns="http://www.w3.org/2000/svg" class="icon-tabler icon-tabler-chart-infographic" width="24" height="24" viewBox="0 0 24 24" stroke-width="1.5" stroke="#000000" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                                        <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                                        <path d="M7 7m-4 0a4 4 0 1 0 8 0a4 4 0 1 0 -8 0" />
+                                        <path d="M7 3v4h4" />
+                                        <path d="M9 17l0 4" />
+                                        <path d="M17 14l0 7" />
+                                        <path d="M13 13l0 8" />
+                                        <path d="M21 12l0 9" />
+                                    </svg>
+                                    <span class="nav-link-text ms-1">Reporte</span>
                             </li>
-
-                            <li>
-                                <i class="fas fa-user text-dark"></i>
-                                <span class="nav-link-text ms-1">Adherir productos a proveedor</span>
-                            </li>
-
-
-
-
-
-
 
                         </div>
                     </div>
                 </div> -->
+
 
                 <!-- <div class="accordion-item">
                     <h2 class="accordion-header" id="flush-headingThree">
@@ -193,6 +212,7 @@
                         </div>
                     </div>
                 </div> -->
+
             </div>
 
         </ul>

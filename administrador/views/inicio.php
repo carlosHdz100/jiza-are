@@ -9,13 +9,12 @@
                 <p class="text-sm mb-0 text-capitalize font-weight-bold">Rentas</p>
                 <h5 class="font-weight-bolder mb-0">
                   300
-                  <!-- <span class="text-success text-sm font-weight-bolder">+</span> -->
                 </h5>
               </div>
             </div>
             <div class="col-4 text-end">
-              <div class="icon icon-shape bg-gradient-primary shadow text-center border-radius-md">
-                <i class="ni ni-money-coins text-lg opacity-10" aria-hidden="true"></i>
+              <div class="icon icon-shape text-center">
+                <img src="assets/img/tienda-de-ropa.png" alt="" class="img-fluid">
               </div>
             </div>
           </div>
@@ -31,14 +30,13 @@
                 <p class="text-sm mb-0 text-capitalize font-weight-bold">Arrendadores</p>
                 <h5 class="font-weight-bolder mb-0">
                   30
-                  <!-- <span class="text-success text-sm font-weight-bolder">+</span> -->
                 </h5>
               </div>
 
             </div>
             <div class="col-4 text-end">
-              <div class="icon icon-shape bg-gradient-primary shadow text-center border-radius-md">
-                <i class="ni ni-world text-lg opacity-10" aria-hidden="true"></i>
+              <div class="icon icon-shape text-center">
+                <img src="assets/img/gestion-de-equipos.png" alt="" class="img-fluid">
               </div>
             </div>
           </div>
@@ -54,13 +52,12 @@
                 <p class="text-sm mb-0 text-capitalize font-weight-bold">Usuarios</p>
                 <h5 class="font-weight-bolder mb-0">
                   3000
-                  <!-- <span class="text-success text-sm font-weight-bolder">+</span> -->
                 </h5>
               </div>
             </div>
             <div class="col-4 text-end">
-              <div class="icon icon-shape bg-gradient-primary shadow text-center border-radius-md">
-                <i class="ni ni-paper-diploma text-lg opacity-10" aria-hidden="true"></i>
+              <div class="icon icon-shape text-center">
+                <img src="assets/img/perfil-del-usuario.png" alt="" class="img-fluid">
               </div>
             </div>
           </div>
@@ -81,8 +78,9 @@
               </div>
             </div>
             <div class="col-4 text-end">
-              <div class="icon icon-shape bg-gradient-primary shadow text-center border-radius-md">
-                <i class="ni ni-cart text-lg opacity-10" aria-hidden="true"></i>
+              <div class="icon icon-shape text-center">
+                <!-- <i class="ni ni-cart text-lg opacity-10" aria-hidden="true"></i> -->
+                <img src="assets/img/ingreso.png" alt="" class="img-fluid">
               </div>
             </div>
           </div>
@@ -144,12 +142,13 @@
             <table class="table align-items-center mb-0">
               <thead>
                 <tr>
-                  <th class="text-uppercase text-secondary text-xxs font-weight-bolder opacity-7">Nombre del Usuario</th>
+                  <th class="text-uppercase text-secondary text-xxs font-weight-bolder opacity-7">Usuario</th>
                   <th class="text-uppercase text-secondary text-xxs font-weight-bolder opacity-7 ps-2">Fecha de creación</th>
                   <th class="text-uppercase text-secondary text-xxs font-weight-bolder opacity-7 ps-2">Monto</th>
                   <th class="text-uppercase text-secondary text-xxs font-weight-bolder opacity-7 ps-2">Fecha de inicio</th>
                   <th class="text-uppercase text-secondary text-xxs font-weight-bolder opacity-7 ps-2">Fecha final</th>
                   <th class="text-center text-uppercase text-secondary text-xxs font-weight-bolder opacity-7">Status</th>
+                  <th class="text-center text-uppercase text-secondary text-xxs font-weight-bolder opacity-7">Acciones</th>
                 </tr>
               </thead>
 
@@ -185,7 +184,11 @@
                   </td>
 
                   <td class="align-middle text-center text-sm">
-                    <span class="badge badge-sm bg-gradient-success">Activo</span>
+                    <span class="badge badge-sm bg-gradient-success">Finalizado</span>
+                  </td>
+
+                  <td class="align-middle text-center text-sm">
+                    <a type="button" class="btn btn-success" href="?view=ver_reporte"><i class="fa fa-eye" aria-hidden="true"></i></a>
                   </td>
                 </tr>
 
@@ -219,7 +222,10 @@
                   </td>
 
                   <td class="align-middle text-center text-sm">
-                    <span class="badge badge-sm bg-gradient-danger">No Activo</span>
+                    <span class="badge badge-sm bg-gradient-danger">Cancelado</span>
+                  </td>
+                  <td class="align-middle text-center text-sm">
+                    <a type="button" class="btn btn-success" href="?view=ver_reporte"><i class="fa fa-eye" aria-hidden="true"></i></a>
                   </td>
                 </tr>
 
@@ -253,7 +259,11 @@
                   </td>
 
                   <td class="align-middle text-center text-sm">
-                    <span class="badge badge-sm bg-gradient-success">Activo</span>
+                    <span class="badge badge-sm bg-gradient-secondary">En proceso</span>
+                  </td>
+
+                  <td class="align-middle text-center text-sm">
+                    <a type="button" class="btn btn-success" href="?view=ver_reporte"><i class="fa fa-eye" aria-hidden="true"></i></a>
                   </td>
                 </tr>
 
@@ -287,7 +297,11 @@
                   </td>
 
                   <td class="align-middle text-center text-sm">
-                    <span class="badge badge-sm bg-gradient-danger">No Activo</span>
+                    <span class="badge badge-sm bg-gradient-primary">Entregado</span>
+                  </td>
+
+                  <td class="align-middle text-center text-sm">
+                    <a type="button" class="btn btn-success" href="?view=ver_reporte"><i class="fa fa-eye" aria-hidden="true"></i></a>
                   </td>
                 </tr>
 
@@ -321,9 +335,14 @@
                   </td>
 
                   <td class="align-middle text-center text-sm">
-                    <span class="badge badge-sm bg-gradient-success">Activo</span>
+                    <span class="badge badge-sm bg-gradient-warning">No entregado</span>
+                  </td>
+
+                  <td class="align-middle text-center text-sm">
+                    <a type="button" class="btn btn-success" href="?view=ver_reporte"><i class="fa fa-eye" aria-hidden="true"></i></a>
                   </td>
                 </tr>
+
 
                 <tr>
                   <td>
@@ -354,7 +373,11 @@
                   </td>
 
                   <td class="align-middle text-center text-sm">
-                    <span class="badge badge-sm bg-gradient-success">Activo</span>
+                    <span class="badge badge-sm bg-gradient-success">Finalizado</span>
+                  </td>
+
+                  <td class="align-middle text-center text-sm">
+                    <a type="button" class="btn btn-success" href="?view=ver_reporte"><i class="fa fa-eye" aria-hidden="true"></i></a>
                   </td>
                 </tr>
 
@@ -388,7 +411,11 @@
                   </td>
 
                   <td class="align-middle text-center text-sm">
-                    <span class="badge badge-sm bg-gradient-danger">No Activo</span>
+                    <span class="badge badge-sm bg-gradient-danger">Cancelado</span>
+                  </td>
+
+                  <td class="align-middle text-center text-sm">
+                    <a type="button" class="btn btn-success" href="?view=ver_reporte"><i class="fa fa-eye" aria-hidden="true"></i></a>
                   </td>
                 </tr>
 
@@ -422,7 +449,11 @@
                   </td>
 
                   <td class="align-middle text-center text-sm">
-                    <span class="badge badge-sm bg-gradient-success">Activo</span>
+                    <span class="badge badge-sm bg-gradient-secondary">En proceso</span>
+                  </td>
+
+                  <td class="align-middle text-center text-sm">
+                    <a type="button" class="btn btn-success" href="?view=ver_reporte"><i class="fa fa-eye" aria-hidden="true"></i></a>
                   </td>
                 </tr>
 
@@ -456,7 +487,11 @@
                   </td>
 
                   <td class="align-middle text-center text-sm">
-                    <span class="badge badge-sm bg-gradient-danger">No Activo</span>
+                    <span class="badge badge-sm bg-gradient-primary">Entregado</span>
+                  </td>
+
+                  <td class="align-middle text-center text-sm">
+                    <a type="button" class="btn btn-success" href="?view=ver_reporte"><i class="fa fa-eye" aria-hidden="true"></i></a>
                   </td>
                 </tr>
 
@@ -490,7 +525,11 @@
                   </td>
 
                   <td class="align-middle text-center text-sm">
-                    <span class="badge badge-sm bg-gradient-success">Activo</span>
+                    <span class="badge badge-sm bg-gradient-warning">No entregado</span>
+                  </td>
+
+                  <td class="align-middle text-center text-sm">
+                    <a type="button" class="btn btn-success" href="?view=ver_reporte"><i class="fa fa-eye" aria-hidden="true"></i></a>
                   </td>
                 </tr>
 

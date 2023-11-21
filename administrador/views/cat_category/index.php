@@ -16,7 +16,7 @@
                     </div>
                     <div class="col-lg-6 d-flex justify-content-end">
                         <div class="d-grid gap-2 d-md-flex justify-content-md-end col-lg-6">
-                            <button onclick="view('')" class="btn btn-info me-md-2" type="button" data-bs-toggle="modal" data-bs-target="#exampleModal">Agregar arrendador</button>
+                            <button onclick="view('')" class="btn btn-info me-md-2" type="button" data-bs-toggle="modal" data-bs-target="#exampleModal">Agregar categoría</button>
                         </div>
                     </div>
                 </div>
