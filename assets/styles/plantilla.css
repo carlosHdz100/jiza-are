@@ -325,3 +325,14 @@ div.datepicker {
     border-width: 17px;
     margin-top: -17px;
 }
+
+/* Agrega estilos para resaltar todas las fechas acumuladas */
+/* .ll-skin-melon td.dp-highlight .ui-state-default {
+  background: rgba(255, 0, 128, 0.8);
+  color: #FFF;
+}
+
+.ll-skin-melon .ui-datepicker td.dateFrom a,
+.ll-skin-melon .ui-datepicker td.dateTo a {
+  background: #FF0080;
+} */

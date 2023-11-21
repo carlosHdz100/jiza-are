@@ -690,7 +690,7 @@
         </div>
         <div class="clearfix"></div>
 
-        <div class="containerForm mt-4">
+        <div class="containerForm mt-4 d-none">
             <h4 class="ls-1 text-uppercase" style="font-weight: 500;">Inicio</h4>
             <input type="text" id="from" class="from" size="10">
             <h4 class="ls-1 text-uppercase"  style="font-weight: 500;">Fin</h4>
@@ -698,6 +698,9 @@
         </div>
 
         <div class="datepicker ll-skin-melon bottom-0"></div>
+
+        <!-- Botón para agregar meses -->
+        <button id="addMonthsBtn" onclick="addMonths()">Agregar Meses</button>
     </div> 
 </div>
 

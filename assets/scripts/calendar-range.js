@@ -1,5 +1,59 @@
+// var selectedMonths = []; // Array para almacenar los meses seleccionados
+
+// function addMonths() {
+//     var currentDate = $(".datepicker").datepicker('getDate');
+//     var numberOfMonthsToAdd = 0; // Puedes ajustar el número de meses que deseas agregar
+
+//     if (currentDate != null) {
+//         currentDate.setMonth(currentDate.getMonth() + numberOfMonthsToAdd);
+//     } else {
+//         currentDate = new Date(); // Si no hay fecha seleccionada, comienza desde el mes actual
+//         currentDate.setMonth(currentDate.getMonth() + numberOfMonthsToAdd);
+//     }
+
+//     selectedMonths.push(currentDate); // Agregar el nuevo mes al array
+//     updateDatePicker(); // Actualizar el datepicker con todos los meses seleccionados
+// }
+
+// function updateDatePicker() {
+//     $(".datepicker").datepicker("setDate", selectedMonths[0]);
+// }
+// ===============================================
+// var selectedMonths = []; 
+// function addMonths() {
+//     var currentDate = $(".datepicker").datepicker('getDate');
+//     var numberOfMonthsToAdd = 2;
+
+//     if (currentDate != null) {
+//         currentDate.setMonth(currentDate.getMonth() + numberOfMonthsToAdd);
+//     } else {
+//         currentDate = new Date();
+//         currentDate.setMonth(currentDate.getMonth() + numberOfMonthsToAdd);
+//     }
+
+//     selectedMonths.push($.datepicker.formatDate('mm/dd/yy', currentDate));
+//     updateDatePicker();
+// }
+// function updateDatePicker() {
+//     $(".datepicker").datepicker("setDate", selectedMonths[0]);
+// }
+// ===============DANIEL======================
 var dateFrom = null;
 var dateTo = null;
+
+function addMonths() {
+    var currentDate = $(".datepicker").datepicker('getDate');
+    var numberOfMonthsToAdd = 1; // Puedes ajustar el número de meses que deseas agregar
+
+    if (currentDate != null) {
+        currentDate.setMonth(currentDate.getMonth() + numberOfMonthsToAdd);
+    } else {
+        currentDate = new Date(); // Si no hay fecha seleccionada, comienza desde el mes actual
+        currentDate.setMonth(currentDate.getMonth() + numberOfMonthsToAdd);
+    }
+
+    $(".datepicker").datepicker("setDate", currentDate);
+}
 
 $("#from").val('06/10/2015');
 $("#to").val('10/10/2015');
@@ -8,7 +62,7 @@ var tempDateFrom = null;
 var tempDateTo = null;
 $(".datepicker").datepicker({
     minDate: 0,
-    numberOfMonths: [2,1],
+    numberOfMonths: [3,1],
     defaultDate: '06/10/2015',
     beforeShowDay: function(date) {           
         dateFrom = $.datepicker.parseDate($.datepicker._defaults.dateFormat, $("#from").val());
