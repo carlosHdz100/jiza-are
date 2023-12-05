@@ -20,12 +20,11 @@
         </div>
         <div class="card-body p-3">
             <div class="row">
-                <div class="col-md-12 mb-md-0 mb-4">
+                <div class="col-md-6 mb-md-0 mb-4">
                     <div class="card card-body border card-plain border-radius-lg d-flex align-items-center flex-row">
                         <ul class="list-group">
                             <li class="list-group-item border-0 ps-0 pt-0 text-sm"><strong class="text-dark">Nombre del artículo: </strong> &nbsp;<span class="fw-bold">Camisa</span> </li>
                             <li class="list-group-item border-0 ps-0 text-sm"><strong class="text-dark">Monto:</strong> &nbsp;<span id="" class="fw-bold">15€</span></li>
-                            <li class="list-group-item border-0 ps-0 text-sm"><strong class="text-dark">Cliente(s):</strong> &nbsp;<span class="fw-bold" id="">Antonio Arce Olivera</span> </li>
                             <li class="list-group-item border-0 ps-0 pt-0 text-sm"><strong class="text-dark">Fecha Inico: </strong> &nbsp;<span class="fw-bold" id="">06/07/2023</span> </li>
                             <li class="list-group-item border-0 ps-0 pt-0 text-sm"><strong class="text-dark">Fecha Entrega: </strong> &nbsp;<span class="fw-bold" id="">13/07/2023</span> </li>
                             <!-- <li class="list-group-item border-0 ps-0 text-sm"><strong class="text-dark">Estatus:</strong> &nbsp; <div id="liq_status"></div> -->
@@ -33,7 +32,18 @@
                         </ul>
                     </div>
                 </div>
-
+                <div class="col-md-6">
+                    <div class="card card-body border card-plain border-radius-lg d-flex align-items-center flex-row">
+                        <ul class="list-group">
+                            <li class="list-group-item border-0 ps-0 text-sm"><strong class="text-dark">Cliente(s):</strong> &nbsp;<span class="fw-bold" id="">Antonio Arce Olivera</span> </li>
+                            <li class="list-group-item border-0 ps-0 text-sm"><strong class="text-dark">Contacto del cliente:</strong> &nbsp;<span id="" class="fw-bold">9999999999</span></li>
+                            <li class="list-group-item border-0 ps-0 pt-0 text-sm"><strong class="text-dark">Arrendador: </strong> &nbsp;<span class="fw-bold">Joel Legaspi Valenzuela</span> </li>
+                            <li class="list-group-item border-0 ps-0 text-sm"><strong class="text-dark">Contacto del arrendador:</strong> &nbsp;<span class="fw-bold" id="">9999999999</span> </li>
+                            <!-- <li class="list-group-item border-0 ps-0 text-sm"><strong class="text-dark">Estatus:</strong> &nbsp; <div id="liq_status"></div> -->
+                            </li>
+                        </ul>
+                    </div>
+                </div>
             </div>
         </div>
     </div>
