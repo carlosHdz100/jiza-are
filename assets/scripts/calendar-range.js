@@ -1,72 +1,56 @@
-// var selectedMonths = []; // Array para almacenar los meses seleccionados
-
-// function addMonths() {
-//     var currentDate = $(".datepicker").datepicker('getDate');
-//     var numberOfMonthsToAdd = 0; // Puedes ajustar el número de meses que deseas agregar
-
-//     if (currentDate != null) {
-//         currentDate.setMonth(currentDate.getMonth() + numberOfMonthsToAdd);
-//     } else {
-//         currentDate = new Date(); // Si no hay fecha seleccionada, comienza desde el mes actual
-//         currentDate.setMonth(currentDate.getMonth() + numberOfMonthsToAdd);
-//     }
-
-//     selectedMonths.push(currentDate); // Agregar el nuevo mes al array
-//     updateDatePicker(); // Actualizar el datepicker con todos los meses seleccionados
-// }
-
-// function updateDatePicker() {
-//     $(".datepicker").datepicker("setDate", selectedMonths[0]);
-// }
-// ===============================================
-// var selectedMonths = []; 
-// function addMonths() {
-//     var currentDate = $(".datepicker").datepicker('getDate');
-//     var numberOfMonthsToAdd = 2;
-
-//     if (currentDate != null) {
-//         currentDate.setMonth(currentDate.getMonth() + numberOfMonthsToAdd);
-//     } else {
-//         currentDate = new Date();
-//         currentDate.setMonth(currentDate.getMonth() + numberOfMonthsToAdd);
-//     }
-
-//     selectedMonths.push($.datepicker.formatDate('mm/dd/yy', currentDate));
-//     updateDatePicker();
-// }
-// function updateDatePicker() {
-//     $(".datepicker").datepicker("setDate", selectedMonths[0]);
-// }
-// ===============DANIEL======================
-var dateFrom = null;
-var dateTo = null;
-
+// Agregar el mes siguiente
 function addMonths() {
-    var currentDate = $(".datepicker").datepicker('getDate');
-    var numberOfMonthsToAdd = 1; // Puedes ajustar el número de meses que deseas agregar
+  var currentDate = $(".datepicker").datepicker("getDate");
+  var numberOfMonthsToAdd = 1; // Puedes ajustar el número de meses que deseas agregar
 
-    if (currentDate != null) {
-        currentDate.setMonth(currentDate.getMonth() + numberOfMonthsToAdd);
-    } else {
-        currentDate = new Date(); // Si no hay fecha seleccionada, comienza desde el mes actual
-        currentDate.setMonth(currentDate.getMonth() + numberOfMonthsToAdd);
-    }
+  if (currentDate != null) {
+    currentDate.setMonth(currentDate.getMonth() + numberOfMonthsToAdd);
+  } else {
+    currentDate = new Date(); // Si no hay fecha seleccionada, comienza desde el mes actual
+    currentDate.setMonth(currentDate.getMonth() + numberOfMonthsToAdd);
+  }
 
-    $(".datepicker").datepicker("setDate", currentDate);
+  $(".datepicker").datepicker("setDate", currentDate);
 }
 
-$("#from").val('06/10/2015');
-$("#to").val('10/10/2015');
+// Regresar al mes anterior
+function subtractMonths() {
+  var currentDate = $(".datepicker").datepicker("getDate");
+  var numberOfMonthsToSubtract = 1; // Puedes ajustar el número de meses que deseas restar
+
+  if (currentDate != null) {
+    currentDate.setMonth(currentDate.getMonth() - numberOfMonthsToSubtract);
+  } else {
+    currentDate = new Date(); // Si no hay fecha seleccionada, comienza desde el mes actual
+    currentDate.setMonth(currentDate.getMonth() - numberOfMonthsToSubtract);
+  }
+
+  $(".datepicker").datepicker("setDate", currentDate);
+}
+var dateFrom = null;
+var dateTo = null;
+var reservedDates = ['12/15/2023', '12/16/2023', '12/17/2023', '12/18/2023'];
+
+// $("#from").val('06/10/2015');
+// $("#to").val('10/10/2015');
 var selectedDate = null;
 var tempDateFrom = null;
 var tempDateTo = null;
 $(".datepicker").datepicker({
     minDate: 0,
     numberOfMonths: [3,1],
-    defaultDate: '06/10/2015',
+    // defaultDate: '06/10/2015',
     beforeShowDay: function(date) {           
         dateFrom = $.datepicker.parseDate($.datepicker._defaults.dateFormat, $("#from").val());
         dateTo = $.datepicker.parseDate($.datepicker._defaults.dateFormat, $("#to").val());
+
+        // Formatear la fecha actual
+        var formattedDate = $.datepicker.formatDate('mm/dd/yy', date);
+
+        // Verificar si la fecha está reservada
+        if ($.inArray(formattedDate, reservedDates) !== -1) {
+            return [false, "reserved-date", "Fecha reservada"]; 
+        } 
         
         if(dateFrom != null){
             if(date.getTime() == dateFrom.getTime()){
@@ -77,6 +61,13 @@ $(".datepicker").datepicker({
             if(date.getTime() == dateTo.getTime()){
                 return [true,"dateTo"];
             } 
+        }
+        // Deshabilitar fechas después de las fechas reservadas
+        if (reservedDates.length > 0) {
+            var lastReservedDate = $.datepicker.parseDate('mm/dd/yy', reservedDates[reservedDates.length - 1]);
+          if (date > lastReservedDate) {
+            return [false, "disabled-date", "Fecha no disponible"];
+          }
         }   
         return [true, dateFrom && ((date.getTime() == dateFrom.getTime()) || (dateTo && date >= dateFrom && date <= dateTo)) ? "dp-highlight" : ""];   
     },
@@ -102,7 +93,7 @@ $(".datepicker").datepicker({
         }, 0); 
     },
     refresh: function() {
-        alert('sdfdsf');
+      alert('sdfdsf');
     }
 });
 
@@ -160,17 +151,3 @@ function highlightBetweenDates() {
 }
 
 highlightBetweenDates();
-
-function daniel() {
-
- // Obtén el botón por su ID
-    var miBoton = document.getElementById("sa");
-
-    // Agrega un event listener para el evento de clic
-    miBoton.addEventListener("click", function() {
-        // Cuando se hace clic, muestra "Hola Mundo" en la consola
-        console.log("Hola Mundo");
-    });
-}
-
-daniel();
