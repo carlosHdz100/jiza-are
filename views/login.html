@@ -94,7 +94,8 @@
             <form id="form" onsubmit="login(); return false">
                 <div class="input-style no-borders has-icon validate-field mb-4">
                     <i class="fa fa-user"></i>
-                    <input type="text" class="form-control validate-name" id="correo1" name="correo" placeholder="Correo">
+                    <input type="text" class="form-control validate-name" id="correo1" name="correo"
+                        placeholder="Correo">
                     <label for="correo1" class="color-blue-dark">Correo</label>
                     <i class="fa fa-times disabled invalid color-red-dark"></i>
                     <i class="fa fa-check disabled valid color-green-dark"></i>
@@ -102,7 +103,8 @@
                 </div>
                 <div class="input-style no-borders has-icon validate-field mb-4">
                     <i class="fa fa-lock"></i>
-                    <input type="password" class="form-control validate-text" id="pass1" name="pass" placeholder="Password">
+                    <input type="password" class="form-control validate-text" id="pass1" name="pass"
+                        placeholder="Password">
                     <label for="pass1" class="color-blue-dark">Password</label>
                     <i class="fa fa-times disabled invalid color-red-dark"></i>
                     <i class="fa fa-check disabled valid color-green-dark"></i>
@@ -118,7 +120,8 @@
                     </div>
                 </div>
 
-                <button type="submit" id="btnLogin" class="btn btn-full btn-m shadow-l w-100 rounded-s text-uppercase font-900 bg-green-dark mt-n2">Ingresar</button>
+                <button type="submit" id="btnLogin"
+                    class="btn btn-full btn-m shadow-l w-100 rounded-s text-uppercase font-900 bg-green-dark mt-n2">Ingresar</button>
             </form>
         </div>
     </div>
@@ -131,62 +134,76 @@
             <a href="#" class="close-menu"><i class="fa fa-times"></i></a>
         </div>
         <div class="content mb-0 mt-0">
-            <div class="input-style no-borders has-icon validate-field mb-4">
-                <i class="fa fa-user"></i>
-                <input type="name" class="form-control validate-name" id="form1ac" placeholder="Ingresa tu nombre">
-                <label for="form1ac" class="color-blue-dark font-10">Ingresa tu nombre</label>
-                <i class="fa fa-times disabled invalid color-red-dark"></i>
-                <i class="fa fa-check disabled valid color-green-dark"></i>
-                <em>(required)</em>
-            </div>
-            <div class="input-style no-borders has-icon validate-field mb-4">
-                <i class="fa fa-user"></i>
-                <input type="name" class="form-control validate-name" id="form1ac" placeholder="Ingresa tus apellidos">
-                <label for="form1ac" class="color-blue-dark font-10">Ingresa tus apellidos</label>
-                <i class="fa fa-times disabled invalid color-red-dark"></i>
-                <i class="fa fa-check disabled valid color-green-dark"></i>
-                <em>(required)</em>
-            </div>
-            <div class="input-style no-borders has-icon validate-field mb-4">
-                <i class="fa fa-at"></i>
-                <input type="email" class="form-control validate-text" id="form2ac55" placeholder="Ingresa tu correo">
-                <label for="form2ac55" class="color-blue-dark font-10">Ingresa tu correo</label>
-                <i class="fa fa-times disabled invalid color-red-dark"></i>
-                <i class="fa fa-check disabled valid color-green-dark"></i>
-                <em>(required)</em>
-            </div>
-            <div class="input-style no-borders has-icon validate-field mb-4">
-                <i class="fa fa-lock"></i>
-                <input type="password" class="form-control validate-text" id="form3ac"
-                    placeholder="Ingresa un password">
-                <label for="form3ac" class="color-blue-dark font-10">Ingresa un password</label>
-                <i class="fa fa-times disabled invalid color-red-dark"></i>
-                <i class="fa fa-check disabled valid color-green-dark"></i>
-                <em>(required)</em>
-            </div>
-            <div class="input-style no-borders has-icon validate-field mb-4">
-                <i class="fa fa-lock"></i>
-                <input type="password" class="form-control validate-text" id="form4ac"
-                    placeholder="Confirma tu password">
-                <label for="form4ac" class="color-blue-dark font-10">Confirma tu password</label>
-                <i class="fa fa-times disabled invalid color-red-dark"></i>
-                <i class="fa fa-check disabled valid color-green-dark"></i>
-                <em>(required)</em>
-            </div>
-            <div class="row">
-                <div class="col-6">
-                    <a href="#" data-menu="menu-forgot-1" class="font-10">¿Olvidaste tu contraseña?</a>
+            <form id="formRegister" onsubmit="register(); return false;">
+                <div class="input-style no-borders has-icon validate-field mb-4">
+                    <i class="fa fa-user"></i>
+                    <input type="text" name="usu_nombre" class="form-control validate-name" id="formName"
+                        placeholder="Ingresa tu nombre">
+                    <label for="formName" class="color-blue-dark font-10">Ingresa tu nombre</label>
+                    <i class="fa fa-times disabled invalid color-red-dark"></i>
+                    <i class="fa fa-check disabled valid color-green-dark"></i>
+                    <em>(requerido)</em>
                 </div>
-                <div class="col-6">
-                    <a data-menu="menu-login-1" href="#" class="float-end font-10">Iniciar Sesión</a>
-                    <div class="clearfix"></div>
+                <div class="input-style no-borders has-icon validate-field mb-4">
+                    <i class="fa fa-user"></i>
+                    <input type="text" name="usu_apellido" class="form-control validate-name" id="usu_apellido"
+                        placeholder="Ingresa tus apellidos">
+                    <label for="usu_apellido" class="color-blue-dark font-10">Ingresa tus apellidos</label>
+                    <i class="fa fa-times disabled invalid color-red-dark"></i>
+                    <i class="fa fa-check disabled valid color-green-dark"></i>
+                    <em>(required)</em>
                 </div>
-            </div>
-            <a href="?view=inicio"
-                class="btn btn-full btn-m shadow-l rounded-s text-uppercase font-900 bg-blue-dark mt-n2">
-                Crear cuenta</a>
+                <div class="input-style no-borders has-icon validate-field mb-4">
+                    <i class="fa fa-at"></i>
+                    <input type="email" name="use_correo" class="form-control validate-text" id="use_correo"
+                        placeholder="Ingresa tu correo">
+                    <label for="use_correo" class="color-blue-dark font-10">Ingresa tu correo</label>
+                    <i class="fa fa-times disabled invalid color-red-dark"></i>
+                    <i class="fa fa-check disabled valid color-green-dark"></i>
+                    <em>(required)</em>
+                </div>
+                <div class="input-style no-borders has-icon validate-field mb-4">
+                    <i class="fa fa-lock"></i>
+                    <input type="password" name="use_password" class="form-control validate-text" id="use_password"
+                        placeholder="Ingresa un password">
+                    <label for="use_password" class="color-blue-dark font-10">Ingresa un password</label>
+                    <i class="fa fa-times disabled invalid color-red-dark"></i>
+                    <i class="fa fa-check disabled valid color-green-dark"></i>
+                    <em>(required)</em>
+                </div>
+                <div class="input-style no-borders has-icon validate-field mb-4">
+                    <i class="fa fa-lock"></i>
+                    <input type="password" name="use_password2" class="form-control validate-text" id="use_password2"
+                        placeholder="Confirma tu password">
+                    <label for="use_password2" class="color-blue-dark font-10">Confirma tu password</label>
+                    <i class="fa fa-times disabled invalid color-red-dark"></i>
+                    <i class="fa fa-check disabled valid color-green-dark"></i>
+                    <em>(requerido)</em>
+                </div>
+                <div class="row">
+                    <div class="col-6">
+                        <a href="#" data-menu="menu-forgot-1" class="font-10">¿Olvidaste tu contraseña?</a>
+                    </div>
+                    <div class="col-6">
+                        <a data-menu="menu-login-1" href="#" class="float-end font-10">Iniciar Sesión</a>
+                        <div class="clearfix"></div>
+                    </div>
+                </div>
+                <button type="submit" id="btnRegister"
+                    class="btn btn-full btn-m shadow-l rounded-s text-uppercase font-900 w-100 bg-blue-dark mt-n2">
+                    Crear cuenta
+                </button>
+            </form>
         </div>
     </div>
+
+    <div style="z-index: 10000;" id="snackbar-2" data-toast="snackbar-2"
+        class="text-center snackbar-toast rounded-sm bg-red-dark color-white fade hide" data-delay="1500"
+        data-autohide="true"></div>
+
+    <div style="z-index: 10000;" id="snackbar-1" data-toast="snackbar-1"
+        class="text-center snackbar-toast rounded-sm bg-gren-dark color-white fade hide" data-delay="1500"
+        data-autohide="true"></div>
 
     <div id="menu-forgot-1" class="menu menu-box-bottom menu-box-detached rounded-m" data-menu-height="240"
         data-menu-effect="menu-over" style="display: block; height: 240px;">

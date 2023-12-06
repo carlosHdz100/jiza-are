@@ -229,13 +229,23 @@ function create($link)
         $usu_apellido = $_POST['usu_apellido'];
         $use_correo   = $_POST['use_correo'];
         $use_password = $_POST['use_password'];
+        $use_password2 = $_POST['use_password2'];
         $use_fkrol    = 3; // 3 =  USUARIO
 
         # VALIDACION DE DATOS
-        if (empty($usu_nombre) || empty($usu_apellido)  || empty($use_correo) || empty($use_password) || empty($use_fkrol)) {
+        if (empty($usu_nombre) || empty($usu_apellido)  || empty($use_correo) || empty($use_password) || empty($use_fkrol) || empty($use_password2)) {
             $data = array(
                 'status'  => false,
                 'message' => 'Datos incompletos. Por favor, completa todos los campos obligatorios.',
+            );
+            echo json_encode($data);
+            return;
+        }
+
+        if ($use_password !== $use_password2) {
+            $data = array(
+                'status'  => false,
+                'message' => 'Las contraseñas no coinciden.',
             );
             echo json_encode($data);
             return;
@@ -268,7 +278,7 @@ function create($link)
 
             $response = array(
                 'status' => true,
-                'message' => 'Se guardó exitosamente.'
+                'message' => 'Te registraste exitosamente, inicia sesión.'
             );
         } catch (Exception $e) {
             // Si ocurre un error, deshacer los cambios y mostrar un mensaje de error
