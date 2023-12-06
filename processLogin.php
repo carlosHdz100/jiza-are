@@ -19,7 +19,7 @@ if (empty($_POST['correo']) && isset($_POST['correo']) || empty($_POST['pass']) 
     }
 
 
-    $consulta = mysqli_query($link, "SELECT use_id,use_correo,use_password,use_fkrol,rol_nombre FROM user INNER JOIN cat_rol ON rol_id = use_fkrol  WHERE use_correo = '$correo' AND use_status = '1'");
+    $consulta = mysqli_query($link, "SELECT use_id,use_correo,use_password,use_fkrol,rol_nombre FROM user INNER JOIN cat_rol ON rol_id = use_fkrol  WHERE use_correo = '$correo' AND use_status = 1 AND use_fkrol = 3");
 
     //verificamos si el user exite con un condicional
     if ($row = mysqli_fetch_array($consulta)) {

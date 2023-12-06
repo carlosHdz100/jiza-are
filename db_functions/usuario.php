@@ -229,7 +229,7 @@ function create($link)
         $usu_apellido = $_POST['usu_apellido'];
         $use_correo   = $_POST['use_correo'];
         $use_password = $_POST['use_password'];
-        $use_fkrol    = $_POST['use_fkrol']; // Asigna el valor a una variable | 1 = rol admin
+        $use_fkrol    = 3; // 3 =  USUARIO
 
         # VALIDACION DE DATOS
         if (empty($usu_nombre) || empty($usu_apellido)  || empty($use_correo) || empty($use_password) || empty($use_fkrol)) {
@@ -294,7 +294,7 @@ function update($link)
         $usu_apellido = $_POST['usu_apellido'];
         $use_correo   = $_POST['use_correo'];
         $use_password = $_POST['use_password'];
-        $use_fkrol    = $_POST['use_fkrol']; // Asigna el valor a una variable | 1 = rol admin
+        $use_fkrol    = 3; // Asigna el valor a una variable | 1 = rol admin
 
         # VALIDACION DE DATOS
         if (empty($use_id) || empty($usu_nombre) || empty($usu_apellido)  || empty($use_correo) || empty($use_password)) {

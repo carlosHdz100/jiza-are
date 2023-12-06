@@ -91,33 +91,35 @@
             <a href="#" class="close-menu"><i class="fa fa-times"></i></a>
         </div>
         <div class="content mb-0">
-            <div class="input-style no-borders has-icon validate-field mb-4">
-                <i class="fa fa-user"></i>
-                <input type="name" class="form-control validate-name" id="form1a" placeholder="Correo">
-                <label for="form1a" class="color-blue-dark">Correo</label>
-                <i class="fa fa-times disabled invalid color-red-dark"></i>
-                <i class="fa fa-check disabled valid color-green-dark"></i>
-                <em>(required)</em>
-            </div>
-            <div class="input-style no-borders has-icon validate-field mb-4">
-                <i class="fa fa-lock"></i>
-                <input type="password" class="form-control validate-text" id="form3a" placeholder="Password">
-                <label for="form3a" class="color-blue-dark">Password</label>
-                <i class="fa fa-times disabled invalid color-red-dark"></i>
-                <i class="fa fa-check disabled valid color-green-dark"></i>
-                <em>(required)</em>
-            </div>
-            <div class="row">
-                <div class="col-6">
-                    <a href="#" data-menu="menu-forgot-1" class="font-10">¿Olvidaste tu contraseña?</a>
+            <form id="form" onsubmit="login(); return false">
+                <div class="input-style no-borders has-icon validate-field mb-4">
+                    <i class="fa fa-user"></i>
+                    <input type="text" class="form-control validate-name" id="correo1" name="correo" placeholder="Correo">
+                    <label for="correo1" class="color-blue-dark">Correo</label>
+                    <i class="fa fa-times disabled invalid color-red-dark"></i>
+                    <i class="fa fa-check disabled valid color-green-dark"></i>
+                    <em>(requerido)</em>
                 </div>
-                <div class="col-6">
-                    <a data-menu="menu-register-1" href="#" class="float-end font-10">Crear una cuenta</a>
-                    <div class="clearfix"></div>
+                <div class="input-style no-borders has-icon validate-field mb-4">
+                    <i class="fa fa-lock"></i>
+                    <input type="password" class="form-control validate-text" id="pass1" name="pass" placeholder="Password">
+                    <label for="pass1" class="color-blue-dark">Password</label>
+                    <i class="fa fa-times disabled invalid color-red-dark"></i>
+                    <i class="fa fa-check disabled valid color-green-dark"></i>
+                    <em>(required)</em>
                 </div>
-            </div>
-            <a href="?view=inicio"
-                class="btn btn-full btn-m shadow-l rounded-s text-uppercase font-900 bg-green-dark mt-n2">Ingresar</a>
+                <div class="row">
+                    <div class="col-6">
+                        <a href="#" data-menu="menu-forgot-1" class="font-10">¿Olvidaste tu contraseña?</a>
+                    </div>
+                    <div class="col-6">
+                        <a data-menu="menu-register-1" href="#" class="float-end font-10">Crear una cuenta</a>
+                        <div class="clearfix"></div>
+                    </div>
+                </div>
+
+                <button type="submit" id="btnLogin" class="btn btn-full btn-m shadow-l w-100 rounded-s text-uppercase font-900 bg-green-dark mt-n2">Ingresar</button>
+            </form>
         </div>
     </div>
 
@@ -196,7 +198,8 @@
         <div class="content mb-0 mt-n2">
             <div class="input-style no-borders has-icon validate-field mb-4">
                 <i class="fa fa-at"></i>
-                <input type="email" class="form-control validate-text" id="form24a" placeholder="Ingresa tu correo electronico">
+                <input type="email" class="form-control validate-text" id="form24a"
+                    placeholder="Ingresa tu correo electronico">
                 <label for="form24a" class="color-blue-dark">Ingresa tu correo electronico</label>
                 <i class="fa fa-times disabled invalid color-red-dark"></i>
                 <i class="fa fa-check disabled valid color-green-dark"></i>
@@ -211,12 +214,15 @@
                     <div class="clearfix"></div>
                 </div>
             </div>
-            <a href="#" class="btn btn-full btn-m shadow-l rounded-s text-uppercase font-900 bg-red-dark mt-n2">Nueva contraseña</a>
+            <a href="#" class="btn btn-full btn-m shadow-l rounded-s text-uppercase font-900 bg-red-dark mt-n2">Nueva
+                contraseña</a>
         </div>
     </div>
 
     <script type="text/javascript" src="assets/scripts/bootstrap.min.js"></script>
     <script type="text/javascript" src="assets/scripts/custom.js"></script>
+    <script type="text/javascript" src="assets/scripts/login.js"></script>
+
 </body>
 
 </html>
