@@ -1,29 +1,19 @@
 <?php
-//session_start();
+session_start();
 
 include('config/db.php'); # CONEXIÓN DE LA BD PARA TODO EL PROYECTO
-//$resultado  = validarSesion();
-$isLogueado = true; //$resultado['logueado'];
-//$idUsuario  = $resultado['idCliente'];
+$resultado  = validarSesion();
+$isLogueado = $resultado['logueado'];
+$idUsuario  = $resultado['idCliente'];
 
 
 if ($isLogueado) {
-    //$usuario = usuario($link, $idUsuario); # INFORMACIÓN DEL usuario logueado
-
-    if ($_GET['view']== '') {
-        include('views/login.html');
-    } else {
-        include('layouts/index.php');
-    }
-
+    $usuario = usuario($link, $idUsuario); # INFORMACIÓN DEL usuario logueado
+    include('layouts/index.php');
 } else {
     # SE PUEDE INCLUIR UNA VISTA DE LA CARPETA VIEWS SI EL DISEÑO ES DIFERENTE A LO QUE SE MOSTRARA AL LOGUAERSE : LOGIN U OTRA COSA
     // include('views/login.php'); # PAGINA DE INICIO
-    if ($_GET['view']== '') {
-        include('views/login.html');
-    } else {
-        include('layouts/index.php');
-    }
+    include('views/login.html');
 }
 
 

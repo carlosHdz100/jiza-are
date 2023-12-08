@@ -13,7 +13,7 @@
     <link rel="stylesheet" type="text/css" href="assets/styles/bootstrap.css">
     <link rel="stylesheet" type="text/css" href="assets/styles/style.css">
     <link rel="stylesheet" type="text/css" href="assets/styles/plantilla.css">
-    
+
     <!-- Incluye jQuery -->
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 
@@ -44,13 +44,13 @@
 
 
         <div id="footer-bar" class="footer-bar-1">
-            <a href="?view=inicio"><i class="fa fa-home"></i><span>Inicio</span></a>
+            <a href="?view="><i class="fa fa-home"></i><span>Inicio</span></a>
             <a href="?view=categorias"><i class="fa fa-star"></i><span>Categorías</span></a>
             <a href="?view=favoritos" class="active-nav"><i class="fa fa-heart"></i><span>Favoritos</span></a>
             <a href="?view=carrito"><i class="fa"><svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-shopping-cart-filled" width="24" height="24" viewBox="0 0 24 24" stroke-width="1.5" stroke="#000000" fill="none" stroke-linecap="round" stroke-linejoin="round">
-  <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
-  <path d="M6 2a1 1 0 0 1 .993 .883l.007 .117v1.068l13.071 .935a1 1 0 0 1 .929 1.024l-.01 .114l-1 7a1 1 0 0 1 -.877 .853l-.113 .006h-12v2h10a3 3 0 1 1 -2.995 3.176l-.005 -.176l.005 -.176c.017 -.288 .074 -.564 .166 -.824h-5.342a3 3 0 1 1 -5.824 1.176l-.005 -.176l.005 -.176a3.002 3.002 0 0 1 1.995 -2.654v-12.17h-1a1 1 0 0 1 -.993 -.883l-.007 -.117a1 1 0 0 1 .883 -.993l.117 -.007h2zm0 16a1 1 0 1 0 0 2a1 1 0 0 0 0 -2zm11 0a1 1 0 1 0 0 2a1 1 0 0 0 0 -2z" stroke-width="0" fill="currentColor" />
-</svg></i><span>carrito</span></a>
+                        <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                        <path d="M6 2a1 1 0 0 1 .993 .883l.007 .117v1.068l13.071 .935a1 1 0 0 1 .929 1.024l-.01 .114l-1 7a1 1 0 0 1 -.877 .853l-.113 .006h-12v2h10a3 3 0 1 1 -2.995 3.176l-.005 -.176l.005 -.176c.017 -.288 .074 -.564 .166 -.824h-5.342a3 3 0 1 1 -5.824 1.176l-.005 -.176l.005 -.176a3.002 3.002 0 0 1 1.995 -2.654v-12.17h-1a1 1 0 0 1 -.993 -.883l-.007 -.117a1 1 0 0 1 .883 -.993l.117 -.007h2zm0 16a1 1 0 1 0 0 2a1 1 0 0 0 0 -2zm11 0a1 1 0 1 0 0 2a1 1 0 0 0 0 -2z" stroke-width="0" fill="currentColor" />
+                    </svg></i><span>carrito</span></a>
             <a href="#" data-menu="menu-settings"><i class="fa fa-user"></i><span>Perfil</span></a>
         </div>
 
@@ -284,6 +284,21 @@
                         <i class="fa fa-angle-right"></i>
                     </a> -->
                 </div>
+                <div class="list-group list-custom-small">
+                    <a href="#" onclick="procesoLogout(); return false;" type="button" class="pb-2 ms-n1">
+                        <i class="fa font-12 fa-logout rounded-s bg-danger color-white me-3">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-logout" width="24" height="24" viewBox="0 0 24 24" stroke-width="1.5" stroke="#ffffff" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                                <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                                <path d="M14 8v-2a2 2 0 0 0 -2 -2h-7a2 2 0 0 0 -2 2v12a2 2 0 0 0 2 2h7a2 2 0 0 0 2 -2v-2" />
+                                <path d="M9 12h12l-3 -3" />
+                                <path d="M18 15l3 -3" />
+                            </svg>
+                        </i>
+                        <span>Cerrar sesión</span>
+
+                        <i class="fa fa-angle-right"></i>
+                    </a>
+                </div>
             </div>
         </div>
 
@@ -325,6 +340,8 @@
 
 
     <script type="text/javascript" src="assets/scripts/custom.js"></script>
+    <script type="text/javascript" src="assets/scripts/utilidades.js"></script>
+
 </body>
 
 </html>
