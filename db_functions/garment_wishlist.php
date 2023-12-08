@@ -1,9 +1,9 @@
 <?php
-//session_start();
-// if (!isset($_SESSION['user_id'])) {
-//     header('Location: ../index.php');
-//     return;
-// }
+session_start();
+if (!isset($_SESSION['id'])) {
+    header('Location: ../index.php');
+    return;
+}
 
 $action = $_REQUEST['action']; # ACCION PARA IR A LA FUNCION CORRECTA
 
@@ -50,7 +50,7 @@ function all($link)
     $stmt = $link->prepare($sql);
 
     // Indicar el parámetro de la consulta
-    $stmt->bind_param("i", $_SESSION['user_id']);
+    $stmt->bind_param("i", $_SESSION['id']);
 
     if (!$stmt) {
         // Manejar errores en la preparación de la consulta

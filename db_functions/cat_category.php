@@ -78,7 +78,7 @@ function all($link)
     }
 
     // Agregamos la paginación
-    $sql .= " LIMIT " . $length . " OFFSET " . $start;
+    //$sql .= " LIMIT " . $length . " OFFSET " . $start;
 
     $stmt = $link->prepare($sql);
 
@@ -148,7 +148,6 @@ function all($link)
     // Cerrar la declaración
     $stmt->close();
 }
-
 
 function view($link)
 {
@@ -301,7 +300,6 @@ function create($link)
     }
 }
 
-
 function update($link)
 {
     if ($_SERVER['REQUEST_METHOD'] == 'POST') {
@@ -396,7 +394,6 @@ function delete($link)
         echo json_encode($response);
     }
 }
-
 
 function desactivate($link)
 {

@@ -251,6 +251,24 @@ function create($link)
             return;
         }
 
+        // verificar que no exista alguien con el mismo correo
+        $sql = "SELECT use_correo FROM user WHERE use_correo = ?";
+        $stmt = $link->prepare($sql);
+        $stmt->bind_param("s", $use_correo);
+        $stmt->execute();
+        $result = $stmt->get_result();
+        $row = $result->fetch_assoc();
+        $use_correo_actual = $row['use_correo'];
+
+        if ($use_correo_actual == $use_correo) {
+            $data = array(
+                'status'  => false,
+                'message' => 'El correo ya existe, intenta con otro.',
+            );
+            echo json_encode($data);
+            return;
+        }
+
         ## HASH DEL PASSWORD
         $use_password = password_hash($use_password, PASSWORD_DEFAULT);
         ## FIN HASH PASSWORD

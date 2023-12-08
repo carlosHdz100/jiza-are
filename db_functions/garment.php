@@ -1,4 +1,8 @@
 <?php
+session_start();
+if (!isset($_SESSION['id'])) {
+    header('Location: ../index.php');
+}
 
 $action = $_REQUEST['action']; # ACCION PARA IR A LA FUNCION CORRECTA
 
@@ -13,8 +17,8 @@ switch ($action) {
     case 'allGarment':
         allGarment($link);
         break;
-    case 'allPack':
-        allPack($link);
+    case 'allPackage':
+        allPackage($link);
         break;
     case 'view':
         view($link);
@@ -31,14 +35,15 @@ switch ($action) {
     case 'desactivate':
         desactivate($link);
         break;
+    case 'whishlist':
+        whishlist($link);
+        break;
     default:
         // Acción desconocida, puedes manejar el caso de error aquí
         break;
 }
 
-
 # ------------------------- FIN DE IFS ------------------------
-
 
 function all($link)
 {
@@ -48,9 +53,11 @@ function all($link)
     $todos    = 2;
     $status   = isset($_REQUEST['status']) ? $_REQUEST['status'] : $activo;
 
+    $category = $_REQUEST['category'];
+
     // Datos para la paginación
-    $start  = isset($_REQUEST['start']) ? $_REQUEST['start'] : 0;
-    $length = isset($_REQUEST['length']) ? $_REQUEST['length'] : 10;
+    $start       = isset($_REQUEST['start']) ? $_REQUEST['start'] : 0;
+    $length      = isset($_REQUEST['length']) ? $_REQUEST['length'] : 10;
 
     // Columna por la cual se ordenará
     $orderColumn = isset($_REQUEST['order'][0]['column']) ? $_REQUEST['order'][0]['column'] : 0;
@@ -65,6 +72,11 @@ function all($link)
 
     // Consulta SQL con una consulta preparada para seleccionar datos
     $sql = "SELECT * FROM garment INNER JOIN usuario ON usu_id = gar_fkusuario INNER JOIN cat_category ON cat_id = gar_fkcat_category INNER JOIN cat_person ON per_id = gar_fkcat_person WHERE $condicion";
+
+    // si hay una categoria la agregamos a la consulta
+    if (!empty($category)) {
+        $sql .= " AND cat_name = '$category'";
+    }
 
     // Agregamos la condición de búsqueda si se proporciona
     if (!empty($searchValue)) {
@@ -91,11 +103,11 @@ function all($link)
     if (!$stmt) {
         // Manejar errores en la preparación de la consulta
         $data = array(
-            'data' => array(),
-            'recordsTotal' => 0,
+            'data'            => array(),
+            'recordsTotal'    => 0,
             'recordsFiltered' => 0,
-            'status' => false,
-            'message' => 'Error en la preparación de la consulta.'
+            'status'          => false,
+            'message'         => 'Error en la preparación de la consulta.'
         );
         echo json_encode($data);
         return;
@@ -116,7 +128,12 @@ function all($link)
         $datos = array();
 
         if ($result->num_rows > 0) {
+
             while ($row = $result->fetch_assoc()) {
+                $row['times_rented']          = timesRented($link, $row['gar_id']);
+                $row['garment_qualification'] = garmentQualification($link, $row['gar_id']);
+                $row['imagenes']              = imagesGarment($link, $row['gar_id']);
+
                 $datos[] = $row;
             }
 
@@ -164,7 +181,7 @@ function allGarment($link)
     $status   = isset($_REQUEST['status']) ? $_REQUEST['status'] : $activo;
 
     $gar_fkcat_type_publication = 1;
-    
+
     // Datos para la paginación
     $start  = isset($_REQUEST['start']) ? $_REQUEST['start'] : 0;
     $length = isset($_REQUEST['length']) ? $_REQUEST['length'] : 10;
@@ -195,7 +212,7 @@ function allGarment($link)
         $sql .= ")";
     }
 
-    
+
     $sql .= " AND gar_fkcat_type_publication = $gar_fkcat_type_publication";
 
     // Agregamos la ordenación
@@ -237,6 +254,10 @@ function allGarment($link)
 
         if ($result->num_rows > 0) {
             while ($row = $result->fetch_assoc()) {
+                $row['times_rented']          = timesRented($link, $row['gar_id']);
+                $row['garment_qualification'] = garmentQualification($link, $row['gar_id']);
+                $row['imagenes']              = imagesGarment($link, $row['gar_id']);
+
                 $datos[] = $row;
             }
 
@@ -275,7 +296,7 @@ function allGarment($link)
     $stmt->close();
 }
 
-function allPack($link)
+function allPackage($link)
 {
     // Consulta SQL con una consulta preparada para seleccionar datos y mostrarlo en datatable
     $inactivo = 0;
@@ -358,6 +379,9 @@ function allPack($link)
 
         if ($result->num_rows > 0) {
             while ($row = $result->fetch_assoc()) {
+                $row['times_rented']          = timesRented($link, $row['gar_id']);
+                $row['garment_qualification'] = garmentQualification($link, $row['gar_id']);
+                $row['imagenes']              = imagesGarment($link, $row['gar_id']);
                 $datos[] = $row;
             }
 
@@ -434,15 +458,23 @@ function view($link)
         // Obtener los resultados de la consulta
         $result = $stmt->get_result();
 
+        $datos = array();
+
         // Verificar si se encontraron resultados
         if ($result->num_rows > 0) {
 
             // Datos de la consulta
-            $row = $result->fetch_assoc();
+            while ($row = $result->fetch_assoc()) {
+
+                $row['times_rented']          = timesRented($link, $gar_id);
+                $row['garment_qualification'] = garmentQualification($link, $gar_id);
+                $row['imagenes']              = imagesGarment($link, $gar_id);
+                $datos[]                      = $row;
+            }
 
             $data = array(
                 'status' => true,
-                'message' => $row
+                'message' => $datos
             );
             echo json_encode($data);
         } else {
@@ -547,7 +579,6 @@ function create($link)
     }
 }
 
-
 function update($link)
 {
     if ($_SERVER['REQUEST_METHOD'] == 'POST') {
@@ -643,7 +674,6 @@ function delete($link)
     }
 }
 
-
 function desactivate($link)
 {
     if ($_SERVER['REQUEST_METHOD'] == 'POST') {
@@ -688,4 +718,216 @@ function desactivate($link)
         // Enviar la respuesta como JSON
         echo json_encode($response);
     }
+}
+
+function whishlist($link)
+{
+    // Consulta SQL con una consulta preparada para seleccionar datos y mostrarlo en datatable
+    $inactivo = 0;
+    $activo   = 1;
+    $todos    = 2;
+    $status   = isset($_REQUEST['status']) ? $_REQUEST['status'] : $activo;
+
+    $use_id   = $_SESSION['id'];
+
+    // obtener el usu_id del usuario logueado
+
+    $sql = "SELECT usu_id FROM usuario WHERE usu_fkuser = ?";
+
+    $stmt = $link->prepare($sql);
+
+    if (!$stmt) {
+        // Manejar errores en la preparación de la consulta
+        $data = array(
+            'data'            => array(),
+            'recordsTotal'    => 0,
+            'recordsFiltered' => 0,
+            'status'          => false,
+            'message'         => 'Error en la preparación de la consulta.'
+        );
+        echo json_encode($data);
+        return;
+    }
+
+    // Vincular el valor del estado al parámetro de la consulta preparada
+    $stmt->bind_param("i", $use_id);
+
+    // Ejecutar la consulta preparada
+    if ($stmt->execute()) {
+        // Obtener los resultados de la consulta
+        $result = $stmt->get_result();
+
+        $row = $result->fetch_assoc();
+
+        $usu_id = $row['usu_id'];
+    }
+
+
+
+
+
+    // Datos para la paginación
+    $start       = isset($_REQUEST['start']) ? $_REQUEST['start'] : 0;
+    $length      = isset($_REQUEST['length']) ? $_REQUEST['length'] : 10;
+
+    // Columna por la cual se ordenará
+    $orderColumn = isset($_REQUEST['order'][0]['column']) ? $_REQUEST['order'][0]['column'] : 0;
+    $orderDir    = isset($_REQUEST['order'][0]['dir']) ? $_REQUEST['order'][0]['dir'] : 'ASC';
+    $columns     = array('gar_name');
+
+    // Búsqueda
+    $searchValue = isset($_REQUEST['search']['value']) ? $_REQUEST['search']['value'] : '';
+
+    $condicion   = ($status == $todos) ? "gar_status IN (?, ?)" : "gar_status = ?";
+    $condicion2  = ($status == $todos) ? "gar_status IN ($activo, $inactivo)" : "gar_status = $status";
+
+    // Consulta SQL con una consulta preparada para seleccionar datos
+    $sql = "SELECT * FROM garment_wishlist INNER JOIN garment ON gar_id = garwis_fkgarment INNER JOIN usuario ON usu_id = gar_fkusuario INNER JOIN cat_category ON cat_id = gar_fkcat_category INNER JOIN cat_person ON per_id = gar_fkcat_person WHERE $condicion";
+
+    // si hay una categoria la agregamos a la consulta
+    if (!empty($usu_id)) {
+        $sql .= " AND garwis_fkusuario = '$usu_id'";
+    }
+
+    // Agregamos la condición de búsqueda si se proporciona
+    if (!empty($searchValue)) {
+        $sql .= " AND (";
+        for ($i = 0; $i < count($columns); $i++) {
+            $sql .= $columns[$i] . " LIKE '%" . $searchValue . "%'";
+            if ($i < count($columns) - 1) {
+                $sql .= " OR ";
+            }
+        }
+        $sql .= ")";
+    }
+
+    // Agregamos la ordenación
+    if (isset($columns[$orderColumn])) {
+        $sql .= " ORDER BY " . $columns[$orderColumn] . " " . $orderDir;
+    }
+
+    // Agregamos la paginación
+    $sql .= " LIMIT " . $length . " OFFSET " . $start;
+
+    $stmt = $link->prepare($sql);
+
+    if (!$stmt) {
+        // Manejar errores en la preparación de la consulta
+        $data = array(
+            'data'            => array(),
+            'recordsTotal'    => 0,
+            'recordsFiltered' => 0,
+            'status'          => false,
+            'message'         => 'Error en la preparación de la consulta.'
+        );
+        echo json_encode($data);
+        return;
+    }
+
+    // Vincular el valor del estado al parámetro de la consulta preparada
+    if ($status == 2) {
+        $stmt->bind_param("ii", $inactivo, $activo);
+    } else {
+        $stmt->bind_param("i", $status);
+    }
+
+    // Ejecutar la consulta preparada
+    if ($stmt->execute()) {
+        // Obtener los resultados de la consulta
+        $result = $stmt->get_result();
+
+        $datos = array();
+
+        if ($result->num_rows > 0) {
+            while ($row = $result->fetch_assoc()) {
+                $row['times_rented'] = timesRented($link, $row['gar_id']);
+                $row['garment_qualification'] = garmentQualification($link, $row['gar_id']);
+                $datos[] = $row;
+            }
+
+            $data = array(
+                'data' => $datos,
+                'recordsTotal' =>  count($datos), // Total de registros sin filtrar
+                'recordsFiltered' => mysqli_num_rows(mysqli_query($link, "SELECT * FROM garment_wishlist INNER JOIN garment ON gar_id = garwis_fkgarment WHERE $condicion2")), // Total de registros después del filtrado
+                'status' => true,
+                'message' => ''
+            );
+        } else {
+            $data = array(
+                'data' => array(),
+                'recordsTotal' => 0,
+                'recordsFiltered' => 0,
+                'status' => false,
+                'message' => 'No se encontraron resultados.'
+            );
+        }
+    } else {
+        // Manejar errores en la ejecución de la consulta
+        $data = array(
+            'data' => array(),
+            'recordsTotal' => 0,
+            'recordsFiltered' => 0,
+            'status' => false,
+            'message' => 'Error en la ejecución de la consulta.'
+        );
+    }
+
+    header('Content-Type: application/json');
+
+    echo json_encode($data);
+
+    // Cerrar la declaración
+    $stmt->close();
+}
+
+function timesRented($link, $gar_id)
+{
+    // funcion que retorna cuantas veces fue rentado la prenda
+
+    $sql = "SELECT COUNT(*) AS total FROM rent_garment WHERE rengar_fkgarment = ?";
+    $stmt = $link->prepare($sql);
+    $stmt->bind_param("i", $gar_id);
+    $stmt->execute();
+    $result = $stmt->get_result();
+    $row = $result->fetch_assoc();
+    $total = $row['total'];
+
+    return $total;
+}
+
+function garmentQualification($link, $gar_id)
+{
+    $sql = "SELECT COUNT(*) AS total_reseñas, IFNULL(ROUND(AVG(garrat_rating), 1), 0) AS promedio_calificaciones FROM garment_rating WHERE garrat_fkgarment = ?";
+    $stmt = $link->prepare($sql);
+    $stmt->bind_param("i", $gar_id);
+    $stmt->execute();
+    $result = $stmt->get_result();
+    $row = $result->fetch_assoc();
+    $total_reseñas = $row['total_reseñas'];
+    $promedio_calificaciones = $row['promedio_calificaciones'];
+
+    $data = array(
+        'total_reseñas' => $total_reseñas,
+        'promedio_calificaciones' => $promedio_calificaciones
+    );
+
+    return $data;
+}
+
+function imagesGarment($link, $gar_id)
+{
+    $sql  = "SELECT garima_url FROM garment_image WHERE garima_fkgarment = ?";
+    $stmt = $link->prepare($sql);
+    $stmt->bind_param("i", $gar_id);
+    $stmt->execute();
+    $result = $stmt->get_result();
+    $data = array();
+
+    if ($result->num_rows > 0) {
+        while ($row = $result->fetch_assoc()) {
+            $data[] = $row;
+        }
+    }
+
+    return $data;
 }
