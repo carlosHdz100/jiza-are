@@ -356,3 +356,46 @@ div.datepicker {
   padding: 10px;
   font-size: 1rem;
 }
+
+.availability-indicator {
+  display: flex;
+  align-items: center;
+  margin-top: 10px;
+}
+
+.circle {
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  background-color: #ff69b4;
+  margin-right: 10px;
+}
+
+.text {
+  font-size: 14px;
+  color: #ff69b4;
+  font-weight: bold;
+}
+
+.circle2 {
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  background-color: #dc3545;
+  margin-right: 10px;
+}
+
+.text2 {
+  font-size: 14px;
+  color: #dc3545;
+  font-weight: bold;
+}
+
+/* .ll-skin-melon .ui-datepicker .ui-datepicker-calendar .reserved-date a {
+  background-color: #dc3545 !important;
+  color: #fff !important;
+}
+
+.ll-skin-melon .ui-datepicker .ui-datepicker-calendar .reserved-date.ui-state-hover a {
+  background-color: #dc3545 !important;
+} */

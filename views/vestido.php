@@ -697,6 +697,17 @@
             <input type="text" id="to" class="to" size="10">
         </div>
 
+        <div class="availability-indicator">
+            <div class="circle"></div>
+            <span class="text">Disponible</span>
+        </div>
+
+        <div class="availability-indicator">
+            <div class="circle2"></div>
+            <span class="text2">No Disponible</span>
+        </div>
+
+
         <div class="datepicker ll-skin-melon bottom-0"></div>
 
         <!-- Botón para agregar meses -->
