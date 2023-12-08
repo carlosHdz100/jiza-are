@@ -29,7 +29,7 @@ function subtractMonths() {
 }
 var dateFrom = null;
 var dateTo = null;
-var reservedDates = ['12/15/2023', '12/16/2023', '12/17/2023', '12/18/2023'];
+var reservedDates = ['12/15/2023', '12/16/2023', '12/17/2023', '12/18/2023', '12/08/2023', '12/11/2023'];
 
 // $("#from").val('06/10/2015');
 // $("#to").val('10/10/2015');
