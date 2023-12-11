@@ -18,6 +18,11 @@
     <link rel="stylesheet" type="text/css" href="assets/fonts/css/fontawesome-all.min.css">
     <link rel="manifest" href="_manifest.json" data-pwa-version="set_in_manifest_and_pwa_js">
     <link rel="apple-touch-icon" sizes="180x180" href="assets/app/icons/icon-192x192.png">
+
+    <!-- importar fullcalendar -->
+    <link href='assets/fullcalendar/main.css' rel='stylesheet' />
+    <script src='assets/fullcalendar/main.js'></script>
+
 </head>
 
 <body class="theme-light" data-highlight="highlight-pink" data-gradient="body-default">
@@ -278,6 +283,21 @@
                         <span class="badge bg-highlight color-white">NEW</span>
                         <i class="fa fa-angle-right"></i>
                     </a> -->
+                    <div class="list-group list-custom-small">
+                        <a href="#" onclick="procesoLogout(); return false;" type="button" class="pb-2 ms-n1">
+                            <i class="fa font-12 fa-logout rounded-s bg-danger color-white me-3">
+                                <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-logout" width="24" height="24" viewBox="0 0 24 24" stroke-width="1.5" stroke="#ffffff" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                                    <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                                    <path d="M14 8v-2a2 2 0 0 0 -2 -2h-7a2 2 0 0 0 -2 2v12a2 2 0 0 0 2 2h7a2 2 0 0 0 2 -2v-2" />
+                                    <path d="M9 12h12l-3 -3" />
+                                    <path d="M18 15l3 -3" />
+                                </svg>
+                            </i>
+                            <span>Cerrar sesión</span>
+
+                            <i class="fa fa-angle-right"></i>
+                        </a>
+                    </div>
                 </div>
             </div>
         </div>
@@ -346,10 +366,11 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.min.js" integrity="sha384-QJHtvGhmr9XOIpI6YVutG+2QOK9T+ZnN4kzFN1RtK3zEFEIsxhlmWl5/YESvpZ13" crossorigin="anonymous"></script>
 
 
-    <!-- <script type="text/javascript" src="assets/scripts/bootstrap.min.js"></script> -->
-
-
+    <script type="text/javascript" src="assets/scripts/bootstrap.min.js"></script>
     <script type="text/javascript" src="assets/scripts/custom.js"></script>
+    <script type="text/javascript" src="assets/scripts/utilidades.js"></script>
+
+
 </body>
 
 </html>

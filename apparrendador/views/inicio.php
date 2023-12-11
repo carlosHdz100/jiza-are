@@ -4,7 +4,7 @@
         <div class="d-flex">
             <div class="align-self-center">
                 <p class="mb-n2 font-12">Hola de nuevo,</p>
-                <h1 class="font-30">Karla ramos</h1>
+                <h1 class="font-30"><?= "$usuario->usu_nombre  $usuario->usu_apellido" ?></h1>
             </div>
             <!-- <div class="align-self-center ms-auto">
                 <a href="#" data-menu="menu-add-funds" class="icon icon-m gradient-blue color-white rounded-m shadow-l rounded-m ms-2"><i class="fa fa-plus font-14"></i></a>
