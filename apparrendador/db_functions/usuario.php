@@ -230,10 +230,11 @@ function create($link)
         $use_correo    = $_POST['use_correo'];
         $use_password  = $_POST['use_password'];
         $use_password2 = $_POST['use_password2'];
+        $usu_telefono  = $_POST['usu_telefono'];
         $use_fkrol     = 4; // 3 =  USUARIO
 
         # VALIDACION DE DATOS
-        if (empty($usu_nombre) || empty($usu_apellido)  || empty($use_correo) || empty($use_password) || empty($use_fkrol) || empty($use_password2)) {
+        if (empty($usu_nombre) || empty($usu_apellido)  || empty($use_correo) || empty($use_password) || empty($use_fkrol) || empty($use_password2) || empty($usu_telefono)) {
             $data = array(
                 'status'  => false,
                 'message' => 'Datos incompletos. Por favor, completa todos los campos obligatorios.',
@@ -286,9 +287,9 @@ function create($link)
             $stmt1->execute();
             $id_ultimo = $link->insert_id;
 
-            $query2 = "INSERT INTO usuario (usu_nombre,usu_apellido,usu_fkuser) VALUES (?, ?, ?)";
+            $query2 = "INSERT INTO usuario (usu_nombre,usu_apellido,usu_fkuser,usu_telefono) VALUES (?, ?, ?, ?)";
             $stmt2 = $link->prepare($query2);
-            $stmt2->bind_param("ssi", $usu_nombre, $usu_apellido, $id_ultimo);
+            $stmt2->bind_param("ssis", $usu_nombre, $usu_apellido, $id_ultimo, $usu_telefono);
             $stmt2->execute();
 
             // Confirmar la transacción
@@ -311,7 +312,7 @@ function create($link)
         // Enviar la respuesta como JSON
         echo json_encode($response);
     }
-}
+}       
 
 
 function update($link)
@@ -322,10 +323,11 @@ function update($link)
         $usu_apellido = $_POST['usu_apellido'];
         $use_correo   = $_POST['use_correo'];
         $use_password = $_POST['use_password'];
+        $usu_telefono = $_POST['usu_telefono'];
         $use_fkrol    = 3; // Asigna el valor a una variable | 1 = rol admin
 
         # VALIDACION DE DATOS
-        if (empty($use_id) || empty($usu_nombre) || empty($usu_apellido)  || empty($use_correo) || empty($use_password)) {
+        if (empty($use_id) || empty($usu_nombre) || empty($usu_apellido)  || empty($use_correo) || empty($use_password) || empty($use_fkrol) || empty($usu_telefono)) {
             $data = array(
                 'status' => false,
                 'message' => 'Datos incompletos. Por favor, completa todos los campos obligatorios.'
@@ -362,9 +364,9 @@ function update($link)
             $stmt1->bind_param("ssii", $use_correo, $use_password, $use_fkrol, $use_id);
             $stmt1->execute();
 
-            $query2 = "UPDATE usuario SET usu_nombre = ?, usu_apellido = ? WHERE usu_fkuser = ?";
+            $query2 = "UPDATE usuario SET usu_nombre = ?, usu_apellido = ?, usu_telefono = ? WHERE usu_fkuser = ?";
             $stmt2 = $link->prepare($query2);
-            $stmt2->bind_param("ssi", $usu_nombre, $usu_apellido, $use_id);
+            $stmt2->bind_param("ssis", $usu_nombre, $usu_apellido, $use_id, $usu_telefono);
             $stmt2->execute();
 
 

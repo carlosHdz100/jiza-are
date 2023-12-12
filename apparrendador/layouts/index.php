@@ -23,6 +23,10 @@
     <link href='assets/fullcalendar/main.css' rel='stylesheet' />
     <script src='assets/fullcalendar/main.js'></script>
 
+    <!-- importar sweetAlert -->
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+
+
 </head>
 
 <body class="theme-light" data-highlight="highlight-pink" data-gradient="body-default">
@@ -369,7 +373,6 @@
     <script type="text/javascript" src="assets/scripts/bootstrap.min.js"></script>
     <script type="text/javascript" src="assets/scripts/custom.js"></script>
     <script type="text/javascript" src="assets/scripts/utilidades.js"></script>
-
 
 </body>
 
