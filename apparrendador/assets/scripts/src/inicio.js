@@ -118,6 +118,10 @@ function viewRenta(id) {
                     usu_telefono2.classList.add('d-none');
                     usu_telefono3.classList.add('d-none');
                     usu_telefono.classList.add('d-none');
+                }else{
+                    usu_telefono2.classList.remove('d-none');
+                    usu_telefono3.classList.remove('d-none');
+                    usu_telefono.classList.remove('d-none');
                 }
 
             } else {

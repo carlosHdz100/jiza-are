@@ -44,7 +44,7 @@ switch ($action) {
 }
 
 # ------------------------- FIN DE IFS ------------------------
-
+/*
 function all($link)
 {
     // Consulta SQL con una consulta preparada para seleccionar datos y mostrarlo en datatable
@@ -499,22 +499,58 @@ function view($link)
     $stmt->close();
     $link->close();
 }
-
+*/
 function create($link)
 {
     if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 
-        $cat_name        = $_POST['cat_name'];
-        $cat_description = $_POST['cat_description'];
+        $gar_fkcat_category         = $_POST['gar_fkcat_category'];
+        $gar_fkcat_person           = $_POST['gar_fkcat_person'];
+        $gar_fkcat_type_publication = $_POST['gar_fkcat_type_publication'];
+        $gar_name                   = $_POST['gar_name'];
+        $gar_price                  = $_POST['gar_price'];
+        $gar_description            = $_POST['gar_description'];
 
-        // Archivo recibido desde el input file
-        $app_image = $_FILES['app_image_value'];
 
-        // Verificar si se ha subido alguna imagen
-        $image_uploaded = !empty($app_image['name']);
+
+        $use_id = $_SESSION['id'];
+
+        // obtener el usu_id del usuario logueado
+
+        $sql = "SELECT usu_id FROM usuario WHERE usu_fkuser = ?";
+
+        $stmt = $link->prepare($sql);
+
+        if (!$stmt) {
+            // Manejar errores en la preparación de la consulta
+            $data = array(
+                'data'            => array(),
+                'recordsTotal'    => 0,
+                'recordsFiltered' => 0,
+                'status'          => false,
+                'message'         => 'Error en la preparación de la consulta.'
+            );
+            echo json_encode($data);
+            return;
+        }
+
+        // Vincular el valor del estado al parámetro de la consulta preparada
+        $stmt->bind_param("i", $use_id);
+
+        // Ejecutar la consulta preparada
+        if ($stmt->execute()) {
+            // Obtener los resultados de la consulta
+            $result = $stmt->get_result();
+
+            $row = $result->fetch_assoc();
+
+            $usu_id = $row['usu_id'];
+        }
+
+
 
         # VALIDACION DE DATOS
-        if (empty($cat_name) || empty($cat_description)) {
+        if (empty($gar_fkcat_category) || empty($gar_fkcat_person) || empty($gar_fkcat_type_publication) || empty($gar_name) || empty($gar_price) || empty($gar_description)) {
             $data = array(
                 'status'  => false,
                 'message' => 'Datos incompletos. Por favor, completa todos los campos obligatorios.',
@@ -523,28 +559,7 @@ function create($link)
             return;
         }
 
-        // Si se ha subido una imagen, procesarla
-        if ($image_uploaded) {
-            // Obtener detalles del archivo
-            $file_name        = $app_image['name'];
-            $file_tmp         = $app_image['tmp_name'];
-            $file_destination = 'garment/' . $file_name; // Ruta de destino para guardar la imagen
 
-            // Intentar mover el archivo a la carpeta 'application'
-            if (move_uploaded_file($file_tmp, "../assets/images/$file_destination")) {
-                $app_image_path = $file_destination;
-            } else {
-                // Si falla la carga del archivo
-                $response = array(
-                    'status' => false,
-                    'message' => 'Error al cargar la imagen. Por favor, inténtalo de nuevo.'
-                );
-                echo json_encode($response);
-                return;
-            }
-        } else {
-            $app_image_path = null; // Si no se sube ninguna imagen, guardar como NULL en la base de datos
-        }
 
         // Iniciar la transacción
         $link->begin_transaction();
@@ -552,10 +567,39 @@ function create($link)
         try {
 
             // Consulta 1: GUARDAR registro en la tabla operator
-            $query1 = "INSERT INTO garment (cat_name, cat_description, cat_image) VALUES (?, ?, ?)";
+            $query1 = "INSERT INTO garment (gar_fkusuario,gar_fkcat_category,gar_fkcat_person,gar_fkcat_type_publication,gar_name,gar_price,gar_description) VALUES (?,?,?,?,?,?,?)";
             $stmt1 = $link->prepare($query1);
-            $stmt1->bind_param("sss", $cat_name, $cat_description, $app_image_path);
+            $stmt1->bind_param("iiiisds", $usu_id, $gar_fkcat_category, $gar_fkcat_person, $gar_fkcat_type_publication, $gar_name, $gar_price, $gar_description);
             $stmt1->execute();
+
+            // Consulta 2: Obtener el ID del registro insertado
+            $gar_id = $link->insert_id;
+
+
+            ## guardado de imagenes
+            $mediaFiles = $_FILES['media'];
+
+            foreach ($mediaFiles['name'] as $index => $fileName) {
+                $targetDir = "../assets/images/garment/";
+
+                $tmpName = $mediaFiles['tmp_name'][$index];
+                $fileType = $mediaFiles['type'][$index];
+                $fileSize = $mediaFiles['size'][$index];
+                // Procesar el archivo...
+
+                $type = substr($mediaFiles['type'][$index], 0, 5);
+
+                // Verifica si el archivo se subió correctamente
+                if (is_uploaded_file($mediaFiles['tmp_name'][$index])) {
+                    // Genera un nombre único para el archivo
+                    $unico = uniqid();
+                    $targetFile =  $unico . '_' . $mediaFiles['name'][$index];
+                    $targetFileBD = '/' . $unico . '_' . $mediaFiles['name'][$index];
+                    // Mueve el archivo a la carpeta de destino
+                    move_uploaded_file($mediaFiles['tmp_name'][$index], $targetDir . $targetFile);
+                    mysqli_query($link, "INSERT INTO garment_image (garima_fkgarment,garima_url) VALUES ('$gar_id','$targetFileBD')");
+                }
+            }
 
             // Confirmar la transacción
             $link->commit();
@@ -578,7 +622,7 @@ function create($link)
         echo json_encode($response);
     }
 }
-
+/*
 function update($link)
 {
     if ($_SERVER['REQUEST_METHOD'] == 'POST') {
@@ -930,4 +974,4 @@ function imagesGarment($link, $gar_id)
     }
 
     return $data;
-}
+}*/

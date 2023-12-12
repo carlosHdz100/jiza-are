@@ -26,6 +26,16 @@
     <!-- importar sweetAlert -->
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 
+    <!-- importar dropzone -->
+    <!--DROPZONE-->
+    <script src="https://unpkg.com/dropzone@5/dist/min/dropzone.min.js"></script>
+    <link rel="stylesheet" href="https://unpkg.com/dropzone@5/dist/min/dropzone.min.css" type="text/css" />
+
+    <!-- importar fullcalendar -->
+    <script src='assets/scripts/fullcalendar-6.1.10/dist/index.global.js'></script>
+     <script src='assets/scripts/fullcalendar-6.1.10/packages/bootstrap4/index.global.js'></script> 
+    <!-- <script src='https://cdn.jsdelivr.net/npm/fullcalendar@6.1.10/index.global.min.js'></script> -->
+
 
 </head>
 
