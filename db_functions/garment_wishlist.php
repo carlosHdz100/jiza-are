@@ -120,12 +120,48 @@ function create($link)
     if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 
         $garwis_fkgarment = $_POST['garwis_fkgarment'];
-        $garwis_fkusuario = $_POST['garwis_fkusuario'];
+        // $garwis_fkusuario = $_POST['garwis_fkusuario'];
+
+
+        $use_id   = $_SESSION['id'];
+
+        // obtener el usu_id del usuario logueado
+
+        $sql = "SELECT usu_id FROM usuario WHERE usu_fkuser = ?";
+
+        $stmt = $link->prepare($sql);
+
+        if (!$stmt) {
+            // Manejar errores en la preparación de la consulta
+            $data = array(
+                'data'            => array(),
+                'recordsTotal'    => 0,
+                'recordsFiltered' => 0,
+                'status'          => false,
+                'message'         => 'Error en la preparación de la consulta.'
+            );
+            echo json_encode($data);
+            return;
+        }
+
+        // Vincular el valor del estado al parámetro de la consulta preparada
+        $stmt->bind_param("i", $use_id);
+
+        // Ejecutar la consulta preparada
+        if ($stmt->execute()) {
+            // Obtener los resultados de la consulta
+            $result = $stmt->get_result();
+
+            $row = $result->fetch_assoc();
+
+            $usu_id = $row['usu_id'];
+        }
+
 
 
 
         # VALIDACION DE DATOS
-        if (empty($garwis_fkgarment) || empty($garwis_fkusuario)) {
+        if (empty($garwis_fkgarment)) {
             $data = array(
                 'status'  => false,
                 'message' => 'Datos incompletos. Por favor, completa todos los campos obligatorios.',
@@ -134,7 +170,7 @@ function create($link)
             return;
         }
 
-    
+
         // Iniciar la transacción
         $link->begin_transaction();
 
@@ -143,7 +179,7 @@ function create($link)
             // Consulta 1: Insertar registro en la tabla 'garment_wishlist'
             $query1 = "INSERT INTO garment_wishlist (garwis_fkgarment, garwis_fkusuario) VALUES (?, ?)";
             $stmt1 = $link->prepare($query1);
-            $stmt1->bind_param("ii", $garwis_fkgarment, $garwis_fkusuario);
+            $stmt1->bind_param("ii", $garwis_fkgarment, $usu_id);
 
             $stmt1->execute();
 
