@@ -88,9 +88,9 @@
             <div data-bs-parent="#tab-group" class="collapse show px-3" id="tab-1">
 
 
+                <div id="listGarment">
 
-
-                <div class="card card-style mx-0">
+                    <!-- <div class="card card-style mx-0">
                     <div class="card card-style mx-2 mt-2" data-card-height="400" style="background-image:url('https://newname.mx/wp-content/uploads/2021/01/AVL7664-1.jpg')">
                         <div class="card-top p-3 pe-2 pt-2">
                             <div id="liveAlertPlaceholder2"></div>
@@ -100,7 +100,7 @@
                                     Fav
                                 </span>
                                 <span class="bg-theme color-theme px-2 py-2 rounded-sm" id="icon2">
-                                    <!-- <i class="fa fa-heart color-dark pe-1"></i> -->
+                                    <i class="fa fa-heart color-dark pe-1"></i>
                                     <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-heart" width="16" height="16" viewBox="0 0 24 24" stroke-width="1.5" stroke="#fd0061" fill="none" stroke-linecap="round" stroke-linejoin="round">
                                         <path stroke="none" d="M0 0h24v24H0z" fill="none" />
                                         <path d="M19.5 12.572l-7.5 7.428l-7.5 -7.428a5 5 0 1 1 7.5 -6.566a5 5 0 1 1 7.5 6.572" />
@@ -139,12 +139,12 @@
                             </div>
                         </div>
                     </div>
-                </div>
+                </div> -->
 
 
 
 
-                <div class="card card-style mx-0">
+                    <!-- <div class="card card-style mx-0">
                     <div class="card card-style mx-2 mt-2" data-card-height="400" style="background-image:url('https://doce38boutique.com/wp-content/uploads/2023/09/VL8038-Vestido-largo-de-lentejuela-con-una-manga-asimetrico-cintura-drapeado-con-escarola-abertura-en-pierna-324x540.jpg')">
                         <div class="card-top p-3 pe-2 pt-2">
                             <a href="#" data-toast="snackbar-favorites" class="float-end">
@@ -184,10 +184,10 @@
                             </div>
                         </div>
                     </div>
+                </div> -->
+
+
                 </div>
-
-
-
 
 
 
@@ -197,78 +197,32 @@
 
             <!-- Tab 2 -->
             <div data-bs-parent="#tab-group" class="collapse px-3" id="tab-2">
-                <div class="card card-style mx-0">
-                    <div class="content mt-3 mb-0">
+                <div id="listPackage">
+                    <!-- <div class="card card-style mx-0">
+                        <div class="content mt-3 mb-0">
+                            <div class="d-flex mb-3">
+                                <div class="w-100 me-3">
+                                    <div class="card card-style m-0" data-card-height="250" style="background-image:url('https://cdn0.bodas.com.mx/cat/vestidos-fiesta/manu-garcia/mg3321--mt20_2x_566275.jpg')">
+                                        <div class="card-bottom text-center pb-2">
 
-
-
-
-
-                        <div class="d-flex mb-3">
-                            <div class="w-100 me-3">
-                                <div class="card card-style m-0" data-card-height="250" style="background-image:url('https://cdn0.bodas.com.mx/cat/vestidos-fiesta/manu-garcia/mg3321--mt20_2x_566275.jpg')">
-                                    <div class="card-bottom text-center pb-2">
-
-                                        <a href="#" data-toast="snackbar-favorites" class="icon icon-xxs bg-theme rounded-l shadow-xl rounded-m mx-2 color-theme" id="icon1"><i class="fa fa-heart color-red-dark font-12"></i></a>
-                                        <a href="#" data-toast="snackbar-cart" class="icon icon-xxs bg-theme rounded-l shadow-xl rounded-m mx-2 color-theme"><i class="fa fa-shopping-bag font-12"></i></a>
+                                            <a href="#" data-toast="snackbar-favorites" class="icon icon-xxs bg-theme rounded-l shadow-xl rounded-m mx-2 color-theme" id="icon1"><i class="fa fa-heart color-red-dark font-12"></i></a>
+                                            <a href="#" data-toast="snackbar-cart" class="icon icon-xxs bg-theme rounded-l shadow-xl rounded-m mx-2 color-theme"><i class="fa fa-shopping-bag font-12"></i></a>
+                                        </div>
                                     </div>
                                 </div>
-                            </div>
-                            <div class="ms-auto w-100">
-                                <h5 class="font-600 font-16 line-height-sm">Vestido de Noche Elegante</h5>
-                                <!-- <span class="color-green-dark d-block font-11 font-600"><i class="fa fa-truck"></i> - Entrega en 2 días</span> -->
-                                <h2 class="pt-2 mt-n1">Renta desde $49.<sup class="font-14 font-400 opacity-50">99</sup></h2>
-                                <a href="?view=vestido" data-toast="snackbar-cart" class="custom-btn btn-11 btn-s bg-highlight rounded-sm font-700 text-uppercase mt-2" data-bs-toggle="offcanvas" data-bs-target="#offcanvasBottom" aria-controls="offcanvasBottom">Rentar ahora</a>
-                            </div>
-                        </div>
-
-                        <div class="divider mt-4 mb-4"></div>
-
-                        <div class="d-flex mb-3">
-                            <div class="w-100 me-3">
-                                <div class="card card-style m-0" data-card-height="250" style="background-image:url('https://m.media-amazon.com/images/I/41aujSgibbL._AC_SY580_.jpg')">
-                                    <div class="card-bottom text-center pb-3">
-                                        <a href="#" data-toast="snackbar-favorites" class="icon icon-xxs bg-theme rounded-l shadow-xl rounded-m mx-2 color-theme"><i class="fa fa-heart color-red-dark font-12"></i></a>
-                                    </div>
+                                <div class="ms-auto w-100">
+                                    <h5 class="font-600 font-16 line-height-sm">Vestido de Noche Elegante</h5>
+                                    <span class="color-green-dark d-block font-11 font-600"><i class="fa fa-truck"></i> - Entrega en 2 días</span>
+                                    <h2 class="pt-2 mt-n1">Renta desde $49.<sup class="font-14 font-400 opacity-50">99</sup></h2>
+                                    <a href="?view=vestido" data-toast="snackbar-cart" class="custom-btn btn-11 btn-s bg-highlight rounded-sm font-700 text-uppercase mt-2" data-bs-toggle="offcanvas" data-bs-target="#offcanvasBottom" aria-controls="offcanvasBottom">Rentar ahora</a>
                                 </div>
                             </div>
 
-                            <div class="ms-auto w-100">
-                                <span class="color-red-dark d-block font-11 font-600">Rentado</span>
-                                <h2 class="opacity-40 pb-2 mt-n1">Renta desde $79.<sup class="font-14 font-400 opacity-50">99</sup></h2>
-                                <h5 class="opacity-40 font-600 font-16 line-height-sm">Vestido de Gala Exclusivo</h5>
-                                <a href="?view=vestido" data-toast="snackbar-cart" class="custom-btn btn-11 btn-s bg-highlight rounded-sm font-700 text-uppercase mt-2" data-bs-toggle="offcanvas" data-bs-target="#offcanvasBottom" aria-controls="offcanvasBottom">Rentar ahora</a>
-                            </div>
+                            <div class="divider mt-4 mb-4"></div>
+
                         </div>
 
-                        <div class="divider mt-4 mb-4"></div>
-
-                        <div class="d-flex mb-3">
-                            <div class="w-100 me-3">
-                                <div class="card card-style m-0" data-card-height="250" style="background-image:url('https://www.pronovias.com/media/catalog/product/l/a/lace_2236_b.jpg?quality=80&bg-color=255,255,255&fit=bounds&height=747&width=560&canvas=560:747')">
-                                    <div class="card-top p-2">
-                                        <!-- <span class="bg-highlight p-2 py-1 rounded-sm font-13 font-600">-30%</span> -->
-                                    </div>
-                                    <div class="card-bottom text-center pb-3">
-                                        <a href="#" data-toast="snackbar-favorites" class="icon icon-xxs bg-theme rounded-l shadow-xl rounded-m mx-2 color-theme"><i class="fa fa-heart color-red-dark font-12"></i></a>
-                                        <a href="#" data-toast="snackbar-cart" class="icon icon-xxs bg-theme rounded-l shadow-xl rounded-m mx-2 color-theme"><i class="fa fa-shopping-bag font-12"></i></a>
-                                    </div>
-                                </div>
-                            </div>
-
-                            <div class="ms-auto w-100">
-                                <!-- <span class="color-blue-dark d-block font-11 font-600">Destacado</span> -->
-                                <h2 class="pb-3 mt-n1">Renta desde $104.<sup class="font-14 font-400 opacity-50">99</sup></h2>
-                                <h5 class="font-600 font-16 line-height-sm">Vestido de Novia con Detalles Exquisitos</h5>
-                                <a href="?view=vestido" data-toast="snackbar-cart" class="custom-btn btn-11 btn-s bg-highlight rounded-sm font-700 text-uppercase mt-2" data-bs-toggle="offcanvas" data-bs-target="#offcanvasBottom" aria-controls="offcanvasBottom">Rentar ahora</a>
-                            </div>
-                        </div>
-
-
-
-
-                    </div>
-
+                    </div> -->
                 </div>
             </div>
 
@@ -684,3 +638,8 @@
 <script src="assets/scripts/alerta-favorito.js"></script>
 <script src="assets/scripts/calendar-range.js"></script>
 <script type="text/javascript" src="assets/scripts/custom.js"></script>
+<script src="assets/scripts/src/garment.js"></script>
+<script>
+createCardsGarment(1);
+createCardsPackage(1);
+</script>

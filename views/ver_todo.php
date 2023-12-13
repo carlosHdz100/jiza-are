@@ -80,10 +80,8 @@
         </div> -->
     <!-- </div> -->
 
-    <div class="row mb-0 ">
-
-
-        <div class="card card-style mx-0 col-12 col-md-6 col-lg-4">
+    <div class="row mb-0" id="listGarmentPackage">
+        <!-- <div class="card card-style mx-0 col-12 col-md-6 col-lg-4">
             <div class="card card-style mx-2 mt-2" data-card-height="400">
                 <div class="card-top p-3 pe-2 pt-2">
                     <div id="liveAlertPlaceholder2"></div>
@@ -93,7 +91,7 @@
                             Fav
                         </span>
                         <span class="bg-theme color-theme px-2 py-2 rounded-sm" id="icon2">
-                            <!-- <i class="fa fa-heart color-dark pe-1"></i> -->
+                            <i class="fa fa-heart color-dark pe-1"></i>
                             <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-heart" width="16" height="16" viewBox="0 0 24 24" stroke-width="1.5" stroke="#fd0061" fill="none" stroke-linecap="round" stroke-linejoin="round">
                                 <path stroke="none" d="M0 0h24v24H0z" fill="none" />
                                 <path d="M19.5 12.572l-7.5 7.428l-7.5 -7.428a5 5 0 1 1 7.5 -6.566a5 5 0 1 1 7.5 6.572" />
@@ -135,10 +133,10 @@
                     </div>
                 </div>
             </div>
-        </div>
+        </div> -->
 
 
-        <div class="card card-style mx-0 col-12 col-md-6 col-lg-4">
+        <!-- <div class="card card-style mx-0 col-12 col-md-6 col-lg-4">
             <div class="card card-style mx-2 mt-2" data-card-height="400">
                 <div class="card-top p-3 pe-2 pt-2">
                     <a href="#" data-toast="snackbar-favorites" class="float-end">
@@ -181,229 +179,7 @@
                     </div>
                 </div>
             </div>
-        </div>
-
-
-        <div class="card card-style mx-0 col-12 col-md-6 col-lg-4">
-            <div class="card card-style mx-2 mt-2" data-card-height="400">
-                <div class="card-top p-3 pe-2 pt-2">
-                    <div id="liveAlertPlaceholder2"></div>
-                    <a href="#" id="agregarAFavoritos" data-toast="snackbar-favorites" class="float-end">
-                        <span class="bg-theme color-theme px-2 py-2 rounded-sm hidden" id="icon1">
-                            <i class="fa fa-heart color-red-dark pe-1"></i>
-                            Fav
-                        </span>
-                        <span class="bg-theme color-theme px-2 py-2 rounded-sm" id="icon2">
-                            <!-- <i class="fa fa-heart color-red-dark pe-1"></i> -->
-                            <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-heart" width="16" height="16" viewBox="0 0 24 24" stroke-width="1.5" stroke="#fd0061" fill="none" stroke-linecap="round" stroke-linejoin="round">
-                                <path stroke="none" d="M0 0h24v24H0z" fill="none" />
-                                <path d="M19.5 12.572l-7.5 7.428l-7.5 -7.428a5 5 0 1 1 7.5 -6.566a5 5 0 1 1 7.5 6.572" />
-                            </svg>
-                            Fav
-                        </span>
-                    </a>
-                </div>
-                <div class="card-image">
-                    <img src="https://img.freepik.com/foto-gratis/sesion-fotos-al-aire-libre-primer-plano-blanco-camisa-casual-negocios_53876-119744.jpg?size=626&ext=jpg&ga=GA1.1.649413161.1697839706&semt=sph" alt="">
-                </div>
-            </div>
-            <div class="content mt-n3">
-                <div class="d-flex">
-                    <div class="me-auto align-self-center">
-                        <h2 class="mb-n1">Camisa de Vestir</h2>
-                        <span class="d-block color-green-dark font-700">Veces rentado: +10</span>
-                    </div>
-                    <div class="ms-auto align-self-center">
-                        <h1 class="pt-2">$32.<sup class="font-14 font-400 opacity-50">99</sup></h1>
-                    </div>
-                </div>
-                <p class="font-12 line-height-m pt-2 mb-2">
-                    Con este vestido de noche podrás tener una comodidad increíble, además de poder usarlo para cualquier ocasión. Estamos seguros que te encantará.
-                </p>
-                <div class="d-flex">
-                    <div class="align-self-center">
-                        <span>
-                            <i class="fa fa-star font-12 color-yellow-dark pe-1"></i>
-                            <i class="fa fa-star font-12 color-yellow-dark pe-1"></i>
-                            <i class="fa fa-star font-12 color-yellow-dark pe-1"></i>
-                            <i class="fa fa-star font-12 color-yellow-dark pe-1"></i>
-                            <i class="fa fa-star font-12 color-yellow-dark pe-1"></i>
-                        </span>
-                        <span class="d-block opacity-70 font-11 mt-n2 color-theme">53 calificaciones</span>
-                    </div>
-                    <div class="align-self-center ms-auto">
-                        <a href="#" data-toast="snackbar-cart" class="custom-btn btn-11 btn-s bg-highlight rounded-sm font-700 text-uppercase" data-bs-toggle="offcanvas" data-bs-target="#offcanvasBottom" aria-controls="offcanvasBottom">Rentar ahora</a>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-
-        <div class="card card-style mx-0 col-12 col-md-6 col-lg-4">
-            <div class="card card-style mx-2 mt-2" data-card-height="400">
-                <div class="card-top p-3 pe-2 pt-2">
-                    <div id="liveAlertPlaceholder2"></div>
-                    <a href="#" id="agregarAFavoritos" data-toast="snackbar-favorites" class="float-end">
-                        <span class="bg-theme color-theme px-2 py-2 rounded-sm hidden" id="icon1">
-                            <i class="fa fa-heart color-red-dark pe-1"></i>
-                            Fav
-                        </span>
-                        <span class="bg-theme color-theme px-2 py-2 rounded-sm" id="icon2">
-                            <!-- <i class="fa fa-heart color-red-dark pe-1"></i> -->
-                            <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-heart" width="16" height="16" viewBox="0 0 24 24" stroke-width="1.5" stroke="#fd0061" fill="none" stroke-linecap="round" stroke-linejoin="round">
-                                <path stroke="none" d="M0 0h24v24H0z" fill="none" />
-                                <path d="M19.5 12.572l-7.5 7.428l-7.5 -7.428a5 5 0 1 1 7.5 -6.566a5 5 0 1 1 7.5 6.572" />
-                            </svg>
-                            Fav
-                        </span>
-                    </a>
-                </div>
-                <div class="card-image">
-                    <img src="https://img.freepik.com/foto-gratis/bastante-magnifica-joven-morena-timida-posando-calle-paris-mirada-dama-elegante-verano-colores-beige-experiencia-viaje_291049-1756.jpg?size=626&ext=jpg&ga=GA1.1.649413161.1697839706&semt=sph" alt="">
-                </div>
-            </div>
-            <div class="content mt-n3">
-                <div class="d-flex">
-                    <div class="me-auto align-self-center">
-                        <h2 class="mb-n1">Bolso 1</h2>
-                        <span class="d-block color-green-dark font-700">Veces rentado: +10</span>
-                    </div>
-                    <div class="ms-auto align-self-center">
-                        <h1 class="pt-2">$32.<sup class="font-14 font-400 opacity-50">99</sup></h1>
-                    </div>
-                </div>
-                <p class="font-12 line-height-m pt-2 mb-2">
-                    Con este bolso podrás tener una comodidad increíble, además de poder usarlo para cualquier ocasión. Estamos seguros que te encantará.
-                </p>
-                <div class="d-flex">
-                    <div class="align-self-center">
-                        <span>
-                            <i class="fa fa-star font-12 color-yellow-dark pe-1"></i>
-                            <i class="fa fa-star font-12 color-yellow-dark pe-1"></i>
-                            <i class="fa fa-star font-12 color-yellow-dark pe-1"></i>
-                            <i class="fa fa-star font-12 color-yellow-dark pe-1"></i>
-                            <i class="fa fa-star font-12 color-yellow-dark pe-1"></i>
-                        </span>
-                        <span class="d-block opacity-70 font-11 mt-n2 color-theme">53 calificaciones</span>
-                    </div>
-                    <div class="align-self-center ms-auto">
-                        <a href="#" data-toast="snackbar-cart" class="custom-btn btn-11 btn-s bg-highlight rounded-sm font-700 text-uppercase" data-bs-toggle="offcanvas" data-bs-target="#offcanvasBottom" aria-controls="offcanvasBottom">Rentar ahora</a>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-
-        <div class="card card-style mx-0 col-12 col-md-6 col-lg-4">
-            <div class="card card-style mx-2 mt-2" data-card-height="400">
-                <div class="card-top p-3 pe-2 pt-2">
-                <div id="liveAlertPlaceholder2"></div>
-                    <a href="#" id="agregarAFavoritos" data-toast="snackbar-favorites" class="float-end">
-                        <span class="bg-theme color-theme px-2 py-2 rounded-sm hidden" id="icon1">
-                            <i class="fa fa-heart color-red-dark pe-1"></i>
-                            Fav
-                        </span>
-                        <span class="bg-theme color-theme px-2 py-2 rounded-sm" id="icon2">
-                            <!-- <i class="fa fa-heart color-dark pe-1"></i> -->
-                            <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-heart" width="16" height="16" viewBox="0 0 24 24" stroke-width="1.5" stroke="#fd0061" fill="none" stroke-linecap="round" stroke-linejoin="round">
-                            <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
-                            <path d="M19.5 12.572l-7.5 7.428l-7.5 -7.428a5 5 0 1 1 7.5 -6.566a5 5 0 1 1 7.5 6.572" />
-                            </svg>
-                            Fav
-                        </span>
-                    </a>
-                </div>
-                <div class="card-image">
-                    <img src="https://img.freepik.com/foto-gratis/mujer-joven-hermosa-estilo-hipster-chaqueta-cuero-rosa_285396-3265.jpg?size=626&ext=jpg&ga=GA1.1.649413161.1697839706&semt=sph" alt="">
-                </div>
-            </div>
-            <div class="content mt-n3">
-                <div class="d-flex">
-                    <div class="me-auto align-self-center">
-                        <h2 class="mb-n1">Zapato 1</h2>
-                        <span class="d-block color-green-dark font-700">Veces rentado: +10</span>
-                    </div>
-                    <div class="ms-auto align-self-center">
-                        <h1 class="pt-2">$32.<sup class="font-14 font-400 opacity-50">99</sup></h1>
-                    </div>
-                </div>
-                <p class="font-12 line-height-m pt-2 mb-2">
-                    Con este zapato podrás tener una comodidad increíble, además de poder usarlo para cualquier ocasión. Estamos seguros que te encantará.
-                </p>
-                <div class="d-flex">
-                    <div class="align-self-center">
-                        <span>
-                            <i class="fa fa-star font-12 color-yellow-dark pe-1"></i>
-                            <i class="fa fa-star font-12 color-yellow-dark pe-1"></i>
-                            <i class="fa fa-star font-12 color-yellow-dark pe-1"></i>
-                            <i class="fa fa-star font-12 color-yellow-dark pe-1"></i>
-                            <i class="fa fa-star font-12 color-yellow-dark pe-1"></i>
-                        </span>
-                        <span class="d-block opacity-70 font-11 mt-n2 color-theme">53 calificaciones</span>
-                    </div>
-                    <div class="align-self-center ms-auto">
-                        <a href="#" data-toast="snackbar-cart" class="custom-btn btn-11 btn-s bg-highlight rounded-sm font-700 text-uppercase" data-bs-toggle="offcanvas" data-bs-target="#offcanvasBottom" aria-controls="offcanvasBottom">Rentar ahora</a>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-
-        <div class="card card-style mx-0 col-12 col-md-6 col-lg-4">
-            <div class="card card-style mx-2 mt-2" data-card-height="400">
-                <div class="card-top p-3 pe-2 pt-2">
-                    <div id="liveAlertPlaceholder2"></div>
-                    <a href="#" id="agregarAFavoritos" data-toast="snackbar-favorites" class="float-end">
-                        <span class="bg-theme color-theme px-2 py-2 rounded-sm hidden" id="icon1">
-                            <i class="fa fa-heart color-red-dark pe-1"></i>
-                            Fav
-                        </span>
-                        <span class="bg-theme color-theme px-2 py-2 rounded-sm" id="icon2">
-                            <!-- <i class="fa fa-heart color-red-dark pe-1"></i> -->
-                            <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-heart" width="16" height="16" viewBox="0 0 24 24" stroke-width="1.5" stroke="#fd0061" fill="none" stroke-linecap="round" stroke-linejoin="round">
-                                <path stroke="none" d="M0 0h24v24H0z" fill="none" />
-                                <path d="M19.5 12.572l-7.5 7.428l-7.5 -7.428a5 5 0 1 1 7.5 -6.566a5 5 0 1 1 7.5 6.572" />
-                            </svg>
-                            Fav
-                        </span>
-                    </a>
-                </div>
-                <div class="card-image">
-                    <img src="https://img.freepik.com/foto-gratis/vista-frontal-gafas-sol-arena-playa_23-2148557643.jpg?size=626&ext=jpg&ga=GA1.1.649413161.1697839706&semt=ais" alt="">
-                </div>
-            </div>
-            <div class="content mt-n3">
-                <div class="d-flex">
-                    <div class="me-auto align-self-center">
-                        <h2 class="mb-n1">Gafas de Sol 1</h2>
-                        <span class="d-block color-green-dark font-700">Veces rentado: +10</span>
-                    </div>
-                    <div class="ms-auto align-self-center">
-                        <h1 class="pt-2">$32.<sup class="font-14 font-400 opacity-50">99</sup></h1>
-                    </div>
-                </div>
-                <p class="font-12 line-height-m pt-2 mb-2">
-                    Con esta gafs podrás tener una comodidad increíble, además de poder usarlo para cualquier ocasión. Estamos seguros que te encantará.
-                </p>
-                <div class="d-flex">
-                    <div class="align-self-center">
-                        <span>
-                            <i class="fa fa-star font-12 color-yellow-dark pe-1"></i>
-                            <i class="fa fa-star font-12 color-yellow-dark pe-1"></i>
-                            <i class="fa fa-star font-12 color-yellow-dark pe-1"></i>
-                            <i class="fa fa-star font-12 color-yellow-dark pe-1"></i>
-                            <i class="fa fa-star font-12 color-yellow-dark pe-1"></i>
-                        </span>
-                        <span class="d-block opacity-70 font-11 mt-n2 color-theme">53 calificaciones</span>
-                    </div>
-                    <div class="align-self-center ms-auto">
-                        <a href="#" data-toast="snackbar-cart" class="custom-btn btn-11 btn-s bg-highlight rounded-sm font-700 text-uppercase" data-bs-toggle="offcanvas" data-bs-target="#offcanvasBottom" aria-controls="offcanvasBottom">Rentar ahora</a>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-
+        </div> -->
     </div>
 
 <!-- Menu Sidebar Sidebar Filters-->
@@ -688,3 +464,7 @@
 <script src="assets/scripts/alerta-favorito.js"></script>
 <script src="assets/scripts/calendar-range.js"></script>
 <script type="text/javascript" src="assets/scripts/custom.js"></script>
+<script src="assets/scripts/src/garment.js"></script>
+<script>
+createCardsGarmentPackage(1);
+</script>
