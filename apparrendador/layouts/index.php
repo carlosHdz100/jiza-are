@@ -335,6 +335,11 @@
                         <span>Mis prendas</span>
                         <i class="fa fa-angle-right"></i>
                     </a>
+                    <a href="?view=paquetes" class="pb-2 ms-n1">
+                        <i class="fa font-14 fa-box bg-warning-dark rounded-s"></i>
+                        <span>Mis paquetes</span>
+                        <i class="fa fa-angle-right"></i>
+                    </a>
                     <!-- <a data-menu="menu-backgrounds" href="#" class="border-0">
                         <i class="fa font-14 fa-cog bg-blue-dark rounded-s"></i>
                         <span>Background Color</span>
@@ -345,8 +350,6 @@
                 </div>
             </div>
         </div>
-
-
 
 
     </div>
@@ -378,7 +381,6 @@
 
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js" integrity="sha384-7+zCNj/IqJ95wo16oMtfsKbZ9ccEh31eOz1HGyDuCQ6wgnyJNSYdrPa03rtR1zdB" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.min.js" integrity="sha384-QJHtvGhmr9XOIpI6YVutG+2QOK9T+ZnN4kzFN1RtK3zEFEIsxhlmWl5/YESvpZ13" crossorigin="anonymous"></script>
-
 
     <script type="text/javascript" src="assets/scripts/bootstrap.min.js"></script>
     <script type="text/javascript" src="assets/scripts/custom.js"></script>

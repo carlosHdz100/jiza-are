@@ -53,7 +53,7 @@ function all($link)
     $todos    = 2;
     $status   = isset($_REQUEST['status']) ? $_REQUEST['status'] : $activo;
 
-    $category = $_REQUEST['category'];
+    $category = isset($_REQUEST['category']) ? $_REQUEST['category'] : '';
 
     // Datos para la paginación
     $start       = isset($_REQUEST['start']) ? $_REQUEST['start'] : 0;

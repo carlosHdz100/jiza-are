@@ -44,7 +44,7 @@ switch ($action) {
 }
 
 # ------------------------- FIN DE IFS ------------------------
-/*
+
 function all($link)
 {
     // Consulta SQL con una consulta preparada para seleccionar datos y mostrarlo en datatable
@@ -172,6 +172,8 @@ function all($link)
     $stmt->close();
 }
 
+
+
 function allGarment($link)
 {
     // Consulta SQL con una consulta preparada para seleccionar datos y mostrarlo en datatable
@@ -181,6 +183,42 @@ function allGarment($link)
     $status   = isset($_REQUEST['status']) ? $_REQUEST['status'] : $activo;
 
     $gar_fkcat_type_publication = 1;
+
+
+    $use_id = $_SESSION['id'];
+
+    // obtener el usu_id del usuario logueado
+
+    $sql = "SELECT usu_id FROM usuario WHERE usu_fkuser = ?";
+
+    $stmt = $link->prepare($sql);
+
+    if (!$stmt) {
+        // Manejar errores en la preparación de la consulta
+        $data = array(
+            'data'            => array(),
+            'recordsTotal'    => 0,
+            'recordsFiltered' => 0,
+            'status'          => false,
+            'message'         => 'Error en la preparación de la consulta.'
+        );
+        echo json_encode($data);
+        return;
+    }
+
+    // Vincular el valor del estado al parámetro de la consulta preparada
+    $stmt->bind_param("i", $use_id);
+
+    // Ejecutar la consulta preparada
+    if ($stmt->execute()) {
+        // Obtener los resultados de la consulta
+        $result = $stmt->get_result();
+
+        $row = $result->fetch_assoc();
+
+        $usu_id = $row['usu_id'];
+    }
+
 
     // Datos para la paginación
     $start  = isset($_REQUEST['start']) ? $_REQUEST['start'] : 0;
@@ -200,6 +238,7 @@ function allGarment($link)
     // Consulta SQL con una consulta preparada para seleccionar datos
     $sql = "SELECT * FROM garment INNER JOIN usuario ON usu_id = gar_fkusuario INNER JOIN cat_category ON cat_id = gar_fkcat_category INNER JOIN cat_person ON per_id = gar_fkcat_person WHERE $condicion";
 
+    $sql .= " AND gar_fkusuario = $usu_id";
     // Agregamos la condición de búsqueda si se proporciona
     if (!empty($searchValue)) {
         $sql .= " AND (";
@@ -307,6 +346,41 @@ function allPackage($link)
     $gar_fkcat_type_publication = 2;
 
 
+    $use_id = $_SESSION['id'];
+
+    // obtener el usu_id del usuario logueado
+
+    $sql = "SELECT usu_id FROM usuario WHERE usu_fkuser = ?";
+
+    $stmt = $link->prepare($sql);
+
+    if (!$stmt) {
+        // Manejar errores en la preparación de la consulta
+        $data = array(
+            'data'            => array(),
+            'recordsTotal'    => 0,
+            'recordsFiltered' => 0,
+            'status'          => false,
+            'message'         => 'Error en la preparación de la consulta.'
+        );
+        echo json_encode($data);
+        return;
+    }
+
+    // Vincular el valor del estado al parámetro de la consulta preparada
+    $stmt->bind_param("i", $use_id);
+
+    // Ejecutar la consulta preparada
+    if ($stmt->execute()) {
+        // Obtener los resultados de la consulta
+        $result = $stmt->get_result();
+
+        $row = $result->fetch_assoc();
+
+        $usu_id = $row['usu_id'];
+    }
+
+
     // Datos para la paginación
     $start  = isset($_REQUEST['start']) ? $_REQUEST['start'] : 0;
     $length = isset($_REQUEST['length']) ? $_REQUEST['length'] : 10;
@@ -325,6 +399,7 @@ function allPackage($link)
     // Consulta SQL con una consulta preparada para seleccionar datos
     $sql = "SELECT * FROM garment INNER JOIN usuario ON usu_id = gar_fkusuario INNER JOIN cat_category ON cat_id = gar_fkcat_category INNER JOIN cat_person ON per_id = gar_fkcat_person WHERE $condicion";
 
+    $sql .= " AND gar_fkusuario = $usu_id";
     // Agregamos la condición de búsqueda si se proporciona
     if (!empty($searchValue)) {
         $sql .= " AND (";
@@ -499,7 +574,7 @@ function view($link)
     $stmt->close();
     $link->close();
 }
-*/
+
 function create($link)
 {
     if ($_SERVER['REQUEST_METHOD'] == 'POST') {
@@ -622,18 +697,22 @@ function create($link)
         echo json_encode($response);
     }
 }
-/*
+
 function update($link)
 {
     if ($_SERVER['REQUEST_METHOD'] == 'POST') {
-        $gar_id          = $_POST['gar_id'];
-        $cat_name        = $_POST['cat_name'];
-        $cat_description = $_POST['cat_description'];
-        $cat_image       = $_POST['cat_image'];
-        $app_imageDB     = $_POST['cat_url'];
+
+        $gar_id                     = $_POST['gar_id'];
+        $gar_fkcat_category         = $_POST['gar_fkcat_category'];
+        $gar_fkcat_person           = $_POST['gar_fkcat_person'];
+        $gar_fkcat_type_publication = $_POST['gar_fkcat_type_publication'];
+        $gar_name                   = $_POST['gar_name'];
+        $gar_price                  = $_POST['gar_price'];
+        $gar_description            = $_POST['gar_description'];
+
 
         # VALIDACION DE DATOS
-        if (empty($cat_name) || empty($cat_description)) {
+        if (empty($gar_id) || empty($gar_fkcat_category) || empty($gar_fkcat_person) || empty($gar_fkcat_type_publication) || empty($gar_name) || empty($gar_price) || empty($gar_description)) {
             $data = array(
                 'status' => false,
                 'message' => 'Datos incompletos. Por favor, completa todos los campos obligatorios.'
@@ -643,21 +722,45 @@ function update($link)
         }
 
 
-        // Archivo recibido desde el input file
-        $app_image = $_FILES['app_image_value'];
 
-        // Verificar si se ha subido alguna imagen
-        $image_uploaded = !empty($app_image['name']);
 
         // Iniciar la transacción
         $link->begin_transaction();
 
         try {
+
+            ## guardado de imagenes
+            $mediaFiles = $_FILES['media'];
+
+            foreach ($mediaFiles['name'] as $index => $fileName) {
+                $targetDir = "../assets/images/garment/";
+
+                $tmpName = $mediaFiles['tmp_name'][$index];
+                $fileType = $mediaFiles['type'][$index];
+                $fileSize = $mediaFiles['size'][$index];
+                // Procesar el archivo...
+
+                $type = substr($mediaFiles['type'][$index], 0, 5);
+
+                // Verifica si el archivo se subió correctamente
+                if (is_uploaded_file($mediaFiles['tmp_name'][$index])) {
+                    // Genera un nombre único para el archivo
+                    $unico = uniqid();
+                    $targetFile =  $unico . '_' . $mediaFiles['name'][$index];
+                    $targetFileBD = '/' . $unico . '_' . $mediaFiles['name'][$index];
+                    // Mueve el archivo a la carpeta de destino
+                    move_uploaded_file($mediaFiles['tmp_name'][$index], $targetDir . $targetFile);
+                    mysqli_query($link, "INSERT INTO garment_image (garima_fkgarment,garima_url) VALUES ('$gar_id','$targetFileBD')");
+                }
+            }
+
+
             // Consulta 1: Actualizar registro en la tabla 'operator'
-            $query1 = "UPDATE garment SET kinper_name = ? WHERE gar_id = ?";
+            $query1 = "UPDATE garment SET gar_fkcat_category = ?, gar_fkcat_person = ?, gar_fkcat_type_publication = ?, gar_name = ?, gar_price = ?, gar_description = ? WHERE gar_id = ?";
             $stmt1 = $link->prepare($query1);
-            $stmt1->bind_param("si", $cat_name, $gar_id);
+            $stmt1->bind_param("iiisdsi", $gar_fkcat_category, $gar_fkcat_person, $gar_fkcat_type_publication, $gar_name, $gar_price, $gar_description, $gar_id);
             $stmt1->execute();
+
 
             // Confirmar la transacción
             $link->commit();
@@ -680,7 +783,7 @@ function update($link)
         echo json_encode($response);
     }
 }
-
+/*
 function delete($link)
 {
     if ($_SERVER['REQUEST_METHOD'] == 'POST') {
@@ -923,6 +1026,8 @@ function whishlist($link)
     // Cerrar la declaración
     $stmt->close();
 }
+*/
+
 
 function timesRented($link, $gar_id)
 {
@@ -974,4 +1079,4 @@ function imagesGarment($link, $gar_id)
     }
 
     return $data;
-}*/
+}

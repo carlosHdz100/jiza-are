@@ -15,13 +15,16 @@ switch ($view) {
         include('views/ver_renta.php');
         break;
     case 'prendas':
-        include('views/prendas.php');
+        include('views/garment/prendas.php');
+        break;
+    case 'paquetes':
+        include('views/garment/paquetes.php');
         break;
     case 'nueva_prenda':
-        include('views/nueva_prenda.php');
+        include('views/garment/nueva_prenda.php');
         break;
     case 'ver_prenda':
-        include('views/ver_prenda.php');
+        include('views/garment/ver_prenda.php');
         break;
     case 'perfil':
         include('views/perfil.php');

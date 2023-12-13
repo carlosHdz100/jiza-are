@@ -22,7 +22,7 @@
                 </div>
                 <div class="input-style input-style-always-active has-borders has-icon validate-field">
                     <i class="fa fa-coins font-12"></i>
-                    <input type="number" name="gar_price" class="form-control validate-name" id="gar_price" placeholder="">
+                    <input type="number" step="0.01" min="0" name="gar_price" class="form-control validate-name" id="gar_price" placeholder="">
                     <label for="gar_price" class="color-blue-dark font-13">Precio</label>
                     <i class="fa fa-times disabled invalid color-red-dark"></i>
                     <i class="fa fa-check disabled valid color-green-dark"></i>
