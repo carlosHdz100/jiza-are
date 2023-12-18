@@ -1,3 +1,7 @@
+<?php
+$categoria = $_GET['category'];
+// $id = $_GET['gar_id'];
+?>
 <div class="page-content mt-2">
 
     <!-- <div class="card preload-img position-fixed w-100" data-card-height="450"> -->
@@ -383,11 +387,11 @@
 
         <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Close"></button>
     </div>
-    <div class="offcanvas-body small">
+    <div class="offcanvas-body small" id="listRentGarment">
 
-        <h1>Vestido</h1>
+        <!-- <h1>Vestido</h1>
 
-        <!-- <img class="img-fluid w-100" src="https://img.freepik.com/foto-gratis/camisa-blanca-palabra-t-ella_1340-25481.jpg?size=626&ext=jpg&ga=GA1.1.649413161.1697839706&semt=sph" alt="Renta de vestido"> -->
+        <img class="img-fluid w-100" src="https://img.freepik.com/foto-gratis/camisa-blanca-palabra-t-ella_1340-25481.jpg?size=626&ext=jpg&ga=GA1.1.649413161.1697839706&semt=sph" alt="Renta de vestido">
         <div id="carouselExample" class="carousel slide" data-bs-ride="carousel">
             <div class="carousel-inner">
                 <div class="carousel-item active">
@@ -427,15 +431,15 @@
         <div class="d-flex justify-content-between">
             <h3>Precio: <strong>€200</strong></h3>
             <button class="custom-btn btn-5"  data-menu="menu-event-calendar"><span>Opciones de Fecha</span></button>
-            <!-- <button type="button" class="btn btn-dark">Opciones de Fecha</button> -->
+            <button type="button" class="btn btn-dark">Opciones de Fecha</button>
         </div>
 
         <hr>
 
         <div id="liveAlertPlaceholder"></div>
-        <!-- <button type="button" class="btn btn-dark" id="agregarAlCarrito" style="width: 100%;">Agregar al carrito</button> -->
+        <button type="button" class="btn btn-dark" id="agregarAlCarrito" style="width: 100%;">Agregar al carrito</button>
         <button type="button" class="custom-btn btn-11" id="agregarAlCarrito" style="width: 100%;">Agregar al carrito<div class="dot"></div></button>
-        <br>
+        <br> -->
     </div>
 </div>
 
@@ -466,5 +470,6 @@
 <script type="text/javascript" src="assets/scripts/custom.js"></script>
 <script src="assets/scripts/src/garment.js"></script>
 <script>
-createCardsGarmentPackage(1);
+createCardsGarmentPackage('<?php echo $categoria?>');
+createOffCanvasGarment();
 </script>
