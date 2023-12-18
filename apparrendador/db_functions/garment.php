@@ -1074,6 +1074,30 @@ function imagesGarment($link, $gar_id)
 
     if ($result->num_rows > 0) {
         while ($row = $result->fetch_assoc()) {
+
+            $url = $row['garima_url'];
+
+            if (strpos($url, 'http://') === 0 || strpos($url, 'https://') === 0) {
+
+                $url = $row['garima_url'];
+            } else {
+                $currentUrl = "http://$_SERVER[HTTP_HOST]$_SERVER[REQUEST_URI]";
+                $parsedUrl = parse_url($currentUrl);
+
+                $segmentsToRemove = ['/index.php', '/db_functions/garment.php'];
+
+                // Eliminar segmentos de la ruta si están presentes
+                $path = $parsedUrl['path'];
+                foreach ($segmentsToRemove as $segment) {
+                    $path = str_replace($segment, '', $path);
+                }
+
+                // Reconstruir la URL sin /index.php
+                $url = $parsedUrl['scheme'] . '://' . $parsedUrl['host'] . $path .'/assets/images/garment'. $row['garima_url'];
+            }
+
+            $row['garima_url'] =  $url;
+
             $data[] = $row;
         }
     }

@@ -1,4 +1,14 @@
 <?php $gar_id = $_REQUEST['gar_id']; ?>
+<style>
+    /* Estilos CSS para las fechas pasadas */
+    .fc-day-past {
+        opacity: 0.5 !important;
+        /* Ajusta la opacidad según tu preferencia */
+        pointer-events: none;
+        /* Deshabilita la interacción con fechas pasadas */
+        background-color: #E4E5E4 !important;
+    }
+</style>
 <div class="page-content mt-3">
 
     <div class="card card-style">
@@ -85,6 +95,21 @@
         </div>
     </div>
 
+
+
+
+    <div class="card card-style">
+
+        <h2 class="mx-1 my-3">Elije las fechas que estara disponible la prenda</h2>
+        <div id="calendar"></div>
+        <hr>
+        <div class="container">
+            <h2>Fechas seleccionadas</h2>
+        </div>
+        <div id="fechas-seleccionadas" class="container"></div>
+        <button id="guardar-btn" class="btn btn-success">Guardar cambios</button>
+    </div>
+
 </div>
 
 
@@ -109,163 +134,164 @@
         cat_person();
         cat_type_publication();
         view(<?= $gar_id ?>);
-        var dominio = window.location.hostname;
-        console.log("El dominio de tu sitio es: " + dominio);
     });
 </script>
 
 
-
-<!-- <div id="calendar"></div>
 <script>
-    document.addEventListener('DOMContentLoaded', function() {
-        var today = new Date(); // Obtener la fecha actual
+    const calendarEl = document.getElementById('calendar');
+    let selectedDates = []; // Array para almacenar fechas seleccionadas en formato 'YYYY-MM-DD'
 
-        var calendarEl = document.getElementById('calendar');
+    const fechaActual = new Date(); // Obtener la fecha actual
+    fechaActual.setDate(fechaActual.getDate() - 1); // Restar un día
 
-        var calendar = new FullCalendar.Calendar(calendarEl, {
+    const fechaAnterior = fechaActual.toISOString().slice(0, 10); // Convertir a formato 'YYYY-MM-DD'
 
-            headerToolbar: {
-                left: 'prev,next today',
-                center: 'title',
-                right: 'dayGridMonth'
-            },
-            validRange: {
-                start: today // Solo permite fechas a partir de la fecha actual
-            },
-            locale: 'es',
-            buttonText: {
-                today: 'Hoy',
-                month: 'Mes',
-                // week: 'Semana',
-                // day: 'Día',
-                // list: 'Lista'
-                // Puedes agregar más traducciones según sea necesario
-            },
-            // initialDate: '2023-01-12',
-            navLinks: true, // can click day/week names to navigate views
-            selectable: true,
-            selectMirror: true,
-            select: function(arg) {
-                var title = prompt('Event Title:');
-                if (title) {
-                    calendar.addEvent({
-                        title: title,
-                        start: arg.start,
-                        end: arg.end,
-                        allDay: arg.allDay
-                    })
-                }
-                calendar.unselect()
-            },
-            eventClick: function(arg) {
-                if (confirm('Are you sure you want to delete this event?')) {
-                    arg.event.remove()
-                }
-            },
-            editable: true,
-            dayMaxEvents: true, // allow "more" link when too many events
-            events: []
-        });
+    const calendar = new FullCalendar.Calendar(calendarEl, {
+        initialView: 'dayGridMonth',
+        selectable: true,
+        locale: 'es', // Establecer el idioma español
+        selectLongPressDelay: 100, // Reducir el tiempo de retardo para dispositivos táctiles
+        select: function(info) {
+            const selectedDate = info.start;
+            const formattedDate = selectedDate.toISOString().slice(0, 10); // Convertir a formato 'YYYY-MM-DD'
 
-        calendar.render();
+            eliminarFecha(formattedDate);
+
+            if (!selectedDates.includes(formattedDate)) {
+                selectedDates.push(formattedDate);
+            } else {
+                selectedDates = selectedDates.filter(date => date !== formattedDate);
+            }
+            highlightSelectedDates(calendar);
+        },
+        // Otros ajustes y configuraciones que necesites
+        // ...
+
+        eventClick: function(info) {
+            const fechaEliminar = info.event.start.toISOString().slice(0, 10); // Obtener la fecha del evento
+            mostrarSweetAlert(info.event.gardat_fkgarment, fechaEliminar, info.event.gardat_status); // Mostrar SweetAlert para confirmar la eliminación
+        },
+
+        selectConstraint: {
+            start: fechaAnterior // Restringe las fechas anteriores al día actual
+        },
     });
-</script> -->
 
-<!--
+    function highlightSelectedDates(calendar) {
+        calendar.removeAllEventSources();
+        const events = selectedDates.map(date => ({
+            title: 'disp',
+            start: date,
+            display: 'background',
+            color: '#95E800'
+        }));
+        calendar.addEventSource(events);
 
-<script>
-    initCalendar();
+        // Añadir texto adicional a las fechas y mostrarlas en un div con saltos de línea
+        const fechasSeleccionadasDiv = document.getElementById('fechas-seleccionadas');
+        const fechasConTexto = selectedDates.map(date => `Fecha: ${date}`);
+        fechasSeleccionadasDiv.innerHTML = fechasConTexto.join('<br>');
 
-    function initCalendar() {
-        var calendarEl = document.getElementById('calendar1');
-
-        var calendar = new FullCalendar.Calendar(calendarEl, {
-            headerToolbar: {
-                left: 'prev,next today',
-                center: 'title',
-                right: 'dayGridMonth'
-            },
-            // initialDate: '2023-01-12',
-            navLinks: true, // can click day/week names to navigate views
-            selectable: true,
-            selectMirror: true,
-            select: function(arg) {
-                var title = prompt('Event Title:');
-                if (title) {
-                    calendar.addEvent({
-                        title: title,
-                        start: arg.start,
-                        end: arg.end,
-                        allDay: arg.allDay
-                    })
-                }
-                calendar.unselect()
-            },
-            eventClick: function(arg) {
-                if (confirm('Are you sure you want to delete this event?')) {
-                    arg.event.remove()
-                }
-            },
-            editable: true,
-            dayMaxEvents: true, // allow "more" link when too many events
-            events: [{
-                    title: 'All Day Event',
-                    start: '2023-01-01'
-                },
-                {
-                    title: 'Long Event',
-                    start: '2023-01-07',
-                    end: '2023-01-10'
-                },
-                {
-                    groupId: 999,
-                    title: 'Repeating Event',
-                    start: '2023-01-09T16:00:00'
-                },
-                {
-                    groupId: 999,
-                    title: 'Repeating Event',
-                    start: '2023-01-16T16:00:00'
-                },
-                {
-                    title: 'Conference',
-                    start: '2023-01-11',
-                    end: '2023-01-13'
-                },
-                {
-                    title: 'Meeting',
-                    start: '2023-01-12T10:30:00',
-                    end: '2023-01-12T12:30:00'
-                },
-                {
-                    title: 'Lunch',
-                    start: '2023-01-12T12:00:00'
-                },
-                {
-                    title: 'Meeting',
-                    start: '2023-01-12T14:30:00'
-                },
-                {
-                    title: 'Happy Hour',
-                    start: '2023-01-12T17:30:00'
-                },
-                {
-                    title: 'Dinner',
-                    start: '2023-01-12T20:00:00'
-                },
-                {
-                    title: 'Birthday Party',
-                    start: '2023-01-13T07:00:00'
-                },
-                {
-                    title: 'Click for Google',
-                    url: 'http://google.com/',
-                    start: '2023-01-28'
-                }
-            ]
-        });
-
-        calendar.render();
     }
-</script> -->
+
+    obtenerFechasDesdeServidor(<?= $gar_id ?>);
+
+
+    function obtenerFechasDesdeServidor(gar_id) {
+        const formData = new FormData();
+        formData.append('id', gar_id);
+        fetch('db_functions/garment_date.php?action=listarFechasPrendaId', {
+                method: 'POST',
+                body: formData
+            })
+            .then(response => response.json())
+            .then(data => {
+                // Procesar las fechas recibidas y agregarlas al calendario como eventos
+                if (data.status) {
+                    let datos = data.data;
+                    datos.forEach(fecha => {
+
+                        calendar.addEvent({
+                            title: fecha.gardat_status == 1 ? 'Disp' : 'Rentado',
+                            start: fecha.gardat_date, // Suponiendo que las fechas están en formato 'YYYY-MM-DD'
+                            color: fecha.gardat_status == 1 ? 'blue' : 'red', // Color azul para las fechas de la BD
+                            gardat_id: fecha.gardat_id,
+                            gardat_fkgarment: fecha.gardat_fkgarment,
+                            gardat_status: fecha.gardat_status
+                        });
+                    });
+                }
+
+                calendar.render();
+            })
+
+    }
+
+
+    function eliminarFecha(gardat_id) {
+        // Aquí puedes enviar la fecha al servidor para eliminarla de la base de datos
+        // Utiliza fetch o algún método similar para realizar la eliminación
+        // Luego, actualiza el calendario si la eliminación es exitosa
+        const formData = new FormData();
+        formData.append('gardat_id', gardat_id);
+        fetch('db_functions/garment_date.php?action=eliminarFecha', {
+                method: 'POST',
+                body: formData
+            })
+            .then(response => response.json())
+            .then(data => {
+                // Procesar las fechas recibidas y agregarlas al calendario como eventos
+                if (data.status) {
+                    calendar.refetchEvents();
+                }
+            })
+    }
+
+    function cambiarCancelado(gardat_id) {
+        // Aquí puedes enviar la fecha al servidor para eliminarla de la base de datos
+        // Utiliza fetch o algún método similar para realizar la eliminación
+        // Luego, actualiza el calendario si la eliminación es exitosa
+        const formData = new FormData();
+        formData.append('gardat_id', gardat_id);
+        fetch('db_functions/garment_date.php?action=cambiarCancelado', {
+                method: 'POST',
+                body: formData
+            })
+            .then(response => response.json())
+            .then(data => {
+                // Procesar las fechas recibidas y agregarlas al calendario como eventos
+                if (data.status) {
+                    calendar.refetchEvents();
+                }
+            })
+    }
+
+    function mostrarSweetAlert(gardat_id, fecha, status) {
+        // Aquí puedes usar SweetAlert para confirmar la eliminación
+        // Mostrar un mensaje al usuario y, si confirma, llamar a eliminarFecha()
+
+        swal.fire({
+            title: status == 1 ? '¿Estás seguro?' : '¿Estás seguro de cancelar la renta?' ,
+            text: status == 1 ? 'La fecha ' + fecha + ' será eliminada' : 'La renta con fecha ' + fecha + ' será cancelada',
+            icon: 'warning',
+            showCancelButton: true,
+            confirmButtonText: status == 1 ? 'Sí, eliminar' : 'Sí, cancelar',
+            cancelButtonText: 'Cancelar'
+        }).then((result) => {
+            if (result.value) {
+                if (status == 0) {
+                    // ya esta rentado y solo debemos cancelar la renta
+                    cambiarCancelado(gardat_id);
+                } else {
+                    // esta disponible y debemos eliminarlo
+                    eliminarFecha(gardat_id);
+                }
+            }
+        });
+    }
+
+
+
+    calendar.render();
+</script>

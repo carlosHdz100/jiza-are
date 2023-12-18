@@ -29,8 +29,6 @@ switch ($view) {
     case 'perfil':
         include('views/perfil.php');
         break;
-
-
     default:
         # ERROR DEBE VOLVER AL INICIO | no esta logueado
         redireccion();
