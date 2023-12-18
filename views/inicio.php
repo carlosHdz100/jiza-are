@@ -640,6 +640,6 @@
 <script type="text/javascript" src="assets/scripts/custom.js"></script>
 <script src="assets/scripts/src/garment.js"></script>
 <script>
-createCardsGarment(1);
-createCardsPackage(1);
+createCardsGarment();
+createCardsPackage();
 </script>

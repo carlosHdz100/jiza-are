@@ -38,7 +38,7 @@ fetch(url)
                         <span class="d-block color-green-dark font-700">Veces rentado: +${item.times_rented}</span>
                     </div>
                     <div class="ms-auto align-self-center">
-                        <h1 class="pt-2">€${item.gar_price}.<sup class="font-14 font-400 opacity-50">99</sup></h1>
+                        <h1 class="pt-2">€${item.gar_price}</sup></h1>
                     </div>
                 </div>
                 <p class="font-12 line-height-m pt-2 mb-2">
