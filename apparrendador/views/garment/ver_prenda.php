@@ -228,7 +228,6 @@
 
     }
 
-
     function eliminarFecha(gardat_id) {
         // Aquí puedes enviar la fecha al servidor para eliminarla de la base de datos
         // Utiliza fetch o algún método similar para realizar la eliminación
@@ -290,7 +289,6 @@
             }
         });
     }
-
 
 
     calendar.render();

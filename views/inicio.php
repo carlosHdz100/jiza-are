@@ -1,3 +1,31 @@
+<style>
+    .swal2-container {
+        z-index: 99999
+    }
+
+    .fc-day-past {
+        opacity: 0.5 !important;
+        /* Ajusta la opacidad según tu preferencia */
+        pointer-events: none;
+        /* Deshabilita la interacción con fechas pasadas */
+        background-color: #E4E5E4 !important;
+    }
+
+    /* Estilo para los días bloqueados */
+    .dia-bloqueado {
+        background-color: #000000;
+        /* Color rojo claro */
+        pointer-events: none;
+        /* Evitar interacción con los días bloqueados */
+    }
+
+    .desactivado {
+        opacity: 0.5 !important;
+        /* Establecer la opacidad */
+        cursor: not-allowed !important;
+        /* Cambiar el cursor */
+    }
+</style>
 <div class="page-content mt-2">
 
     <div class="card preload-img position-fixed w-100" data-card-height="450">
@@ -51,12 +79,8 @@
         <iframe src="https://maps.google.com/maps?q=%Sidney%20Opera&t=k&z=17&ie=UTF8&iwloc=&output=embed" style="height:650px; margin-top:-200px;"></iframe>
     </div>
 
-
-
     <!-- Scroll Over Clear Effect-->
-    <div class="card bg-transparent shadow-0 border-0 mb-0 no-click" data-card-height="430" style="height: 430px;">
-
-    </div>
+    <div class="card bg-transparent shadow-0 border-0 mb-0 no-click" data-card-height="430" style="height: 430px;"></div>
 
     <div class="card card-style mx-0 pb-5 pt-1">
         <div class="divider mx-auto mt-3 bg-gray-dark opacity-30 rounded-s mb-3" style="height:5px; width:50px;"></div>
@@ -70,251 +94,39 @@
             <div class="divider divider-margins mt-4"></div>
         </div>
 
-
-
-
         <div id="tab-group">
             <div class="card card-style bg-theme pb-0 mb-3">
+
                 <div class="tab-controls tabs-rounded tabs-large" data-highlight="bg-highlight">
-                    <a href="#" class="font-14 font-600" data-bs-toggle="collapse" data-bs-target="#tab-1" data-active><span class="opacity-80">Prendas</span></a>
-                    <a href="#" class="font-14 font-600" data-bs-toggle="collapse" data-bs-target="#tab-2"><span class="opacity-80">Paquetes</span></a>
+                    <a onclick="getGarment();" href="#" class="font-14 font-600" data-bs-toggle="collapse" data-bs-target="#tab-1" data-active><span class="opacity-80">Prendas</span></a>
+                    <a onclick="getPackaje()" href="#" class="font-14 font-600" data-bs-toggle="collapse" data-bs-target="#tab-2"><span class="opacity-80">Paquetes</span></a>
                     <!-- <a href="#" class="font-14 font-600" data-bs-toggle="collapse" data-bs-target="#tab-3"><span class="opacity-80">Accesorios</span></a> -->
                 </div>
             </div>
 
-
-
             <!-- Tab 1 -->
             <div data-bs-parent="#tab-group" class="collapse show px-3" id="tab-1">
-
-
-                <div id="listGarment">
-
-                    <!-- <div class="card card-style mx-0">
-                    <div class="card card-style mx-2 mt-2" data-card-height="400" style="background-image:url('https://newname.mx/wp-content/uploads/2021/01/AVL7664-1.jpg')">
-                        <div class="card-top p-3 pe-2 pt-2">
-                            <div id="liveAlertPlaceholder2"></div>
-                            <a href="#" id="agregarAFavoritos" data-toast="snackbar-favorites" class="float-end">
-                                <span class="bg-theme color-theme px-2 py-2 rounded-sm hidden" id="icon1">
-                                    <i class="fa fa-heart color-red-dark pe-1"></i>
-                                    Fav
-                                </span>
-                                <span class="bg-theme color-theme px-2 py-2 rounded-sm" id="icon2">
-                                    <i class="fa fa-heart color-dark pe-1"></i>
-                                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-heart" width="16" height="16" viewBox="0 0 24 24" stroke-width="1.5" stroke="#fd0061" fill="none" stroke-linecap="round" stroke-linejoin="round">
-                                        <path stroke="none" d="M0 0h24v24H0z" fill="none" />
-                                        <path d="M19.5 12.572l-7.5 7.428l-7.5 -7.428a5 5 0 1 1 7.5 -6.566a5 5 0 1 1 7.5 6.572" />
-                                    </svg>
-                                    Fav
-                                </span>
-                            </a>
-                        </div>
-                    </div>
-                    <div class="content mt-n3">
-                        <div class="d-flex">
-                            <div class="me-auto align-self-center">
-                                <h2 class="mb-n1">Vestido de noche</h2>
-                                <span class="d-block color-green-dark font-700">Veces rentado: +10</span>
-                            </div>
-                            <div class="ms-auto align-self-center">
-                                <h1 class="pt-2">$32.<sup class="font-14 font-400 opacity-50">99</sup></h1>
-                            </div>
-                        </div>
-                        <p class="font-12 line-height-m pt-2 mb-2">
-                            Con este vestido de noche podrás tener una comodidad increíble, además de poder usarlo para cualquier ocasión. Estamos seguros que te encantará.
-                        </p>
-                        <div class="d-flex">
-                            <div class="align-self-center">
-                                <span>
-                                    <i class="fa fa-star font-12 color-yellow-dark pe-1"></i>
-                                    <i class="fa fa-star font-12 color-yellow-dark pe-1"></i>
-                                    <i class="fa fa-star font-12 color-yellow-dark pe-1"></i>
-                                    <i class="fa fa-star font-12 color-yellow-dark pe-1"></i>
-                                    <i class="fa fa-star font-12 color-yellow-dark pe-1"></i>
-                                </span>
-                                <span class="d-block opacity-70 font-11 mt-n2 color-theme">53 calificaciones</span>
-                            </div>
-                            <div class="align-self-center ms-auto">
-                                <a href="#" data-toast="snackbar-cart" class="custom-btn btn-11 btn-s bg-highlight rounded-sm font-700 text-uppercase" data-bs-toggle="offcanvas" data-bs-target="#offcanvasBottom" aria-controls="offcanvasBottom">Rentar ahora</a>
-                            </div>
-                        </div>
-                    </div>
-                </div> -->
-
-
-
-
-                    <!-- <div class="card card-style mx-0">
-                    <div class="card card-style mx-2 mt-2" data-card-height="400" style="background-image:url('https://doce38boutique.com/wp-content/uploads/2023/09/VL8038-Vestido-largo-de-lentejuela-con-una-manga-asimetrico-cintura-drapeado-con-escarola-abertura-en-pierna-324x540.jpg')">
-                        <div class="card-top p-3 pe-2 pt-2">
-                            <a href="#" data-toast="snackbar-favorites" class="float-end">
-                                <span class="bg-theme color-theme px-2 py-2 rounded-sm">
-                                    <i class="fa fa-heart color-red-dark pe-1"></i>
-                                    Fav
-                                </span>
-                            </a>
-                        </div>
-                    </div>
-                    <div class="content mt-n3">
-                        <div class="d-flex">
-                            <div class="me-auto align-self-center">
-                                <h2 class="mb-n1">Vestido de noche</h2>
-                                <span class="d-block color-green-dark font-700">Veces rentado: +10</span>
-                            </div>
-                            <div class="ms-auto align-self-center">
-                                <h1 class="pt-2">$32.<sup class="font-14 font-400 opacity-50">99</sup></h1>
-                            </div>
-                        </div>
-                        <p class="font-12 line-height-m pt-2 mb-2">
-                            Con este vestido de noche podrás tener una comodidad increíble, además de poder usarlo para cualquier ocasión. Estamos seguros que te encantará.
-                        </p>
-                        <div class="d-flex">
-                            <div class="align-self-center">
-                                <span>
-                                    <i class="fa fa-star font-12 color-yellow-dark pe-1"></i>
-                                    <i class="fa fa-star font-12 color-yellow-dark pe-1"></i>
-                                    <i class="fa fa-star font-12 color-yellow-dark pe-1"></i>
-                                    <i class="fa fa-star font-12 color-yellow-dark pe-1"></i>
-                                    <i class="fa fa-star font-12 color-yellow-dark pe-1"></i>
-                                </span>
-                                <span class="d-block opacity-70 font-11 mt-n2 color-theme">53 calificaciones</span>
-                            </div>
-                            <div class="align-self-center ms-auto">
-                                <a href="#" data-toast="snackbar-cart" class="custom-btn btn-11 btn-s bg-highlight rounded-sm font-700 text-uppercase" data-bs-toggle="offcanvas" data-bs-target="#offcanvasBottom" aria-controls="offcanvasBottom">Rentar ahora</a>
-                            </div>
-                        </div>
-                    </div>
-                </div> -->
-
-
-                </div>
-
-
-
+                <div id="setGarment"></div>
             </div>
-
-
 
             <!-- Tab 2 -->
             <div data-bs-parent="#tab-group" class="collapse px-3" id="tab-2">
-                <div id="listPackage">
-                    <!-- <div class="card card-style mx-0">
-                        <div class="content mt-3 mb-0">
-                            <div class="d-flex mb-3">
-                                <div class="w-100 me-3">
-                                    <div class="card card-style m-0" data-card-height="250" style="background-image:url('https://cdn0.bodas.com.mx/cat/vestidos-fiesta/manu-garcia/mg3321--mt20_2x_566275.jpg')">
-                                        <div class="card-bottom text-center pb-2">
-
-                                            <a href="#" data-toast="snackbar-favorites" class="icon icon-xxs bg-theme rounded-l shadow-xl rounded-m mx-2 color-theme" id="icon1"><i class="fa fa-heart color-red-dark font-12"></i></a>
-                                            <a href="#" data-toast="snackbar-cart" class="icon icon-xxs bg-theme rounded-l shadow-xl rounded-m mx-2 color-theme"><i class="fa fa-shopping-bag font-12"></i></a>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="ms-auto w-100">
-                                    <h5 class="font-600 font-16 line-height-sm">Vestido de Noche Elegante</h5>
-                                    <span class="color-green-dark d-block font-11 font-600"><i class="fa fa-truck"></i> - Entrega en 2 días</span>
-                                    <h2 class="pt-2 mt-n1">Renta desde $49.<sup class="font-14 font-400 opacity-50">99</sup></h2>
-                                    <a href="?view=vestido" data-toast="snackbar-cart" class="custom-btn btn-11 btn-s bg-highlight rounded-sm font-700 text-uppercase mt-2" data-bs-toggle="offcanvas" data-bs-target="#offcanvasBottom" aria-controls="offcanvasBottom">Rentar ahora</a>
-                                </div>
-                            </div>
-
-                            <div class="divider mt-4 mb-4"></div>
-
-                        </div>
-
-                    </div> -->
-                </div>
+                <div id="setPackaje"></div>
             </div>
-
-
-
-
-            <!-- Tab 3 -->
-            <!-- <div data-bs-parent="#tab-group" class="collapse" id="tab-3">
-                <div class="card card-style mx-3">
-                    <div class="content">
-                        <div class="row mb-0">
-
-
-
-
-
-                            <div class="col-6">
-                                <div class="card card-style m-0" data-card-height="140" style="background-image:url('https://i5.walmartimages.com.mx/mg/gm/3pp/asr/42cd59bb-a09b-40fb-9985-efd30ac36961.85cd13959dfa6ff3aba7620e05079696.jpeg?odnHeight=612&odnWidth=612&odnBg=FFFFFF')">
-                                    <div class="card-top p-2">
-                                        <span class="bg-highlight p-2 py-1 rounded-sm font-13 font-600">-50%</span>
-                                    </div>
-                                    <div class="card-bottom text-center pb-3">
-                                        <a href="#" data-toast="snackbar-favorites" class="icon icon-xxs bg-theme rounded-l shadow-xl rounded-m mx-2 color-theme"><i class="fa fa-heart color-red-dark font-12"></i></a>
-                                        <a href="#" data-toast="snackbar-cart" class="icon icon-xxs bg-theme rounded-l shadow-xl rounded-m mx-2 color-theme"><i class="fa fa-shopping-bag font-12"></i></a>
-                                    </div>
-                                </div>
-                                <h5 class="font-600 font-16 line-height-sm pt-3">Collar Elegante para Vestidos</h5>
-                                <span class="color-blue-dark d-block font-11 font-600">Destacado esta Semana</span>
-                                <h2 class="pb-3 mt-n1">$34.<sup class="font-14 font-400 opacity-50">99</sup></h2>
-                            </div>
-
-                            <div class="col-6">
-                                <div class="card card-style m-0 bg-28" data-card-height="140" style="background-image:url('https://exoticaonline.mx/18226-large_default/diadema-ancha-cristal.jpg')">
-                                    <div class="card-top p-2">
-                                        <span class="bg-red-dark p-2 py-1 rounded-sm font-13 font-600">-50%</span>
-                                    </div>
-                                    <div class="card-bottom text-center pb-3">
-                                        <a href="#" data-toast="snackbar-favorites" class="icon icon-xxs bg-theme rounded-l shadow-xl rounded-m mx-2 color-theme"><i class="fa fa-heart color-red-dark font-12"></i></a>
-                                        <a href="#" data-toast="snackbar-cart" class="icon icon-xxs bg-theme rounded-l shadow-xl rounded-m mx-2 color-theme"><i class="fa fa-shopping-bag font-12"></i></a>
-                                    </div>
-                                </div>
-                                <h5 class="font-600 font-16 line-height-sm pt-3">Diadema de Cristales para Ropa de Noche</h5>
-                                <span class="color-red-dark d-block font-11 font-600">No disponible</span>
-                                <h2 class="pb-3 mt-n1">$14.<sup class="font-14 font-400 opacity-50">99</sup></h2>
-                            </div>
-                            <div class="col-12">
-                                <div class="divider mt-2 mb-4"></div>
-                            </div>
-
-                            <div class="col-6">
-                                <div class="card card-style m-0 bg-21" data-card-height="140" style="background-image:url('https://i5.walmartimages.com.mx/mg/gm/3pp/asr/e0af7907-1591-40f3-8f6c-c72211e58187.648dc2338b8536fdfa1693502a28c853.jpeg?odnHeight=612&odnWidth=612&odnBg=FFFFFF')">
-                                    <div class="card-bottom text-center pb-3">
-                                        <a href="#" data-toast="snackbar-favorites" class="icon icon-xxs bg-theme rounded-l shadow-xl rounded-m mx-2 color-theme"><i class="fa fa-heart color-red-dark font-12"></i></a>
-                                        <a href="#" data-toast="snackbar-cart" class="icon icon-xxs bg-theme rounded-l shadow-xl rounded-m mx-2 color-theme"><i class="fa fa-shopping-bag font-12"></i></a>
-                                    </div>
-                                </div>
-                                <h5 class="font-600 font-16 line-height-sm pt-3">Cinturón de Diseño para Vestidos</h5>
-                                <span class="color-green-dark d-block font-11 font-600">Disponible</span>
-                                <h2 class="mt-n1">$23.<sup class="font-14 font-400 opacity-50">99</sup></h2>
-                            </div>
-
-                            <div class="col-6">
-                                <div class="card card-style m-0 bg-8" data-card-height="140" style="background-image:url('https://m.media-amazon.com/images/I/71AlglSGrhL._AC_UY580_.jpg')">
-                                    <div class="card-bottom text-center pb-3">
-                                        <a href="#" data-toast="snackbar-favorites" class="icon icon-xxs bg-theme rounded-l shadow-xl rounded-m mx-2 color-theme"><i class="fa fa-heart color-red-dark font-12"></i></a>
-                                    </div>
-                                </div>
-                                <h5 class="opacity-40 font-600 font-16 line-height-sm pt-3">Bolsa de Ropa para Viajes</h5>
-                                <span class="color-red-dark d-block font-11 font-600">No disponible</span>
-                                <h2 class="opacity-40 pb-2 mt-n1">$47.<sup class="font-14 font-400 opacity-50">99</sup></h2>
-                            </div>
-
-                        </div>
-                    </div>
-                </div>
-            </div> -->
         </div>
 
 
-        <div class="d-flex px-3 mb-n3">
+        <div class="d-flex px-3 mb-1">
             <div class="align-self-center">
                 <h4 class="mb-0">Más para ver</h4>
             </div>
-            <div class="align-self-center ms-auto">
-                <a href="?view=ver_todo" class="font-12">Ver todo</a>
-            </div>
+            <a href="?view=ver_todo" class="align-self-center ms-auto">
+                <a href="?view=ver_todo" class="font-14">Ver todo</a>
+            </a>
         </div>
 
         <div class="splide double-slider slider-no-dots visible-slider" id="double-slider-1a">
             <div class="splide__track">
-
-
 
                 <div class="splide__list">
                     <div class="splide__slide">
@@ -560,21 +372,10 @@
     </div>
     <div class="offcanvas-body small">
 
-        <h1>Vestido</h1>
+        <h1 id="garName">Vestido</h1>
 
-        <!-- <img class="img-fluid w-100" src="https://img.freepik.com/foto-gratis/camisa-blanca-palabra-t-ella_1340-25481.jpg?size=626&ext=jpg&ga=GA1.1.649413161.1697839706&semt=sph" alt="Renta de vestido"> -->
         <div id="carouselExample" class="carousel slide" data-bs-ride="carousel">
-            <div class="carousel-inner">
-                <div class="carousel-item active">
-                    <img src="https://newname.mx/wp-content/uploads/2021/01/AVL7664-1.jpg" class="d-block w-100" alt="...">
-                </div>
-                <div class="carousel-item">
-                    <img src="https://newname.mx/wp-content/uploads/2021/01/AVL7664-1.jpg" class="d-block w-100" alt="...">
-                </div>
-                <div class="carousel-item">
-                    <img src="https://newname.mx/wp-content/uploads/2021/01/AVL7664-1.jpg" class="d-block w-100" alt="...">
-                </div>
-            </div>
+            <div class="carousel-inner" id="garImages"></div>
             <button class="carousel-control-prev" type="button" data-bs-target="#carouselExample" data-bs-slide="prev">
                 <span class="carousel-control-prev-icon" aria-hidden="true"></span>
                 <span class="visually-hidden">Previous</span>
@@ -585,61 +386,247 @@
             </button>
         </div>
 
-        <span class="d-block color-green-dark font-700">Veces rentado: +10</span>
+        <span class="d-block color-green-dark font-700">Veces rentado: <span id="vecesRentado"></span></span>
 
-        <p class="mb-2">Este hermoso vestido está disponible para alquiler. Es la elección perfecta para ocasiones especiales, como bodas, fiestas de gala y eventos elegantes. Destaca tu estilo con este vestido exclusivo.</p>
+        <p class="mb-2" id="garDescription">Este hermoso vestido está disponible para alquiler. Es la elección perfecta para ocasiones especiales, como bodas, fiestas de gala y eventos elegantes. Destaca tu estilo con este vestido exclusivo.</p>
 
         <div class="align-self-center">
-            <span>
-                <i class="fa fa-star font-12 color-yellow-dark pe-1"></i>
-                <i class="fa fa-star font-12 color-yellow-dark pe-1"></i>
-                <i class="fa fa-star font-12 color-yellow-dark pe-1"></i>
-                <i class="fa fa-star font-12 color-yellow-dark pe-1"></i>
-                <i class="fa fa-star font-12 color-yellow-dark pe-1"></i>
-            </span>
-            <span class="d-block opacity-70 font-11 mt-n2 color-theme">53 calificaciones</span>
+            <span id="estrellas"></span>
+            <span class="d-block opacity-70 font-11 mt-n2 color-theme" id="calificaciones"></span>
         </div>
         <div class="d-flex justify-content-between">
-            <h3>Precio: <strong>€200</strong></h3>
-            <button class="custom-btn btn-5" data-menu="menu-event-calendar"><span>Opciones de Fecha</span></button>
-            <!-- <button type="button" class="btn btn-dark">Opciones de Fecha</button> -->
+            <h3>Precio: <strong id="garPrice">€200</strong></h3>
+            <button id="btnRenderCalendar" class="custom-btn btn-5" data-menu="menu-event-calendar"><span>Seleccionar Fecha</span></button>
         </div>
 
         <hr>
 
         <div id="liveAlertPlaceholder"></div>
-        <!-- <button type="button" class="btn btn-dark"  id="agregarAlCarrito" style="width: 100%;">Agregar al carrito</button> -->
         <button type="button" class="custom-btn btn-11" id="agregarAlCarrito" style="width: 100%;">Agregar al carrito<div class="dot"></div></button>
         <br>
     </div>
 </div>
 
 <!-- Calendar -->
-<div id="menu-event-calendar" class="menu menu-box-bottom menu-box-detached" data-menu-height="370" style="display: block; height: 370px; z-index:99999">
+<div id="menu-event-calendar" class="menu menu-box-bottom menu-box-detached" data-menu-height="450" style="display: block; height: 370px; z-index:7777">
     <div class="calendar bg-theme m-0" style="max-width:100%!important;">
         <div class="cal-header">
-            <h4 class="cal-title text-left font-700 bg-highlight color-white">Elige las fechas que necesite</h4>
+            <h4 class="cal-title text-left font-700 bg-highlight color-white">Elige las fechas que necesite rentar</h4>
             <h6 class="cal-title-right color-white close-menu"><i class="fa fa-times"></i></h6>
         </div>
         <div class="clearfix"></div>
 
-        <div class="containerForm mt-4">
+        <div id="calendar"></div>
+
+        <!-- <div class="containerForm mt-4">
             <h4 class="ls-1 text-uppercase" style="font-weight: 500;">Inicio</h4>
             <input type="text" id="from" class="from" size="10">
             <h4 class="ls-1 text-uppercase" style="font-weight: 500;">Fin</h4>
             <input type="text" id="to" class="to" size="10">
-        </div>
-
-        <div class="datepicker ll-skin-melon bottom-0"></div>
+        </div> -->
+        <!-- <div class="datepicker ll-skin-melon bottom-0"></div> -->
     </div>
 </div>
 
-<script src="assets/scripts/alerta-carrito.js"></script>
-<script src="assets/scripts/alerta-favorito.js"></script>
-<script src="assets/scripts/calendar-range.js"></script>
 <script type="text/javascript" src="assets/scripts/custom.js"></script>
 <script src="assets/scripts/src/garment.js"></script>
+<script src="assets/scripts/src/garment_wishlist.js"></script>
 <script>
-createCardsGarment();
-createCardsPackage();
+    document.addEventListener('DOMContentLoaded', function() {
+        getGarment();
+    });
+
+
+    function renderCalendarf(gar_id) {
+        let eventosDelFetch = []; // Almacenar las fechas obtenidas del fetch
+
+        const fechaActual = new Date(); // Obtener la fecha actual
+
+        const fechaAnterior = fechaActual.toISOString().slice(0, 10); // Convertir a formato 'YYYY-MM-DD'
+
+        const formData = new FormData();
+        formData.append('id', gar_id);
+
+        // Hacer el fetch de tus datos
+        fetch('db_functions/garment_date.php?action=listarFechasPrendaId', {
+                method: 'POST',
+                body: formData
+            })
+            .then(response => response.json())
+            .then(data => {
+                let datos = data.data;
+                // Transformar datos a un formato compatible con FullCalendar
+                // let availableEvents = datos.filter(evento => evento.gardat_status === 0);
+                // let rentedEvents = datos.filter(evento => evento.gardat_status === 1);
+                const eventosDelFetch = datos.map(evento => ({
+                    title: evento.gardat_status == 0 ? 'Disponible' : 'Rentado',
+                    start: evento.gardat_date, // Asegúrate de que este campo tenga la fecha en formato correcto
+                    end: evento.gardat_date, // Asegúrate de que este campo tenga la fecha en formato correcto
+                    color: evento.gardat_status == 0 ? 'green' : 'red', // Establecer el color de fondo a verde para las fechas obtenidas
+                    gardat_id: evento.gardat_id,
+                    gardat_fkgarment: evento.gardat_fkgarment,
+                    gardat_status: evento.gardat_status
+                }));
+
+                // Inicializar FullCalendar
+                const calendarEl = document.getElementById('calendar');
+                const calendar = new FullCalendar.Calendar(calendarEl, {
+                    initialView: 'dayGridMonth',
+                    selectable: true, // Habilitar la selección de fechas
+                    events: eventosDelFetch,
+                    locale: 'es',
+                    selectLongPressDelay: 100, // Reducir el tiempo de retardo para dispositivos táctiles
+
+                    select: function(info) {
+
+
+                        let fechaHoy = new Date();
+                        let fechaSeleccionadaDate = new Date(info.startStr);
+
+                        const fechaSeleccionada = info.startStr;
+                        let fechaFinSeleccionada = info.endStr;
+                        // restarle un dia a la fecha final
+                        const fechaFinMenosUnDia = new Date(fechaFinSeleccionada);
+                        fechaFinMenosUnDia.setDate(fechaFinMenosUnDia.getDate() - 1);
+
+                        //formatear fecha a yyyy-mm-dd
+                        const fechaFinFormateada = new Date(fechaFinMenosUnDia).toISOString().slice(0, 10);
+
+                        //iterar los rangos de fecha en un array de fechaSeleccionada y fechaFinFormateada se sumara 1 dia
+
+                        const fechaInicioIterar = new Date(fechaSeleccionada);
+                        const fechaFinIterar = new Date(fechaFinFormateada);
+
+                        let fechasElegidas = [];
+                        const diaEnMilisegundos = 24 * 60 * 60 * 1000; // Cantidad de milisegundos en un día
+
+                        for (let fechaIterar = fechaInicioIterar; fechaIterar <= fechaFinIterar; fechaIterar.setDate(fechaIterar.getDate() + 1)) {
+                            fechasElegidas.push(new Date(fechaIterar).toISOString().split('T')[0]);
+                        }
+
+                        //sacar los id iterando 
+                        //este es el array de id de fechas elegidas
+                        let arrayGardatIdElegidas = [];
+                        let arrayFechasElegidas = [];
+                        //este es el array de estatus de fechas seleccionadas para validar mas adalente
+                        let arrayStatusDisponiblesValidar = [];
+                        //este es el array de boleanos de fechas elegidas se encuantran en la de la DB para validar mas adelante
+                        let arrayBoleanoFechasEncontradas = [];
+
+                        let fechasServidor = [];
+
+                        fechasElegidas.forEach(fecha => {
+
+                            eventosDelFetch.forEach(item => {
+
+                                fechasServidor.push(item.start);
+
+                                if (item.start === fecha) {
+                                    arrayGardatIdElegidas.push(item.gardat_id);
+                                    arrayStatusDisponiblesValidar.push(item.gardat_status);
+                                    arrayFechasElegidas.push(item.gardat_date)
+                                }
+                            });
+                        });
+
+
+                        fechasElegidas.forEach(fecha => {
+                            console.log(fecha);
+
+                            if (fechasServidor.includes(fecha)) {
+                                arrayBoleanoFechasEncontradas.push('true');
+                            } else {
+                                arrayBoleanoFechasEncontradas.push('false');
+
+                            }
+
+                        });
+
+
+                        // const fechaEncontrada = eventosDelFetch.find(evento => evento.start === fechaSeleccionada);
+
+                        let isFechasDisponibles = arrayStatusDisponiblesValidar.includes(1);
+                        let isFechasValidas = arrayBoleanoFechasEncontradas.includes('false');
+
+
+                        if (arrayStatusDisponiblesValidar.length > 0 && arrayGardatIdElegidas.length > 0) {
+
+                            if (isFechasDisponibles) {
+                                console.log('todo mal');
+                            } else {
+                                if (isFechasValidas) {
+                                    console.log('todo mal');
+                                } else {
+                                    console.log('todo bien 3');
+                                    mostrarSweetAlert(arrayGardatIdElegidas, arrayFechasElegidas, fechaSeleccionada, fechaFinFormateada);
+                                }
+                            }
+                        } else {
+                            console.log('no se puede seguir con vacios');
+                        }
+
+                    },
+                    selectConstraint: {
+                        start: fechaAnterior // Restringe las fechas anteriores al día actual
+                    },
+                });
+                calendar.render();
+            })
+            .catch(error => {
+                console.error('Hubo un problema con la petición fetch:', error);
+            });
+
+    }
+
+    function mostrarSweetAlert(arrayGardat_id, arrayFechasElegidas, fechaInicio, fechaFin) {
+
+        swal.fire({
+            title: '¿Deseas agendar estas fechas?',
+            text: `Fechas seleccionadas: del ${fechaInicio} al ${fechaFin}`,
+            icon: 'warning',
+            showCancelButton: true,
+            confirmButtonText: 'Confirmar fechas',
+            cancelButtonText: 'Cancelar'
+        }).then((result) => {
+            if (result.value) {
+                console.log('Fechas seleccionadas exitosamente');
+                agregarCarrito(arrayGardat_id);
+            }
+        });
+    }
+
+    function agregarCarrito(gardat_id) {
+        const formData = new FormData();
+        formData.append('gardat_id', gardat_id); //gardat_id es array de id de fechas
+
+        fetch('db_functions/cart.php?action=create', {
+                method: 'POST',
+                body: formData
+            })
+            .then(response => response.json())
+            .then(data => {
+                console.log(data);
+                if (data.status) {
+                    swal.fire({
+                        title: '¡Agregado al carrito!',
+                        text: 'Se ha agregado el producto al carrito de compras',
+                        icon: 'success',
+                        confirmButtonText: 'Aceptar'
+                    }).then((result) => {
+                        if (result.value) {
+                            window.location.href = "?view=carrito";
+                        }
+                    });
+                } else {
+                    swal.fire({
+                        title: '¡Error!',
+                        text: 'No se ha podido agregar el producto al carrito de compras, intente nuevamente',
+                        icon: 'error',
+                        confirmButtonText: 'Aceptar'
+                    });
+                }
+            });
+
+    }
+
 </script>

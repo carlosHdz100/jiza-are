@@ -25,6 +25,14 @@
     <link rel="stylesheet" type="text/css" href="assets/fonts/css/fontawesome-all.min.css">
     <link rel="manifest" href="_manifest.json" data-pwa-version="set_in_manifest_and_pwa_js">
     <link rel="apple-touch-icon" sizes="180x180" href="assets/app/icons/icon-192x192.png">
+
+    <!-- importar fullcalendar -->
+    <!-- <script src='assets/scripts/fullcalendar-6.1.10/dist/index.global.js'></script>
+    <script src='assets/scripts/fullcalendar-6.1.10/packages/bootstrap4/index.global.js'></script> -->
+    <script src='https://cdn.jsdelivr.net/npm/fullcalendar@6.1.10/index.global.min.js'></script>
+
+    <!-- importar sweetAlert -->
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 </head>
 
 <body class="theme-light" data-highlight="highlight-pink" data-gradient="body-default">
@@ -58,8 +66,6 @@
         <!-- Page Content-->
         <?php include('config/views.php'); ?>
         <!-- End of Page Content-->
-
-
 
         <!-- Menu Sidebar Sidebar Filters-->
         <div id="menu-filter" class="menu menu-box-left" data-menu-height="cover" data-menu-width="cover">
@@ -302,9 +308,6 @@
             </div>
         </div>
 
-
-
-
     </div>
 
 
@@ -329,6 +332,11 @@
         </div>
     </div> -->
 
+    <!-- toast -->
+
+    <div id="active-snackbar-favorites" data-toast="snackbar-favorites"></div>
+    <div id="snackbar-favorites" class="snackbar-toast rounded-m bg-red-dark fade hide" data-bs-delay="1200" data-bs-autohide="true"><i class="fa fa-heart me-3"></i><span id="messageWishList"></span></div>
+
 
     <script type="text/javascript" src="assets/scripts/bootstrap.min.js"></script>
 
@@ -336,7 +344,7 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.min.js" integrity="sha384-QJHtvGhmr9XOIpI6YVutG+2QOK9T+ZnN4kzFN1RtK3zEFEIsxhlmWl5/YESvpZ13" crossorigin="anonymous"></script>
 
 
-    <!-- <script type="text/javascript" src="assets/scripts/bootstrap.min.js"></script> -->
+    <script type="text/javascript" src="assets/scripts/bootstrap.min.js"></script>
 
 
     <script type="text/javascript" src="assets/scripts/custom.js"></script>

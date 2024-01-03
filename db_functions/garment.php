@@ -133,7 +133,7 @@ function all($link)
                 $row['times_rented']          = timesRented($link, $row['gar_id']);
                 $row['garment_qualification'] = garmentQualification($link, $row['gar_id']);
                 $row['imagenes']              = imagesGarment($link, $row['gar_id']);
-
+                $row['is_wishlist']           = isWishlist($link, $row['gar_id']);
                 $datos[] = $row;
             }
 
@@ -257,6 +257,7 @@ function allGarment($link)
                 $row['times_rented']          = timesRented($link, $row['gar_id']);
                 $row['garment_qualification'] = garmentQualification($link, $row['gar_id']);
                 $row['imagenes']              = imagesGarment($link, $row['gar_id']);
+                $row['is_wishlist']           = isWishlist($link, $row['gar_id']);
 
                 $datos[] = $row;
             }
@@ -382,6 +383,8 @@ function allPackage($link)
                 $row['times_rented']          = timesRented($link, $row['gar_id']);
                 $row['garment_qualification'] = garmentQualification($link, $row['gar_id']);
                 $row['imagenes']              = imagesGarment($link, $row['gar_id']);
+                $row['is_wishlist']           = isWishlist($link, $row['gar_id']);
+
                 $datos[] = $row;
             }
 
@@ -469,6 +472,8 @@ function view($link)
                 $row['times_rented']          = timesRented($link, $gar_id);
                 $row['garment_qualification'] = garmentQualification($link, $gar_id);
                 $row['imagenes']              = imagesGarment($link, $gar_id);
+                $row['is_wishlist']           = isWishlist($link, $row['gar_id']);
+
                 $datos[]                      = $row;
             }
 
@@ -720,6 +725,100 @@ function desactivate($link)
     }
 }
 
+function isWishlist($link, $gar_id)
+{
+    // funcion que retorna si la prenda esta en la lista de deseos del usuario
+    $usu_id = $_SESSION['usu_id'];
+
+    $sql = "SELECT * FROM garment_wishlist WHERE garwis_fkgarment = ? AND garwis_fkusuario = ?";
+    $stmt = $link->prepare($sql);
+    $stmt->bind_param("ii", $gar_id, $usu_id);
+    $stmt->execute();
+    $result = $stmt->get_result();
+
+    if ($result->num_rows > 0) {
+        return true;
+    } else {
+        return false;
+    }
+}
+
+function timesRented($link, $gar_id)
+{
+    // funcion que retorna cuantas veces fue rentado la prenda
+
+    $sql = "SELECT COUNT(*) AS total FROM rent_garment WHERE rengar_fkgarment = ?";
+    $stmt = $link->prepare($sql);
+    $stmt->bind_param("i", $gar_id);
+    $stmt->execute();
+    $result = $stmt->get_result();
+    $row = $result->fetch_assoc();
+    $total = $row['total'];
+
+    return $total;
+}
+
+function garmentQualification($link, $gar_id)
+{
+    $sql = "SELECT COUNT(*) AS total_reseñas, IFNULL(ROUND(AVG(garrat_rating), 1), 0) AS promedio_calificaciones FROM garment_rating WHERE garrat_fkgarment = ?";
+    $stmt = $link->prepare($sql);
+    $stmt->bind_param("i", $gar_id);
+    $stmt->execute();
+    $result = $stmt->get_result();
+    $row = $result->fetch_assoc();
+    $total_reseñas = $row['total_reseñas'];
+    $promedio_calificaciones = $row['promedio_calificaciones'];
+
+    $data = array(
+        'total_reseñas' => $total_reseñas,
+        'promedio_calificaciones' => $promedio_calificaciones
+    );
+
+    return $data;
+}
+
+function imagesGarment($link, $gar_id)
+{
+    $sql  = "SELECT garima_url FROM garment_image WHERE garima_fkgarment = ?";
+    $stmt = $link->prepare($sql);
+    $stmt->bind_param("i", $gar_id);
+    $stmt->execute();
+    $result = $stmt->get_result();
+    $data = array();
+
+    if ($result->num_rows > 0) {
+        while ($row = $result->fetch_assoc()) {
+
+            $url = $row['garima_url'];
+
+            if (strpos($url, 'http://') === 0 || strpos($url, 'https://') === 0) {
+
+                $url = $row['garima_url'];
+            } else {
+                $currentUrl = "http://$_SERVER[HTTP_HOST]$_SERVER[REQUEST_URI]";
+                $parsedUrl = parse_url($currentUrl);
+
+                $segmentsToRemove = ['/index.php', '/db_functions/garment.php'];
+
+                // Eliminar segmentos de la ruta si están presentes
+                $path = $parsedUrl['path'];
+                foreach ($segmentsToRemove as $segment) {
+                    $path = str_replace($segment, '', $path);
+                }
+
+                // Reconstruir la URL sin /index.php
+                $url = $parsedUrl['scheme'] . '://' . $parsedUrl['host'] . $path . '/apparrendador/assets/images/garment' . $row['garima_url'];
+            }
+
+            $row['garima_url'] =  $url;
+
+            $data[] = $row;
+        }
+    }
+
+    return $data;
+}
+
 function whishlist($link)
 {
     // Consulta SQL con una consulta preparada para seleccionar datos y mostrarlo en datatable
@@ -878,80 +977,4 @@ function whishlist($link)
 
     // Cerrar la declaración
     $stmt->close();
-}
-
-function timesRented($link, $gar_id)
-{
-    // funcion que retorna cuantas veces fue rentado la prenda
-
-    $sql = "SELECT COUNT(*) AS total FROM rent_garment WHERE rengar_fkgarment = ?";
-    $stmt = $link->prepare($sql);
-    $stmt->bind_param("i", $gar_id);
-    $stmt->execute();
-    $result = $stmt->get_result();
-    $row = $result->fetch_assoc();
-    $total = $row['total'];
-
-    return $total;
-}
-
-function garmentQualification($link, $gar_id)
-{
-    $sql = "SELECT COUNT(*) AS total_reseñas, IFNULL(ROUND(AVG(garrat_rating), 1), 0) AS promedio_calificaciones FROM garment_rating WHERE garrat_fkgarment = ?";
-    $stmt = $link->prepare($sql);
-    $stmt->bind_param("i", $gar_id);
-    $stmt->execute();
-    $result = $stmt->get_result();
-    $row = $result->fetch_assoc();
-    $total_reseñas = $row['total_reseñas'];
-    $promedio_calificaciones = $row['promedio_calificaciones'];
-
-    $data = array(
-        'total_reseñas' => $total_reseñas,
-        'promedio_calificaciones' => $promedio_calificaciones
-    );
-
-    return $data;
-}
-
-function imagesGarment($link, $gar_id)
-{
-    $sql  = "SELECT garima_url FROM garment_image WHERE garima_fkgarment = ?";
-    $stmt = $link->prepare($sql);
-    $stmt->bind_param("i", $gar_id);
-    $stmt->execute();
-    $result = $stmt->get_result();
-    $data = array();
-
-    if ($result->num_rows > 0) {
-        while ($row = $result->fetch_assoc()) {
-
-            $url = $row['garima_url'];
-
-            if (strpos($url, 'http://') === 0 || strpos($url, 'https://') === 0) {
-
-                $url = $row['garima_url'];
-            } else {
-                $currentUrl = "http://$_SERVER[HTTP_HOST]$_SERVER[REQUEST_URI]";
-                $parsedUrl = parse_url($currentUrl);
-
-                $segmentsToRemove = ['/index.php', '/db_functions/garment.php'];
-
-                // Eliminar segmentos de la ruta si están presentes
-                $path = $parsedUrl['path'];
-                foreach ($segmentsToRemove as $segment) {
-                    $path = str_replace($segment, '', $path);
-                }
-
-                // Reconstruir la URL sin /index.php
-                $url = $parsedUrl['scheme'] . '://' . $parsedUrl['host'] . $path . '/assets/images/garment' . $row['garima_url'];
-            }
-
-            $row['garima_url'] =  $url;
-            
-            $data[] = $row;
-        }
-    }
-
-    return $data;
 }
