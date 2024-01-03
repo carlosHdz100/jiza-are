@@ -35,6 +35,7 @@ function getGarment() {
                 <h5 class="font-13 font-600 opacity-50 pt-1 pb-2">${item.gar_description}...</h5>
                 <div class="divider mb-2"></div>
                 <span class="d-block color-green-dark font-700">Veces rentado: ${item.times_rented > 0 ? item.times_rented : 0}</span>
+                <span class="d-block color-gray-dark font-700">Por: ${item.usu_nombre} ${item.usu_apellido}</span>
                 <div class="divider mb-2"></div>
                 
                 <div class="d-flex">
@@ -93,6 +94,8 @@ function getPackaje() {
                 <h5 class="font-13 font-600 opacity-50 pt-1 pb-2">${item.gar_description}...</h5>
                 <div class="divider mb-2"></div>
                 <span class="d-block color-green-dark font-700">Veces rentado: ${item.times_rented > 0 ? item.times_rented : 0}</span>
+                <span class="d-block color-gray-dark font-700">Por: ${item.usu_nombre} ${item.usu_apellido}</span>
+
                 <div class="divider mb-2"></div>
                 
                 <div class="d-flex">
