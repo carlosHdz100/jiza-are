@@ -32,10 +32,19 @@
         <!-- Search -->
         <div class="content mt-2 position-absolute start-0 end-0 mx-1">
             <div class="notch-clear"></div>
-            <div class="search-box bg-theme color-theme rounded-m shadow-l mx-2">
+            <!-- <div class="search-box bg-theme color-theme rounded-m shadow-l mx-2">
                 <i class="fa fa-search"></i>
                 <input type="text" class="border-0" placeholder="Qué estás buscando?" data-search>
+                <input type="text" class="border-0" placeholder="En dónde?" data-search>
                 <a href="#" class="clear-search disabled no-click mt-0"></a>
+                <a href="#" data-menu="menu-filter" class="color-theme"><i class="fa fa-sliders me-n3"></i></a>
+            </div> -->
+            <div class="search-box bg-theme color-theme rounded-m shadow-l mx-2 d-flex justify-content-between">
+                <span class=""><i class="fa fa-search"></i></span>
+                <input type="text" class="border-0" aria-label="busqueda" alt="que estas buscando" class="form-control" placeholder="Qué estás buscando?" data-search>
+                <input type="text" class="border-0" aria-label="Lugar" alt="En donde lo estas buscando" class="form-control" placeholder="En dónde?">
+                <a href="#" class="clear-search disabled no-click mt-0"></a>
+
                 <a href="#" data-menu="menu-filter" class="color-theme"><i class="fa fa-sliders me-n3"></i></a>
             </div>
 
@@ -70,9 +79,6 @@
                     </a>
                 </div>
             </div>
-
-
-
 
         </div>
         <!-- Placing iframe under the header -->
@@ -628,5 +634,4 @@
             });
 
     }
-
 </script>

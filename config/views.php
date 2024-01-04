@@ -26,29 +26,20 @@ switch ($view) {
     case 'renta_detalle':
         include('views/renta_detalle.php');
         break;
-    case 'vestido':
-        include('views/vestido.php');
-        break;
-    case 'camiseta':
-        include('views/camiseta.php');
-        break;
-    case 'bolso':
-        include('views/bolso.php');
-        break;
-    case 'zapato':
-        include('views/zapato.php');
-        break;
-    case 'gafa':
-        include('views/gafa.php');
-        break;
     case 'favoritos':
         include('views/favoritos.php');
         break;
     case 'accionesymodales':
         include('views/accionesymodales.php');
         break;
-    case 'ver_todo':
-        include('views/ver_todo.php');
+    case 'ver_prenda':
+        include('views/garment/ver_todo.php');
+        break;
+    case 'success':
+        include('views/success.php');
+        break;
+    case 'error':
+        include('views/error.php');
         break;
     default:
         # ERROR DEBE VOLVER AL INICIO | no esta logueado

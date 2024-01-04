@@ -53,21 +53,25 @@ function all($link)
     $todos    = 2;
     $status   = isset($_REQUEST['status']) ? $_REQUEST['status'] : $activo;
 
-    $category = isset($_REQUEST['category']) ? $_REQUEST['category'] : '';
+    $category   = isset($_REQUEST['category'])   ? $_REQUEST['category']   : '';
+    $priceStart = isset($_REQUEST['priceStart']) ? $_REQUEST['priceStart'] : '';
+    $priceEnd   = isset($_REQUEST['priceEnd'])   ? $_REQUEST['priceEnd']   : '';
+    $arrendador = isset($_REQUEST['arrendador']) ? $_REQUEST['arrendador'] : '';
+    $ubicacion  = isset($_REQUEST['ubicacion'])  ? $_REQUEST['ubicacion']  : '';
 
     // Datos para la paginación
-    $start       = isset($_REQUEST['start']) ? $_REQUEST['start'] : 0;
+    $start       = isset($_REQUEST['start'])  ? $_REQUEST['start']  : 0;
     $length      = isset($_REQUEST['length']) ? $_REQUEST['length'] : 10;
 
     // Columna por la cual se ordenará
     $orderColumn = isset($_REQUEST['order'][0]['column']) ? $_REQUEST['order'][0]['column'] : 0;
-    $orderDir    = isset($_REQUEST['order'][0]['dir']) ? $_REQUEST['order'][0]['dir'] : 'ASC';
+    $orderDir    = isset($_REQUEST['order'][0]['dir'])    ? $_REQUEST['order'][0]['dir']    : 'ASC';
     $columns     = array('gar_name');
 
     // Búsqueda
     $searchValue = isset($_REQUEST['search']['value']) ? $_REQUEST['search']['value'] : '';
 
-    $condicion   = ($status == $todos) ? "gar_status IN (?, ?)" : "gar_status = ?";
+    $condicion   = ($status == $todos) ? "gar_status IN (?, ?)"               : "gar_status = ?";
     $condicion2  = ($status == $todos) ? "gar_status IN ($activo, $inactivo)" : "gar_status = $status";
 
     // Consulta SQL con una consulta preparada para seleccionar datos

@@ -28,7 +28,9 @@ function getGarmentWhislist() {
                         estrellas += '<i class="fa fa-star color-yellow-dark opacity-30"></i>';
                     }
 
-                    html += `<div class="card card-style mx-3 div${item.garwis_id}">
+                    html += `<div class="card card-style mx-3 position-relative div${item.garwis_id}">
+                <div class="position-absolute top-0 start-0 bg-highlight px-2 py-1">${item.gar_fkcat_type_publication == 1 ? 'Prenda' : 'Paquete'}</div>
+
                 <img src="${item.imagenes[0].garima_url}" class="img-fluid my-3">
                 <div class="content">
                 <h3 class="mb-0">${item.gar_name}</h3>
