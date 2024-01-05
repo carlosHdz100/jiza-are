@@ -33,6 +33,8 @@
 
     <!-- importar sweetAlert -->
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <!-- stripe -->
+    <script src="https://js.stripe.com/v3/"></script>
 </head>
 
 <body class="theme-light" data-highlight="highlight-pink" data-gradient="body-default">
