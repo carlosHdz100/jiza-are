@@ -11,9 +11,9 @@
     </div>
 
     <div class="d-flex justify-content-center mt-5">
-        <button type="button" class="btn btn-dark me-2 p-3  ">Ver mi renta</button>
+        <button type="button" class="btn btn-outline-primary me-5 p-3  ">Ver mi renta</button>
 
-        <button type="button" class="btn btn-dark p-3">Ir al inicio</button>
+        <button type="button" class="btn btn-outline-primary p-3">Ir al inicio</button>
     </div>
 
 </div>
