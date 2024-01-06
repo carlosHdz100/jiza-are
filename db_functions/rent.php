@@ -15,57 +15,33 @@ switch ($action) {
     case 'renderStripe':
         renderStripe($link);
         break;
+    case 'create':
+        create($link);
+        break;
     default:
         // Acción desconocida, puedes manejar el caso de error aquí
         break;
 }
-
 
 # ------------------------- FIN DE IFS ------------------------
 function create($link)
 {
     if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 
-        $cat_name        = $_POST['cat_name'];
-        $cat_description = $_POST['cat_description'];
 
-        // Archivo recibido desde el input file
-        $app_image = $_FILES['app_image_value'];
+        $paymentIntentId = $_POST['paymentIntentId'];
+        $amount          = $_POST['amount'];
 
-        // Verificar si se ha subido alguna imagen
-        $image_uploaded = !empty($app_image['name']);
-
-        # VALIDACION DE DATOS
-        if (empty($cat_name) || empty($cat_description)) {
-            $data = array(
+        if (empty($paymentIntentId) || empty($amount)) {
+            // No se recibieron datos
+            $response = array(
                 'status'  => false,
-                'message' => 'Datos incompletos. Por favor, completa todos los campos obligatorios.',
+                'message' => 'No se recibieron datos'
             );
-            echo json_encode($data);
+
+            // Enviar respuesta
+            echo json_encode($response);
             return;
-        }
-
-        // Si se ha subido una imagen, procesarla
-        if ($image_uploaded) {
-            // Obtener detalles del archivo
-            $file_name        = $app_image['name'];
-            $file_tmp         = $app_image['tmp_name'];
-            $file_destination = 'garment/' . $file_name; // Ruta de destino para guardar la imagen
-
-            // Intentar mover el archivo a la carpeta 'application'
-            if (move_uploaded_file($file_tmp, "../assets/images/$file_destination")) {
-                $app_image_path = $file_destination;
-            } else {
-                // Si falla la carga del archivo
-                $response = array(
-                    'status' => false,
-                    'message' => 'Error al cargar la imagen. Por favor, inténtalo de nuevo.'
-                );
-                echo json_encode($response);
-                return;
-            }
-        } else {
-            $app_image_path = null; // Si no se sube ninguna imagen, guardar como NULL en la base de datos
         }
 
         // Iniciar la transacción
@@ -73,11 +49,71 @@ function create($link)
 
         try {
 
-            // Consulta 1: GUARDAR registro en la tabla operator
-            $query1 = "INSERT INTO cat_category (cat_name, cat_description, cat_image) VALUES (?, ?, ?)";
-            $stmt1 = $link->prepare($query1);
-            $stmt1->bind_param("sss", $cat_name, $cat_description, $app_image_path);
-            $stmt1->execute();
+            // crear la renta
+            $query = "INSERT INTO rent (ren_fkusuario,ren_amount,ren_pay_id_stripe) VALUES (?, ?, ?)";
+            $stmt = $link->prepare($query);
+            $stmt->bind_param("ids", $_SESSION['usu_id'], $amount, $paymentIntentId);
+            $stmt->execute();
+
+            // obtener el id de la renta
+            $rentId = $link->insert_id;
+            $status = 1;
+
+            // obtener los datos del carrito
+            $query = "SELECT gar_id,gar_price FROM cart INNER JOIN garment_date ON gardat_id = car_fkgarment_date INNER JOIN garment ON gar_id = gardat_fkgarment WHERE car_fkusuario = ? group by gar_id";
+            $stmt = $link->prepare($query);
+            $stmt->bind_param("i", $_SESSION['usu_id']);
+            $stmt->execute();
+            $result = $stmt->get_result();
+
+            // recorrer los datos del carrito
+            while ($row = $result->fetch_assoc()) {
+                // crear la renta detalle
+                $query = "INSERT INTO rent_garment (rengar_fkrent,rengar_fkgarment,rengar_amount) VALUES (?, ?, ?)";
+                $stmt = $link->prepare($query);
+                $stmt->bind_param("iid", $rentId, $row['gar_id'], $row['gar_price']);
+                $stmt->execute();
+
+                // obtener el id de la renta detalle
+                $rentGarmentId = $link->insert_id;
+
+                // obtener los datos de las fechas de la prenda
+                $query2 = "SELECT gardat_id FROM cart INNER JOIN garment_date ON gardat_id = car_fkgarment_date INNER JOIN garment ON gar_id = gardat_fkgarment WHERE car_fkusuario = ? AND gar_id = ?";
+                $stmt2 = $link->prepare($query2);
+                $stmt2->bind_param("ii", $_SESSION['usu_id'], $row['gar_id']);
+                $stmt2->execute();
+                $result2 = $stmt2->get_result();
+
+                // recorrer los datos de las fechas de la prenda
+                while ($row2 = $result2->fetch_assoc()) {
+                    // crear la renta detalle fecha
+                    $query = "INSERT INTO rent_date (rendat_fkrent_garment, rendat_fkgarment_date) VALUES (?, ?)";
+                    $stmt = $link->prepare($query);
+                    $stmt->bind_param("ii", $rentGarmentId, $row2['gardat_id']);
+                    $stmt->execute();
+
+                    // actualizar la prenda
+                    $query = "UPDATE garment_date SET gardat_status =  ? WHERE gardat_id = ?";
+                    $stmt = $link->prepare($query);
+                    $stmt->bind_param("ii", $status, $row2['gardat_id']);
+                    $stmt->execute();
+
+                }
+
+
+                // eliminar los datos del wishlist 
+                $query = "DELETE FROM garment_wishlist WHERE garwis_fkgarment = ? AND garwis_fkusuario = ?";
+                $stmt = $link->prepare($query);
+                $stmt->bind_param("ii", $row['gar_id'], $_SESSION['usu_id']);
+                $stmt->execute();
+            }
+
+            // eliminar los datos del carrito y si tambien estaba en el wishlist pero solo los que estaban en el carrito
+            $query = "DELETE FROM cart WHERE car_fkusuario = ?";
+            $stmt = $link->prepare($query);
+            $stmt->bind_param("i", $_SESSION['usu_id']);
+            $stmt->execute();
+
 
             // Confirmar la transacción
             $link->commit();
@@ -107,7 +143,7 @@ function create($link)
 //     return $numeroSinPuntos;
 // }
 
-function calculateOrderAmount(array $items,$link): int
+function calculateOrderAmount(array $items, $link): int
 {
     $usu_id = $_SESSION['usu_id'];
     $arrayPrice = array();
@@ -144,7 +180,7 @@ function renderStripe($link)
         // retrieve JSON from POST body
         $jsonStr = file_get_contents('php://input');
         $jsonObj = json_decode($jsonStr);
-        $montoPagar = calculateOrderAmount($jsonObj->items,$link);
+        $montoPagar = calculateOrderAmount($jsonObj->items, $link);
 
         // Create a PaymentIntent with amount and currency
         $paymentIntent = $stripe->paymentIntents->create([
@@ -173,28 +209,4 @@ function renderStripe($link)
         http_response_code(500);
         echo json_encode(['error' => $e->getMessage()]);
     }
-
-
-    /*require_once '../vendor/autoload.php';
-
-    $stripeSecretKey = 'sk_test_51LQRsFCEr4e1NxgfEGYbRD51eDK90TuoVnqn7B8ha6OjUvmTCsHOWhK0Jt0HL1wzizslrtBpsTaljB0Or1Hp2kuj00p9E86o64';
-
-    \Stripe\Stripe::setApiKey($stripeSecretKey);
-    header('Content-Type: application/json');
-
-    $YOUR_DOMAIN = 'http://localhost/jiza-are/index.php';
-
-    $checkout_session = \Stripe\Checkout\Session::create([
-        'line_items' => [[
-            # Provide the exact Price ID (e.g. pr_1234) of the product you want to sell
-            'price' => '400',
-            'quantity' => 1,
-        ]],
-        'mode' => 'payment',
-        'success_url' => $YOUR_DOMAIN . '?view=succes',
-        'cancel_url' => $YOUR_DOMAIN . '?view=error',
-    ]);
-
-    header("HTTP/1.1 303 See Other");
-    header("Location: " . $checkout_session->url);*/
 }

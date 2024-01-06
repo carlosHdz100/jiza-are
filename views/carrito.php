@@ -232,23 +232,6 @@
                     <h4 class="font-18" id="setPrice"></h4>
                 </div>
             </div>
-            <!-- <div class="d-flex mb-3">
-                <div class="me-3">
-                    <h4 class="font-18">Shipping</h4>
-                </div>
-                <div class="ms-auto">
-                    <h4 class="font-18">FREE</h4>
-                </div>
-            </div> -->
-            <!-- <div class="divider mb-3"></div>
-            <div class="d-flex mb-3">
-                <div class="me-3">
-                    <h4 class="font-16 color-highlight">Est Delivery</h4>
-                </div>
-                <div class="ms-auto">
-                    <h4 class="font-16 color-highlight">1 Hour, 25 Min</h4>
-                </div>
-            </div> -->
             <div class="divider"></div>
         </div>
     </div>

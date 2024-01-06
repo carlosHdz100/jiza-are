@@ -89,7 +89,8 @@ async function checkStatus() {
     switch (paymentIntent.status) {
         case "succeeded":
             showMessage("¡Pago exitoso!");
-            reedirecSuccess()
+            saveTransactionDetails(paymentIntent);
+            // Guardar en la base de datos
             break;
         case "processing":
             showMessage("Su pago se está procesando.");
@@ -100,6 +101,32 @@ async function checkStatus() {
         default:
             showMessage("Algo salió mal.");
             break;
+    }
+}
+
+async function saveTransactionDetails(paymentIntent) {
+    try {
+        console.log(paymentIntent);
+
+        let datos = new FormData();
+        datos.append("paymentIntentId", paymentIntent.id);
+        datos.append("amount", paymentIntent.amount);
+        // Llamada a tu backend para guardar los detalles de la transacción
+        const response = await fetch("db_functions/rent.php?action=create", {
+            method: "POST",
+            body: datos,
+        });
+
+        if (response.ok) {
+            const responseData = await response.json();
+            console.log(responseData);
+            console.log("Detalles de la transacción guardados en la base de datos.");
+            reedirecSuccess()
+        } else {
+            console.error("Error al guardar detalles de la transacción.");
+        }
+    } catch (error) {
+        console.error("Error al intentar guardar detalles de la transacción:", error);
     }
 }
 
