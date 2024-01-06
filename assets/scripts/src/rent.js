@@ -1,76 +1,10 @@
-function renderFormStripe() {
-
-    // This is your test publishable API key.
-    const stripe = Stripe("pk_test_51LQRsFCEr4e1Nxgfg1f0BMuhIUNPgyA2b1A0fk6cA1CLYIpj5czbHFaorhGpGhDZqcbHsVc80XbTKGmW0izVGRJI00JG77wU1k");
-
-    initialize();
-
-    // Create a Checkout Session as soon as the page loads
-    async function initialize() {
-        const response = await fetch("/checkout.php", {
-            method: "POST",
-        });
-
-        const { clientSecret } = await response.json();
-
-        const checkout = await stripe.initEmbeddedCheckout({
-            clientSecret,
-        });
-
-        // Mount Checkout
-        checkout.mount('#checkout');
-    }
-    /*var stripe = Stripe('pk_test_51HxY7jHb2XZq9h7Ygj2tH0J3yG7k4JZfVl7ZJL1qY5Fp2p1K1l4VzYb3Q3M5k2rQj5QwUZ1sZxQZm5r8C7ZQJg9R00Yz5j1JqY');
-    var elements = stripe.elements();
-    var style = {
-        base: {
-            color: '#32325d',
-            lineHeight: '18px',
-            fontFamily: '"Helvetica Neue", Helvetica, sans-serif',
-            fontSmoothing: 'antialiased',
-            fontSize: '16px',
-            '::placeholder': {
-                color: '#aab7c4'
-            }
-        },
-        invalid: {
-            color: '#fa755a',
-            iconColor: '#fa755a'
-        }
-    };
-    var card = elements.create('card', {style: style});
-    card.mount('#card-element');
-    card.on('change', function (event) {
-        var displayError = document.getElementById('card-errors');
-        if (event.error) {
-            displayError.textContent = event.error.message;
-        }
-        else {
-            displayError.textContent = '';
-        }
-    });
-    var form = document.getElementById('payment-form');
-    form.addEventListener('submit', function (event) {
-        event.preventDefault();
-        stripe.createToken(card).then(function (result) {
-            if (result.error) {
-                var errorElement = document.getElementById('card-errors');
-                errorElement.textContent = result.error.message;
-            }
-            else {
-                stripeTokenHandler(result.token);
-            }
-        });
-    });*/
-
-}
-
 
 // This is your test publishable API key.
 const stripe = Stripe("pk_test_51LQRsFCEr4e1Nxgfg1f0BMuhIUNPgyA2b1A0fk6cA1CLYIpj5czbHFaorhGpGhDZqcbHsVc80XbTKGmW0izVGRJI00JG77wU1k");
 
 // The items the customer wants to buy
 const items = [{ id: "xl-tshirt" }];
+const setPrice = document.querySelector("#setPrice");
 
 let elements;
 
@@ -81,23 +15,38 @@ document
     .querySelector("#payment-form")
     .addEventListener("submit", handleSubmit);
 
+
 // Fetches a payment intent and captures the client secret
 async function initialize() {
-    const { clientSecret } = await fetch("db_functions/rent.php?action=renderStripe", {
-        method: "POST",
-        headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({ items }),
-    }).then((r) => r.json());
+    try {
+        const { clientSecret, amount } = await fetch("db_functions/rent.php?action=renderStripe", {
+            method: "POST",
+            headers: { "Content-Type": "application/json" },
+            body: JSON.stringify({ items }),
+        }).then((r) => r.json());
 
-    elements = stripe.elements({ clientSecret });
+        elements = stripe.elements({ clientSecret });
 
-    const paymentElementOptions = {
-        layout: "tabs",
-    };
+        console.log(amount); // Esto mostrará en la consola lo que se obtiene como clientSecret
+        const paymentElementOptions = {
+            layout: "tabs",
+        };
 
-    const paymentElement = elements.create("payment", paymentElementOptions);
-    paymentElement.mount("#payment-element");
+        const paymentElement = elements.create("payment", paymentElementOptions);
+        paymentElement.mount("#payment-element");
+        document.querySelector(".btnSubmit").classList.remove("hidden");
+        setPrice.textContent = `${amount}€`;
+
+    } catch (error) {
+        console.error("Error fetching clientSecret:", error);
+        // Si hay un error, ocultar el botón
+        document.querySelector(".btnSubmit").classList.add("hidden");
+        setPrice.textContent = `0€`;
+    }
 }
+
+// También puedes añadir un código para mostrar un mensaje de error o tomar otras acciones necesarias en lugar de simplemente ocultar el botón.
+
 
 async function handleSubmit(e) {
     e.preventDefault();
@@ -139,20 +88,17 @@ async function checkStatus() {
 
     switch (paymentIntent.status) {
         case "succeeded":
-            showMessage("Payment succeeded!");
-
-            setTimeout(() => {
-                reedirecSuccess()
-            }, 2000);
+            showMessage("¡Pago exitoso!");
+            reedirecSuccess()
             break;
         case "processing":
-            showMessage("Your payment is processing.");
+            showMessage("Su pago se está procesando.");
             break;
         case "requires_payment_method":
-            showMessage("Your payment was not successful, please try again.");
+            showMessage("Su pago no fue exitoso, inténtelo nuevamente.");
             break;
         default:
-            showMessage("Something went wrong.");
+            showMessage("Algo salió mal.");
             break;
     }
 }

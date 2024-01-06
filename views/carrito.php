@@ -1,4 +1,3 @@
-<script src="https://js.stripe.com/v3/"></script>
 
 <style>
     .miDiv {
@@ -210,13 +209,15 @@
                     </div>
                 </div>
             </div> -->
-            <form id="payment-form">
+
+            <form class="" id="payment-form">
                 <div id="payment-element">
                     <!--Stripe.js injects the Payment Element-->
+                    <span id="text-noValido"></span>
                 </div>
-                <button id="submit">
+                <button class="btnSubmit hidden" id="submit">
                     <div class="spinner hidden" id="spinner"></div>
-                    <span id="button-text">Rentar ahora</span>
+                    <span id="button-text" class="">Rentar ahora</span>
                 </button>
                 <div id="payment-message" class="hidden"></div>
             </form>
@@ -228,7 +229,7 @@
                     <h4 class="font-18">Total</h4>
                 </div>
                 <div class="ms-auto">
-                    <h4 class="font-18">$34<sup>98</sup></h4>
+                    <h4 class="font-18" id="setPrice"></h4>
                 </div>
             </div>
             <!-- <div class="d-flex mb-3">
@@ -249,7 +250,6 @@
                 </div>
             </div> -->
             <div class="divider"></div>
-            <a href="?view=rentas" class="btn btn-full bg-highlight btn-m text-uppercase font-800 rounded-sm">Rentar articulos</a>
         </div>
     </div>
 

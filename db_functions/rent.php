@@ -1,4 +1,9 @@
 <?php
+session_start();
+if (!isset($_SESSION['id'])) {
+    header('Location: ../index.php');
+}
+
 
 $action = $_REQUEST['action']; # ACCION PARA IR A LA FUNCION CORRECTA
 
@@ -96,15 +101,34 @@ function create($link)
     }
 }
 
+// function eliminarPuntos($numero) {
+//     // Reemplaza los puntos con una cadena vacía
+//     $numeroSinPuntos = str_replace('.', '', $numero);
+//     return $numeroSinPuntos;
+// }
 
-function calculateOrderAmount(array $items): int
+function calculateOrderAmount(array $items,$link): int
 {
-    // Replace this constant with a calculation of the order's amount
-    // Calculate the order total on the server to prevent
-    // people from directly manipulating the amount on the client
-    return 1400;
+    $usu_id = $_SESSION['usu_id'];
+    $arrayPrice = array();
+
+    // realizar la consulta para obtener el precio de la prenda
+    $query = "SELECT gar_price FROM cart INNER JOIN garment_date ON gardat_id = car_fkgarment_date INNER JOIN garment ON gar_id = gardat_fkgarment WHERE car_fkusuario = ?";
+    $stmt = $link->prepare($query);
+    $stmt->bind_param("i", $usu_id);
+    $stmt->execute();
+    $result = $stmt->get_result();
+    while ($row = $result->fetch_assoc()) {
+        $arrayPrice[] = str_replace('.', '', $row['gar_price']);
+    }
+
+    $total = array_sum($arrayPrice);
+
+    $numeroSinPuntos = str_replace('.', '', $total);
+
+    return $total;
 }
-function renderStripe()
+function renderStripe($link)
 {
 
 
@@ -116,24 +140,32 @@ function renderStripe()
 
 
     header('Content-Type: application/json');
-
     try {
         // retrieve JSON from POST body
         $jsonStr = file_get_contents('php://input');
         $jsonObj = json_decode($jsonStr);
+        $montoPagar = calculateOrderAmount($jsonObj->items,$link);
 
         // Create a PaymentIntent with amount and currency
         $paymentIntent = $stripe->paymentIntents->create([
-            'amount' => calculateOrderAmount($jsonObj->items),
-            'currency' => 'mxn',
-            // In the latest version of the API, specifying the `automatic_payment_methods` parameter is optional because Stripe enables its functionality by default.
-            'automatic_payment_methods' => [
-                'enabled' => true,
-            ],
+            'amount' => $montoPagar,
+            // 'currency' => 'mxn',
+            'currency' => 'eur', // Use 'eur' for euros
+            'payment_method_types' => ['card'],
+
+            // 'country' => 'ES', // Set country to Spain ('ES' is the country code for Spain)
+            //'country' => 'ES', // Set country to Spain ('ES' is the country code for Spain)
+            // 'automatic_payment_methods' => [
+            //     'enabled' => true,
+            // ], // This parameter might not be necessary in newer API versions
         ]);
+
+        // formatear el monto a pagar a un formato de moneda euros
+        $montoPagar = number_format($montoPagar / 100, 2, '.', ',');
 
         $output = [
             'clientSecret' => $paymentIntent->client_secret,
+            'amount' => $montoPagar,
         ];
 
         echo json_encode($output);
