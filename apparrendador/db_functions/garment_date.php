@@ -14,9 +14,11 @@ switch ($action) {
     case 'listarFechasPrendaId':
         listarFechasPrendaId($link);
         break;
-        case 'delete':
-            delete($link);
-            break;
+    case 'delete':
+        delete($link);
+        break;
+    case 'create':
+        create($link);
     default:
         // Acción desconocida, puedes manejar el caso de error aquí
         break;
@@ -29,7 +31,7 @@ function listarFechasPrendaId($link)
 
     $gar_id = $_POST['id']; // 
 
-   
+
     // Consulta SQL con una consulta preparada para seleccionar datos
     $sql = "SELECT * FROM garment_date WHERE gardat_fkgarment = ?";
 
@@ -46,7 +48,7 @@ function listarFechasPrendaId($link)
         return;
     }
 
-   
+
     $stmt->bind_param("i", $gar_id);
 
     // Ejecutar la consulta preparada
@@ -167,6 +169,71 @@ function desactivate($link)
             $response = array(
                 'status' => false,
                 'message' => 'Error en la actualización: ' . $e->getMessage()
+            );
+        }
+
+        // Enviar la respuesta como JSON
+        echo json_encode($response);
+    }
+}
+
+function create($link)
+{
+
+    if ($_SERVER['REQUEST_METHOD'] == 'POST') {
+
+        $fechas = $_POST['fechas'];
+        $gar_id = $_POST['gar_id'];
+        $fechas = json_decode($fechas, true);
+
+
+        // Iniciar la transacción
+        $link->begin_transaction();
+
+        try {
+
+            foreach ($fechas as $fecha) {
+
+                // checar si la fecha ya existe con el id de la prenda
+                $sql = "SELECT * FROM garment_date WHERE gardat_fkgarment = ? AND gardat_date = ?";
+                $stmt = $link->prepare($sql);
+                $stmt->bind_param("is", $gar_id, $fecha);
+                $stmt->execute();
+                $result = $stmt->get_result();
+                $row = $result->fetch_assoc();
+
+                // if ($row) {
+                //     $response = array(
+                //         'status' => false,
+                //         'message' => 'La fecha ya existe'
+                //     );
+                //     echo json_encode($response);
+                //     return;
+                // }
+
+                if ($result->num_rows == 0) {
+                    // Consulta 1: Insertar registro en la tabla 'operator'
+                    $query1 = "INSERT INTO garment_date (gardat_fkgarment,gardat_date) VALUES (?, ?)";
+                    $stmt1 = $link->prepare($query1);
+                    $stmt1->bind_param("is", $gar_id, $fecha);
+                    $stmt1->execute();
+                }
+            }
+
+            // Confirmar la transacción
+            $link->commit();
+
+            $response = array(
+                'status' => true,
+                'message' => 'El registro se eliminó exitosamente'
+            );
+        } catch (Exception $e) {
+            // Si ocurre un error, deshacer los cambios y mostrar un mensaje de error
+            $link->rollback();
+
+            $response = array(
+                'status' => false,
+                'message' => 'Ocurrió un error al intentar eliminar el registro: ' . $e->getMessage()
             );
         }
 

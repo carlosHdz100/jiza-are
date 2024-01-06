@@ -295,7 +295,7 @@ function viewRenta($link)
 
 function fechasRentadas($link, $rengar_id)
 {
-    $sql = "SELECT rendat_date FROM rent_date WHERE rendat_fkrent_garment = ?";
+    $sql = "SELECT gardat_date FROM rent_date INNER JOIN garment_date ON gardat_id = rendat_fkgarment_date WHERE rendat_fkrent_garment = ?";
 
     $stmt = $link->prepare($sql);
 

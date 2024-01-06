@@ -107,7 +107,7 @@
             <h2>Fechas seleccionadas</h2>
         </div>
         <div id="fechas-seleccionadas" class="container"></div>
-        <button id="guardar-btn" class="btn btn-success">Guardar cambios</button>
+        <button id="guardar-btn" onclick="guardarFechas(<?= $gar_id ?>)" class="btn btn-success">Guardar cambios</button>
     </div>
 
 </div>
@@ -170,7 +170,7 @@
 
         eventClick: function(info) {
             const fechaEliminar = info.event.start.toISOString().slice(0, 10); // Obtener la fecha del evento
-            mostrarSweetAlert(info.event.gardat_fkgarment, fechaEliminar, info.event.gardat_status); // Mostrar SweetAlert para confirmar la eliminación
+            //mostrarSweetAlert(info.event.gardat_fkgarment, fechaEliminar, info.event.gardat_status); // Mostrar SweetAlert para confirmar la eliminación
         },
 
         selectConstraint: {
@@ -213,9 +213,9 @@
                     datos.forEach(fecha => {
 
                         calendar.addEvent({
-                            title: fecha.gardat_status == 1 ? 'Disp' : 'Rentado',
+                            title: fecha.gardat_status == 1 ? 'Rentado' : 'Disp',
                             start: fecha.gardat_date, // Suponiendo que las fechas están en formato 'YYYY-MM-DD'
-                            color: fecha.gardat_status == 1 ? 'blue' : 'red', // Color azul para las fechas de la BD
+                            color: fecha.gardat_status == 1 ? 'red' : 'blue', // Color azul para las fechas de la BD
                             gardat_id: fecha.gardat_id,
                             gardat_fkgarment: fecha.gardat_fkgarment,
                             gardat_status: fecha.gardat_status
@@ -271,7 +271,7 @@
         // Mostrar un mensaje al usuario y, si confirma, llamar a eliminarFecha()
 
         swal.fire({
-            title: status == 1 ? '¿Estás seguro?' : '¿Estás seguro de cancelar la renta?' ,
+            title: status == 1 ? '¿Estás seguro?' : '¿Estás seguro de cancelar la renta?',
             text: status == 1 ? 'La fecha ' + fecha + ' será eliminada' : 'La renta con fecha ' + fecha + ' será cancelada',
             icon: 'warning',
             showCancelButton: true,
@@ -288,6 +288,28 @@
                 }
             }
         });
+    }
+
+    function guardarFechas(gar_id) {
+        // Aquí puedes enviar las fechas al servidor para guardarlas en la base de datos
+        // Utiliza fetch o algún método similar para realizar la inserción
+        // Luego, actualiza el calendario si la inserción es exitosa
+        const formData = new FormData();
+        formData.append('fechas', JSON.stringify(selectedDates));
+        formData.append('gar_id', gar_id);
+        fetch('db_functions/garment_date.php?action=create', {
+                method: 'POST',
+                body: formData
+            })
+            .then(response => response.json())
+            .then(data => {
+                console.log(data);
+                // Procesar las fechas recibidas y agregarlas al calendario como eventos
+                if (data.status) {
+                    window.location.reload();
+                }
+            })
+
     }
 
 

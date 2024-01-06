@@ -94,8 +94,8 @@ function viewRenta(id) {
                 const codigoEntrega = document.getElementById('codigoEntrega');
 
                 usu_name.textContent = `${renta.usu_nombre} ${renta.usu_apellido}`;
-                dateStart.textContent = renta.fechas_rentadas[0].rendat_date;
-                dateEnd.textContent = `${renta.fechas_rentadas[renta.fechas_rentadas.length - 1].rendat_date}`;
+                dateStart.textContent = renta.fechas_rentadas[0].gardat_date;
+                dateEnd.textContent = `${renta.fechas_rentadas[renta.fechas_rentadas.length - 1].gardat_date}`;
                 urlPrendas.setAttribute('href', `prendas.php?ver_renta=&prenda=${renta.gar_id}`);
                 ren_amount.textContent = `${renta.ren_amount} €`;
                 rent_id.textContent = `rent-${renta.ren_id}`;
