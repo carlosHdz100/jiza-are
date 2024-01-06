@@ -108,7 +108,7 @@ function getPackaje() {
                 </div>
                 <div class="d-flex align-items-center ms-auto">
                 <button type="button" onclick="addGarmentWhislist(${item.gar_id})" class="icon icon-s bg-theme rounded-l shadow-xl rounded-m ms-2 color-theme"><i class="fa fa-heart btnWishList${item.gar_id} ${isWishList == true ? 'color-red-dark' : ''} font-14"></i></button>
-                <a href="#" data-toast="snackbar-cart" style="width: 100%" class="ms-2 custom-btn btn-11 btn-s bg-highlight rounded-sm font-700 text-uppercase" data-bs-toggle="offcanvas" data-bs-target="#offcanvasBottom" aria-controls="offcanvasBottom">Rentar</a>
+                <a href="#" onclick="getGarmentById(${item.gar_id})" data-toast="snackbar-cart" style="width: 100%" class="ms-2 custom-btn btn-11 btn-s bg-highlight rounded-sm font-700 text-uppercase" data-bs-toggle="offcanvas" data-bs-target="#offcanvasBottom" aria-controls="offcanvasBottom">Rentar</a>
                 </div>
                 </div>
                 </div>

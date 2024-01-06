@@ -61,7 +61,7 @@ function all($link)
 
     // Datos para la paginación
     $start       = isset($_REQUEST['start'])  ? $_REQUEST['start']  : 0;
-    $length      = isset($_REQUEST['length']) ? $_REQUEST['length'] : 10;
+    $length      = isset($_REQUEST['length']) ? $_REQUEST['length'] : 16;
 
     // Columna por la cual se ordenará
     $orderColumn = isset($_REQUEST['order'][0]['column']) ? $_REQUEST['order'][0]['column'] : 0;
@@ -188,7 +188,7 @@ function allGarment($link)
 
     // Datos para la paginación
     $start  = isset($_REQUEST['start']) ? $_REQUEST['start'] : 0;
-    $length = isset($_REQUEST['length']) ? $_REQUEST['length'] : 10;
+    $length = isset($_REQUEST['length']) ? $_REQUEST['length'] : 16;
 
     // Columna por la cual se ordenará
     $orderColumn = isset($_REQUEST['order'][0]['column']) ? $_REQUEST['order'][0]['column'] : 0;
@@ -314,7 +314,7 @@ function allPackage($link)
 
     // Datos para la paginación
     $start  = isset($_REQUEST['start']) ? $_REQUEST['start'] : 0;
-    $length = isset($_REQUEST['length']) ? $_REQUEST['length'] : 10;
+    $length = isset($_REQUEST['length']) ? $_REQUEST['length'] : 16; // son 10 pero puse 16 por ahoa
 
     // Columna por la cual se ordenará
     $orderColumn = isset($_REQUEST['order'][0]['column']) ? $_REQUEST['order'][0]['column'] : 0;
