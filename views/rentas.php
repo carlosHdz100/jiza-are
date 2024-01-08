@@ -1,74 +1,83 @@
-<div class="page-content mt-2">
-
-    <div class="d-flex justify-content-end me-2 mb-3">
-        <a href="?view=historial" class="btn btn-secondary">Historial</a>
-    </div>
+<div class="page-content pt-3">
     <div class="card card-style">
-        <div class="content text-center">
-            <h1 class="font-700 mb-1">Rentas en proceso</h1>
+        <div class="content">
+            <h2 class="mb-0 text-center">
+                Rentas en proceso de entrega
+            </h2>
+
+            <div class="row mb-0 mt-2">
+                <div class="col-4">
+                    <a href="#" class="btn btn-full btn-m rounded-sm bg-warning text-uppercase font-800"><svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-package-import" width="20" height="20" viewBox="0 0 24 24" stroke-width="1.5" stroke="#ffffff" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                            <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                            <path d="M12 21l-8 -4.5v-9l8 -4.5l8 4.5v4.5" />
+                            <path d="M12 12l8 -4.5" />
+                            <path d="M12 12v9" />
+                            <path d="M12 12l-8 -4.5" />
+                            <path d="M22 18h-7" />
+                            <path d="M18 15l-3 3l3 3" />
+                        </svg> <br> <span style="font-size: 10px;">Recibir</span> </a>
+                </div>
+                <div class="col-4">
+                    <a href="#" class="btn btn-full btn-m rounded-sm bg-green-dark text-uppercase font-800"><svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-package-export" width="20" height="20" viewBox="0 0 24 24" stroke-width="1.5" stroke="#ffffff" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                            <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                            <path d="M12 21l-8 -4.5v-9l8 -4.5l8 4.5v4.5" />
+                            <path d="M12 12l8 -4.5" />
+                            <path d="M12 12v9" />
+                            <path d="M12 12l-8 -4.5" />
+                            <path d="M15 18h7" />
+                            <path d="M19 15l3 3l-3 3" />
+                        </svg> <br> <span style="font-size: 9px;">Entregar</span></a>
+                </div>
+                <div class="col-4">
+                    <a href="#" class="btn btn-full btn-m rounded-sm bg-secondary text-white text-uppercase font-800"><i class="fa fa-history"></i> <br><span style="font-size: 9px;">Historial</span></a>
+                </div>
+            </div>
         </div>
     </div>
+    <div class="divider divider-margins"></div>
 
-    <div data-card-height="130" class="card card-style round-medium shadow-huge top-30" style="height: 230px;">
-        <div class="card-top mt-3 ms-3">
-            <h2 class="color-white pt-3 pb-3">#255</h2>
-            <!-- <p class="color-white font-10 opacity-80 mb-n1"><i class="far fa-calendar"></i> 28 noviembre <i class="ms-4 far fa-clock"></i> 09:00 PM</p> -->
-            <!-- <p class="color-white font-10 opacity-80 m-1"><i class="fa fa-map-marker-alt"></i> Madrid, España, Collins Street #14</p> -->
-
-            <!-- <div class="p-1 alert alert-small rounded-s shadow-xl bg-yellow-dark mx-2 my-2" role="alert">
-                <span><i class="fa fa-exclamation-triangle"></i></span>
-                <strong>Mañana se entrega esta producto</strong>
-                <button type="button" class="close color-white opacity-60 font-16" data-bs-dismiss="alert" aria-label="Close">×</button>
-            </div> -->
-
-        </div>
-        <div class="card-top mt-3 me-3">
-            <a href="?view=renta_detalle" class="float-end bg-white color-black btn btn-s rounded-xl font-900 mt-2 text-uppercase font-11">Ver renta</a>
-        </div>
-        <div class="card-bottom pb-3 pe-4">
-            <div class="float-end">
-                <h1 class="pt-2 text-white">32.<sup class="font-14 font-400 opacity-50">99 €</sup></h1>
+    <a href="?view=renta_detalle" aria-expanded="false" aria-controls="invoice-one" class="no-effect card card-style mb-2 collapsed">
+        <div class="content">
+            <div class="d-flex mb-n1">
+                <div>
+                    <h3>Invoice #001</h3>
+                    <p class="opacity-80 font-10 mt-n2">Click for Details - 25th June 2023</p>
+                </div>
+                <div class="ms-auto align-self-center text-center opacity-70">
+                    <i class="fa fa-check-circle color-green-dark fa-2x mt-1"></i><br>
+                </div>
             </div>
         </div>
+    </a>
 
-        <div class="card-bottom pb-3 pe-4">
-            <div class="float-start ms-4">
-                <h2 class="color-white ">Productos: 2</h2>
-                <!-- <h1 class="pt-2 text-white">32.<sup class="font-14 font-400 opacity-50">99 €</sup></h1> -->
+
+    <a href="?view=renta_detalle" aria-expanded="false" aria-controls="invoice-two" class="no-effect card card-style mb-2">
+        <div class="content">
+            <div class="d-flex mb-n1">
+                <div>
+                    <h3>Invoice #002</h3>
+                    <p class="opacity-80 font-10 mt-n2">Click for Details - 25th July 2023</p>
+                </div>
+                <div class="ms-auto align-self-center text-center opacity-70">
+                    <i class="fa fa-exclamation-circle color-yellow-dark fa-2x mt-1"></i><br>
+                </div>
             </div>
         </div>
-        <div class="card-overlay bg-highlight opacity-90"></div>
-        <div class="card-overlay bg-gradient"></div>
-    </div>
+    </a>
 
-    <div data-card-height="130" class="card card-style round-medium shadow-huge top-30" style="height: 230px;">
-        <div class="card-top mt-3 ms-3">
-            <h2 class="color-white pt-3 pb-3">#250</h2>
-            <!-- <p class="color-white font-10 opacity-80 mb-n1"><i class="far fa-calendar"></i> 28 noviembre <i class="ms-4 far fa-clock"></i> 09:00 PM</p> -->
-            <!-- <p class="color-white font-10 opacity-80 m-1"><i class="fa fa-map-marker-alt"></i> Madrid, España, Collins Street #14</p> -->
-            <!-- <div class="p-1 alert alert-small rounded-s shadow-xl bg-green-dark mx-2 my-2" role="alert">
-                <span><i class="fa fa-exclamation-triangle"></i></span>
-                <strong>Te quedan 3 dias</strong>
-                <button type="button" class="close color-white opacity-60 font-16" data-bs-dismiss="alert" aria-label="Close">×</button>
-            </div> -->
-           
-        </div>
-        <div class="card-top mt-3 me-3">
-            <a href="?view=renta_detalle" class="float-end bg-white color-black btn btn-s rounded-xl font-900 mt-2 text-uppercase font-11">Ver renta</a>
-        </div>
-        <div class="card-bottom pb-3 pe-4">
-            <div class="float-end">
-                <h1 class="pt-2 text-white">32.<sup class="font-14 font-400 opacity-50">99 €</sup></h1>
+    <a href="?view=renta_detalle" aria-expanded="false" aria-controls="invoice-three" class="no-effect card card-style mb-3 collapsed">
+        <div class="content">
+            <div class="d-flex mb-n1">
+                <div>
+                    <h3>Invoice #003</h3>
+                    <p class="opacity-80 font-10 mt-n2">Click for Details - 15th December 2023</p>
+                </div>
+                <div class="ms-auto align-self-center text-center opacity-70">
+                    <i class="fa fa-times-circle color-red-dark fa-2x mt-1"></i><br>
+                </div>
             </div>
         </div>
+    </a>
 
-        <div class="card-bottom pb-3 pe-4">
-            <div class="float-start ms-4">
-                <h2 class="color-white ">Productos: 2</h2>
-                <!-- <h1 class="pt-2 text-white">32.<sup class="font-14 font-400 opacity-50">99 €</sup></h1> -->
-            </div>
-        </div>
-        <div class="card-overlay bg-highlight opacity-90"></div>
-        <div class="card-overlay bg-gradient"></div>
-    </div>
+
 </div>
