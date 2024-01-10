@@ -421,11 +421,17 @@
             <h6 class="cal-title-right color-white close-menu"><i class="fa fa-times"></i></h6>
         </div>
 
-        <span class="badge rounded-pill text-bg-success p-3 mt-4">Fechas Disponibles</span>
-
-        <span class="badge rounded-pill text-bg-danger p-3">Fechas Rentadas</span>
-
-        <span class="border border-dark badge rounded-pill text-bg-light p-3 mb-4 mt-2">Fechas No Disponibles</span>
+        <div class="row text-center mt-4 mb-4">
+            <div class="col-4">
+                <span class="badge rounded text-bg-success py-3 px-2">Fechas Disponibles</span>
+            </div>
+            <div class="col-4">
+                <span class="badge rounded text-bg-danger py-3 px-2">Fechas Rentadas</span>
+            </div>
+            <div class="col-4">
+                <span class="badge rounded text-bg-info py-3 px-2">Fechas Rentadas</span>
+            </div>
+        </div>
 
         <div class="clearfix"></div>
 
