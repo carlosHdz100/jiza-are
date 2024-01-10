@@ -40,8 +40,8 @@
         <div class="content">
             <div class="d-flex mb-n1">
                 <div>
-                    <h3>Invoice #001</h3>
-                    <p class="opacity-80 font-10 mt-n2">Click for Details - 25th June 2023</p>
+                    <h3>Rentas #001</h3>
+                    <p class="opacity-80 font-10 mt-n2">Clic para Ver Detalles - 25th June 2023</p>
                 </div>
                 <div class="ms-auto align-self-center text-center opacity-70">
                     <i class="fa fa-check-circle color-green-dark fa-2x mt-1"></i><br>
@@ -55,8 +55,8 @@
         <div class="content">
             <div class="d-flex mb-n1">
                 <div>
-                    <h3>Invoice #002</h3>
-                    <p class="opacity-80 font-10 mt-n2">Click for Details - 25th July 2023</p>
+                    <h3>Rentas #002</h3>
+                    <p class="opacity-80 font-10 mt-n2">Clic para Ver Detalles - 25 de Julio de 2023</p>
                 </div>
                 <div class="ms-auto align-self-center text-center opacity-70">
                     <i class="fa fa-exclamation-circle color-yellow-dark fa-2x mt-1"></i><br>
@@ -69,8 +69,8 @@
         <div class="content">
             <div class="d-flex mb-n1">
                 <div>
-                    <h3>Invoice #003</h3>
-                    <p class="opacity-80 font-10 mt-n2">Click for Details - 15th December 2023</p>
+                    <h3>Rentas #003</h3>
+                    <p class="opacity-80 font-10 mt-n2">Clic para Ver Detalles - 15 de Diciembre de 2023</p>
                 </div>
                 <div class="ms-auto align-self-center text-center opacity-70">
                     <i class="fa fa-times-circle color-red-dark fa-2x mt-1"></i><br>

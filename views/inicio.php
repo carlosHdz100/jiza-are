@@ -422,7 +422,7 @@
         </div>
         <div class="clearfix"></div>
 
-        <div id="calendar"></div>
+        <div id="calendar"><h1>Hola</h1></div>
 
         <!-- <div class="containerForm mt-4">
             <h4 class="ls-1 text-uppercase" style="font-weight: 500;">Inicio</h4>
