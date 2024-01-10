@@ -420,9 +420,16 @@
             <h4 class="cal-title text-left font-700 bg-highlight color-white">Elige las fechas que necesite rentar</h4>
             <h6 class="cal-title-right color-white close-menu"><i class="fa fa-times"></i></h6>
         </div>
+
+        <span class="badge rounded-pill text-bg-success p-3 mt-4">Fechas Disponibles</span>
+
+        <span class="badge rounded-pill text-bg-danger p-3">Fechas Rentadas</span>
+
+        <span class="border border-dark badge rounded-pill text-bg-light p-3 mb-4 mt-2">Fechas No Disponibles</span>
+
         <div class="clearfix"></div>
 
-        <div id="calendar"><h1>Hola</h1></div>
+        <div id="calendar"></div>
 
     </div>
 </div>
