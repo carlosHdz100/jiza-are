@@ -424,13 +424,6 @@
 
         <div id="calendar"></div>
 
-        <!-- <div class="containerForm mt-4">
-            <h4 class="ls-1 text-uppercase" style="font-weight: 500;">Inicio</h4>
-            <input type="text" id="from" class="from" size="10">
-            <h4 class="ls-1 text-uppercase" style="font-weight: 500;">Fin</h4>
-            <input type="text" id="to" class="to" size="10">
-        </div> -->
-        <!-- <div class="datepicker ll-skin-melon bottom-0"></div> -->
     </div>
 </div>
 
