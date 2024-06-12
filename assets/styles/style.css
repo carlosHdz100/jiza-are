@@ -167,6 +167,24 @@ body {
   border-bottom: solid 1px rgba(0, 0, 0, 0.03);
   box-shadow: 0 4px 18px 0 rgba(0, 0, 0, 0.08);
 }
+
+.search-fixed {
+  position: fixed;
+  top: 0px;
+  left: 0px;
+  right: 0px;
+  height: 50px;
+  height: calc(50px + constant(safe-area-inset-top) * 0.8) !important;
+  height: calc(50px + env(safe-area-inset-top) * 0.8) !important;
+  z-index: 99;
+  transition: all 350ms ease;
+  /* background-color: #FFF; */
+  background-color: #f0f0f0f0;
+  /* border-bottom: solid 1px rgba(0, 0, 0, 0.03);
+  box-shadow: 0 4px 18px 0 rgba(0, 0, 0, 0.08); */
+}
+
+
 .header .header-title {
   position: absolute;
   height: 50px;

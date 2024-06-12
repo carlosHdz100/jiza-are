@@ -26,25 +26,12 @@
         /* Cambiar el cursor */
     }
 </style>
+<div class="page-content mt-2">
 
-
-<div class="page-content ">
-
-    <!-- Search -->
-    <div class="card preload-img position-fixed w-100 search-fixed header-fixed header-auto-show-active" data-card-height="" style="margin-top: 60px;">
-
+    <div class="card preload-img position-fixed w-100" data-card-height="450">
         <!-- Search -->
         <div class="content mt-2 position-absolute start-0 end-0 mx-1">
-            <div class="d-flex align-items-center justify-content-center">
-                <div class="d-flex align-items-center"> <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-map-pin" width="20" height="20" viewBox="0 0 24 24" stroke-width="2" stroke="#fd0061" fill="none" stroke-linecap="round" stroke-linejoin="round">
-                        <path stroke="none" d="M0 0h24v24H0z" fill="none" />
-                        <path d="M9 11a3 3 0 1 0 6 0a3 3 0 0 0 -6 0" />
-                        <path d="M17.657 16.657l-4.243 4.243a2 2 0 0 1 -2.827 0l-4.244 -4.243a8 8 0 1 1 11.314 0z" />
-                    </svg>
-                    <div>Asunción castellanos</div>
-                </div>
-            </div>
-            <!-- <div class="notch-clear"></div> -->
+            <div class="notch-clear"></div>
             <!-- <div class="search-box bg-theme color-theme rounded-m shadow-l mx-2">
                 <i class="fa fa-search"></i>
                 <input type="text" class="border-0" placeholder="Qué estás buscando?" data-search>
@@ -52,13 +39,15 @@
                 <a href="#" class="clear-search disabled no-click mt-0"></a>
                 <a href="#" data-menu="menu-filter" class="color-theme"><i class="fa fa-sliders me-n3"></i></a>
             </div> -->
-            <div class="search-box bg-theme color-theme rounded-m shadow-l mx-3 d-flex justify-content-between">
+            <div class="search-box bg-theme color-theme rounded-m shadow-l mx-2 d-flex justify-content-between">
                 <span class=""><i class="fa fa-search"></i></span>
                 <input type="text" class="border-0" aria-label="busqueda" alt="que estas buscando" class="form-control" placeholder="Qué estás buscando?" data-search>
+                <input type="text" class="border-0" aria-label="Lugar" alt="En donde lo estas buscando" class="form-control" placeholder="En dónde?">
                 <a href="#" class="clear-search disabled no-click mt-0"></a>
 
                 <a href="#" data-menu="menu-filter" class="color-theme"><i class="fa fa-sliders me-n3"></i></a>
             </div>
+
 
 
             <div class="search-results disabled-search-list mt-3">
@@ -92,169 +81,99 @@
             </div>
 
         </div>
+        <!-- Placing iframe under the header -->
+        <iframe src="https://maps.google.com/maps?q=%Sidney%20Opera&t=k&z=17&ie=UTF8&iwloc=&output=embed" style="height:650px; margin-top:-200px;"></iframe>
     </div>
 
     <!-- Scroll Over Clear Effect-->
-    <div class="card bg-transparent shadow-0 border-0 mb-0 no-click" data-card-height="150" style="height: 430px;"></div>
+    <div class="card bg-transparent shadow-0 border-0 mb-0 no-click" data-card-height="430" style="height: 430px;"></div>
 
-    <!-- lista de productos -->
-    <div class="card card-style">
-        <div class="content mb-0">
-            <h1 class="mb-n1">Encuentra tu prenda</h1>
-            <p class="mb-4 font-600 color-highlight">¡Nuevas prendas estan llegando!</p>
+    <div class="card card-style mx-0 pb-5 pt-1">
+        <div class="divider mx-auto mt-3 bg-gray-dark opacity-30 rounded-s mb-3" style="height:5px; width:50px;"></div>
+        <div class="search-no-results disabled mt-n3">
+            <div class="content bg-red-dark p-3 rounded-m">
+                <h1 class="color-white">Sin resultados</h1>
+                <p class="color-white">
+                    No se encontraraon datos conforme a tu busqueda.
+                </p>
+            </div>
+            <div class="divider divider-margins mt-4"></div>
+        </div>
 
-            <div class="row text-center mb-0">
-                <div class="col-6 mb-4">
-                    <a href="#"><img src="assets/images/pictures/17s.jpg" class="rounded-sm shadow-xl img-fluid"></a>
-                    <a href="#" class="d-block mt-3">
-                        <i class="fa fa-star color-yellow-dark"></i>
-                        <i class="fa fa-star color-yellow-dark"></i>
-                        <i class="fa fa-star color-yellow-dark"></i>
-                        <i class="fa fa-star color-yellow-dark"></i>
-                        <i class="fa fa-star color-yellow-dark"></i><br>
-                        <span class="font-10 d-block mt-n1">130 Reviewers</span>
-                    </a>
-                    <a href="#">
-                        <h5 class="mt-1">Brilliant Headset and Mobile</h5>
-                        <span class="color-green-dark font-10">In Stock</span>
-                    </a>
-                    <h1 class="mt-1 mb-n2 font-800">$199<sup class="font-300 font-16">.99</sup></h1>
-                    <span class="opacity-50 font-11"><del>$299<sup>.99</sup></del> (- 40%)</span>
-                </div>
-                <div class="col-6 mb-4">
-                    <a href="#"><img src="assets/images/pictures/18s.jpg" class="rounded-sm shadow-xl img-fluid"></a>
-                    <a href="#" class="d-block mt-3">
-                        <i class="fa fa-star color-yellow-dark"></i>
-                        <i class="fa fa-star color-yellow-dark"></i>
-                        <i class="fa fa-star color-yellow-dark"></i>
-                        <i class="fa fa-star color-yellow-dark"></i>
-                        <i class="fa fa-star-half color-yellow-dark"></i><br>
-                        <span class="font-10 d-block mt-n1">41 Reviewers</span>
-                    </a>
-                    <a href="#">
-                        <h5 class="mt-1">Wireless in Ear Headsets</h5>
-                        <span class="color-green-dark font-10">In Stock</span>
-                    </a>
-                    <h1 class="mt-1 mb-n2 font-800">$399<sup class="font-300 font-16">.99</sup></h1>
-                    <span class="opacity-50 font-11"><del>$799<sup>.99</sup></del> (- 50%)</span>
+        <div id="tab-group">
+            <div class="card card-style bg-theme pb-0 mb-3">
+
+                <div class="tab-controls tabs-rounded tabs-large" data-highlight="bg-highlight">
+                    <a onclick="getGarment();" href="#" class="font-14 font-600" data-bs-toggle="collapse" data-bs-target="#tab-1" data-active><span class="opacity-80">Prendas</span></a>
+                    <a onclick="getPackaje()" href="#" class="font-14 font-600" data-bs-toggle="collapse" data-bs-target="#tab-2"><span class="opacity-80">Paquetes</span></a>
+                    <!-- <a href="#" class="font-14 font-600" data-bs-toggle="collapse" data-bs-target="#tab-3"><span class="opacity-80">Accesorios</span></a> -->
                 </div>
             </div>
 
-            <div class="row text-center mb-0">
-                <div class="col-6 mb-4">
-                    <a href="#"><img src="assets/images/pictures/17s.jpg" class="rounded-sm shadow-xl img-fluid"></a>
-                    <a href="#" class="d-block mt-3">
-                        <i class="fa fa-star color-yellow-dark"></i>
-                        <i class="fa fa-star color-yellow-dark"></i>
-                        <i class="fa fa-star color-yellow-dark"></i>
-                        <i class="fa fa-star color-yellow-dark"></i>
-                        <i class="fa fa-star color-yellow-dark"></i><br>
-                        <span class="font-10 d-block mt-n1">130 Reviewers</span>
-                    </a>
-                    <a href="#">
-                        <h5 class="mt-1">Brilliant Headset and Mobile</h5>
-                        <span class="color-green-dark font-10">In Stock</span>
-                    </a>
-                    <h1 class="mt-1 mb-n2 font-800">$199<sup class="font-300 font-16">.99</sup></h1>
-                    <span class="opacity-50 font-11"><del>$299<sup>.99</sup></del> (- 40%)</span>
-                </div>
-                <div class="col-6 mb-4">
-                    <a href="#"><img src="images/pictures/18s.jpg" class="rounded-sm shadow-xl img-fluid"></a>
-                    <a href="#" class="d-block mt-3">
-                        <i class="fa fa-star color-yellow-dark"></i>
-                        <i class="fa fa-star color-yellow-dark"></i>
-                        <i class="fa fa-star color-yellow-dark"></i>
-                        <i class="fa fa-star color-yellow-dark"></i>
-                        <i class="fa fa-star-half color-yellow-dark"></i><br>
-                        <span class="font-10 d-block mt-n1">41 Reviewers</span>
-                    </a>
-                    <a href="#">
-                        <h5 class="mt-1">Wireless in Ear Headsets</h5>
-                        <span class="color-green-dark font-10">In Stock</span>
-                    </a>
-                    <h1 class="mt-1 mb-n2 font-800">$399<sup class="font-300 font-16">.99</sup></h1>
-                    <span class="opacity-50 font-11"><del>$799<sup>.99</sup></del> (- 50%)</span>
-                </div>
+            <!-- Tab 1 -->
+            <div data-bs-parent="#tab-group" class="collapse show px-3" id="tab-1">
+                <div id="setGarment"></div>
             </div>
 
-            <div class="row text-center mb-0">
-                <div class="col-6 mb-4">
-                    <a href="#"><img src="images/pictures/17s.jpg" class="rounded-sm shadow-xl img-fluid"></a>
-                    <a href="#" class="d-block mt-3">
-                        <i class="fa fa-star color-yellow-dark"></i>
-                        <i class="fa fa-star color-yellow-dark"></i>
-                        <i class="fa fa-star color-yellow-dark"></i>
-                        <i class="fa fa-star color-yellow-dark"></i>
-                        <i class="fa fa-star color-yellow-dark"></i><br>
-                        <span class="font-10 d-block mt-n1">130 Reviewers</span>
-                    </a>
-                    <a href="#">
-                        <h5 class="mt-1">Brilliant Headset and Mobile</h5>
-                        <span class="color-green-dark font-10">In Stock</span>
-                    </a>
-                    <h1 class="mt-1 mb-n2 font-800">$199<sup class="font-300 font-16">.99</sup></h1>
-                    <span class="opacity-50 font-11"><del>$299<sup>.99</sup></del> (- 40%)</span>
-                </div>
-                <div class="col-6 mb-4">
-                    <a href="#"><img src="images/pictures/18s.jpg" class="rounded-sm shadow-xl img-fluid"></a>
-                    <a href="#" class="d-block mt-3">
-                        <i class="fa fa-star color-yellow-dark"></i>
-                        <i class="fa fa-star color-yellow-dark"></i>
-                        <i class="fa fa-star color-yellow-dark"></i>
-                        <i class="fa fa-star color-yellow-dark"></i>
-                        <i class="fa fa-star-half color-yellow-dark"></i><br>
-                        <span class="font-10 d-block mt-n1">41 Reviewers</span>
-                    </a>
-                    <a href="#">
-                        <h5 class="mt-1">Wireless in Ear Headsets</h5>
-                        <span class="color-green-dark font-10">In Stock</span>
-                    </a>
-                    <h1 class="mt-1 mb-n2 font-800">$399<sup class="font-300 font-16">.99</sup></h1>
-                    <span class="opacity-50 font-11"><del>$799<sup>.99</sup></del> (- 50%)</span>
-                </div>
+            <!-- Tab 2 -->
+            <div data-bs-parent="#tab-group" class="collapse px-3" id="tab-2">
+                <div id="setPackaje"></div>
             </div>
+        </div>
 
-            <div class="row text-center mb-0">
-                <div class="col-6 mb-4">
-                    <a href="#"><img src="images/pictures/17s.jpg" class="rounded-sm shadow-xl img-fluid"></a>
-                    <a href="#" class="d-block mt-3">
-                        <i class="fa fa-star color-yellow-dark"></i>
-                        <i class="fa fa-star color-yellow-dark"></i>
-                        <i class="fa fa-star color-yellow-dark"></i>
-                        <i class="fa fa-star color-yellow-dark"></i>
-                        <i class="fa fa-star color-yellow-dark"></i><br>
-                        <span class="font-10 d-block mt-n1">130 Reviewers</span>
-                    </a>
-                    <a href="#">
-                        <h5 class="mt-1">Brilliant Headset and Mobile</h5>
-                        <span class="color-green-dark font-10">In Stock</span>
-                    </a>
-                    <h1 class="mt-1 mb-n2 font-800">$199<sup class="font-300 font-16">.99</sup></h1>
-                    <span class="opacity-50 font-11"><del>$299<sup>.99</sup></del> (- 40%)</span>
-                </div>
-                <div class="col-6 mb-4">
-                    <a href="#"><img src="images/pictures/18s.jpg" class="rounded-sm shadow-xl img-fluid"></a>
-                    <a href="#" class="d-block mt-3">
-                        <i class="fa fa-star color-yellow-dark"></i>
-                        <i class="fa fa-star color-yellow-dark"></i>
-                        <i class="fa fa-star color-yellow-dark"></i>
-                        <i class="fa fa-star color-yellow-dark"></i>
-                        <i class="fa fa-star-half color-yellow-dark"></i><br>
-                        <span class="font-10 d-block mt-n1">41 Reviewers</span>
-                    </a>
-                    <a href="#">
-                        <h5 class="mt-1">Wireless in Ear Headsets</h5>
-                        <span class="color-green-dark font-10">In Stock</span>
-                    </a>
-                    <h1 class="mt-1 mb-n2 font-800">$399<sup class="font-300 font-16">.99</sup></h1>
-                    <span class="opacity-50 font-11"><del>$799<sup>.99</sup></del> (- 50%)</span>
+
+        <div class="d-flex px-3 mb-1">
+            <div class="align-self-center">
+                <h4 class="mb-0">Más para ver</h4>
+            </div>
+            <a href="?view=ver_todo" class="align-self-center ms-auto">
+                <a href="?view=ver_todo" class="font-14">Ver todo</a>
+            </a>
+        </div>
+
+        <div class="splide double-slider slider-no-dots visible-slider" id="double-slider-1a">
+            <div class="splide__track">
+
+                <div class="splide__list">
+                    <div class="splide__slide">
+                        <a href="#" class="mx-3" data-menu="menu-reserve" data-bs-toggle="offcanvas" data-bs-target="#offcanvasBottom" aria-controls="offcanvasBottom">
+                            <div class="card card-style me-0 mb-0" style="background-image:url(https://barocsshop.com/wp-content/uploads/2023/06/vestido-cloeh-f.jpg);" data-card-height="250">
+                                <div class="card-top p-2">
+                                    <!-- <span class="bg-red-dark color-white px-2 py-1 rounded-xs font-11 font-700">-10%</span> -->
+                                </div>
+                                <div class="card-bottom p-2 px-2">
+                                    <h4 class="color-white line-height-s">Conjunto vestido</h4>
+                                    <span class="color-white font-10 opacity-60"><i class="fa fa-map-marker pe-2"></i>Ibiza, españa</span>
+                                </div>
+                                <div class="card-overlay bg-gradient"></div>
+                            </div>
+                        </a>
+                    </div>
+
+
+
+                    <div class="splide__slide">
+                        <a href="#" class="mx-3" data-menu="menu-reserve" data-bs-toggle="offcanvas" data-bs-target="#offcanvasBottom" aria-controls="offcanvasBottom">
+                            <div class="card card-style me-0 mb-0" style="background-image:url(https://cdn0.bodas.com.mx/cat/vestidos-fiesta/manu-garcia/mg3321--mt20_2x_566275.jpg);" data-card-height="250">
+                                <div class="card-top p-2">
+                                    <!-- <span class="color-white bg-blue-dark px-2 py-1 rounded-xs font-11 font-700">RENTA</span> -->
+                                </div>
+                                <div class="card-bottom p-2 px-2">
+                                    <h4 class="color-white line-height-s">Prenda minimalista</h4>
+                                    <span class="color-white font-10 opacity-60"><i class="fa fa-map-marker pe-2"></i>Ibiza, España</span>
+                                </div>
+                                <div class="card-overlay bg-gradient"></div>
+                            </div>
+                        </a>
+                    </div>
+
                 </div>
             </div>
-            <a href="#" class="btn btn-full btn-m rounded-s mb-3 font-800 text-uppercase bg-highlight">Ver más</a>
         </div>
     </div>
-</div>
 
+
+</div>
 
 <!-- Menu Sidebar Sidebar Filters-->
 <div id="menu-filter" class="menu menu-box-left" data-menu-height="cover" data-menu-width="cover">
@@ -449,6 +368,7 @@
     <div class="divider divider-margins mt-4 mb-4"></div>
 
 </div>
+
 
 <!-- Rentar -->
 <div class="offcanvas offcanvas-bottom" tabindex="-1" id="offcanvasBottom" aria-labelledby="offcanvasBottomLabel" style="height: auto;">

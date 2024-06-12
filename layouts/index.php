@@ -45,8 +45,8 @@
 
     <div id="page">
 
-        <div class="header header-fixed header-logo-center header-auto-show">
-            <a href="#" class="header-title">Renta de ropa</a>
+        <div class="header header-fixed header-logo-center"> <!--header-auto-show-->
+            <a href="#" class="header-title"><img src="assets/images/logorenta.jpg" class="rounded" alt="" width="150" height="25"></a>
             <a href="#" data-back-button class="header-icon header-icon-1"><i class="fas fa-arrow-left"></i></a>
             <!-- <a href="#" data-toggle-theme class="header-icon header-icon-4"><i class="fas fa-lightbulb"></i></a> -->
         </div>
