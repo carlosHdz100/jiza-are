@@ -503,13 +503,28 @@
 
         <div class="row text-center mt-4 mb-4">
             <div class="col-4">
-                <span class="badge rounded text-bg-success py-3 px-2">Fechas Disponibles</span>
+                <span class="text-danger">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-circle" width="16" height="16" viewBox="0 0 24 24" stroke-width="3" stroke="#ff2825" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                        <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                        <path d="M12 12m-9 0a9 9 0 1 0 18 0a9 9 0 1 0 -18 0" />
+                    </svg>
+                    <b>Rentado</b></span>
             </div>
             <div class="col-4">
-                <span class="badge rounded text-bg-danger py-3 px-2">Fechas Rentadas</span>
+                <span class="text-success">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-circle" width="16" height="16" viewBox="0 0 24 24" stroke-width="3" stroke="#00b341" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                        <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                        <path d="M12 12m-9 0a9 9 0 1 0 18 0a9 9 0 1 0 -18 0" />
+                    </svg>
+                    <b>Disponible</b></span>
             </div>
             <div class="col-4">
-                <span class="badge rounded text-bg-info py-3 px-2">Fechas Rentadas</span>
+                <span class="text-secondary">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-circle" width="16" height="16" viewBox="0 0 24 24" stroke-width="3" stroke="#9e9e9e" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                        <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                        <path d="M12 12m-9 0a9 9 0 1 0 18 0a9 9 0 1 0 -18 0" />
+                    </svg>
+                    <b>No Disponible</b></span>
             </div>
         </div>
 
